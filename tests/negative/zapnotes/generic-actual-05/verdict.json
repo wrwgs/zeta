@@ -1,0 +1,21 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "incompatActualization",
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:Stepping#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(553.5-553.5)]: undeclared `A'",
+    "ERROR[LTX:zapnotes.tex(553.3-553.6)]:",
+    "invalid actualization of `S'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)"
+  ]
+}

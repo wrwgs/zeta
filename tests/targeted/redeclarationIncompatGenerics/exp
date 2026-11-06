@@ -1,0 +1,22 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load TredeclarationIncompatGenerics.tex
++ scanning TredeclarationIncompatGenerics.tex
+- load TredeclarationIncompatGenerics.tex
+>>> c -u TredeclarationIncompatGenerics#TredeclarationIncompatGenerics
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:TredeclarationIncompatGenerics#TredeclarationIncompatGenerics
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:TredeclarationIncompatGenerics#TredeclarationIncompatGenerics
+! ERROR[LTX:TredeclarationIncompatGenerics.tex(14.3-14.4)]:
+!   incompatible genericity of redeclared `gg'.
+!     previous declaration: LTX:TredeclarationIncompatGenerics.tex(11.3-11.4)
+!     previous genericity : 1 parameters
+!     new genericity      : none
+= good bye.

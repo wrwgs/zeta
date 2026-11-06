@@ -1,0 +1,10 @@
+{
+  "section": "Nat",
+  "unit": "Nat#zapnotes",
+  "kind": "pred",
+  "line": 248,
+  "query": "\\dom add",
+  "yields": [
+    "{(Z,y),(S(Z),z),(S(S(Z)),y),(S(S(S(Z))),y),...}"
+  ]
+}

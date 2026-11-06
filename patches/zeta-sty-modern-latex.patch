@@ -1,0 +1,24 @@
+--- /tmp/zeta.sty.orig	2026-11-06 08:08:30.285660475 +0000
++++ run/zetabase/lib/latex/zeta.sty	2026-11-06 08:08:58.805217948 +0000
+@@ -750,7 +750,20 @@
+           \mathcode`\;="8000 {\catcode`\;=\active \gdef;{\eszsemicolon\;}}
+ 
+           % Tilde is made to insert a space in math-mode
+-          \edef\esz@origtilde{~}
++          % Capture the CURRENT MEANING of the active ~, not its expansion.
++          % \edef here recursed forever on modern LaTeX: ~ is now a protected
++          % \nobreakspace whose expansion reaches ~ again, exhausting TeX's input
++          % stack (zeta.sty:753, 'TeX capacity exceeded [input stack size=10000]').
++          % \let is also the more correct idiom for restoring the original ~.
++          % State the original meaning of ~ outright rather than capturing it.
++          % \edef recursed forever on modern LaTeX (~ is a protected \nobreakspace
++          % whose expansion reaches ~ again), and \let still recursed in text mode.
++          % A non-breaking space is what ~ means in both LaTeX and plain TeX, so say so:
++          \ifx\nobreakspace\undefined
++            \def\esz@origtilde{\penalty\@M\ }%
++          \else
++            \def\esz@origtilde{\leavevmode\nobreak\ }%
++          \fi
+           \def\esztildespace#1{%
+              \def~{\ifmmode#1\else\esz@origtilde\fi}%
+           }

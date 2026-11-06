@@ -1,0 +1,12 @@
+{
+  "section": "Nat",
+  "unit": "Nat#zapnotes",
+  "kind": "pred",
+  "line": 237,
+  "query": "add \\in pfun[N \\cross N,N]",
+  "yields": [
+    "...",
+    "unresolved constraints:",
+    "LTX:zapnotes.tex(205.58-205.68) waiting for variable y"
+  ]
+}

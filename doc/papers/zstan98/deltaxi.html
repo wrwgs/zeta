@@ -1,0 +1,247 @@
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Z Proposal</TITLE>
+<META NAME="description" CONTENT="Z Proposal">
+<META NAME="keywords" CONTENT="deltaxi">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="deltaxi.css">
+</HEAD>
+<BODY >
+
+<P>
+  <FONT SIZE="+1"><B><A NAME="tex2html1"
+ HREF="deltaxi.html">WG.48.2</A>: </FONT><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$"><FONT SIZE="+1"> and </FONT><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$"><FONT SIZE="+1"> as Operators</B></FONT> 
+<P>
+  <FONT SIZE="-1">Proposal for the Z Standard, 
+        by Wolfgang Grieskamp (<TT>wg@cs.tu-berlin.de</TT>), November 11, 1998, 
+        (v3)  , <A NAME="tex2html2"
+ HREF="deltaxi.ps.gz">postscript version</A>
+</FONT> 
+  
+<P>
+  
+<P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+What</A>
+</H2>
+
+<P>
+<IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$">
+are introduced as expression operators. An
+implicit definition of a schema named <IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+(<IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img4.gif"
+ ALT="$\Xi S$">)
+is not
+supported.
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Why</A>
+</H2>
+
+<P>
+The current handling of implicit definition of <IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+and <IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img4.gif"
+ ALT="$\Xi S$">schemas introduces an irregularity into Standard Z which complicates
+the language definition and implementation. This irregularity is in
+particular problematic in combination with paragraph reordering (see
+<A NAME="tex2html3"
+ HREF="paragraph-reordering.html">WG.48.3</A>).
+
+<P>
+From a methodological point of view, the possibility of attaching
+non-standard meanings to the phrase <IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+can be criticised.  If
+a special meaning of <IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+is required, it seems to be
+better style to document this meaning in a descriptive name for this
+schema.
+
+<P>
+Since in Standard Z schema references have been generalised to
+expressions, it would be orthogonal to treat <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$">as operators on expressions. This allows e.g. specifications such
+as 
+
+<P>
+<BR>
+<IMG
+ WIDTH="170" HEIGHT="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img5.gif"
+ ALT="\begin{zed}D == [x,y: \num \vert x > y] \\
+\Delta\_Dx == [\Delta D; \Xi (D \hide x)] \\
+Op == [\Delta\_Dx \vert x' = x + 1]
+\end{zed}">
+<BR>
+<P>
+
+<H2><A NAME="SECTION00003000000000000000">
+How</A>
+</H2>
+
+<P>
+
+<H5><A NAME="SECTION00003001000000000000">
+Updates to the WD 1.5</A>
+</H5>
+
+<P>
+<UL>
+<LI>Characters: introduce <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$">
+as symbols
+<LI>Lexis: introduce <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$">
+as keywords
+<LI>Concrete and annotated syntax: introduce <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$">
+as 
+  unary operators. Assign them a priority above schema decoration.
+<LI>Transformations: reduce <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$">
+expressions.
+</UL>
+<P>
+
+<H5><A NAME="SECTION00003002000000000000">
+Compatibility</A>
+</H5> Specifications which make use of
+the redefinition of <IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+can be easily ported by a global
+textual replace of <IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+with e.g. <IMG
+ WIDTH="32" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img7.gif"
+ ALT="$\Delta\_S$">.
+Specifications
+which don't make use of the redefinition don't need to be changed - a
+single lexem <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+followed by a schema name <I>S</I> is the application of
+the operator <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+to the name <I>S</I>.
+
+<P>
+
+<H5><A NAME="SECTION00003003000000000000">
+Variants</A>
+</H5>
+
+<P>
+Instead of treating <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img2.gif"
+ ALT="$\Xi$">
+as symbols, it would be also
+possible to keep them being letters. Distinguishing between the name
+<IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+and the operation 
+<!-- MATH: $\Delta ~~ S$ -->
+<IMG
+ WIDTH="32" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img8.gif"
+ ALT="$\Delta ~~ S$">
+has to be indicated by
+whitespace, as with decoration. Type checkers will detect that a name
+<IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="deltaxi-img3.gif"
+ ALT="$\Delta S$">
+(without space) is not defined.
+
+<P>
+<BR> <HR>
+<ADDRESS>
+<a href="mailto:wg@cs.tu-berlin.de">Wolfgang Grieskamp</a>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,23 @@
+UNIT LTX:Stepping#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  S
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _=_
+  _\fun_
+  _\in_
+  _\in_[]
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+LOCALS
+PROPERTIES
+  LTX:zapnotes.tex(553.3-553.27): S : {{$NATIVEmakeNumber(1)} + {$NATIVEmakeNumber(2)}} + {{$NATIVEmakeNumber(3)} + {$NATIVEmakeNumber(4)}};

@@ -1,0 +1,67 @@
+{
+  // ZETA port -- VS Code "unmanaged folder" Java project.
+  //
+  // There is no Maven/Gradle build here; harness/build-port.sh is authoritative.
+  // These settings only teach the language server the same classpath it uses, so
+  // port/src indexes and navigates.  Nothing here participates in the real build.
+
+  // The ported tree is the only Java source.  recovered/src is Pizza, not Java.
+  "java.project.sourcePaths": ["port/src"],
+
+  // The 2002 reference.  This jar is exactly what work/ref-classes was extracted
+  // from (905 classes, verified identical), so the IDE resolves what javac does.
+  // java.project.referencedLibraries accepts jars only -- not class directories --
+  // which is why this points at the jar and not at work/ref-classes.
+  "java.project.referencedLibraries": [
+    "recovered/dist/zetadist1_5/lib/classes.jar"
+  ],
+
+  // DELIBERATELY NOT port/classes.  Ported classes shadow the reference on the
+  // classpath, and harness/build-port.sh wipes port/classes on every run; letting
+  // the language server also write there would corrupt the oracle or be corrupted
+  // by it.  The IDE gets its own throwaway output tree.
+  "java.project.outputPath": "work/vscode-classes",
+
+  // The port is latin1 (docs/port-recipe.md).  Scoped to Java ONLY: this repo's
+  // markdown (zesurrect-plan.md, docs/*.md) is UTF-8 and full of arrows and
+  // dashes, which a workspace-wide iso88591 would render as mojibake.
+  "[java]": { "files.encoding": "iso88591" },
+  "files.autoGuessEncoding": false,
+
+  // The port needs 21 for sealed types and switch patterns.  Note the 2002
+  // reference is run under JDK 8 (run/zeta) -- that is a runtime concern, not this.
+  "java.jdt.ls.java.home": "/home/wrw/zeta/recovered/tools/jdk21",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "/home/wrw/zeta/recovered/tools/jdk21",
+      "default": true
+    }
+  ],
+
+  // build-port.sh passes -nowarn; 1998-era code trips a lot of modern lint.
+  "java.compile.nullAnalysis.mode": "disabled",
+
+  // recovered/ is 621M and work/ is 132M of jars, class trees and corpora.
+  // Without these the extension crawls all of it on every startup.
+  "java.import.exclusions": [
+    "**/recovered/**",
+    "**/work/**",
+    "**/baselines/**",
+    "**/baselines-ported/**",
+    "**/run/**"
+  ],
+  "files.watcherExclude": {
+    "**/recovered/**": true,
+    "**/work/**": true,
+    "**/baselines/**": true,
+    "**/baselines-ported/**": true,
+    "**/run/**": true
+  },
+  "search.exclude": {
+    "**/work/corpus/**": true,
+    "**/work/build*/**": true,
+    "**/recovered/tools/**": true,
+    "**/recovered/dist/**": true
+  }
+}

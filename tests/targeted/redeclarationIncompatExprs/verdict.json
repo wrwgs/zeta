@@ -1,0 +1,13 @@
+{
+  "expect": "redeclarationIncompatExprs",
+  "kinds": [
+    "redeclarationIncompatExprs"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TredeclarationIncompatExprs.tex(17.3-17.3)]:",
+    "incompatible type of redeclared `v'.",
+    "previous declaration: LTX:TredeclarationIncompatExprs.tex(14.3-14.3)",
+    "previous type       : \\baseNum",
+    "new type            : NAME"
+  ]
+}

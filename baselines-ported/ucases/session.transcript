@@ -1,0 +1,26 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load ucases.tex
++ scanning ucases.tex
+- load ucases.tex
+>>> c -u UseCases#ucases
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:UseCases#ucases
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:UseCases#ucases
+- c -u UseCases#ucases
+>>> c -u UseCasesModel#ucases
++ parsing section LTX:UseCasesModel#ucases
++ type checking section LTX:UseCasesModel#ucases
+- c -u UseCasesModel#ucases
+>>> c -u CashDispenser#ucases
++ parsing section LTX:CashDispenser#ucases
++ type checking section LTX:CashDispenser#ucases
+- c -u CashDispenser#ucases
+= good bye.

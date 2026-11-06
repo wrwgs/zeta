@@ -1,0 +1,46 @@
+\zsection[LTX:Toolkit#Toolkit,LTX:BBSpec#bbook]{LTX:BBExec#bbook}
+
+%%zap protected
+
+\begin{zed}
+  NAME ::= Werner | Barbara | Martin
+\end{zed}
+
+\begin{zed}
+  DATE ::= date \ldata Date \rdata
+\end{zed}
+
+\begin{schema}{Date}
+  day: \nat \\
+  month: \nat \\
+  year: \nat
+\where
+  day \in 1 \upto 31 \\
+  month \in 1 \upto 12 \\
+  month = 2 \implies day \leq 29 \\
+  month \in \{4,6,7,9,11\} \implies day \leq 30 \\
+  year \geq 0
+\end{schema}
+
+\begin{axdef}
+  add ==
+    \lambda name?: NAME; date?: DATE @
+    [\Delta BirthdayBook | AddBirthday] \\
+  find ==
+    \lambda name?: NAME @
+    [\Delta BirthdayBook; date!: DATE | FindBirthday] \\
+  remind ==
+    \lambda today?: DATE @
+    [\Delta BirthdayBook; cards!: \power NAME | Remind] \\
+  remove == \lambda name?: NAME @ [\Delta BirthdayBook | Remove]
+\end{axdef}
+
+\begin{zed}
+  InitBirthdayBook2 ==
+    InitBirthdayBook \lor
+    [    BirthdayBook
+       |
+         birthday =
+         \{  Werner \mapsto
+               date \lblot day == 7,month == 5,year == 1929 \rblot\}]
+\end{zed}

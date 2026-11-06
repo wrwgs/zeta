@@ -1,0 +1,332 @@
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Z Proposal</TITLE>
+<META NAME="description" CONTENT="Z Proposal">
+<META NAME="keywords" CONTENT="paragraph-reordering">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="paragraph-reordering.css">
+</HEAD>
+<BODY >
+
+<P>
+  <FONT SIZE="+1"><B><A NAME="tex2html1"
+ HREF="paragraph-reordering.html">WG.48.3</A>: Independence of Textual Order of Paragraphs</B></FONT> 
+<P>
+  <FONT SIZE="-1">Proposal for the Z Standard, 
+        by Wolfgang Grieskamp (<TT>wg@cs.tu-berlin.de</TT>), November 11, 1998, 
+        (v3)  , <A NAME="tex2html2"
+ HREF="paragraph-reordering.ps.gz">postscript version</A>
+</FONT> 
+  
+<P>
+  
+<P>
+<BR>
+
+<P>
+
+<H5><A NAME="SECTION00000001000000000000">
+Note</A>
+</H5>
+This is a technical refinement of an earlier proposal of SHV.
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+What</A>
+</H2>
+
+<P>
+The order how paragraphs appear in a Z section is arbitrary. The
+definition-use relation of paragraphs must be acyclic. (A paragraph
+is in definition-use relation to another paragraph, if it introduces a name
+which is referred to by the other paragraph.)
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Why</A>
+</H2>
+
+<P>
+Shortly: the adequate way to structure the paragraphs of a section is
+not always bottom-up.  (As far as I know, the panel already agreed
+that paragraph reordering is useful in general.)
+
+<P>
+
+<H2><A NAME="SECTION00003000000000000000">
+How</A>
+</H2>
+
+<P>
+
+<H5><A NAME="SECTION00003001000000000000">
+Conformance</A>
+</H5> Tools working in batch mode which don't implement
+this feature are considered still as conforming, since filters can be
+build which perform the paragraph reordering for them. (However, these
+filters need to type-check the specification; see discussion of
+implementation below.)
+
+<P>
+
+<H5><A NAME="SECTION00003002000000000000">
+Dependencies</A>
+</H5>
+
+<P>
+Proposal <B><A NAME="tex2html3"
+ HREF="deltaxi.html">WG.48.2</A></B> is assumed, such that redefinition of
+<IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="paragraph-reordering-img1.gif"
+ ALT="$\Delta$">
+and <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="paragraph-reordering-img2.gif"
+ ALT="$\Xi$">
+is prohibited.
+
+<P>
+
+<H5><A NAME="SECTION00003003000000000000">
+Updates to WD 1.5</A>
+</H5>
+
+<P>
+<UL>
+<LI>Lexis, Clause 7.4.4 (User-defined operators): Refine:
+  <BLOCKQUOTE>
+[...] These associations extent over the entire Z section
+    they are defined within and are disabled at the end of the
+    section. [...]
+  </BLOCKQUOTE>
+<LI>Type Inference Rules, Clause 13.2.2.1 (the according clause 
+  in 12, resp.): add a comment such as:
+  <BLOCKQUOTE>
+The order how paragraphs appear in a Z section is arbitrary. The
+    definition-use relation of paragraphs must be acyclic. (A paragraph
+    is in definition-use relation to another paragraph, if it introduces a name
+    which is referred to by the other paragraph.)
+  </BLOCKQUOTE>  Define reordering (and cycle check) as a
+  condition to the rule. This could be something along:
+  <BR>
+<IMG
+ WIDTH="281" HEIGHT="71" ALIGN="BOTTOM" BORDER="0"
+ SRC="paragraph-reordering-img3.gif"
+ ALT="\begin{zed}\begin{array}{cc}
+\dfrac{
+\begin{array}{c}
+\Gamma_0 \vDash^D d_{\r...
+...\
+\rho : 1 \upto n \bij 1 \upto n
+\end{array} \right)
+\end{array} \end{zed}">
+<BR>
+It's sufficient to just demand that the re-ordering <IMG
+ WIDTH="12" HEIGHT="27" ALIGN="MIDDLE" BORDER="0"
+ SRC="paragraph-reordering-img4.gif"
+ ALT="$\rho$">
+is a bijection,
+   since:
+   <UL>
+<LI>any instance of <IMG
+ WIDTH="12" HEIGHT="27" ALIGN="MIDDLE" BORDER="0"
+ SRC="paragraph-reordering-img4.gif"
+ ALT="$\rho$">
+which does not represent a proper bottom-up
+     order is rejected by clause 13.2.5.1, which would detect that a 
+     referenced name <I>i</I> is not defined. It doesn't matter for the
+     rule system that this undefinedness results from that <I>i</I> is never
+     defined, that <I>i</I> is defined later on in the order, or that <I>i</I>     is cyclic defined.
+<LI>if there are degrees of freedom how to reorder paragraphs,
+     then which order to choose doesn't matters semantically, as
+     justified below.
+   </UL></UL>
+<P>
+
+<H5><A NAME="SECTION00003004000000000000">
+Semantics</A>
+</H5>
+
+<P>
+Consider there are two possible well-formed (well-typed) re-orderings
+<I>S</I><SUB>1</SUB> and <I>S</I><SUB>2</SUB> of a section. Are these always semantically
+equivalent? Here is a justification which actually reduces the problem
+to a desirable property of the semantic equations in general (which
+seems to be fulfilled in WD 1.5 - yet this still needs to be
+counter-checked by the authors of clause 16).
+
+<P>
+From any section, one can syntactically build what I would call the
+<EM>algebraic normal form</EM>, 
+<!-- MATH: $ANF_S = (G_S,C_S,P_S)$ -->
+<I>ANF</I><SUB><I>S</I></SUB> = (<I>G</I><SUB><I>S</I></SUB>,<I>C</I><SUB><I>S</I></SUB>,<I>P</I><SUB><I>S</I></SUB>), where <I>G</I><SUB><I>S</I></SUB>,
+<I>C</I><SUB><I>S</I></SUB>, and <I>P</I><SUB><I>S</I></SUB> are sets of paragraphs, which are constructed as
+follows:
+
+<P>
+<UL>
+<LI><I>G</I><SUB><I>S</I></SUB> contains a given type paragraph for each given type and free
+  type paragraph in S;
+<LI><I>C</I><SUB><I>S</I></SUB> contains for each axiomatic definition in <I>S</I> a paragraph with the
+  declarations of its global constants with their basic types (build
+  from given types, formal generics, powerset, and schema type);
+<LI><I>P</I><SUB><I>S</I></SUB> contains for each axiomatic definition in <I>S</I> a paragraph with the
+  literal properties of it, enriched by properties induced by the
+  declarations (e.g. for <IMG
+ WIDTH="34" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="paragraph-reordering-img7.gif"
+ ALT="$x:\nat$">
+the property 
+<!-- MATH: $x \in \nat$ -->
+<IMG
+ WIDTH="40" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="paragraph-reordering-img8.gif"
+ ALT="$x \in \nat$">). For
+  free types, <I>P</I><SUB><I>S</I></SUB> contains the set of according free-type axioms.
+</UL>
+<P>
+From <I>ANF</I><SUB><I>S</I></SUB> one can reconstruct a Z sections 
+<!-- MATH: $S' =
+\mathsf{section}~i~\mathsf{parents}~i_1, \ldots,
+i_n~\mathsf{END}~G_S~C_S~P_S~\mathsf{END}$ -->
+<IMG
+ WIDTH="324" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="paragraph-reordering-img9.gif"
+ ALT="$S' =
+\mathsf{section}~i~\mathsf{parents}~i_1, \ldots,
+i_n~\mathsf{END}~G_S~C_S~P_S~\mathsf{END}$">,
+where the individual
+paragraphs from <I>G</I><SUB><I>S</I></SUB> (resp. <I>C</I><SUB><I>S</I></SUB> and <I>P</I><SUB><I>S</I></SUB>) are ordered arbitrarily,
+and which is by construction definition-before-use. Now we
+<EM>assume that the semantics equations ensure</EM> that for each
+arbitrary arrangement of <I>S</I>' (according to the degrees of freedom in
+ordering individual paragraphs from <I>G</I><SUB><I>S</I></SUB>, <I>C</I><SUB><I>S</I></SUB>, and <I>P</I><SUB><I>S</I></SUB>) it holds:
+
+<!-- MATH: $\lbag S \rbag^{\mathcal{S}} = \lbag S' \rbag^{\mathcal{S}}$ -->
+<IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="paragraph-reordering-img10.gif"
+ ALT="$\lbag S \rbag^{\mathcal{S}} = \lbag S' \rbag^{\mathcal{S}}$">
+(where
+<I>S</I> is well-typed).  So we can lift the semantic mapping to ANFs, and say
+that 
+<!-- MATH: $\lbag S \rbag^{\mathcal{S}} = \lbag ANF_{S}
+\rbag^{\mathcal{S}}$ -->
+<IMG
+ WIDTH="113" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="paragraph-reordering-img11.gif"
+ ALT="$\lbag S \rbag^{\mathcal{S}} = \lbag ANF_{S}
+\rbag^{\mathcal{S}}$">.
+Now since 
+<!-- MATH: $ANF_{S_1} = ANF_{S_2}$ -->
+<I>ANF</I><SUB><I>S</I><SUB>1</SUB></SUB> = <I>ANF</I><SUB><I>S</I><SUB>2</SUB></SUB> if <I>S</I><SUB>1</SUB> and
+<I>S</I><SUB>2</SUB> are reorderings of the same section, which is obvious since for
+the construction of the ANF the order how paragraphs are added to the
+sets <I>G</I><SUB><I>S</I></SUB> (resp. <I>C</I><SUB><I>S</I></SUB> and <I>P</I><SUB><I>S</I></SUB>) doesn't matters, we can conclude
+that 
+<!-- MATH: $\lbag S_1 \rbag^{\mathcal{S}} = \lbag ANF_{S_1}
+\rbag^{\mathcal{S}} = \lbag ANF_{S_2} \rbag^{\mathcal{S}} = \lbag S_2
+\rbag^{\mathcal{S}}$ -->
+<IMG
+ WIDTH="260" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="paragraph-reordering-img12.gif"
+ ALT="$\lbag S_1 \rbag^{\mathcal{S}} = \lbag ANF_{S_1}
+\rbag^{\mathcal{S}} = \lbag ANF_{S_2} \rbag^{\mathcal{S}} = \lbag S_2
+\rbag^{\mathcal{S}}$">.
+
+<P>
+
+<H5><A NAME="SECTION00003005000000000000">
+Implementation (Operator Templates)</A>
+</H5>
+
+<P>
+Since the token mapping introduced by operator templates
+needs to hold over an entire section, tools need to evaluate
+the templates before actual parsing begins. This can be
+achieved by evaluating the syntax of operator templates already
+at scanning time. 
+
+<P>
+If a <code>zed</code>-markup-box would be introduced for the L<SUP><SMALL>A</SMALL></SUP>T<SMALL>E</SMALL>X-markup
+in Annex A.3, then inside of this markup template paragraphs should
+not allowed to be mixed with other paragraphs. A lexer would not be
+able to recognise the operator templates easily, since hard-newlines
+separating paragraphs are converted to soft-newlines in dependency of
+the keywords introduced by templates.
+
+<P>
+
+<H5><A NAME="SECTION00003006000000000000">
+Implementation (Type Inference)</A>
+</H5>
+
+<P>
+As can be drawn from the literature about type-inference for
+functional languages, it is not possible to check the unordered
+paragraphs of a section ``at once'' by global type unification. Trying
+so what amount to type inference in the presence of polymorphic
+recursion, which is not decidable. (The problem has been merely
+depicted in WD 1.5, Sect.&nbsp;13.3, p67: ``[need to] finalise the type
+of a generic definition before type-checking instantiations of that
+generic definition''.)
+
+<P>
+As well, it is not possible to reorder paragraphs prior to
+type-checking, since the construction of the definition-use relation
+of paragraphs requires type information. This is a consequence of the
+fact that in Standard Z axiomatic definitions may include an arbitrary
+expression denoting a schema in their declaration part. To derive what
+names are introduced, the type of the included expression needs to be
+inferred.
+
+<P>
+Therefore an implementation of paragraph reordering needs to be
+interleaved with type-checking.  However, there is a simple model how
+this interleaving can be realized using a modular extension to
+existing type-checking algorithms: check each paragraph of a section
+by a <EM>parallel executing thread</EM>, and let these threads
+synchronise via the global constant environment <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="paragraph-reordering-img13.gif"
+ ALT="$\Gamma$">:
+
+<P>
+<UL>
+<LI>Whenever a thread refers to a name <I>i</I> which
+  is not yet define in <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="paragraph-reordering-img13.gif"
+ ALT="$\Gamma$">,
+it suspends waiting for a definition of <I>i</I>.
+<LI>Whenever a thread defines a name <I>i</I> in
+  <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="paragraph-reordering-img13.gif"
+ ALT="$\Gamma$">,
+all threads waiting for this name are resumed.
+<LI>If all threads happen to wait for a name definition, a deadlock
+  has occurred, which either reflects a cyclic definition are an
+  undeclared-name error.
+</UL>
+<P>
+In practice, the handling of deadlocks has to be instrumented
+to produce meaningful error diagnostics.
+
+<P>
+<BR> <HR>
+<ADDRESS>
+<a href="mailto:wg@cs.tu-berlin.de">Wolfgang Grieskamp</a>
+</ADDRESS>
+</BODY>
+</HTML>

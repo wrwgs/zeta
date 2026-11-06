@@ -1,0 +1,72 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:queens#zapnotes}
+
+\begin{zed}
+  N == 8
+\end{zed}
+
+\begin{zed}
+  Pos == \num \cross \num
+\end{zed}
+
+\begin{axdef}
+  col == \lambda p: Pos @ p.#1 \\
+  row == \lambda p: Pos @ p.#2
+\end{axdef}
+
+\begin{axdef}
+  up == \lambda p: Pos @ col p - row p \\
+  down == \lambda p: Pos @ col p + row p
+\end{axdef}
+
+\begin{zed}
+  feasible ==
+    \{  ps: \power Pos; p: Pos
+        |
+          \forall p': Pos | p' \in ps @
+            col p \neq col p' \land row p \neq row p' \land up p \neq up p'
+            \land down p \neq down p' @ (ps,p)\}
+\end{zed}
+
+\begin{axdef}
+  queens: \nat \rel \power Pos
+\where
+  queens =
+    \{(0,\emptyset)\} \cup
+    \{  n,c: \nat; qs,qs': \power Pos
+        |
+          n > 0 \\
+          (n - 1,qs) \in queens \\
+          c \in 1 \upto N \\
+          (qs,(c,n)) \in feasible \\
+          qs' = qs \cup \{(c,n)\} @ (n,qs')\}
+\end{axdef}
+
+\begin{axdef}
+  queens_1: \nat \rel \power Pos
+\where
+  queens_1 =
+    \{(0,\emptyset)\} \cup
+    \{  n,c: \nat; qs,qs': \power Pos
+        |
+          n > 0 \\
+          \BEGINSEQ \\
+          (n - 1,qs) \in queens_1 \\
+          c \in 1 \upto N \\
+          \ENDSEQ \\
+          (qs,(c,n)) \in feasible \\
+          qs' = qs \cup \{(c,n)\} @ (n,qs')\}
+\end{axdef}
+
+\begin{axdef}
+  queens_2: \nat \rel \power Pos
+\where
+  queens_2 =
+    \{(0,\emptyset)\} \cup
+    \{  n,c: \nat; qs,qs': \power Pos
+        |
+          n > 0 \\
+          qs \in \EXT \{qs: \power Pos | (n - 1,qs) \in queens_2 @ qs\} \\
+          c \in 1 \upto N \\
+          (qs,(c,n)) \in feasible \\
+          qs' = qs \cup \{(c,n)\} @ (n,qs')\}
+\end{axdef}

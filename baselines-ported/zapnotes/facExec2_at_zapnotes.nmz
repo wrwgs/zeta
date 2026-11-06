@@ -1,0 +1,26 @@
+UNIT LTX:facExec2#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _*_
+  _-_
+  _=_
+  _=_[]
+  _\fun_
+  _\fun_[]
+  _\in_
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  fac
+LOCALS
+PROPERTIES
+  LTX:zapnotes.tex(339.9-339.58): fac = {(x,%r) | LTX:zapnotes.tex(339.26-339.58): %r = IF {#<>() | LTX:zapnotes.tex(339.30-339.34): x = $NATIVEmakeNumber(0)} THEN $NATIVEmakeNumber(1) ELSE _*_ (x,fac (_-_ (x,$NATIVEmakeNumber(1))))};

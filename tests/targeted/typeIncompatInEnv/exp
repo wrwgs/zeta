@@ -1,0 +1,21 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load TtypeIncompatInEnv.tex
++ scanning TtypeIncompatInEnv.tex
+- load TtypeIncompatInEnv.tex
+>>> c -u TtypeIncompatInEnv#TtypeIncompatInEnv
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:TtypeIncompatInEnv#TtypeIncompatInEnv
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:TtypeIncompatInEnv#TtypeIncompatInEnv
+! ERROR[LTX:TtypeIncompatInEnv.tex(20.7-20.15)]:
+!   type mismatch of `x' in environment.
+!     this type       : \baseNum
+!     environment type: NAME
+= good bye.

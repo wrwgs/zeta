@@ -1,0 +1,6 @@
+zeta.prog.latex=/home/wrw/shared/texlive/2026/bin/aarch64-linux/latex
+zeta.prog.viewer=/home/wrw/shared/texlive/2026/bin/aarch64-linux/xdvi
+zeta.prog.gnudoit=/bin/true
+zeta.prog.xemacs=/bin/true
+zeta.devel.javacc_home=/home/wrw/zeta/toolchain/javacc
+zeta.devel.prog.gmake=make

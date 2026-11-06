@@ -1,0 +1,49 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:Shortest#Shortest}
+
+\begin{zed}
+  Node == \denotation
+\end{zed}
+
+\begin{zed}
+  Graph == Node \rel Node
+\end{zed}
+
+\begin{zed}
+  nodes == \lambda G: Graph @ \dom G \cup \ran G
+\end{zed}
+
+\begin{axdef}
+  shortest: Graph \cross Node \fun Node \ffun \nat
+\where
+  shortest =
+  \lambda G: Graph; node: Node @
+    \LET
+      Step ==
+        \lambda W: Node \ffun \nat @
+          W \cup
+          \{  n: Node; prev: \power \nat
+              |
+                n \in nodes G \setminus \dom W \\
+                prev = (W \circ G \inv) \limg \{n\} \rimg \land
+                  (W \circ G \inv) \limg \{n\} \rimg \neq \emptyset @
+                n \mapsto min (succ \limg prev \rimg)\} @
+    fix Step \{node \mapsto 0\}
+\end{axdef}
+
+\begin{axdef}{[X]}
+  fix: (X \pfun X) \fun X \pfun X
+\where
+  fix =
+  \lambda f: X \pfun X @
+  \lambda x: X @ \LET x' == f x @ \IF x = x' \THEN x \ELSE fix f x'
+\end{axdef}
+
+\begin{zed}
+  G ==
+    \{\ZD{A} \mapsto \ZD{B},
+      \ZD{A} \mapsto \ZD{C},
+      \ZD{C} \mapsto \ZD{D},
+      \ZD{D} \mapsto \ZD{E},
+      \ZD{B} \mapsto \ZD{E},
+      \ZD{B} \mapsto \ZD{A}\}
+\end{zed}

@@ -1,0 +1,103 @@
+UNIT LTX:Specials#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  A
+  GIVENTYPEINFO
+  GIVENTYPEINFO%giventypeinfo
+  GIVENTYPEINFO%typegen
+  GIVENTYPEINFO[]
+  S
+  TYPEINFO
+  TYPEINFO%giventypeinfo
+  TYPEINFO%typegen
+  TYPEINFO[]
+  X
+  Y
+  \DEEPFORCE
+  \DEEPFORCE[]
+  \EXT_
+  \EXT_[]
+  \FORCE
+  \FORCE[]
+  \MEMOIZE
+  \PRINT
+  \PRINT[]
+  \TRACE
+  \TRACE[]
+  \assumed_
+  \assumed_[]
+  \baseNum
+  \denotation
+  \efinset_
+  \efinset_[]
+  \emptyset
+  \emptyset[]
+  \finset_
+  \finset_[]
+  \giventypeinfo_
+  \giventypeinfo_[]
+  \langle,,\rangle
+  \langle,,\rangle[]
+  \nat
+  \num
+  \ran
+  \seq_
+  \seq_[]
+  \typeinfo_
+  \typeinfo_[]
+  _=_
+  _=_[]
+  _>_
+  _\fromdeno_
+  _\fromdeno_[]
+  _\fromfile_
+  _\fromfile_[]
+  _\fun_
+  _\fun_[]
+  _\in_
+  _\neq_
+  _\pfun_
+  _\pfun_[]
+  _\rel_
+  _\setminus_
+  _\setminus_[]
+  _\subseteq_
+  foldl
+  foldl[]
+  foldr
+  foldr[]
+  head
+  head[]
+  setreduce
+  setreduce[]
+  tail
+  tail[]
+LOCALS
+PROPERTIES
+  LTX:zapnotes.tex(753.1-755.11): \TRACE = {(X,\TRACE) | LTX:zapnotes.tex(754.13-754.27): \TRACE = {(x,x) | }};
+  LTX:zapnotes.tex(754.13-754.27): \TRACE[] = {(x,x) | };
+  LTX:zapnotes.tex(756.1-758.11): \PRINT = {((X,Y),\PRINT) | LTX:zapnotes.tex(757.13-757.32): \PRINT = {((x,y),y) | }};
+  LTX:zapnotes.tex(757.13-757.32): \PRINT[] = {((x,y),y) | };
+  LTX:zapnotes.tex(770.1-772.11): \FORCE = {(X,\FORCE) | LTX:zapnotes.tex(771.13-771.27): \FORCE = {(x,x) | }};
+  LTX:zapnotes.tex(771.13-771.27): \FORCE[] = {(x,x) | };
+  LTX:zapnotes.tex(773.1-775.11): \DEEPFORCE = {(X,\DEEPFORCE) | LTX:zapnotes.tex(774.17-774.31): \DEEPFORCE = {(x,x) | }};
+  LTX:zapnotes.tex(774.17-774.31): \DEEPFORCE[] = {(x,x) | };
+  LTX:zapnotes.tex(787.1-789.11): \assumed_ = {(X,X) | };
+  LTX:zapnotes.tex(788.18-788.18): \assumed_[] = UNIV;
+  LTX:zapnotes.tex(797.1-801.12): S = UNIV;
+  LTX:zapnotes.tex(812.1-816.12): S = {<x==x> | LTX:zapnotes.tex(815.11-815.13): (x,$NATIVEmakeNumber(0)) : _>_};
+  LTX:zapnotes.tex(831.1-833.11): \EXT_ = {(X,\EXT_) | LTX:zapnotes.tex(832.14-832.36): \EXT_ = {(S,S) | }};
+  LTX:zapnotes.tex(832.14-832.36): \EXT_[] = {(S,S) | };
+  LTX:zapnotes.tex(840.1-848.11): setreduce = {((X,Y),setreduce) | LTX:zapnotes.tex(844.6-847.73): setreduce = {((f,y,S),%r) | LTX:zapnotes.tex(845.9-847.73): %r = IF {#<>() | LTX:zapnotes.tex(845.13-845.25): S = EMPTY} THEN y ELSE /NATIVEmu {y' | LTX:zapnotes.tex(847.17-847.73): UNIV <= {<x==x> | LTX:zapnotes.tex(847.32-847.73): y' = setreduce (f,f (x,y),_\setminus_[] (S,{x}) )}}}};
+  LTX:zapnotes.tex(844.6-847.73): setreduce[] = {((f,y,%R1),%r) | LTX:zapnotes.tex(845.9-847.73): %r = IF {#<>() | LTX:zapnotes.tex(845.13-845.25): %R1 = EMPTY} THEN y ELSE /NATIVEmu {y' | LTX:zapnotes.tex(847.17-847.73): UNIV <= {<x==x> | LTX:zapnotes.tex(847.32-847.73): y' = setreduce[] (f,f (x,y),_\setminus_[] (%R1,{x}))}}};
+  LTX:zapnotes.tex(860.1-867.11): foldr = {((X,Y),foldr) | LTX:zapnotes.tex(863.11-866.48): foldr = {((f,y),%r) | LTX:zapnotes.tex(864.12-866.48): %r = {(s,%r) | LTX:zapnotes.tex(865.15-866.48): %r = IF {#<>() | LTX:zapnotes.tex(865.19-865.36): s = \langle,,\rangle[] EMPTY} THEN y ELSE f (head[] s,foldr (f,y) (tail[] s))}}};
+  LTX:zapnotes.tex(863.11-866.48): foldr[] = {((f,y),%r) | LTX:zapnotes.tex(864.12-866.48): %r = {(s,%r) | LTX:zapnotes.tex(865.15-866.48): %r = IF {#<>() | LTX:zapnotes.tex(865.19-865.36): s = \langle,,\rangle[] EMPTY} THEN y ELSE f (head[] s,foldr[] (f,y) (tail[] s))}};
+  LTX:zapnotes.tex(869.1-876.11): foldl = {((X,Y),foldl) | LTX:zapnotes.tex(872.11-875.47): foldl = {((y,f),%r) | LTX:zapnotes.tex(873.12-875.47): %r = {(s,%r) | LTX:zapnotes.tex(874.15-875.47): %r = IF {#<>() | LTX:zapnotes.tex(874.19-874.36): s = \langle,,\rangle[] EMPTY} THEN y ELSE foldl (f (y,head[] s),f) (tail[] s)}}};
+  LTX:zapnotes.tex(872.11-875.47): foldl[] = {((y,f),%r) | LTX:zapnotes.tex(873.12-875.47): %r = {(s,%r) | LTX:zapnotes.tex(874.15-875.47): %r = IF {#<>() | LTX:zapnotes.tex(874.19-874.36): s = \langle,,\rangle[] EMPTY} THEN y ELSE foldl[] (f (y,head[] s),f) (tail[] s)}};
+  LTX:zapnotes.tex(890.1-892.11): \efinset_ = {(X,\efinset_) | LTX:zapnotes.tex(891.18-891.48): \efinset_ = {(S,%r) | LTX:zapnotes.tex(891.40-891.48): %r = \finset_ X}};
+  LTX:zapnotes.tex(891.18-891.48): \efinset_[] = {(S,%r) | LTX:zapnotes.tex(891.40-891.48): %r = \finset_[]};
+  LTX:zapnotes.tex(925.1-927.11): \typeinfo_ = UNIV;
+  LTX:zapnotes.tex(928.1-930.11): \giventypeinfo_ = UNIV;
+  LTX:zapnotes.tex(944.1-946.11): _\fromfile_ = UNIV;
+  LTX:zapnotes.tex(947.1-949.11): _\fromdeno_ = UNIV;

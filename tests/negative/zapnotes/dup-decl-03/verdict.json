@@ -1,0 +1,18 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "redeclaration"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:facExec1#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(328.3-328.5)]:",
+    "illegal redeclaration of `fac'.",
+    "previous declaration: LTX:zapnotes.tex(327.3-327.5)"
+  ]
+}

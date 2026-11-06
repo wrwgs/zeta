@@ -1,0 +1,21 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "redeclaration"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBExec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(163.3-163.5)]:",
+    "illegal redeclaration of `day'.",
+    "previous declaration: LTX:bbook.tex(162.3-162.5)",
+    "ERROR[LTX:bbook.tex(163.3-163.5)]:",
+    "illegal redeclaration of `day'.",
+    "previous declaration: LTX:bbook.tex(162.3-162.5)"
+  ]
+}

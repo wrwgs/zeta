@@ -1,0 +1,10 @@
+{
+  "source": "bbook.tex",
+  "operator": "generic-actual",
+  "detail": "schema/known[DATE]",
+  "units": [
+    "BBExec#bbook",
+    "BBSpec#bbook",
+    "BBTest#bbook"
+  ]
+}

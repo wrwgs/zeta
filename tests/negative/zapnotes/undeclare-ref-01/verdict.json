@@ -1,0 +1,15 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker"
+  ],
+  "artifacts_changed": [
+    "pretty-text:Nat#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(75.40-75.47)]: undeclared `ZZundecl'"
+  ]
+}

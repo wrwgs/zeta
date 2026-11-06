@@ -1,0 +1,10 @@
+{
+  "source": "bbook.tex",
+  "operator": "swap-type",
+  "detail": "axdef/test : \\power BirthdayBook \\fun -> DATE",
+  "units": [
+    "BBExec#bbook",
+    "BBSpec#bbook",
+    "BBTest#bbook"
+  ]
+}

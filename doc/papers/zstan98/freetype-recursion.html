@@ -1,0 +1,405 @@
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Z Proposal</TITLE>
+<META NAME="description" CONTENT="Z Proposal">
+<META NAME="keywords" CONTENT="freetype-recursion">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="freetype-recursion.css">
+</HEAD>
+<BODY >
+
+<P>
+  <FONT SIZE="+1"><B>
+<A NAME="tex2html1"
+ HREF="freetype-recursion.html">WG.48.4</A>: Mutual Recursive Free Types in Different Paragraphs
+</B></FONT> 
+<P>
+  <FONT SIZE="-1">Proposal for the Z Standard, 
+        by Wolfgang Grieskamp (<TT>wg@cs.tu-berlin.de</TT>), November 11, 1998, 
+        (v3)  , <A NAME="tex2html2"
+ HREF="freetype-recursion.ps.gz">postscript version</A>
+</FONT> 
+  
+<P>
+  
+<P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+What</A>
+</H2>
+
+<P>
+Mutual recursive free types may appear in different paragraphs, and
+not just one paragraph where they are separated by <code>&amp;</code>.  It is in
+general possible to refer to Z names in a free type definition which are
+themselves defined in dependency of this free type.
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Why</A>
+</H2>
+
+<P>
+Mutual recursive free type definitions are an essential feature to let
+Z capture algebraic-axiomatic specification techniques.
+
+<P>
+The current solution to allow these definitions only in one single
+paragraph is unsatisfactory, since mutual recursive free type systems
+might become relative large (consider e.g. the abstract syntax of Z
+itself). A Z specification is in most practical cases given as a
+<EM>literal</EM> specification document, where the Z paragraphs are
+embedded in arbitrary documentation text. In these documents, Z
+paragraphs are <EM>atomic</EM> entities. Having one very large
+such entity is not adequate.
+
+<P>
+Furthermore, since mutual recursive free types are in principle
+allowed for Standard Z, it is un-orthogonal that is not possible to
+extend this recursion also to other simple names, such as in:
+
+<P>
+<BR>
+<IMG
+ WIDTH="214" HEIGHT="31" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img1.gif"
+ ALT="\begin{zed}TREE ::= leaf \vert node \ldata FOREST \rdata \\
+FOREST == \seq TREE
+\end{zed}">
+<BR>
+<P>
+This is syntactically not possible though it is semantically well
+understood.
+
+<P>
+
+<H2><A NAME="SECTION00003000000000000000">
+How</A>
+</H2>
+
+<P>
+
+<H5><A NAME="SECTION00003001000000000000">
+Dependencies</A>
+</H5>
+
+<P>
+This proposal depends on paragraph reordering, <A NAME="tex2html3"
+ HREF="paragraph-reordering.html">WG.48.3</A>.
+
+<P>
+
+<H5><A NAME="SECTION00003002000000000000">
+Conformance</A>
+</H5>
+
+<P>
+Tools working in batch mode which don't implement this feature may be
+still regarded as conforming, since transformations can
+build which translate free types for them (see syntactic and semantic
+transformations below).
+
+<P>
+
+<H5><A NAME="SECTION00003003000000000000">
+Syntactic Transformation</A>
+</H5>
+
+<P>
+The syntax of a single free type definition is 
+transformed (before type-checking) into the following paragraphs:
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>a declaration of a given type
+<DT>2.
+<DD>a version of the free type paragraph which doesn't introduces a
+new given type, but just postulates the free-typeness of a known
+  given type
+</DL>
+<P>
+For example, the specification fragment above is transformed (where
+<IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img2.gif"
+ ALT="$\angle$">
+denotes the new kind of free-type paragraph which doesn't
+introduces a new given type):
+
+<P>
+<BR>
+<IMG
+ WIDTH="210" HEIGHT="49" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img3.gif"
+ ALT="\begin{zed}[TREE]\\
+TREE \mathrel{\angle}~~ leaf \vert node \ldata FOREST \rdata \\
+FOREST == \seq TREE \\
+\end{zed}">
+<BR>
+<P>
+Now, paragraph reordering (<A NAME="tex2html4"
+ HREF="paragraph-reordering.html">WG.48.3</A>) takes over.
+
+<P>
+(It is not necessarily intended that that the <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img2.gif"
+ ALT="$\angle$">
+axiom becomes
+part of the visible Z syntax.)
+
+<P>
+
+<H5><A NAME="SECTION00003004000000000000">
+Semantic Transformations</A>
+</H5>
+
+<P>
+
+<P>
+The problem to handle is that the expressions used for the domain of
+constructor functions are in general opaque regarding dependencies to
+the fixed type of the <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img2.gif"
+ ALT="$\angle$">
+axiom.  They may contain references to
+constants defined by arbitrary axioms dependent of the fixed type.
+(See <I>TREE</I> and <I>FOREST</I> as a simple example of such references.)
+This hinders the syntactic substitution in the induction axiom
+generated from a free type (Clause 15.2.3.1).  Consider a type
+
+<P>
+<BR>
+<IMG
+ WIDTH="62" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img4.gif"
+ ALT="\begin{zed}f ~~\angle ~~ c \ldata e \rdata
+\end{zed}">
+<BR>
+<P>
+The induction axiom states:
+
+<P>
+<BR>
+<IMG
+ WIDTH="326" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img5.gif"
+ ALT="\begin{zed}\forall F: \power f \vert (\forall y : (\mu f == F @ e) @ c~y \in F) @ f = F
+\end{zed}">
+<BR>
+<P>
+The <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img6.gif"
+ ALT="$\mu$">
+phrase only captures direct occurrences of <I>f</I> in <I>e</I>.
+
+<P>
+There is a solution to this problem which I will describe below. On
+the one hand, this solution enhances the power of the free-type
+construct to allow definitions such as <I>TREE</I> and <I>FOREST</I>, but on the
+other also puts a constraint on free types which is not present in the
+current standard. (This constraint, however, may be regarded as
+excluding strange free-type inductions which are unwanted anyway.)
+
+<P>
+The solution bases on the observation that in free type systems, the
+recursive occurrences of interest during fixpoint-construction are
+visible in the domain type of the constructor functions. Let the
+domain expression, <I>e</I>, have type 
+<!-- MATH: $\power \tau[f]$ -->
+<IMG
+ WIDTH="40" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img7.gif"
+ ALT="$\power \tau[f]$">
+(where <IMG
+ WIDTH="28" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img8.gif"
+ ALT="$\tau[f]$">denotes a type parameterized over <I>f</I>), then the induction axiom is
+reformulated as:
+
+<P>
+<BR>
+<IMG
+ WIDTH="317" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img9.gif"
+ ALT="\begin{zed}\ldots \forall F: \power f \vert (\forall y : e \cap \tau[F] @ c~y \in F) @ f = F \ldots
+\end{zed}">
+<BR>
+<P>
+The expression 
+<!-- MATH: $e \cap \tau[w]$ -->
+<IMG
+ WIDTH="56" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img10.gif"
+ ALT="$e \cap \tau[w]$">
+denotes a set with the opaque
+``structure'' of <I>e</I> but with elements ``embedded'' in this structure
+which come from <I>w</I> - garbage from the <I>f</I> currently fixed is
+excluded this way.  For the <I>TREE</I> example above, e.g., we get the
+induction axiom:
+
+<P>
+<BR>
+<IMG
+ WIDTH="546" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img11.gif"
+ ALT="\begin{zed}\forall F: \power TREE \vert
+leaf \in F \land
+(\forall y: FOREST \cap \power (\num \cross F) @ node~y \in F) @ FOREST = F
+\end{zed}">
+<BR>
+<P>
+If a prover uses this axiom for induction, it may simplify the
+expression 
+<!-- MATH: $FOREST \cap \power(\num \cross F)$ -->
+<IMG
+ WIDTH="140" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img12.gif"
+ ALT="$FOREST \cap \power(\num \cross F)$">
+- which after
+unfolding of <I>FOREST</I> and applying distributivity of intersection and
+sequence axioms yields <IMG
+ WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img13.gif"
+ ALT="$\seq F$">.
+
+<P>
+The restriction imposed by this solution is that only those
+occurrences of <I>f</I> are captured by induction which appear in the type
+<IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img14.gif"
+ ALT="$\tau$">.
+Consider, e.g., the following type definition 
+
+<P>
+<BR>
+<IMG
+ WIDTH="233" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img15.gif"
+ ALT="\begin{zed}T ::= c \ldata \finset \{ x:T; f: T \inj \nat @ f~x \} \rdata
+\end{zed}">
+<BR>
+<P>
+The occurrence of T in the constructors domain will not be considered
+in the refined version of the induction above, since the type of the
+constructors domain elements is 
+<!-- MATH: $\power \num$ -->
+<IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img16.gif"
+ ALT="$\power \num$">.
+But in the current
+definition of induction in the Standard, it would be captured by syntactic
+substitution. 
+
+<P>
+I haven't found a more useful example which raises the same problem,
+and I doubt that it exists.  Recursive free-types are a tool for
+describing trees and terms, where the structure of the defined object
+is replicated at recursion points. In all these applications, the
+recursive references are visible in the constructor domains. For the
+other cases, if the proposed modification of induction would be
+accepted, then a possible desired fixpoint would just not be
+expressible by free-types, without effecting the consistency or power
+of the Z language itself.
+
+<P>
+
+<P><P>
+<BR>
+<EM>Mutual Recursion</EM>: Because of the possibility of opaque
+references to other free types in the domain of a constructor,
+dependencies between free types are not obvious from the syntax. The
+solution to this is to place the induction axiom at the end of a
+section, performing simultaneous induction over <EM>all</EM> free types
+in the section (using the type 
+<!-- MATH: $\tau_{ij}[F_1,\ldots,F_r]$ -->
+<IMG
+ WIDTH="94" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img17.gif"
+ ALT="$\tau_{ij}[F_1,\ldots,F_r]$">
+in the
+intersection described above). 
+
+<P>
+
+<H5><A NAME="SECTION00003005000000000000">
+Updates to WD 1.5</A>
+</H5>
+
+<P>
+<UL>
+<LI>Narrative: add a comment (e.g. to Annex G) such as:
+  <BLOCKQUOTE>
+Mutual recursive free types are allowed. It is in general possible
+    to refer to Z names in a free type definition which are defined
+    themselves in dependency of the free type.
+  </BLOCKQUOTE>
+<LI>Normative:
+  <UL>
+<LI>Clause 7, Lexis: remove <code>&amp;</code> as an ASCII keyword
+<LI>Clause 8 and 9, Concrete and Annotated Syntax: remove the
+    <code>&amp;</code> parts of free types
+<LI>Clause 8 and 9, Concrete and Annotated Syntax: add a variant
+    for the <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img2.gif"
+ ALT="$\angle$">-style of free-type axioms
+<LI>Clause 11, Syntactic Transformation Rules: transform ::=    paragraphs to given type and <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img2.gif"
+ ALT="$\angle$">-style axioms
+<LI>Clause 13 (or 12): In 13.2.3.4: Considering that ::=    paragraphs do not appear any more: 
+    <UL>
+<LI>reduce this to the simpler case of just one free type
+      definition in the <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img2.gif"
+ ALT="$\angle$">-style
+<LI>don't add <I>f</I> to <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="freetype-recursion-img18.gif"
+ ALT="$\Gamma_0$">
+<LI>treat <I>f</I> as a reference expression
+    </UL>
+<LI>Clause 15.2.3.1, Semantic Transformation Rules: emit the
+    constructor declarations and axioms for totality, injectivity, and
+    disjointness at the place of each individual free type. Put a
+    simultaneous induction axiom as described above for <EM>all</EM>
+    free types at the end of a section.
+  </UL></UL>  
+
+<P>
+
+<H5><A NAME="SECTION00003006000000000000">
+Variants</A>
+</H5>
+Things become easier if proposal <A NAME="tex2html5"
+ HREF="multiple-decl.html">WG.48.5</A>, ``multiple
+declarations'', would be accepted.  Then the new paragraph kind <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="freetype-recursion-img2.gif"
+ ALT="$\angle$">is not necessary, ::= can be used instead.
+
+<P>
+<BR> <HR>
+<ADDRESS>
+<a href="mailto:wg@cs.tu-berlin.de">Wolfgang Grieskamp</a>
+</ADDRESS>
+</BODY>
+</HTML>

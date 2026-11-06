@@ -1,0 +1,8 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:facNonExec#zapnotes}
+
+\begin{axdef}
+  fac: \nat \fun \nat
+\where
+  fac 0 = 1 \\
+  \forall x: \nat | x > 0 @ fac x = x * fac (x - 1)
+\end{axdef}

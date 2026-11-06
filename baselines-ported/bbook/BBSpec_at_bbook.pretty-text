@@ -1,0 +1,59 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:BBSpec#bbook}
+
+\begin{zed}
+  [NAME]
+\end{zed}
+
+\begin{zed}
+  [DATE]
+\end{zed}
+
+\begin{schema}{BirthdayBook}
+  known: \power NAME \\
+  birthday: NAME \pfun DATE
+\where
+  known = \dom birthday
+\end{schema}
+
+\begin{schema}{InitBirthdayBook}
+  BirthdayBook
+\where
+  birthday = \emptyset
+\end{schema}
+
+\begin{schema}{AddBirthday}
+  \Delta BirthdayBook \\
+  name?: NAME \\
+  date?: DATE
+\where
+  name? \notin known \\
+  birthday' = birthday \cup \{name? \mapsto date?\}
+\end{schema}
+
+\begin{schema}{FindBirthday}
+  \Xi BirthdayBook \\
+  name?: NAME \\
+  date!: DATE
+\where
+  name? \in known \\
+  date! = birthday name?
+\end{schema}
+
+\begin{schema}{Remind}
+  \Xi BirthdayBook \\
+  today?: DATE \\
+  cards!: \power NAME
+\where
+  cards! =
+  \{  n: NAME
+      |
+        n \in known \\
+        birthday n = today? @ n\}
+\end{schema}
+
+\begin{schema}{Remove}
+  \Delta BirthdayBook \\
+  name?: NAME
+\where
+  birthday' = \{name?\} \ndres birthday
+\end{schema}

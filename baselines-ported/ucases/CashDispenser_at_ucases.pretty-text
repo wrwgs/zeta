@@ -1,0 +1,98 @@
+\zsection[LTX:UseCases#ucases,
+          LTX:Toolkit#Toolkit]{LTX:CashDispenser#ucases}
+
+\begin{zed}
+  ACTOR ::= user | dispenser
+\end{zed}
+
+\begin{zed}
+  ACTION ::=
+    askCard
+    | putCard
+    | ejectCard
+    | takeCard
+    | askAmount
+    | putAmount \ldata \num \rdata
+    | ejectMoney \ldata \num \rdata
+    | takeMoney
+\end{zed}
+
+\begin{schema}{State}
+  reserves: \num
+\end{schema}
+
+\begin{schema}{CantDraw}
+  \Xi State \\
+  amount?: \num
+\where
+  reserves < amount?
+\end{schema}
+
+\begin{schema}{Draw}
+  \Delta State \\
+  amount?: \num
+\where
+  reserves \geq amount? \\
+  reserves' = reserves - amount?
+\end{schema}
+
+\begin{zed}
+  \mkrel ==
+    \lambda Op: \power \Delta State @
+    \{Op @ (\theta State,\theta State' )\}
+\end{zed}
+
+\begin{axdef}
+  Normal,InvalidCard,NoReserves,System: Fragment [ACTOR,ACTION,State]
+\where
+  Normal =
+    dispenser \ucmk askCard \ucthen
+      user \ucmk putCard \ucthen
+        dispenser \ucmk askAmount \ucthen
+          \ucselect
+          \{  amount?: \num @
+                  user \ucmkt putAmount amount? \uctrans
+                    \mkrel [\Delta State | Draw] \ucthen
+                  dispenser \ucmk ejectCard \ucthen
+                    user \ucmk takeCard \ucthen
+                      dispenser \ucmk ejectMoney amount? \ucthen
+                        user \ucmk takeMoney\} \\
+  InvalidCard =
+    user \ucmk putCard \ucthen
+      dispenser \ucmk ejectCard \ucthen user \ucmk takeCard \\
+  NoReserves =
+    \ucselect
+    \{  amount?: \num @
+            user \ucmkt putAmount amount? \uctrans
+              \mkrel [\Delta State | CantDraw] \ucthen
+            dispenser \ucmk ejectCard \ucthen user \ucmk takeCard\} \\
+  System = \ucrepeat (Normal \ucexcept InvalidCard \ucexcept NoReserves)
+\end{axdef}
+
+\begin{zed}
+  d_1 ==
+    \langle \{(1,dispenser \ucmki askCard),
+              (2,user \ucmki putCard),
+              (3,dispenser \ucmki askAmount),
+              (4,user \ucmki putAmount 400),
+              (5,dispenser \ucmki ejectCard),
+              (6,user \ucmki takeCard),
+              (7,dispenser \ucmki ejectMoney 400),
+              (8,user \ucmki takeMoney)\} \rangle
+\end{zed}
+
+\begin{zed}
+  d_2 ==
+    \langle \{(1,dispenser \ucmki askCard),
+              (2,user \ucmki putCard),
+              (3,dispenser \ucmki ejectCard),
+              (4,user \ucmki takeCard)\} \rangle
+\end{zed}
+
+\begin{zed}
+  \sigma_1 == \lblot reserves == 600 \rblot
+\end{zed}
+
+\begin{zed}
+  \sigma_2 == \lblot reserves == 800 \rblot
+\end{zed}

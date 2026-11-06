@@ -1,0 +1,26 @@
+UNIT LTX:Genericity#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  X
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _=_
+  _\fun_
+  _\in_
+  _\in_[]
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  id
+  id[]
+LOCALS
+PROPERTIES
+  LTX:zapnotes.tex(429.1-431.11): id = {(X,id) | LTX:zapnotes.tex(430.9-430.33): id = {(x,x) | LTX:zapnotes.tex(430.17-430.23): x : X}};
+  LTX:zapnotes.tex(430.9-430.33): id[] = {(x,x) | };

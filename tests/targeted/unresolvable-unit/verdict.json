@@ -1,0 +1,10 @@
+{
+  "expect": "unresolvable-unit",
+  "kinds": [
+    "unresolvable-unit"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:Tunresolvableunit.tex(7.3-7.49)]:",
+    "`NoSuchSectionHere' cannot be resolved as a unit"
+  ]
+}

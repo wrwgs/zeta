@@ -1,0 +1,143 @@
+UNIT LTX:BBTest#bbook
+PARENTS
+  LTX:BBExec#bbook
+  LTX:BBSpec#bbook
+  LTX:Toolkit#Toolkit
+GLOBALS
+  AddBirthday
+  Barbara
+  BirthdayBook
+  DATE
+  FindBirthday
+  INPUT
+  INPUT%giventypeinfo
+  INPUT%typegen
+  Martin
+  NAME
+  OUTPUT
+  OUTPUT%giventypeinfo
+  OUTPUT%typegen
+  Remind
+  Remove
+  UniformAdd
+  UniformFind
+  UniformOps
+  UniformRemind
+  UniformRemove
+  Werner
+  \#
+  \#[]
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \langle,,\rangle
+  \langle,,\rangle[]
+  \nat
+  \num
+  \ran
+  \seq_
+  \seq_[]
+  _=_
+  _=_[]
+  _\fun_
+  _\fun_[]
+  _\in_
+  _\in_[]
+  _\limg_\rimg
+  _\limg_\rimg[]
+  _\mapsto_
+  _\mapsto_[]
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  addI
+  date
+  date1
+  date2
+  dateO
+  findI
+  front
+  front[]
+  in1
+  in2
+  in3
+  in3a
+  last
+  last[]
+  namesO
+  okayO
+  out1
+  out2
+  out2a
+  out3
+  out3a
+  remindI
+  removeI
+  step
+  test
+LOCALS
+  %l
+  %l1
+  %l10
+  %l11
+  %l12
+  %l13
+  %l2
+  %l3
+  %l4
+  %l5
+  %l6
+  %l7
+  %l8
+  %l9
+  \ran[]
+PROPERTIES
+  LTX:bbook.tex(348.2-352.28): INPUT%giventypeinfo = #GivenTypeInfo (addI<(NAME,DATE)>|findI<NAME>|remindI<DATE>|removeI<NAME>);
+  LTX:bbook.tex(349.3-349.38): addI = {((%a1,%a2),#addI(%a1,%a2)) | LTX:bbook.tex(349.16-349.19): %a1 : NAME; LTX:bbook.tex(349.28-349.31): %a2 : DATE};
+  LTX:bbook.tex(349.3-349.38);
+  LTX:bbook.tex(350.3-350.26): findI = {(%a1,#findI(%a1)) | LTX:bbook.tex(350.3-350.26): %a1 : NAME};
+  LTX:bbook.tex(350.3-350.26);
+  LTX:bbook.tex(351.3-351.28): remindI = {(%a1,#remindI(%a1)) | LTX:bbook.tex(351.3-351.28): %a1 : DATE};
+  LTX:bbook.tex(351.3-351.28);
+  LTX:bbook.tex(352.3-352.28): INPUT = \ran[] addI + \ran[] findI + \ran[] remindI + \ran[] removeI;
+  LTX:bbook.tex(352.3-352.28): removeI = {(%a1,#removeI(%a1)) | LTX:bbook.tex(352.3-352.28): %a1 : NAME};
+  LTX:bbook.tex(353.2-356.34): OUTPUT%giventypeinfo = #GivenTypeInfo(okayO|dateO<DATE>|namesO<!NAME>);
+  LTX:bbook.tex(354.3-354.7);
+  LTX:bbook.tex(355.3-355.26): dateO = {(%a1,#dateO(%a1)) | LTX:bbook.tex(355.3-355.26): %a1 : DATE};
+  LTX:bbook.tex(355.3-355.26);
+  LTX:bbook.tex(356.3-356.34): OUTPUT = {#okayO()} + \ran[] dateO + \ran[] namesO;
+  LTX:bbook.tex(356.3-356.34): namesO = {(%a1,#namesO(%a1)) | LTX:bbook.tex(356.17-356.27): %a1 <= NAME};
+  LTX:bbook.tex(364.5-368.24): UniformAdd = {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==#okayO()>\date?,name? | LTX:bbook.tex(364.5-364.23): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(364.5-364.23): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(366.8-366.41): ((name?,date?),in) : addI; LTX:bbook.tex(367.14-367.24): <birthday==birthday,birthday'==birthday',date?==date?,known==known ,known'==known',name?==name?> : AddBirthday};
+  LTX:bbook.tex(370.5-374.40): UniformFind = {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out>\date!,name? | LTX:bbook.tex(370.5-370.23): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(370.5-370.23): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(372.8-372.33): (name?,in) : findI; LTX:bbook.tex(373.14-373.25): <birthday==birthday,birthday'==birthday',date!==date!,known==known ,known'==known',name?==name?> : FindBirthday; LTX:bbook.tex(374.14-374.40): (date!,out) : dateO};
+  LTX:bbook.tex(376.5-380.43): UniformRemind = {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out>\today?,cards! | LTX:bbook.tex(376.5-376.23): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(376.5-376.23): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(378.9-378.37): (today?,in) : remindI; LTX:bbook.tex(379.15-379.20): <birthday==birthday,birthday'==birthday',cards!==cards!,known==known ,known'==known',today?==today?> : Remind; LTX:bbook.tex(380.15-380.43): (cards!,out) : namesO};
+  LTX:bbook.tex(382.5-386.24): UniformRemove = {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==#okayO()>\name? | LTX:bbook.tex(382.5-382.23): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(382.5-382.23): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(384.8-384.35): (name?,in) : removeI; LTX:bbook.tex(385.14-385.19): <birthday==birthday,birthday'==birthday',known==known,known'==known' ,name?==name?> : Remove};
+  LTX:bbook.tex(409.17-409.43): %l = {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> | LTX:bbook.tex(409.17-409.26): <birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> : UniformAdd} + {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> | LTX:bbook.tex(409.33-409.43): <birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> : UniformFind};
+  LTX:bbook.tex(409.17-409.62): %l1 = {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> | LTX:bbook.tex(409.17-409.43): <birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> : %l} + {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> | LTX:bbook.tex(409.50-409.62): <birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> : UniformRemind};
+  LTX:bbook.tex(409.17-409.81): %l2 = {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> | LTX:bbook.tex(409.17-409.62): <birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> : %l1} + {<birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> | LTX:bbook.tex(409.69-409.81): <birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> : UniformRemove};
+  LTX:bbook.tex(417.11-418.85): step = {((in,out),%r) | LTX:bbook.tex(418.1-418.85): %r = {(<birthday==birthday,known==known> ,<birthday==birthday',known==known'>) | LTX:bbook.tex(418.26-418.35): <birthday==birthday,birthday'==birthday',in==in,known==known ,known'==known',out==out> : %l2; LTX:bbook.tex(418.4-418.22): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(418.4-418.22): <birthday==birthday,known==known> : BirthdayBook}};
+  LTX:bbook.tex(418.26-418.35): UniformOps = %l2;
+  LTX:bbook.tex(431.10-434.84): test = {(init,%r) | LTX:bbook.tex(432.11-434.84): %r = {((is,os),%r) | LTX:bbook.tex(432.54-432.67): \#[] is = \#[] os; LTX:bbook.tex(433.12-434.84): %r = IF {#<>() | LTX:bbook.tex(433.16-433.24): \#[] is = $NATIVEmakeNumber(0)} THEN init ELSE _\limg_\rimg[] (step (last[] is,last[] os) ,test init (front[] is,front[] os))}};
+  LTX:bbook.tex(441.11-441.65): %l3 = date <day==$NATIVEmakeNumber(7),month==$NATIVEmakeNumber(5) ,year==$NATIVEmakeNumber(1929)>;
+  LTX:bbook.tex(442.11-442.67): %l4 = date <day==$NATIVEmakeNumber(18),month==$NATIVEmakeNumber(11) ,year==$NATIVEmakeNumber(1935)>;
+  LTX:bbook.tex(446.10-446.44): %l5 = \langle,,\rangle[] {($NATIVEmakeNumber(1),addI (Werner,%l3))};
+  LTX:bbook.tex(446.10-446.44): in1 = %l5;
+  LTX:bbook.tex(447.10-447.30): %l6 = \langle,,\rangle[] {($NATIVEmakeNumber(1),#okayO())};
+  LTX:bbook.tex(447.10-447.30): out1 = %l6;
+  LTX:bbook.tex(451.12-451.61): %l7 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),addI (Werner,%l3))} + {($NATIVEmakeNumber(2),findI Werner)});
+  LTX:bbook.tex(451.12-451.61): in2 = %l7;
+  LTX:bbook.tex(452.12-452.46): %l8 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),#okayO())} + {($NATIVEmakeNumber(2),dateO %l3)});
+  LTX:bbook.tex(452.12-452.46): out2 = %l8;
+  LTX:bbook.tex(453.12-453.46): %l9 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),#okayO())} + {($NATIVEmakeNumber(2),dateO %l4)});
+  LTX:bbook.tex(453.12-453.46): out2a = %l9;
+  LTX:bbook.tex(457.10-459.54): %l10 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),addI (Werner,%l3))} + {($NATIVEmakeNumber(2),addI (Barbara,%l4))} + {($NATIVEmakeNumber(3),addI (Martin,%l4))} + {($NATIVEmakeNumber(4),findI Werner)} + {($NATIVEmakeNumber(5),remindI %l4)});
+  LTX:bbook.tex(457.10-459.54): in3 = %l10;
+  LTX:bbook.tex(460.12-462.54): %l11 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),addI (Werner,%l3))} + {($NATIVEmakeNumber(2),addI (Werner,%l4))} + {($NATIVEmakeNumber(3),addI (Barbara,%l4))} + {($NATIVEmakeNumber(4),findI Werner)} + {($NATIVEmakeNumber(5),remindI %l4)});
+  LTX:bbook.tex(460.12-462.54): in3a = %l11;
+  LTX:bbook.tex(462.40-462.46): date2 = %l4;
+  LTX:bbook.tex(463.11-464.53): %l12 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),#okayO())} + {($NATIVEmakeNumber(2),#okayO())} + {($NATIVEmakeNumber(3),#okayO())} + {($NATIVEmakeNumber(4),dateO %l3)} + {($NATIVEmakeNumber(5),namesO ({Barbara} + {Martin}))});
+  LTX:bbook.tex(463.11-464.53): out3 = %l12;
+  LTX:bbook.tex(465.12-466.46): %l13 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),#okayO())} + {($NATIVEmakeNumber(2),#okayO())} + {($NATIVEmakeNumber(3),#okayO())} + {($NATIVEmakeNumber(4),dateO %l3)} + {($NATIVEmakeNumber(5),namesO {Barbara})});
+  LTX:bbook.tex(465.12-466.46): out3a = %l13;
+  LTX:bbook.tex(465.34-465.38): okayO = #okayO();
+  LTX:bbook.tex(465.46-465.52): date1 = %l3;

@@ -1,0 +1,6 @@
+plugin zeta.tools.latex.LatexAdaptor
+plugin zeta.tools.zparser.ParserAdaptor
+plugin zeta.tools.zchecker.CheckerAdaptor
+plugin zeta.tools.nmzreducer.ReducerAdaptor
+plugin zeta.tools.nzap.ZapAdaptor
+plugin zeta.tools.pp.PrettyPrinterAdaptor

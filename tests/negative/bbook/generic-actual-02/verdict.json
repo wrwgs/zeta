@@ -1,0 +1,23 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "incompatActualization"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBExec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(169.37-169.45)]:",
+    "invalid actualization of `day'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)",
+    "ERROR[LTX:bbook.tex(169.37-169.45)]:",
+    "invalid actualization of `day'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)"
+  ]
+}

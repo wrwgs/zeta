@@ -1,0 +1,23 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load zapnotes.tex
++ scanning zapnotes.tex
+- load zapnotes.tex
+>>> e -u Genericity#zapnotes \{x:\num | x \in 1 \upto 1024; x \mod 2 = 0\}
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:Genericity#zapnotes
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:Genericity#zapnotes
++ reducing LTX:Genericity#zapnotes
++ compiling LTX:Genericity#zapnotes
++ reducing LTX:Toolkit#Toolkit
++ compiling LTX:Toolkit#Toolkit
+= {2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,...}
+- e -u Genericity#zapnotes \{x: \num | x \in 1 \upto 1024; x \mod 2 = 0 \}
+= good bye.

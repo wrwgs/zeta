@@ -1,0 +1,10 @@
+{
+  "source": "bbook.tex",
+  "operator": "dup-decl",
+  "detail": "axdef/test duplicated",
+  "units": [
+    "BBExec#bbook",
+    "BBSpec#bbook",
+    "BBTest#bbook"
+  ]
+}

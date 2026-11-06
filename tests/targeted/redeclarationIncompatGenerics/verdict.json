@@ -1,0 +1,13 @@
+{
+  "expect": "redeclarationIncompatGenerics",
+  "kinds": [
+    "redeclarationIncompatGenerics"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TredeclarationIncompatGenerics.tex(14.3-14.4)]:",
+    "incompatible genericity of redeclared `gg'.",
+    "previous declaration: LTX:TredeclarationIncompatGenerics.tex(11.3-11.4)",
+    "previous genericity : 1 parameters",
+    "new genericity      : none"
+  ]
+}

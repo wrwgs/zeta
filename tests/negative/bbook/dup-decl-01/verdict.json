@@ -1,0 +1,23 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "redeclaration"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBSpec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(64.3-64.7)]:",
+    "illegal redeclaration of `known'.",
+    "previous declaration: LTX:bbook.tex(63.3-63.7)",
+    "ERROR[LTX:bbook.tex(64.3-64.7)]:",
+    "illegal redeclaration of `known'.",
+    "previous declaration: LTX:bbook.tex(63.3-63.7)",
+    "ERROR[LTX:bbook.tex(64.3-64.7)]:",
+    "illegal redeclaration of `known'."
+  ]
+}

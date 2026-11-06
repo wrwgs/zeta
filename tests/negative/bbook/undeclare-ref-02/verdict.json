@@ -1,0 +1,16 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBExec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(169.37-169.44)]: undeclared `ZZundecl'",
+    "ERROR[LTX:bbook.tex(169.37-169.44)]: undeclared `ZZundecl'"
+  ]
+}

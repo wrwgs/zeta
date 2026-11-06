@@ -1,0 +1,10 @@
+{
+  "expect": "ambiguous-unit",
+  "kinds": [
+    "ambiguous-unit"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:Tambiguousunit.tex(7.3-7.32)]:",
+    "`Dup' is ambigious. possible completions: LTX:Dup#DupB, LTX:Dup#DupA"
+  ]
+}

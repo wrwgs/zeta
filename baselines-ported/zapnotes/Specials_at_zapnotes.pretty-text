@@ -1,0 +1,111 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:Specials#zapnotes}
+
+\begin{zed}
+  \TRACE == \lambda x: X @ x
+\end{zed}
+
+\begin{zed}
+  \PRINT == \lambda x: X; y: Y @ y
+\end{zed}
+
+\begin{zed}
+  \FORCE == \lambda x: X @ x
+\end{zed}
+
+\begin{zed}
+  \DEEPFORCE == \lambda x: X @ x
+\end{zed}
+
+\zgeneric{1 (\assumed \_)}
+
+\begin{zed}
+  \assumed X == X
+\end{zed}
+
+\begin{schema}{S}
+  x: \num
+\where
+  \assumed [ | x > 0]
+\end{schema}
+
+%%macro \assert 1 [ | #1 ]
+
+\begin{schema}{S}
+  x: \num
+\where
+  [ | x > 0]
+\end{schema}
+
+\zfunction{90 (\EXT \_)}
+
+\begin{zed}
+  \EXT \_ == \lambda S: \power X @ S
+\end{zed}
+
+\begin{axdef}{[X,Y]}
+  setreduce: (X \cross Y \pfun Y) \cross Y \cross (\power X) \pfun Y
+\where
+  setreduce =
+  \lambda f: X \cross Y \pfun Y; y: Y; S: \power X @
+    \IF S = \emptyset \THEN y
+    \ELSE
+      \mu
+        y': Y | \forall x: X @ y' = setreduce (f,f (x,y),S \setminus \{x\})
+        @ y'
+\end{axdef}
+
+\begin{axdef}{[X,Y]}
+  foldr: (X \cross Y \pfun Y) \cross Y \fun \seq X \pfun Y
+\where
+  foldr =
+  \lambda f: X \cross Y \pfun Y; y: Y @
+  \lambda s: \seq X @
+    \IF s = \langle \{\} \rangle \THEN y
+    \ELSE f (head s,foldr (f,y)(tail s))
+\end{axdef}
+
+\begin{axdef}{[X,Y]}
+  foldl: Y \cross (Y \cross X \pfun Y) \fun \seq X \pfun Y
+\where
+  foldl =
+  \lambda y: Y; f: Y \cross X \pfun Y @
+  \lambda s: \seq X @
+    \IF s = \langle \{\} \rangle \THEN y
+    \ELSE foldl (f (y,head s),f)(tail s)
+\end{axdef}
+
+\zfunction{90 (\efinset \_)}
+
+\begin{zed}
+  \efinset \_ == \lambda S: \power X @ \finset X
+\end{zed}
+
+\begin{zed}
+  [TYPEINFO]
+\end{zed}
+
+\begin{zed}
+  [GIVENTYPEINFO]
+\end{zed}
+
+\zgeneric{10 (\typeinfo \_)}
+\zgeneric{10 (\giventypeinfo \_)}
+
+\begin{axdef}{[A]}
+  \typeinfo \_: TYPEINFO [A]
+\end{axdef}
+
+\begin{axdef}{[A]}
+  \giventypeinfo \_: GIVENTYPEINFO [A]
+\end{axdef}
+
+\zfunction{9 (\_ \fromfile \_)}
+\zfunction{9 (\_ \fromdeno \_)}
+
+\begin{axdef}{[A]}
+  \_ \fromfile \_: TYPEINFO [A] \cross \denotation \pfun \seq A
+\end{axdef}
+
+\begin{axdef}{[A]}
+  \_ \fromdeno \_: TYPEINFO [A] \cross \denotation \pfun \seq A
+\end{axdef}

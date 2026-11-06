@@ -1,0 +1,10 @@
+{
+  "source": "bbook.tex",
+  "operator": "undeclare-ref",
+  "detail": "axdef/test -> ZZundecl",
+  "units": [
+    "BBExec#bbook",
+    "BBSpec#bbook",
+    "BBTest#bbook"
+  ]
+}

@@ -1,0 +1,23 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load DupA.tex
++ scanning DupA.tex
+- load DupA.tex
+>>> load DupB.tex
++ scanning DupB.tex
+- load DupB.tex
+>>> load Tambiguousunit.tex
++ scanning Tambiguousunit.tex
+- load Tambiguousunit.tex
+>>> c -u Tambiguousunit#Tambiguousunit
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:Tambiguousunit#Tambiguousunit
+! ERROR[LTX:Tambiguousunit.tex(7.3-7.32)]:
+!   `Dup' is ambigious. possible completions: LTX:Dup#DupB, LTX:Dup#DupA
+= good bye.

@@ -1,0 +1,11 @@
+{
+  "expect": "cyclic",
+  "kinds": [
+    "cyclic"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:Tcyclic.tex(11.8-11.8)]:",
+    "cyclic definition. involving names     : b,a",
+    "involving references: LTX:Tcyclic.tex(14.8-14.8)"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "bbook.tex",
+  "operator": "undeclare-ref",
+  "detail": "schema/known -> ZZundecl",
+  "units": [
+    "BBExec#bbook",
+    "BBSpec#bbook",
+    "BBTest#bbook"
+  ]
+}

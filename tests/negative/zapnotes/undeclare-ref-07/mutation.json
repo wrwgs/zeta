@@ -1,0 +1,18 @@
+{
+  "source": "zapnotes.tex",
+  "operator": "undeclare-ref",
+  "detail": "axdef/queens_1 -> ZZundecl",
+  "units": [
+    "DataInput#zapnotes",
+    "FreeTypes#zapnotes",
+    "FreeTypes2#zapnotes",
+    "Genericity#zapnotes",
+    "Nat#zapnotes",
+    "Specials#zapnotes",
+    "Stepping#zapnotes",
+    "facExec1#zapnotes",
+    "facExec2#zapnotes",
+    "facNonExec#zapnotes",
+    "queens#zapnotes"
+  ]
+}

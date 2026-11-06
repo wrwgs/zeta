@@ -1,0 +1,10 @@
+{
+  "section": "DataInput",
+  "unit": "DataInput#zapnotes",
+  "kind": "expr",
+  "line": 982,
+  "query": "\\typeinfo Seq[\\power [x: \\num; y: \\num]] ~ \\fromdeno \\ZD{cons \\{1 2\\} cons \\{\\} cons \\{5 6 7 8\\} nil nil}",
+  "yields": [
+    "<cons({<x==1,y==2>},cons({},cons({<x==5,y==6>,<x==7,y==8>},nil))),nil>"
+  ]
+}

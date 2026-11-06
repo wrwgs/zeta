@@ -1,0 +1,8 @@
+<1>
+LaTeXFragment {
+ String
+  header:
+  ;
+ String content:
+  "\includeDocument{$ZETABASE/lib/ztoolkits/Toolkit.tex}";
+}

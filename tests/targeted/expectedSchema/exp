@@ -1,0 +1,19 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load TexpectedSchema.tex
++ scanning TexpectedSchema.tex
+- load TexpectedSchema.tex
+>>> c -u TexpectedSchema#TexpectedSchema
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:TexpectedSchema#TexpectedSchema
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:TexpectedSchema#TexpectedSchema
+! ERROR[LTX:TexpectedSchema.tex(17.13-17.13)]:
+!   expected a schema type. found type: \baseNum
+= good bye.

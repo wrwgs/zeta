@@ -1,0 +1,28 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load bbook.tex
++ scanning bbook.tex
+- load bbook.tex
+>>> c -u BBSpec#bbook
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:BBSpec#bbook
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:BBSpec#bbook
+- c -u BBSpec#bbook
+>>> c -u BBExec#bbook
++ parsing section LTX:BBExec#bbook
++ type checking section LTX:BBExec#bbook
+- c -u BBExec#bbook
+>>> c -u BBTest#bbook
++ parsing section LTX:BBTest#bbook
++ type checking section LTX:BBTest#bbook
+- c -u BBTest#bbook
+>>> c -u Toolkit#Toolkit
+- c -u Toolkit#Toolkit
+= good bye.

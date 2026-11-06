@@ -1,0 +1,40 @@
+#!/bin/sh
+# ZETA 1.5 launcher -- runs the Java 21 port (classes).
+#
+# Every path is relative to this script, so the repository can live anywhere:
+#   <repo>/run/zeta              this script
+#   <repo>/run/zetabase          ZETABASE (zetarc, defaults.props, toolkits, LaTeX styles, libZAM)
+#   <repo>/classes          the ported classes (build them with harness/build.sh)
+#   <repo>/toolchain/jdk21       the JDK
+#
+# Usage:  run/zeta -b      batch shell (commands on stdin; `help` lists them)
+#         run/zeta -g      Swing GUI
+#
+# Overrides: ZETA_JAVA (JVM), ZETA_CLASSES (class path), ZETABASE.
+# Replaces the 2000-era $ZETABASE/bin/zeta, which hardcoded ZETABASE=/home/uebb/wg/et.
+
+set -e
+
+ZETAROOT=$(cd "$(dirname "$0")" && pwd)
+REPO=$(cd "$ZETAROOT/.." && pwd)
+ZETABASE=${ZETABASE:-$ZETAROOT/zetabase}
+export ZETABASE
+
+ZETA_JAVA=${ZETA_JAVA:-$REPO/toolchain/jdk21/bin/java}
+ZETA_CLASSES=${ZETA_CLASSES:-$REPO/classes}
+
+if [ ! -d "$ZETA_CLASSES" ] && [ ! -f "$ZETA_CLASSES" ]; then
+  echo "zeta: no classes at $ZETA_CLASSES -- run harness/build.sh first" >&2
+  exit 1
+fi
+
+TEXINPUTS=".:$ZETABASE/lib/latex:$ZETABASE/lib/ztoolkits:${TEXINPUTS}"
+export TEXINPUTS
+
+exec "$ZETA_JAVA" \
+    -Xmx512m \
+    -Dzeta.home="$ZETABASE" \
+    -Dzeta.latex.path="$TEXINPUTS" \
+    -Djava.library.path="$ZETABASE/lib/native/Linux-$(uname -m)" \
+    -cp "$ZETA_CLASSES" \
+    zeta.tools.sh.Driver "$@"

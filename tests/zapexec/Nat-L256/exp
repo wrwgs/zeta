@@ -1,0 +1,23 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load zapnotes.tex
++ scanning zapnotes.tex
+- load zapnotes.tex
+>>> p -u Nat#zapnotes \exists_1 ns == \{x: N | x~less~three \} @ ((ns \cross ns) \dres add) \in pfun[N \cross N,N]
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:Nat#zapnotes
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:Nat#zapnotes
++ reducing LTX:Nat#zapnotes
++ compiling LTX:Nat#zapnotes
++ reducing LTX:Toolkit#Toolkit
++ compiling LTX:Toolkit#Toolkit
+= *true*
+- p -u Nat#zapnotes \exists_1 ns == \{x: N | x~less~three \} @ ((ns \cross ns) \dres add) \in pfun[N \cross N,N]
+= good bye.

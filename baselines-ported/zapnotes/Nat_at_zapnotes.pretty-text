@@ -1,0 +1,46 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:Nat#zapnotes}
+
+\begin{zed}
+  N ::= Z | S \ldata \{x: N @ x\} \rdata
+\end{zed}
+
+\begin{zed}
+  three == S (S (S Z))
+\end{zed}
+
+\begin{axdef}
+  add: N \cross N \fun N
+\where
+  add =
+    \{y: N @ (Z,y) \mapsto y\} \cup
+    \{x,y,z: N | (x,y) \mapsto z \in add @ (S x,y) \mapsto S z\}
+\end{axdef}
+
+\zrelation{(\_ less \_)}
+
+\begin{zed}
+  \_ less \_ ==
+    \{x,y: N | \exists t: N @ (x,S t) \mapsto y \in add @ (x,y)\}
+\end{zed}
+
+\zrelation{(\_ less_1 \_)}
+
+\begin{zed}
+  \_ less_1 \_ == \{x,y: N | \exists t: N @ y = add (x,S t) @ (x,y)\}
+\end{zed}
+
+\begin{zed}
+  image ==
+    \lambda R: \power X \cross Y; S: \power X @
+    \{  x: X; y: Y
+        |
+          x \in S \\
+          (x,y) \in R @ y\}
+\end{zed}
+
+\begin{zed}
+  pfun ==
+    \{  R: \power X \cross Y
+        |
+          \forall x: X | x \in \dom R @ \exists_1 y: Y @ (x,y) \in R @ R\}
+\end{zed}

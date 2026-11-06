@@ -1,0 +1,19 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "incompatActualization"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBTest#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(434.48-434.57)]:",
+    "invalid actualization of `test'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)"
+  ]
+}

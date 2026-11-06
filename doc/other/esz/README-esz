@@ -1,0 +1,38 @@
+This is a pre-release of the ESZ/ZAP toolkit, version 2.2c.
+
+Contents
+--------
+
+* ESZ -- a typechecker for Z and the ESPRESS notation mSZ, which includes 
+  generation of HOL-Z theories and generation of the Java-based 
+  intermediate Z representation ZIRP
+
+* ZAP -- a compiler for a functional sublanguage of Z
+
+* ZIRP -- classes and API documentation
+
+* ESZ Emacs/XEmacs mode -- a mode for operating
+  ESZ and ZAP from within Emacs
+
+* VTeX XEmacs mode -- a mode for visualising Z and LaTeX under XEmacs
+
+* esz.sty -- a LaTeX style for Z and the ESPRESS notation mSZ
+
+
+[Documentation is not complete, this will be the main task to do
+for the final release 2.2c!]
+
+It is recommended to operate ESZ and ZAP from
+within the ESZ emacs mode, and follow the online documentation
+(menus). To start the ESZ mode, run M-x esz under
+Emacs.
+
+For installation instructions, see the file INSTALL.
+
+
+
+
+
+
+
+

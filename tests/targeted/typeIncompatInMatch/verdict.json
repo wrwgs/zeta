@@ -1,0 +1,12 @@
+{
+  "expect": "typeIncompatInMatch",
+  "kinds": [
+    "typeIncompatInMatch"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TtypeIncompatInMatch.tex(20.3-20.15)]:",
+    "type mismatch of `x'' joined with `x'.",
+    "type of `x'': \\baseNum",
+    "type of `x' : NAME"
+  ]
+}

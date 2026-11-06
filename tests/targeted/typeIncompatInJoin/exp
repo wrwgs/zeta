@@ -1,0 +1,21 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load TtypeIncompatInJoin.tex
++ scanning TtypeIncompatInJoin.tex
+- load TtypeIncompatInJoin.tex
+>>> c -u TtypeIncompatInJoin#TtypeIncompatInJoin
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:TtypeIncompatInJoin#TtypeIncompatInJoin
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:TtypeIncompatInJoin#TtypeIncompatInJoin
+! ERROR[LTX:TtypeIncompatInJoin.tex(20.3-20.13)]:
+!   type mismatch of joined `x'.
+!     first type : \baseNum
+!     second type: NAME
+= good bye.

@@ -1,0 +1,956 @@
+UnitEnv. name                 :
+           LTX:Nat#zapnotes
+         locator              :
+           LTX:zapnotes.tex(62.3-62.16)
+         isClass              : false
+         formals              : <1> Name[] {}
+         syntactic parents    :
+           <1>HashSet
+           {LTX:Toolkit#Toolkit,
+            LTX:Nat#zapnotes}
+         context parents      :
+           <1>HashSet
+           {LTX:Toolkit#Toolkit,
+            LTX:Nat#zapnotes}
+         pragmas              :
+           LTX:Toolkit#Toolkit: zap
+           given <LPARENTH> \assumed <ARG>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEtrace <LPARENTH>
+           <STROKEIN> <COMMA> <STROKEIN>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEdeepForce <LPARENTH>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEforce <LPARENTH>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEwaitfor <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEIN>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEmemoize <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           given \zbool
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEextIsEmpty
+           <LPARENTH> <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEextSplit <LPARENTH>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEmakeNumber
+           <LPARENTH> <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEnumAdd <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEnumSub <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEnumMul <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEnumDiv <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEnumMod <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEnumLess <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEnumLessEq <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           given \num \baseNum
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEisSeqRepr <LPARENTH>
+           <STROKEIN> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEcons <LPARENTH>
+           <STROKEIN> <COMMA> <STROKEIN>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEhead <LPARENTH>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEtail <LPARENTH>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEseqCard <LPARENTH>
+           <STROKEIN> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEencode <LPARENTH>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEdecode <LPARENTH>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           given \denotation
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEgiventypeinfo
+           <LPARENTH> <STROKEOUT> <COMMA>
+           <STROKEOUT> <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEfromFile <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+           LTX:Toolkit#Toolkit: zap
+           native NATIVEfromDeno <LPARENTH>
+           <STROKEOUT> <COMMA> <STROKEOUT>
+           <RPARENTH>
+         macros               :
+           LTX:Toolkit#Toolkit: \ALSO 0 
+           <LINESEP>
+           LTX:Toolkit#Toolkit: \also 0 
+           <LINESEP>
+           LTX:Toolkit#Toolkit: \, 0 
+           LTX:Toolkit#Toolkit: & 0 
+           LTX:Toolkit#Toolkit: \> 0 
+           LTX:Toolkit#Toolkit: \qquad 0 
+           LTX:Toolkit#Toolkit: \< 0 
+           LTX:Toolkit#Toolkit: \; 0 
+           LTX:Toolkit#Toolkit: \quad 0 
+           LTX:Toolkit#Toolkit: \! 0 
+           LTX:Toolkit#Toolkit: \t 1 
+           LTX:Toolkit#Toolkit: \assert 1 
+           <LBRACK> <MID> #1
+           <RBRACK>
+           LTX:Toolkit#Toolkit: \Also 0 
+           <LINESEP>
+           LTX:Toolkit#Toolkit: ~ 0 
+         fixities             :
+           "LTX:Toolkit#Toolkit. "
+           (9): (10) \fromfile (10)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(996.1-996.31)
+           "LTX:Toolkit#Toolkit. "
+           (100): (100) \star
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(447.1-447.15)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \surj (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) \comp (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(399.1-399.21)
+           "LTX:Toolkit#Toolkit. "
+           (90): \efinset (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(230.1-230.28)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \prefix (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(688.1-688.24)
+           "LTX:Toolkit#Toolkit. "
+           (100): (100) \plus
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(434.1-434.15)
+           "LTX:Toolkit#Toolkit. "
+           [90]: \finset (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(225.1-225.37)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) < (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(569.1-569.23)
+           "LTX:Toolkit#Toolkit. "
+           (40): (40) + (41)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(567.1-567.15)
+           "LTX:Toolkit#Toolkit. "
+           [10]: \giventypeinfo (11)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(960.1-960.33)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \partition (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(508.1-508.20)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \pfun (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (95): (96) \limg (0) \rimg
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(377.1-377.34)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \notin (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(263.1-263.37)
+           "LTX:Toolkit#Toolkit. "
+           [1]: \assumed (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(51.1-51.26)
+           "LTX:Toolkit#Toolkit. "
+           (95): (96) \bsup (0) \esup
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(426.1-426.34)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \finj (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (40): (40) \zscons (41)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(685.1-685.17)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) \circ (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(399.1-399.21)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) * (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(568.1-568.22)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \leq (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(569.1-569.23)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) \div (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(568.1-568.22)
+           "LTX:Toolkit#Toolkit. "
+           [90]: \seq_1 (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(684.1-684.27)
+           "LTX:Toolkit#Toolkit. "
+           [90]: \power_1 (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(225.1-225.37)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \fun (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \subseteq (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(263.1-263.37)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \subset (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(263.1-263.37)
+           "LTX:Toolkit#Toolkit. "
+           (2): (3) \whenbound (3)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(114.1-114.32)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) \extract (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(687.1-687.26)
+           "LTX:Toolkit#Toolkit. "
+           [10]: \typeinfo (11)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(959.1-959.28)
+           "LTX:Toolkit#Toolkit. "
+           (90): - (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(572.1-572.21)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) \mod (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(568.1-568.22)
+           "LTX:Toolkit#Toolkit. "
+           (70): (70) \dres (71)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(506.1-506.42)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \geq (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(569.1-569.23)
+           "LTX:Nat#zapnotes. "
+           (-1): (0) less (-1)
+               ; LTX:zapnotes.tex(79.3-79.26)
+           "LTX:Toolkit#Toolkit. "
+           [90]: \finset_1 (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(225.1-225.37)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) \cap (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(288.1-288.14)
+           "LTX:Toolkit#Toolkit. "
+           (20): (20) \mapsto (21)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(201.1-201.17)
+           "LTX:Toolkit#Toolkit. "
+           [90]: \id (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(389.1-389.13)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \pinj (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (70): (70) \ndres (71)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(506.1-506.42)
+           "LTX:Nat#zapnotes. "
+           (-1): (0) less_1 (-1)
+               ; LTX:zapnotes.tex(154.3-154.28)
+           "LTX:Toolkit#Toolkit. "
+           [90]: \seq (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(684.1-684.27)
+           "LTX:Toolkit#Toolkit. "
+           (70): (70) \wplus (71)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(506.1-506.42)
+           "LTX:Toolkit#Toolkit. "
+           (-1): \disjoint (0)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(507.1-507.20)
+           "LTX:Toolkit#Toolkit. "
+           (100): (100) \inv
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(368.1-368.14)
+           "LTX:Toolkit#Toolkit. "
+           [90]: \iseq (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(684.1-684.27)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \suffix (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(688.1-688.24)
+           "LTX:Toolkit#Toolkit. "
+           (9): (10) \fromdeno (10)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(997.1-997.31)
+           "LTX:Toolkit#Toolkit. "
+           (40): (40) \cup (41)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(287.1-287.24)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) > (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(569.1-569.23)
+           "LTX:Toolkit#Toolkit. "
+           (40): (40) - (41)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(567.1-567.15)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \ffun (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \rel (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (9999): \langle,,\rangle
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(691.1-691.37)
+           "LTX:Toolkit#Toolkit. "
+           (70): (70) \rres (71)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(506.1-506.42)
+           "LTX:Toolkit#Toolkit. "
+           (30): (30) \upto (31)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(566.1-566.15)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \in (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(263.1-263.37)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \inj (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) \neq (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(165.1-165.15)
+           "LTX:Toolkit#Toolkit. "
+           (60): (60) \oplus (61)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(505.1-505.16)
+           "LTX:Toolkit#Toolkit. "
+           (40): (40) \cat (41)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(686.1-686.14)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \psurj (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (50): (50) \filter (51)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(687.1-687.26)
+           "LTX:Toolkit#Toolkit. "
+           (40): (40) \setminus (41)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(287.1-287.24)
+           "LTX:Toolkit#Toolkit. "
+           [2]: (3) \bij (2)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(459.1-459.65)
+           "LTX:Toolkit#Toolkit. "
+           (70): (70) \nrres (71)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(506.1-506.42)
+           "LTX:Toolkit#Toolkit. "
+           (-1): (0) = (-1)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(165.1-165.15)
+           "LTX:Toolkit#Toolkit. "
+           (90): \EXT (91)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(228.1-228.24)
+         expr-keywords        :
+           <1>HashSet
+           {\whenbound,\extract,\rres,
+            \fromfile,\ffun,\wplus,\assumed,
+            \mapsto,\bsup,\finset_1,\mod,
+            \pinj,\id,\fun,\fromdeno,\ndres,
+            \seq,\limg,\nrres,\cup,\EXT,
+            \circ,\rel,\cat,\finj,\plus,\cap,
+            -,\inv,\zscons,+,\div,\filter,*,
+            \oplus,\upto,\inj,\setminus,
+            \finset,\bij,\efinset,\typeinfo,
+            \rimg,\comp,\pfun,\iseq,\psurj,
+            \esup,\seq_1,\surj,\star,
+            \giventypeinfo,\dres,\power_1}
+         pred-keywords        :
+           <1>HashSet
+           {\prefix,less,\notin,\neq,
+            \partition,>,=,\disjoint,
+            \subseteq,<,\in,\subset,less_1,
+            \geq,\suffix,\leq}
+         open-keywords        :
+           <1>HashSet{\langle}
+         close-keywords       :
+           <1>HashSet{\rangle}
+         leftoffside-keywords :
+           <1>HashSet
+           {\whenbound,\extract,\rres,
+            \fromfile,\ffun,\in,\wplus,
+            \subseteq,\mapsto,less,\bsup,
+            \notin,\mod,less_1,\pinj,\fun,
+            \fromdeno,\ndres,>,=,\limg,<,
+            \nrres,\cup,\circ,\rel,\cat,
+            \finj,\plus,\subset,\cap,-,\inv,
+            \zscons,+,\div,\filter,*,\neq,
+            \oplus,\upto,\leq,\inj,\setminus,
+            \partition,\bij,\rimg,\comp,
+            \pfun,\geq,\psurj,\esup,\suffix,
+            \surj,\star,\rangle,\prefix,
+            \dres}
+         rightoffside-keywords:
+           <1>HashSet
+           {\limg,\div,\partition,less,
+            \extract,\giventypeinfo,\bij,
+            \pfun,\comp,\fromfile,\zscons,
+            \iseq,\fromdeno,\upto,\finset_1,
+            \efinset,\power_1,\finj,\suffix,
+            \circ,\nrres,\geq,\notin,
+            \assumed,\seq,\cup,\ffun,\EXT,
+            \wplus,\subset,\rres,\ndres,\in,
+            \surj,\oplus,\whenbound,\id,
+            \setminus,>,\mod,=,<,\subseteq,
+            \prefix,-,\inj,+,*,\langle,
+            \mapsto,\psurj,\filter,\finset,
+            \dres,\leq,\neq,\typeinfo,\pinj,
+            \rel,\seq_1,\cat,\fun,\cap,
+            less_1,\bsup,\disjoint}
+         constants            :
+           LTX:Toolkit#Toolkit.NATIVEseqCard[X]: 
+             P (P X ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(715.3-715.15)
+           LTX:Toolkit#Toolkit._\nrres_[X,
+                                        Y]: 
+             P ((P (X ** Y) ** P Y) ** 
+                P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(530.3-530.14)
+           LTX:Nat#zapnotes._less_1_: 
+             P (N ** N)
+               ; LTX:zapnotes.tex(157.3-157.16)
+           LTX:Toolkit#Toolkit.\disjoint_[X,
+                                          Y]: 
+             P (P (X ** P Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(542.4-542.15)
+           LTX:Toolkit#Toolkit.\ENDSEQ: P []
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(140.14-140.20)
+           LTX:Toolkit#Toolkit.fold[X]: 
+             P (P ((X ** X) ** X) ** 
+                P (P (\baseNum ** X) ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(854.3-854.6)
+           LTX:Toolkit#Toolkit.succ: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(649.3-649.6)
+           LTX:Toolkit#Toolkit.\ddec: 
+             P (\denotation ** 
+                P (\baseNum ** \baseNum))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(942.3-942.7)
+           LTX:Toolkit#Toolkit._\surj_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(494.3-494.11)
+           LTX:Toolkit#Toolkit._\geq_: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(645.3-645.12)
+           LTX:Toolkit#Toolkit._\bsup_\esup[X]: 
+             P ((P (X ** X) ** \baseNum) ** 
+                P (X ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(429.3-429.19)
+           LTX:Toolkit#Toolkit._\zscons_[X]: 
+             P ((X ** P (\baseNum ** X)) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(760.3-760.15)
+           LTX:Toolkit#Toolkit._\ffun_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(497.3-497.11)
+           LTX:Toolkit#Toolkit.\DEEPFORCE[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(107.3-107.12)
+           LTX:Toolkit#Toolkit._\notin_[X]: 
+             P (X ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(272.4-272.15)
+           LTX:Toolkit#Toolkit.\dcat[X]: 
+             P (P (\baseNum ** 
+                   P (\baseNum ** X)) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(900.4-900.8)
+           LTX:Toolkit#Toolkit._\bij_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(496.3-496.11)
+           LTX:Toolkit#Toolkit.NATIVEhomT: 
+             P NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(148.3-148.14)
+           LTX:Toolkit#Toolkit.NATIVEisNonEmptySeq: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(697.15-697.33)
+           LTX:Toolkit#Toolkit.\emptyset[X]: 
+             P X
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(256.3-256.11)
+           LTX:Toolkit#Toolkit._\fromdeno_[A]: 
+             P ((TYPEINFO[A] ** 
+                 \denotation) ** 
+                P (\baseNum ** A))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1004.3-1004.17)
+           LTX:Nat#zapnotes.pfun[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:zapnotes.tex(228.3-228.6)
+           LTX:Toolkit#Toolkit.\giventypeinfo_[A]: 
+             GIVENTYPEINFO[A]
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(967.3-967.19)
+           LTX:Toolkit#Toolkit.INTERNfoldr[X,
+                                           Y]: 
+             P ((P ((X ** Y) ** Y) ** Y ** 
+                 P (\baseNum ** X)) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(836.3-836.13)
+           LTX:Toolkit#Toolkit._\oplus_[X,
+                                        Y]: 
+             P ((P (X ** Y) ** 
+                 P (X ** Y)) ** P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(536.3-536.14)
+           LTX:Toolkit#Toolkit._>_: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(641.3-641.9)
+           LTX:Toolkit#Toolkit.\seq_[X]: 
+             P (P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(731.3-731.9)
+           LTX:Toolkit#Toolkit.NATIVEsquash: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(697.47-697.58)
+           LTX:Toolkit#Toolkit.INTERNfoldl[X,
+                                           Y]: 
+             P ((Y ** P ((Y ** X) ** Y) ** 
+                 P (\baseNum ** X)) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(845.3-845.13)
+           LTX:Toolkit#Toolkit._\mapsto_[X,
+                                         Y]: 
+             P ((X ** Y) ** (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(211.4-211.16)
+           LTX:Toolkit#Toolkit._\inv[X,Y]: 
+             P (P (X ** Y) ** P (Y ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(371.4-371.10)
+           LTX:Toolkit#Toolkit.\power_1_[X]: 
+             P (P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(238.3-238.13)
+           LTX:Toolkit#Toolkit.NATIVEhom[X,
+                                         Y]: 
+             P ((NATIVEhomT ** P X) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(153.3-153.11)
+           LTX:Toolkit#Toolkit.\zfalse: P []
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(191.3-191.9)
+           LTX:Toolkit#Toolkit.\PRINT[X,Y]: 
+             P ((X ** Y) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(79.3-79.8)
+           LTX:Toolkit#Toolkit._\dres_[X,Y]: 
+             P ((P X ** P (X ** Y)) ** 
+                P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(512.3-512.13)
+           LTX:Toolkit#Toolkit.NATIVEtail[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(714.3-714.12)
+           LTX:Toolkit#Toolkit.NATIVEdecode: 
+             P (\denotation ** 
+                P (\baseNum ** \baseNum))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(936.3-936.14)
+           LTX:Toolkit#Toolkit.NATIVEtrace[X,
+                                           Y]: 
+             P ((X ** Y) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(71.3-71.13)
+           LTX:Toolkit#Toolkit._=_[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(169.3-169.9)
+           LTX:Toolkit#Toolkit._\in_[X]: 
+             P (X ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(267.4-267.12)
+           LTX:Toolkit#Toolkit._\cat_[X]: 
+             P ((P (\baseNum ** X) ** 
+                 P (\baseNum ** X)) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(766.4-766.13)
+           LTX:Toolkit#Toolkit.NATIVEnumAdd: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(594.3-594.14)
+           LTX:Toolkit#Toolkit._\upto_: 
+             P ((\baseNum ** \baseNum) ** 
+                P \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(653.3-653.13)
+           LTX:Toolkit#Toolkit._\comp_[X,Y,
+                                       Z]: 
+             P ((P (X ** Y) ** 
+                 P (Y ** Z)) ** P (X ** Z))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(403.4-403.14)
+           LTX:Toolkit#Toolkit._\inj_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(495.3-495.11)
+           LTX:Toolkit#Toolkit._\div_: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(625.3-625.12)
+           LTX:Toolkit#Toolkit.NATIVEcons[X]: 
+             P ((X ** P (\baseNum ** X)) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(712.3-712.12)
+           LTX:Nat#zapnotes.add: 
+             P ((N ** N) ** N)
+               ; LTX:zapnotes.tex(71.3-71.5)
+           LTX:Toolkit#Toolkit._\suffix_[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(888.4-888.16)
+           LTX:Toolkit#Toolkit.AUXasSeq[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(722.3-722.10)
+           LTX:Toolkit#Toolkit.\FORCE[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(111.3-111.8)
+           LTX:Toolkit#Toolkit.iter[X]: 
+             P (\baseNum ** 
+                P (P (X ** X) ** P (X ** X)))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(418.3-418.6)
+           LTX:Toolkit#Toolkit.NATIVEcard: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(221.30-221.39)
+           LTX:Toolkit#Toolkit._<_: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(633.3-633.9)
+           LTX:Toolkit#Toolkit._\whenbound_[X,
+                                            Y]: 
+             P ((X ** Y) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(117.3-117.18)
+           LTX:Toolkit#Toolkit._\partition_[X,
+                                            Y]: 
+             P (P (X ** P Y) ** P Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(551.4-551.19)
+           LTX:Toolkit#Toolkit.\efinset_[X]: 
+             P (P X ** P (P X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(248.3-248.13)
+           LTX:Toolkit#Toolkit.\zbool: 
+             P (P [])
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(187.3-187.8)
+           LTX:Toolkit#Toolkit.tail[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(797.3-797.6)
+           LTX:Toolkit#Toolkit.GivenTypeInfo[A]: 
+             P (\denotation ** 
+                GIVENTYPEINFO[A])
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.3-956.62)
+           LTX:Toolkit#Toolkit.NATIVEmemoize[X]: 
+             P ((\baseNum ** P X) ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(129.3-129.15)
+           LTX:Toolkit#Toolkit._\fun_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(473.3-473.12)
+           LTX:Toolkit#Toolkit._\psurj_[X,
+                                        Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(487.3-487.14)
+           LTX:Toolkit#Toolkit.\denotation: 
+             P \denotation
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(929.3-929.15)
+           LTX:Toolkit#Toolkit.NATIVEbigcap: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(221.16-221.27)
+           LTX:Toolkit#Toolkit.NATIVEextIsEmpty[X]: 
+             P X
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(329.3-329.18)
+           LTX:Toolkit#Toolkit.foldr[X,Y]: 
+             P ((P ((X ** Y) ** Y) ** Y) ** 
+                P (P (\baseNum ** X) ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(822.3-822.7)
+           LTX:Toolkit#Toolkit.\langle,,\rangle[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(753.3-753.20)
+           LTX:Toolkit#Toolkit.NATIVEnumMod: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(595.17-595.28)
+           LTX:Toolkit#Toolkit.foldl[X,Y]: 
+             P ((Y ** P ((Y ** X) ** Y)) ** 
+                P (P (\baseNum ** X) ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(829.3-829.7)
+           LTX:Toolkit#Toolkit._\limg_\rimg[X,
+                                            Y]: 
+             P ((P (X ** Y) ** P X) ** P Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(380.4-380.20)
+           LTX:Toolkit#Toolkit.\nat: 
+             P \baseNum
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(601.4-601.7)
+           LTX:Toolkit#Toolkit.\seq_1_[X]: 
+             P (P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(740.3-740.10)
+           LTX:Toolkit#Toolkit.last[X]: 
+             P (P (\baseNum ** X) ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(811.3-811.6)
+           LTX:Toolkit#Toolkit.NATIVEfromFile[A]: 
+             P ((TYPEINFO[A] ** 
+                 \denotation) ** 
+                P (\baseNum ** A))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(989.3-989.16)
+           LTX:Toolkit#Toolkit._\subseteq_[X]: 
+             P (P X ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(275.4-275.18)
+           LTX:Nat#zapnotes._less_: 
+             P (N ** N)
+               ; LTX:zapnotes.tex(82.3-82.14)
+           LTX:Toolkit#Toolkit.NATIVEdeepForce[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(93.3-93.17)
+           LTX:Nat#zapnotes.three: N
+               ; LTX:zapnotes.tex(68.3-68.7)
+           LTX:Toolkit#Toolkit.NATIVEnumLess: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(597.3-597.15)
+           LTX:Toolkit#Toolkit.NATIVEnumSub: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(594.30-594.41)
+           LTX:Toolkit#Toolkit.NATIVEhead[X]: 
+             P (P (\baseNum ** X) ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(713.3-713.12)
+           LTX:Toolkit#Toolkit.NATIVEisSeqRepr[X]: 
+             P X
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(711.3-711.17)
+           LTX:Toolkit#Toolkit.NATIVEnotempty: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(220.16-220.29)
+           LTX:Toolkit#Toolkit.\nat_1: 
+             P \baseNum
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(605.4-605.9)
+           LTX:Toolkit#Toolkit.squash[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(783.3-783.8)
+           LTX:Toolkit#Toolkit.\denc: 
+             P (P (\baseNum ** \baseNum) ** 
+                \denotation)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(946.3-946.7)
+           LTX:Toolkit#Toolkit.\ran[X,Y]: 
+             P (P (X ** Y) ** P Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(362.4-362.7)
+           LTX:Toolkit#Toolkit.\BEGINSEQ: 
+             P []
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(140.3-140.11)
+           LTX:Toolkit#Toolkit.\EXT_[X]: 
+             P (P X ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(234.3-234.9)
+           LTX:Toolkit#Toolkit._\prefix_[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(879.4-879.16)
+           LTX:Toolkit#Toolkit.NATIVEnumDiv: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(595.3-595.14)
+           LTX:Toolkit#Toolkit.NATIVEext: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(220.32-220.40)
+           LTX:Toolkit#Toolkit.\bigcap[X]: 
+             P (P (P X) ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(309.4-309.10)
+           LTX:Toolkit#Toolkit._\mod_: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(629.3-629.12)
+           LTX:Toolkit#Toolkit._\rres_[X,Y]: 
+             P ((P (X ** Y) ** P Y) ** 
+                P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(524.3-524.13)
+           LTX:Toolkit#Toolkit.TypeInfo[A]: 
+             P (\denotation ** TYPEINFO[A])
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.3-955.52)
+           LTX:Toolkit#Toolkit.NATIVEextSplit[X]: 
+             P (P X ** (X ** P X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(333.3-333.16)
+           LTX:Toolkit#Toolkit._\cap_[X]: 
+             P ((P X ** P X) ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(296.4-296.13)
+           LTX:Toolkit#Toolkit._\ndres_[X,
+                                        Y]: 
+             P ((P X ** P (X ** Y)) ** 
+                P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(518.3-518.14)
+           LTX:Toolkit#Toolkit._\plus[X]: 
+             P (P (X ** X) ** P (X ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(438.2-438.8)
+           LTX:Toolkit#Toolkit.rev[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(802.3-802.5)
+           LTX:Toolkit#Toolkit.\dom[X,Y]: 
+             P (P (X ** Y) ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(357.4-357.7)
+           LTX:Toolkit#Toolkit.NATIVEasSeq: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(697.35-697.45)
+           LTX:Toolkit#Toolkit.\TRACE[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(75.3-75.8)
+           LTX:Toolkit#Toolkit._-_: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(617.3-617.9)
+           LTX:Toolkit#Toolkit.head[X]: 
+             P (P (\baseNum ** X) ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(792.3-792.6)
+           LTX:Toolkit#Toolkit.max: 
+             P (P \baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(668.3-668.5)
+           LTX:Toolkit#Toolkit.NATIVEencode: 
+             P (P (\baseNum ** \baseNum) ** 
+                \denotation)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(935.3-935.14)
+           LTX:Toolkit#Toolkit.\baseNum: 
+             P \baseNum
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(588.3-588.12)
+           LTX:Toolkit#Toolkit.\iseq_[X]: 
+             P (P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.3-746.9)
+           LTX:Toolkit#Toolkit.NATIVEempty: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(220.3-220.13)
+           LTX:Toolkit#Toolkit._\leq_: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(637.3-637.12)
+           LTX:Toolkit#Toolkit.\assumed_[X]: 
+             P X
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(59.3-59.13)
+           LTX:Toolkit#Toolkit._\subset_[X]: 
+             P (P X ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(280.4-280.16)
+           LTX:Toolkit#Toolkit.front[X]: 
+             P (P (\baseNum ** X) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(816.3-816.7)
+           LTX:Toolkit#Toolkit.\num: 
+             P \baseNum
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(589.3-589.6)
+           LTX:Toolkit#Toolkit.NATIVEwaitfor[X,
+                                             Y]: 
+             P ((X ** Y) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(101.3-101.15)
+           LTX:Toolkit#Toolkit.\typeinfo_[A]: 
+             TYPEINFO[A]
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(963.3-963.14)
+           LTX:Toolkit#Toolkit.NATIVEisSeq: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(697.3-697.13)
+           LTX:Nat#zapnotes.image[X,Y]: 
+             P ((P (X ** Y) ** P X) ** P Y)
+               ; LTX:zapnotes.tex(203.4-203.8)
+           LTX:Nat#zapnotes.Z: N
+               ; LTX:zapnotes.tex(65.3-65.36)
+           LTX:Toolkit#Toolkit.-_: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(609.3-609.6)
+           LTX:Toolkit#Toolkit.second[X,Y]: 
+             P ((X ** Y) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(208.4-208.9)
+           LTX:Toolkit#Toolkit._\fromfile_[A]: 
+             P ((TYPEINFO[A] ** 
+                 \denotation) ** 
+                P (\baseNum ** A))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1000.3-1000.17)
+           LTX:Nat#zapnotes.S: P (N ** N)
+               ; LTX:zapnotes.tex(65.3-65.36)
+           LTX:Toolkit#Toolkit.setreduce[X,
+                                         Y]: 
+             P ((P ((X ** Y) ** Y) ** Y ** 
+                 P X) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(316.3-316.11)
+           LTX:Toolkit#Toolkit.GIVENTYPEINFO[A]: 
+             P GIVENTYPEINFO[A]
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.3-956.62)
+           LTX:Toolkit#Toolkit._\setminus_[X]: 
+             P ((P X ** P X) ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(301.4-301.19)
+           LTX:Toolkit#Toolkit.\#[X]: 
+             P (P X ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(911.4-911.5)
+           LTX:Nat#zapnotes.N: P N
+               ; LTX:zapnotes.tex(65.3-65.36)
+           LTX:Toolkit#Toolkit.AUXreduce[X,
+                                         Y]: 
+             P ((P ((X ** Y) ** Y) ** Y ** 
+                 P X) ** Y)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(337.3-337.11)
+           LTX:Toolkit#Toolkit._\filter_[X]: 
+             P ((P (\baseNum ** X) ** 
+                 P X) ** P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(866.4-866.16)
+           LTX:Toolkit#Toolkit.\bigcup[X]: 
+             P (P (P X) ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(305.4-305.10)
+           LTX:Toolkit#Toolkit._+_: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(613.3-613.9)
+           LTX:Toolkit#Toolkit._\extract_[X]: 
+             P ((P \baseNum ** 
+                 P (\baseNum ** X)) ** 
+                P (\baseNum ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(873.4-873.17)
+           LTX:Toolkit#Toolkit._\cup_[X]: 
+             P ((P X ** P X) ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(291.4-291.13)
+           LTX:Toolkit#Toolkit._\pinj_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(480.3-480.13)
+           LTX:Toolkit#Toolkit._\star[X]: 
+             P (P (X ** X) ** P (X ** X))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(451.2-451.8)
+           LTX:Toolkit#Toolkit.NATIVEpower: 
+             NATIVEhomT
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(221.3-221.13)
+           LTX:Toolkit#Toolkit._\rel_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(463.3-463.12)
+           LTX:Toolkit#Toolkit.NATIVEnumMul: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(594.16-594.27)
+           LTX:Toolkit#Toolkit.\finset_[X]: 
+             P (P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(244.3-244.12)
+           LTX:Toolkit#Toolkit.NATIVEforce[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(97.3-97.13)
+           LTX:Toolkit#Toolkit.\MEMOIZE[X]: 
+             P (P X ** P X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(133.3-133.10)
+           LTX:Toolkit#Toolkit.NATIVEgiventypeinfo: 
+             P ((\denotation ** 
+                 \denotation) ** \denotation)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(975.3-975.21)
+           LTX:Toolkit#Toolkit.\ztrue: P []
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(192.3-192.8)
+           LTX:Toolkit#Toolkit.TYPEINFO[A]: 
+             P TYPEINFO[A]
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.3-955.52)
+           LTX:Toolkit#Toolkit._*_: 
+             P ((\baseNum ** \baseNum) ** 
+                \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(621.3-621.9)
+           LTX:Toolkit#Toolkit.first[X,Y]: 
+             P ((X ** Y) ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(205.4-205.8)
+           LTX:Toolkit#Toolkit._\neq_[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(175.3-175.12)
+           LTX:Toolkit#Toolkit.\id_[X]: 
+             P (X ** X)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(392.4-392.9)
+           LTX:Toolkit#Toolkit._\pfun_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(467.3-467.13)
+           LTX:Toolkit#Toolkit.NATIVEfromDeno[A]: 
+             P ((TYPEINFO[A] ** 
+                 \denotation) ** 
+                P (\baseNum ** A))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(993.3-993.16)
+           LTX:Toolkit#Toolkit.\abs: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(675.3-675.6)
+           LTX:Toolkit#Toolkit.min: 
+             P (P \baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(661.3-661.5)
+           LTX:Toolkit#Toolkit._\finj_[X,Y]: 
+             P (P (X ** Y))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(498.3-498.11)
+           LTX:Toolkit#Toolkit._\circ_[X,Y,
+                                       Z]: 
+             P ((P (Y ** Z) ** 
+                 P (X ** Y)) ** P (X ** Z))
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(410.4-410.14)
+           LTX:Toolkit#Toolkit.NATIVEnumLessEq: 
+             P (\baseNum ** \baseNum)
+               ; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(597.17-597.31)
+         ports                : <1> Name[] {}
+         datas                : <1> Name[] {}
+         properties           : <1> Name[] {}
+         inits                : <1> Name[] {}
+         states               : <1> Name[] {}

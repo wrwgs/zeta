@@ -1,0 +1,10 @@
+{
+  "expect": "incompleteType",
+  "kinds": [
+    "incompleteActualization"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TincompleteType.tex(14.8-14.13)]:",
+    "cannot determine actualization of `unused'. inferred: unused[<any>]"
+  ]
+}

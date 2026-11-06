@@ -1,0 +1,12 @@
+{
+  "expect": "typeIncompatInJoin",
+  "kinds": [
+    "typeIncompatInJoin"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TtypeIncompatInJoin.tex(20.3-20.13)]:",
+    "type mismatch of joined `x'.",
+    "first type : \\baseNum",
+    "second type: NAME"
+  ]
+}

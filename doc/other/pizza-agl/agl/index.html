@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>Aggregate Library for Pizza</title>
+</head>
+
+<body vlink="#551a8b" alink="#ff0000" text="#000000" bgcolor="#ffffff" link="#0000ee">
+<hr>
+<h2>An Aggregate Library for Pizza</h2>
+<h3>Version 0.5 (16.11.97)</h3>
+
+A first attempt towards an aggregate library for Pizza.  This library
+is a by-product of our work using Pizza/Java as a tool integration
+language for <a href="http://www.first.gmd.de/~espress/">ESPRESS</a>.<p>
+
+Remarks on the general design decisions are found <a
+href="DesignDecisions.html">here</a>. Online documentation is found <a
+href="api/espress.util.pizza.agl.html">here</a>.<p>
+
+Though the basic interfaces of the aggregate types should be complete
+(if you don't think so, please let us know!), not all intended
+<em>implementation variants</em> of aggregates are provided yet. The
+followings are definitely missing:
+
+<pre>
+   class OrdListSet&lt;A implements Ordered&lt;A&gt;&gt; extends Set&lt;A&gt;;
+   class AvlSet&lt;A implements Ordered&lt;A&gt;&gt; extends Set&lt;A&gt;;
+   class OrdListMap&lt;A implements Ordered&lt;A&gt;,B&gt; extends Map&lt;A,B&gt;;
+   class AvlMap&lt;A implements Ordered&lt;A&gt;,B&gt; extends Map&lt;A,B&gt;;
+</pre>
+
+The present implementations haven't been deeply tested; a beta-version
+can be obtained by contacting the authors.
+
+We are interested in feedback, and are open to suggestions for changes
+and extensions. <p>
+
+
+<hr>
+<address><a href="mailto:wg@cs.tu-berlin.de">Wolfgang Grieskamp</a>,
+<a href="mailto:buessow@cs.tu-berlin.de">Robert B&uuml;ssow</a></address>
+<!-- Created: Sat Oct 11 14:28:41 MET DST 1997 -->
+<!-- hhmts start -->
+Last modified: Sat Oct 11 16:42:20 MET DST 1997
+<!-- hhmts end -->
+  </body>
+</html>

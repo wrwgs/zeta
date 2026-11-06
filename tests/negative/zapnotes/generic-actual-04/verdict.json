@@ -1,0 +1,21 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "incompatActualization",
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:facExec2#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(339.56-339.56)]: undeclared `A'",
+    "ERROR[LTX:zapnotes.tex(339.52-339.57)]:",
+    "invalid actualization of `fac'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)"
+  ]
+}

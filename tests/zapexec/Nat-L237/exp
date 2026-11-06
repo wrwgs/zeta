@@ -1,0 +1,58 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load zapnotes.tex
++ scanning zapnotes.tex
+- load zapnotes.tex
+>>> p -u Nat#zapnotes add \in pfun[N \cross N,N]
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:Nat#zapnotes
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:Nat#zapnotes
++ reducing LTX:Nat#zapnotes
++ compiling LTX:Nat#zapnotes
++ reducing LTX:Toolkit#Toolkit
++ compiling LTX:Toolkit#Toolkit
+! WARNING[<ZAM>]: generating backtrace ...
+! WARNING[<ZAM>]:
+!   unresolvable constraints in toplevel goal {
+!     resolving LTX:zapnotes.tex(229.5-230.71)
+!     with variables:
+!      R = LTX:zapnotes.tex(74.6-74.33)+LTX:zapnotes.tex(75.6-75.67)
+!     unresolved constraints:
+!      LTX:zapnotes.tex(230.14-230.68) waiting for subgoal {
+!        resolving '{_x IN _S1; _x NOTIN _S2}'
+!        with parameters:
+!         _S1 = LTX:zapnotes.tex(230.22-230.38)(R=LTX:zapnotes.tex(74.6-74.33)+LTX:zapnotes.tex(75.6-75.67))
+!         _S2 = LTX:zapnotes.tex(230.14-230.68)(R=LTX:zapnotes.tex(74.6-74.33)+LTX:zapnotes.tex(75.6-75.67))
+!        with variables:
+!         _x = <x==(...,...)>
+!        unresolved constraints:
+!         '_x IN _S1; _x NOTIN _S2' waiting for subgoal {
+!           resolving LTX:zapnotes.tex(230.14-230.68)
+!           with parameters:
+!            R = LTX:zapnotes.tex(74.6-74.33)+LTX:zapnotes.tex(75.6-75.67)
+!           with variables:
+!            x = (Z,y)
+!           unresolved constraints:
+!            LTX:zapnotes.tex(230.42-230.68) waiting for subgoal {
+!              resolving LTX:zapnotes.tex(230.42-230.68)
+!              with parameters:
+!               R = LTX:zapnotes.tex(74.6-74.33)+LTX:zapnotes.tex(75.6-75.67)
+!               x = (Z,y)
+!              with variables:
+!               y~ unbound
+!              unresolved constraints:
+!               LTX:zapnotes.tex(230.58-230.68) waiting for variable y
+!            }
+!         }
+!      }
+!   }
+= *unknown*
+- p -u Nat#zapnotes add \in pfun[N \cross N,N]
+= good bye.

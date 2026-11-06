@@ -1,0 +1,11 @@
+{
+  "section": "Stepping",
+  "unit": "Stepping#zapnotes",
+  "kind": "expr",
+  "line": 559,
+  "query": "S",
+  "yields": [
+    "{1,2}",
+    "(possibly more solutions)"
+  ]
+}

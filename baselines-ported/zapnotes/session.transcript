@@ -1,0 +1,58 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load zapnotes.tex
++ scanning zapnotes.tex
+- load zapnotes.tex
+>>> c -u DataInput#zapnotes
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:DataInput#zapnotes
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:DataInput#zapnotes
+- c -u DataInput#zapnotes
+>>> c -u FreeTypes#zapnotes
++ parsing section LTX:FreeTypes#zapnotes
++ type checking section LTX:FreeTypes#zapnotes
+- c -u FreeTypes#zapnotes
+>>> c -u FreeTypes2#zapnotes
++ parsing section LTX:FreeTypes2#zapnotes
++ type checking section LTX:FreeTypes2#zapnotes
+- c -u FreeTypes2#zapnotes
+>>> c -u Genericity#zapnotes
++ parsing section LTX:Genericity#zapnotes
++ type checking section LTX:Genericity#zapnotes
+- c -u Genericity#zapnotes
+>>> c -u Nat#zapnotes
++ parsing section LTX:Nat#zapnotes
++ type checking section LTX:Nat#zapnotes
+- c -u Nat#zapnotes
+>>> c -u Specials#zapnotes
++ parsing section LTX:Specials#zapnotes
++ type checking section LTX:Specials#zapnotes
+- c -u Specials#zapnotes
+>>> c -u Stepping#zapnotes
++ parsing section LTX:Stepping#zapnotes
++ type checking section LTX:Stepping#zapnotes
+- c -u Stepping#zapnotes
+>>> c -u facExec1#zapnotes
++ parsing section LTX:facExec1#zapnotes
++ type checking section LTX:facExec1#zapnotes
+- c -u facExec1#zapnotes
+>>> c -u facExec2#zapnotes
++ parsing section LTX:facExec2#zapnotes
++ type checking section LTX:facExec2#zapnotes
+- c -u facExec2#zapnotes
+>>> c -u facNonExec#zapnotes
++ parsing section LTX:facNonExec#zapnotes
++ type checking section LTX:facNonExec#zapnotes
+- c -u facNonExec#zapnotes
+>>> c -u queens#zapnotes
++ parsing section LTX:queens#zapnotes
++ type checking section LTX:queens#zapnotes
+- c -u queens#zapnotes
+= good bye.

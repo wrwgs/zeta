@@ -1,0 +1,18 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "redeclaration"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:Nat#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(72.3-72.5)]:",
+    "illegal redeclaration of `add'.",
+    "previous declaration: LTX:zapnotes.tex(71.3-71.5)"
+  ]
+}

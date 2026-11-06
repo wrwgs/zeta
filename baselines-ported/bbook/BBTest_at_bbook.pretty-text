@@ -1,0 +1,120 @@
+\zsection[LTX:Toolkit#Toolkit,LTX:BBSpec#bbook,
+          LTX:BBExec#bbook]{LTX:BBTest#bbook}
+
+\begin{zed}
+  INPUT ::=
+    addI \ldata NAME \cross DATE \rdata
+    | findI \ldata NAME \rdata
+    | remindI \ldata DATE \rdata
+    | removeI \ldata NAME \rdata
+\end{zed}
+
+\begin{zed}
+  OUTPUT ::=
+    okayO | dateO \ldata DATE \rdata | namesO \ldata \power NAME \rdata
+\end{zed}
+
+\begin{schema}{UniformAdd}
+  \Delta BirthdayBook \\
+  in: INPUT \\
+  out: OUTPUT
+\where
+  \exists name?: NAME; date?: DATE @
+    (name?,date?) \mapsto in \in addI \land AddBirthday \land out = okayO
+\end{schema}
+
+\begin{schema}{UniformFind}
+  \Delta BirthdayBook \\
+  in: INPUT \\
+  out: OUTPUT
+\where
+  \exists name?: NAME; date!: DATE @
+    name? \mapsto in \in findI \land FindBirthday \land
+      date! \mapsto out \in dateO
+\end{schema}
+
+\begin{schema}{UniformRemind}
+  \Delta BirthdayBook \\
+  in: INPUT \\
+  out: OUTPUT
+\where
+  \exists today?: DATE; cards!: \power NAME @
+    today? \mapsto in \in remindI \land Remind \land
+      cards! \mapsto out \in namesO
+\end{schema}
+
+\begin{schema}{UniformRemove}
+  \Delta BirthdayBook \\
+  in: INPUT \\
+  out: OUTPUT
+\where
+  \exists name?: NAME @
+    name? \mapsto in \in removeI \land Remove \land out = okayO
+\end{schema}
+
+\begin{zed}
+  UniformOps ==
+    UniformAdd \lor UniformFind \lor UniformRemind \lor UniformRemove
+\end{zed}
+
+\begin{zed}
+  step ==
+    \lambda in: INPUT; out: OUTPUT @
+    \{  \Delta BirthdayBook | UniformOps @
+        (\theta BirthdayBook,\theta BirthdayBook' )\}
+\end{zed}
+
+\begin{axdef}
+  test:
+  \power BirthdayBook \fun
+  (\seq INPUT) \cross (\seq OUTPUT) \fun \power BirthdayBook
+\where
+  test =
+  \lambda init: \power BirthdayBook @
+  \lambda is: \seq INPUT; os: \seq OUTPUT | \# is = \# os @
+    \IF \# is = 0 \THEN init
+    \ELSE step (last is,last os) \limg test init (front is,front os) \rimg
+\end{axdef}
+
+\begin{axdef}
+  date1 == date \lblot day == 7,month == 5,year == 1929 \rblot \\
+  date2 == date \lblot day == 18,month == 11,year == 1935 \rblot
+\end{axdef}
+
+\begin{axdef}
+  in1 == \langle \{(1,addI (Werner,date1))\} \rangle \\
+  out1 == \langle \{(1,okayO)\} \rangle
+\end{axdef}
+
+\begin{axdef}
+  in2 == \langle \{(1,addI (Werner,date1)),(2,findI Werner)\} \rangle \\
+  out2 == \langle \{(1,okayO),(2,dateO date1)\} \rangle \\
+  out2a == \langle \{(1,okayO),(2,dateO date2)\} \rangle
+\end{axdef}
+
+\begin{axdef}
+  in3 ==
+    \langle \{(1,addI (Werner,date1)),
+              (2,addI (Barbara,date2)),
+              (3,addI (Martin,date2)),
+              (4,findI Werner),
+              (5,remindI date2)\} \rangle \\
+  in3a ==
+    \langle \{(1,addI (Werner,date1)),
+              (2,addI (Werner,date2)),
+              (3,addI (Barbara,date2)),
+              (4,findI Werner),
+              (5,remindI date2)\} \rangle \\
+  out3 ==
+    \langle \{(1,okayO),
+              (2,okayO),
+              (3,okayO),
+              (4,dateO date1),
+              (5,namesO \{Barbara,Martin\})\} \rangle \\
+  out3a ==
+    \langle \{(1,okayO),
+              (2,okayO),
+              (3,okayO),
+              (4,dateO date1),
+              (5,namesO \{Barbara\})\} \rangle
+\end{axdef}

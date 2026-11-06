@@ -1,0 +1,84 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:UseCasesModel#ucases}
+
+\begin{schema}{Interaction [\alpha,\pi]}
+  actor: \alpha \\
+  action: \pi
+\end{schema}
+
+\begin{zed}
+  Dialogue == \seq Interaction [\alpha,\pi]
+\end{zed}
+
+\begin{zed}
+  Pattern == \seq Interaction [\alpha,\pi] \cross (\Sigma \rel \Sigma)
+\end{zed}
+
+\begin{zed}
+  Fragment == \power Pattern [\alpha,\pi,\Sigma]
+\end{zed}
+
+\zfunction{65 (\_ \ucmki \_)}
+\zfunction{60 (\_ \ucmk \_)}
+\zfunction{60 (\_ \ucmkt \_ \uctrans \_)}
+\zfunction{50 \rightassoc (\_ \ucthen \_)}
+\zfunction{40 \leftassoc (\_ \ucexcept \_)}
+
+\begin{zed}
+  \_ \ucmki \_ ==
+    \lambda actor: \alpha; action: \pi @ \theta Interaction [\alpha,\pi]
+\end{zed}
+
+\begin{zed}
+  \_ \ucmkt \_ \uctrans \_ ==
+    \lambda actor: \alpha; action: \pi; r: \Sigma \rel \Sigma @
+    \{\langle \{(1,(actor \ucmki action,r))\} \rangle\}
+\end{zed}
+
+\begin{zed}
+  \_ \ucmk \_ ==
+    \lambda actor: \alpha; action: \pi @
+      actor \ucmkt action \uctrans \id \Sigma
+\end{zed}
+
+\begin{zed}
+  \_ \ucthen \_ ==
+    \lambda f,f': Fragment [\alpha,\pi,\Sigma] @
+    \{p: f; p': f' @ p \cat p'\}
+\end{zed}
+
+\begin{zed}
+  \ucrepeat ==
+    \lambda f: Fragment [\alpha,\pi,\Sigma] @
+        \{p_1: Pattern [\alpha,\pi,\Sigma]; p_2: f @ (p_1,p_1 \cat p_2)\}
+        \star \limg \{\langle \{\} \rangle\} \rimg
+\end{zed}
+
+\begin{zed}
+  \_ \ucexcept \_ ==
+    \lambda f,f': Fragment [\alpha,\pi,\Sigma] @
+      f \cup
+      \{  p: f; p': f'; i: \nat
+          |
+            i \in \dom p \\
+            first (p i) = first (p' 1) @ (1 \upto i - 1) \dres p \cat p'\}
+\end{zed}
+
+\begin{zed}
+  \ucselect == \lambda fs: \power Fragment [\alpha,\pi,\Sigma] @ \bigcup fs
+\end{zed}
+
+\zrelation{(\_ \ucin \_)}
+
+\begin{axdef}{[\alpha,\pi,\Sigma]}
+  \_ \ucin \_:
+  Dialogue [\alpha,\pi] \cross \Sigma \rel Fragment [\alpha,\pi,\Sigma]
+\where
+  \forall
+    d: Dialogue [\alpha,\pi];
+    \sigma: \Sigma;
+    f: Fragment [\alpha,\pi,\Sigma] @
+    (d,\sigma) \ucin f \iff
+    (  \exists p: f @
+         \sigma \in \dom (fold ((\_ \comp \_))(second \circ p)) \land
+           first \circ p = d)
+\end{axdef}

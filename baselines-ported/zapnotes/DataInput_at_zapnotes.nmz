@@ -1,0 +1,38 @@
+UNIT LTX:DataInput#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  A
+  Seq
+  Seq%giventypeinfo
+  Seq%typegen
+  Seq[]
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _=_
+  _\fun_
+  _\in_
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  cons
+  cons[]
+  nil
+  nil[]
+LOCALS
+  \ran[]
+PROPERTIES
+  LTX:zapnotes.tex(978.14-978.16): nil = {(A,#nil()) | };
+  LTX:zapnotes.tex(978.14-978.16): nil[] = #nil();
+  LTX:zapnotes.tex(978.14-978.16);
+  LTX:zapnotes.tex(978.20-978.53): Seq[] = {#nil()} + \ran[] cons;
+  LTX:zapnotes.tex(978.20-978.53): cons = {(A,cons) | LTX:zapnotes.tex(978.20-978.53): cons = /NATIVEmu {%m\%l | LTX:zapnotes.tex(978.20-978.53): %m = {((%a1,%a2),#cons(%a1,%a2)) | LTX:zapnotes.tex(978.41-978.46): %a1 : A; LTX:zapnotes.tex(978.41-978.46): %a2 : %l}; LTX:zapnotes.tex(978.41-978.46): %l = Seq A}};
+  LTX:zapnotes.tex(978.20-978.53): cons[] = {((%a1,%a2),#cons(%a1,%a2)) | LTX:zapnotes.tex(978.41-978.46): %a2 : Seq[]};
+  LTX:zapnotes.tex(978.3-978.53): Seq = {(A,Seq) | LTX:zapnotes.tex(978.14-978.16); LTX:zapnotes.tex(978.20-978.53): Seq = {#nil()} + \ran[] cons};
+  LTX:zapnotes.tex(978.3-978.53): Seq%giventypeinfo = #GivenTypeInfo(nil|cons<(%%1,Seq[%%1])>);

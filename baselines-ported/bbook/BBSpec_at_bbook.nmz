@@ -1,0 +1,52 @@
+UNIT LTX:BBSpec#bbook
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  AddBirthday
+  BirthdayBook
+  DATE
+  DATE%giventypeinfo
+  DATE%typegen
+  FindBirthday
+  InitBirthdayBook
+  NAME
+  NAME%giventypeinfo
+  NAME%typegen
+  Remind
+  Remove
+  \MEMOIZE
+  \baseNum
+  \dom
+  \dom[]
+  \emptyset
+  \emptyset[]
+  \nat
+  \num
+  \ran
+  \seq_
+  _=_
+  _=_[]
+  _\cup_
+  _\cup_[]
+  _\fun_
+  _\in_
+  _\in_[]
+  _\mapsto_
+  _\mapsto_[]
+  _\ndres_
+  _\ndres_[]
+  _\neq_
+  _\notin_
+  _\notin_[]
+  _\pfun_
+  _\pfun_[]
+  _\rel_
+  _\subseteq_
+LOCALS
+PROPERTIES
+  LTX:bbook.tex(105.1-111.12): AddBirthday = {<birthday==birthday,birthday'==birthday',date?==date?,known==known ,known'==known',name?==name?> | LTX:bbook.tex(106.3-106.21): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(106.3-106.21): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(109.3-109.20): (name?,known) : _\notin_[]; LTX:bbook.tex(110.15-110.51): birthday' = birthday + {(name?,date?)}};
+  LTX:bbook.tex(112.1-118.12): FindBirthday = {<birthday==birthday,birthday'==birthday,date!==date!,known==known ,known'==known,name?==name?> | LTX:bbook.tex(113.3-113.18): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(113.3-113.18): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(116.3-116.17): name? : known; LTX:bbook.tex(117.11-117.25): date! = birthday name?};
+  LTX:bbook.tex(119.1-124.12): Remind = {<birthday==birthday,birthday'==birthday,cards!==cards!,known==known ,known'==known,today?==today?> | LTX:bbook.tex(120.3-120.18): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(120.3-120.18): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(123.12-123.62): cards! = {n | LTX:bbook.tex(123.25-123.35): n : known; LTX:bbook.tex(123.38-123.59): birthday n = today?}};
+  LTX:bbook.tex(125.1-130.12): Remove = {<birthday==birthday,birthday'==birthday',known==known,known'==known' ,name?==name?> | LTX:bbook.tex(126.3-126.22): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(126.3-126.22): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(129.15-129.42): birthday' = _\ndres_[] ({name?},birthday)};
+  LTX:bbook.tex(62.1-67.12): BirthdayBook = {<birthday==birthday,known==known> | LTX:bbook.tex(66.11-66.23): known = \dom[] birthday};
+  LTX:bbook.tex(75.23-75.57): InitBirthdayBook = {<birthday==birthday,known==known> | LTX:bbook.tex(75.23-75.34): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(75.49-75.57): birthday = EMPTY};

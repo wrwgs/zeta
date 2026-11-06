@@ -1,0 +1,10 @@
+{
+  "expect": "undeclaredField",
+  "kinds": [
+    "undeclaredField"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TundeclaredField.tex(16.3-16.15)]:",
+    "expected a binding type with field `nosuchfield'. found type: [x: \\baseNum]"
+  ]
+}

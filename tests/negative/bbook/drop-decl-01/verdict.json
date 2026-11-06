@@ -1,0 +1,17 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBSpec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(65.3-65.7)]: undeclared `known'",
+    "ERROR[LTX:bbook.tex(65.3-65.7)]: undeclared `known'",
+    "ERROR[LTX:bbook.tex(65.3-65.7)]: undeclared `known'"
+  ]
+}

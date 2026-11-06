@@ -1,0 +1,3439 @@
+<1>UnitAbsy.Section
+(LTX:CashDispenser#ucases,
+ {LTX:UseCases#ucases,LTX:Toolkit#Toolkit},
+ {<2>Item.AxiomaticDef
+  ({},
+   <3>Expr.FreeType
+   (<4>NameDecl
+    (ACTOR,
+     <5>
+     Annotation {
+       Locator zeta.session.Locator: LTX:dispenser.tex(36.3-36.7);
+     }),
+    {<6>Expr.Branch.Constant
+     (<7>NameDecl
+      (user,
+       <8>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(36.13-36.16);
+       }),
+      <9>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(36.13-36.16);
+      }),
+     <10>Expr.Branch.Constant
+     (<11>NameDecl
+      (dispenser,
+       <12>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(36.20-36.28);
+       }),
+      <13>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(36.20-36.28);
+      })},
+    <14>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(36.3-36.28);
+    }),
+   <15>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(36.3-36.28);
+   }),
+  <16>Item.AxiomaticDef
+  ({},
+   <17>Expr.FreeType
+   (<18>NameDecl
+    (ACTION,
+     <19>
+     Annotation {
+       Locator zeta.session.Locator: LTX:dispenser.tex(37.3-37.8);
+     }),
+    {<20>Expr.Branch.Constant
+     (<21>NameDecl
+      (askCard,
+       <22>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(37.16-37.22);
+       }),
+      <23>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(37.16-37.22);
+      }),
+     <24>Expr.Branch.Constant
+     (<25>NameDecl
+      (putCard,
+       <26>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(37.26-37.32);
+       }),
+      <27>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(37.26-37.32);
+      }),
+     <28>Expr.Branch.Constant
+     (<29>NameDecl
+      (ejectCard,
+       <30>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(37.36-37.44);
+       }),
+      <31>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(37.36-37.44);
+      }),
+     <32>Expr.Branch.Constant
+     (<33>NameDecl
+      (takeCard,
+       <34>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(37.48-37.55);
+       }),
+      <35>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(37.48-37.55);
+      }),
+     <36>Expr.Branch.Constant
+     (<37>NameDecl
+      (askAmount,
+       <38>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(38.14-38.22);
+       }),
+      <39>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(38.14-38.22);
+      }),
+     <40>Expr.Branch.Function
+     (<41>NameDecl
+      (putAmount,
+       <42>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(38.26-38.34);
+       }),
+      <43>Expr.Variable
+      (<44>NameAppl
+       (\num,
+        {},
+        <45>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(38.43-38.46);
+        }),
+       <46>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(38.43-38.46);
+       }),
+      <47>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(38.26-38.53);
+      }),
+     <48>Expr.Branch.Function
+     (<49>NameDecl
+      (ejectMoney,
+       <50>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(39.14-39.23);
+       }),
+      <51>Expr.Variable
+      (<52>NameAppl
+       (\num,
+        {},
+        <53>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(39.32-39.35);
+        }),
+       <54>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(39.32-39.35);
+       }),
+      <55>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(39.14-39.42);
+      }),
+     <56>Expr.Branch.Constant
+     (<57>NameDecl
+      (takeMoney,
+       <58>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(39.46-39.54);
+       }),
+      <59>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(39.46-39.54);
+      })},
+    <60>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(37.3-39.54);
+    }),
+   <61>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(37.3-39.54);
+   }),
+  <62>Item.AxiomaticDef
+  ({},
+   <63>Expr.Text
+   ({<64>Expr.Decl.Eqn
+     (<65>NameDecl
+      (State,
+       <66>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(58.16-58.20);
+       }),
+      <67>Expr.Text
+      ({<68>Expr.Decl.Direct
+        ({<69>NameDecl
+          (reserves,
+           <70>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(59.3-59.10);
+           })},
+         <71>Expr.Variable
+         (<72>NameAppl
+          (\num,
+           {},
+           <73>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(59.13-59.16);
+           }),
+          <74>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(59.13-59.16);
+          }),
+         <75>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(59.3-59.16);
+         })},
+       {},
+       <76>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(58.1-60.12);
+       }),
+      <77>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(58.1-60.12);
+      })},
+    {},
+    <78>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(58.1-60.12);
+    }),
+   <79>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(58.1-60.12);
+   }),
+  <80>Item.AxiomaticDef
+  ({},
+   <81>Expr.Text
+   ({<82>Expr.Decl.Eqn
+     (<83>NameDecl
+      (CantDraw,
+       <84>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(61.16-61.23);
+       }),
+      <85>Expr.Text
+      ({<86>Expr.Decl.Inclusion
+        (<87>Expr.Unary
+         (Xi,
+          <88>Expr.Variable
+          (<89>NameAppl
+           (State,
+            {},
+            <90>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(62.7-62.11);
+            }),
+           <91>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(62.7-62.11);
+           }),
+          <92>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(62.3-62.11);
+          }),
+         <93>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(62.3-62.11);
+         }),
+        <94>Expr.Decl.Direct
+        ({<95>NameDecl
+          (amount?,
+           <96>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(62.14-62.20);
+           })},
+         <97>Expr.Variable
+         (<98>NameAppl
+          (\num,
+           {},
+           <99>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(62.24-62.27);
+           }),
+          <100>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(62.24-62.27);
+          }),
+         <101>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(62.14-62.27);
+         })},
+       {<102>Predicate.Test
+        (<103>Expr.Tuple
+         ({<104>Expr.Variable
+           (<105>NameAppl
+            (reserves,
+             {},
+             <106>
+             Annotation {
+               Locator zeta.session.Locator: LTX:dispenser.tex(64.3-64.10);
+             }),
+            <107>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(64.3-64.10);
+            }),
+           <108>Expr.Variable
+           (<109>NameAppl
+            (amount?,
+             {},
+             <110>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(64.14-64.20);
+             }),
+            <111>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(64.14-64.20);
+            })},
+          <112>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(64.3-64.20);
+          }),
+         <113>Expr.Variable
+         (<114>NameAppl
+          (_<_,
+           {},
+           <115>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(64.3-64.20);
+           }),
+          <116>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(64.3-64.20);
+          }),
+         <117>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(64.3-64.20);
+         })},
+       <118>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(61.1-65.12);
+       }),
+      <119>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(61.1-65.12);
+      })},
+    {},
+    <120>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(61.1-65.12);
+    }),
+   <121>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(61.1-65.12);
+   }),
+  <122>Item.AxiomaticDef
+  ({},
+   <123>Expr.Text
+   ({<124>Expr.Decl.Eqn
+     (<125>NameDecl
+      (Draw,
+       <126>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(66.16-66.19);
+       }),
+      <127>Expr.Text
+      ({<128>Expr.Decl.Inclusion
+        (<129>Expr.Unary
+         (Delta,
+          <130>Expr.Variable
+          (<131>NameAppl
+           (State,
+            {},
+            <132>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(67.10-67.14);
+            }),
+           <133>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(67.10-67.14);
+           }),
+          <134>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(67.3-67.14);
+          }),
+         <135>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(67.3-67.14);
+         }),
+        <136>Expr.Decl.Direct
+        ({<137>NameDecl
+          (amount?,
+           <138>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(67.17-67.23);
+           })},
+         <139>Expr.Variable
+         (<140>NameAppl
+          (\num,
+           {},
+           <141>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(67.27-67.30);
+           }),
+          <142>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(67.27-67.30);
+          }),
+         <143>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(67.17-67.30);
+         })},
+       {<144>Predicate.Test
+        (<145>Expr.Tuple
+         ({<146>Expr.Variable
+           (<147>NameAppl
+            (reserves,
+             {},
+             <148>
+             Annotation {
+               Locator zeta.session.Locator: LTX:dispenser.tex(69.3-69.10);
+             }),
+            <149>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(69.3-69.10);
+            }),
+           <150>Expr.Variable
+           (<151>NameAppl
+            (amount?,
+             {},
+             <152>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(69.17-69.23);
+             }),
+            <153>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(69.17-69.23);
+            })},
+          <154>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(69.3-69.23);
+          }),
+         <155>Expr.Variable
+         (<156>NameAppl
+          (_\geq_,
+           {},
+           <157>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(69.3-69.23);
+           }),
+          <158>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(69.3-69.23);
+          }),
+         <159>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(69.3-69.23);
+         }),
+        <160>Predicate.Test
+        (<161>Expr.Tuple
+         ({<162>Expr.Variable
+           (<163>NameAppl
+            (reserves',
+             {},
+             <164>
+             Annotation {
+               Locator zeta.session.Locator: LTX:dispenser.tex(70.3-70.11);
+             }),
+            <165>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(70.3-70.11);
+            }),
+           <166>Expr.Binary
+           (Apply,
+            <167>Expr.Variable
+            (<168>NameAppl
+             (_-_,
+              {},
+              <169>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(70.15-70.32);
+              }),
+             <170>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(70.15-70.32);
+             }),
+            <171>Expr.Tuple
+            ({<172>Expr.Variable
+              (<173>NameAppl
+               (reserves,
+                {},
+                <174>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(70.15-70.22);
+                }),
+               <175>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(70.15-70.22);
+               }),
+              <176>Expr.Variable
+              (<177>NameAppl
+               (amount?,
+                {},
+                <178>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(70.26-70.32);
+                }),
+               <179>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(70.26-70.32);
+               })},
+             <180>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(70.15-70.32);
+             }),
+            <181>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(70.15-70.32);
+            })},
+          <182>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(70.3-70.32);
+          }),
+         <183>Expr.Variable
+         (<184>NameAppl
+          (_=_,
+           {},
+           <185>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(70.3-70.32);
+           }),
+          <186>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(70.3-70.32);
+          }),
+         <187>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(70.3-70.32);
+         })},
+       <188>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(66.1-71.12);
+       }),
+      <189>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(66.1-71.12);
+      })},
+    {},
+    <190>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(66.1-71.12);
+    }),
+   <191>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(66.1-71.12);
+   }),
+  <192>Item.AxiomaticDef
+  ({},
+   <193>Expr.Text
+   ({<194>Expr.Decl.Eqn
+     (<195>NameDecl
+      (\mkrel,
+       <196>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(73.3-73.8);
+       }),
+      <197>Expr.Quantor
+      (Lambda,
+       <198>Expr.Text
+       ({<199>Expr.Decl.Direct
+         ({<200>NameDecl
+           (Op,
+            <201>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(73.22-73.23);
+            })},
+          <202>Expr.Unary
+          (Power,
+           <203>Expr.Unary
+           (Delta,
+            <204>Expr.Variable
+            (<205>NameAppl
+             (State,
+              {},
+              <206>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(73.39-73.43);
+              }),
+             <207>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(73.39-73.43);
+             }),
+            <208>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(73.32-73.43);
+            }),
+           <209>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(73.25-73.43);
+           }),
+          <210>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(73.22-73.43);
+          })},
+        {},
+        <211>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(73.22-73.43);
+        }),
+       <212>Expr.Quantor
+       (Set,
+        <213>Expr.Variable
+        (<214>NameAppl
+         (Op,
+          {},
+          <215>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(74.28-74.29);
+          }),
+         <216>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(74.28-74.29);
+         }),
+        <217>Expr.Tuple
+        ({<218>Expr.Unary
+          (Theta,
+           <219>Expr.Variable
+           (<220>NameAppl
+            (State,
+             {},
+             <221>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(74.41-74.45);
+             }),
+            <222>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(74.41-74.45);
+            }),
+           <223>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(74.34-74.45);
+           }),
+          <224>Expr.Unary
+          (Theta,
+           <225>Expr.Unary
+           (<226>Expr.UnaryKind.Decorate("'",,
+            <227>Expr.Variable
+            (<228>NameAppl
+             (State,
+              {},
+              <229>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(74.55-74.59);
+              }),
+             <230>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(74.55-74.59);
+             }),
+            <231>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(74.55-74.61);
+            }),
+           <232>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(74.48-74.61);
+           })},
+         <233>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(74.33-74.62);
+         }),
+        <234>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(74.26-74.64);
+        }),
+       <235>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(73.14-74.64);
+       }),
+      <236>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(73.3-74.64);
+      })},
+    {},
+    <237>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(72.1-75.11);
+    }),
+   <238>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(72.1-75.11);
+   }),
+  <239>Item.AxiomaticDef
+  ({},
+   <240>Expr.Text
+   ({<241>Expr.Decl.Direct
+     ({<242>NameDecl
+       (Normal,
+        <243>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(92.3-92.8);
+        }),
+       <244>NameDecl
+       (InvalidCard,
+        <245>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(92.10-92.20);
+        }),
+       <246>NameDecl
+       (NoReserves,
+        <247>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(92.22-92.31);
+        }),
+       <248>NameDecl
+       (System,
+        <249>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(92.34-92.39);
+        })},
+      <250>Expr.Variable
+      (<251>NameAppl
+       (Fragment,
+        {<252>Expr.Variable
+         (<253>NameAppl
+          (ACTOR,
+           {},
+           <254>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(93.43-93.47);
+           }),
+          <255>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(93.43-93.47);
+          }),
+         <256>Expr.Variable
+         (<257>NameAppl
+          (ACTION,
+           {},
+           <258>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(93.49-93.54);
+           }),
+          <259>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(93.49-93.54);
+          }),
+         <260>Expr.Variable
+         (<261>NameAppl
+          (State,
+           {},
+           <262>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(93.56-93.60);
+           }),
+          <263>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(93.56-93.60);
+          })},
+        <264>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(93.34-93.61);
+        }),
+       <265>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(93.34-93.61);
+       }),
+      <266>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(92.3-93.61);
+      })},
+    {<267>Predicate.Test
+     (<268>Expr.Tuple
+      ({<269>Expr.Variable
+        (<270>NameAppl
+         (Normal,
+          {},
+          <271>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(96.3-96.8);
+          }),
+         <272>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(96.3-96.8);
+         }),
+        <273>Expr.Binary
+        (Apply,
+         <274>Expr.Variable
+         (<275>NameAppl
+          (_\ucthen_,
+           {},
+           <276>
+           Annotation {
+             Locator zeta.session.Locator: LTX:dispenser.tex(96.16-105.43);
+           }),
+          <277>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(96.16-105.43);
+          }),
+         <278>Expr.Tuple
+         ({<279>Expr.Binary
+           (Apply,
+            <280>Expr.Variable
+            (<281>NameAppl
+             (_\ucmk_,
+              {},
+              <282>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(96.16-96.38);
+              }),
+             <283>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(96.16-96.38);
+             }),
+            <284>Expr.Tuple
+            ({<285>Expr.Variable
+              (<286>NameAppl
+               (dispenser,
+                {},
+                <287>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(96.16-96.24);
+                }),
+               <288>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(96.16-96.24);
+               }),
+              <289>Expr.Variable
+              (<290>NameAppl
+               (askCard,
+                {},
+                <291>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(96.32-96.38);
+                }),
+               <292>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(96.32-96.38);
+               })},
+             <293>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(96.16-96.38);
+             }),
+            <294>
+            Annotation {
+              Locator zeta.session.Locator: LTX:dispenser.tex(96.16-96.38);
+            }),
+           <295>Expr.Binary
+           (Apply,
+            <296>Expr.Variable
+            (<297>NameAppl
+             (_\ucthen_,
+              {},
+              <298>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(97.21-105.43);
+              }),
+             <299>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(97.21-105.43);
+             }),
+            <300>Expr.Tuple
+            ({<301>Expr.Binary
+              (Apply,
+               <302>Expr.Variable
+               (<303>NameAppl
+                (_\ucmk_,
+                 {},
+                 <304>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(97.21-97.38);
+                 }),
+                <305>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(97.21-97.38);
+                }),
+               <306>Expr.Tuple
+               ({<307>Expr.Variable
+                 (<308>NameAppl
+                  (user,
+                   {},
+                   <309>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(97.21-97.24);
+                   }),
+                  <310>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(97.21-97.24);
+                  }),
+                 <311>Expr.Variable
+                 (<312>NameAppl
+                  (putCard,
+                   {},
+                   <313>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(97.32-97.38);
+                   }),
+                  <314>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(97.32-97.38);
+                  })},
+                <315>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(97.21-97.38);
+                }),
+               <316>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(97.21-97.38);
+               }),
+              <317>Expr.Binary
+              (Apply,
+               <318>Expr.Variable
+               (<319>NameAppl
+                (_\ucthen_,
+                 {},
+                 <320>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(98.21-105.43);
+                 }),
+                <321>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(98.21-105.43);
+                }),
+               <322>Expr.Tuple
+               ({<323>Expr.Binary
+                 (Apply,
+                  <324>Expr.Variable
+                  (<325>NameAppl
+                   (_\ucmk_,
+                    {},
+                    <326>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(98.21-98.45);
+                    }),
+                   <327>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(98.21-98.45);
+                   }),
+                  <328>Expr.Tuple
+                  ({<329>Expr.Variable
+                    (<330>NameAppl
+                     (dispenser,
+                      {},
+                      <331>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:dispenser.tex(98.21-98.29);
+                      }),
+                     <332>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(98.21-98.29);
+                     }),
+                    <333>Expr.Variable
+                    (<334>NameAppl
+                     (askAmount,
+                      {},
+                      <335>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:dispenser.tex(98.37-98.45);
+                      }),
+                     <336>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(98.37-98.45);
+                     })},
+                   <337>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(98.21-98.45);
+                   }),
+                  <338>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(98.21-98.45);
+                  }),
+                 <339>Expr.Binary
+                 (Apply,
+                  <340>Expr.Variable
+                  (<341>NameAppl
+                   (\ucselect,
+                    {},
+                    <342>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(99.21-99.29);
+                    }),
+                   <343>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(99.21-99.29);
+                   }),
+                  <344>Expr.Quantor
+                  (Set,
+                   <345>Expr.Text
+                   ({<346>Expr.Decl.Direct
+                     ({<347>NameDecl
+                       (amount?,
+                        <348>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:dispenser.tex(99.32-99.38);
+                        })},
+                      <349>Expr.Variable
+                      (<350>NameAppl
+                       (\num,
+                        {},
+                        <351>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:dispenser.tex(99.41-99.44);
+                        }),
+                       <352>
+                       Annotation {
+                         Locator zeta.session.Locator:
+                          LTX:dispenser.tex(99.41-99.44);
+                       }),
+                      <353>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:dispenser.tex(99.32-99.44);
+                      })},
+                    {},
+                    <354>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(99.32-99.44);
+                    }),
+                   <355>Expr.Binary
+                   (Apply,
+                    <356>Expr.Variable
+                    (<357>NameAppl
+                     (_\ucthen_,
+                      {},
+                      <358>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:dispenser.tex(100.21-105.40);
+                      }),
+                     <359>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(100.21-105.40);
+                     }),
+                    <360>Expr.Tuple
+                    ({<361>Expr.Binary
+                      (Apply,
+                       <362>Expr.Variable
+                       (<363>NameAppl
+                        (_\ucmkt_\uctrans_,
+                         {},
+                         <364>
+                         Annotation {
+                           Locator zeta.session.Locator:
+                            LTX:dispenser.tex(100.21-101.54);
+                         }),
+                        <365>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:dispenser.tex(100.21-101.54);
+                        }),
+                       <366>Expr.Tuple
+                       ({<367>Expr.Variable
+                         (<368>NameAppl
+                          (user,
+                           {},
+                           <369>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(100.21-100.24);
+                           }),
+                          <370>
+                          Annotation {
+                            Locator zeta.session.Locator:
+                             LTX:dispenser.tex(100.21-100.24);
+                          }),
+                         <371>Expr.Binary
+                         (Apply,
+                          <372>Expr.Variable
+                          (<373>NameAppl
+                           (putAmount,
+                            {},
+                            <374>
+                            Annotation {
+                              Locator zeta.session.Locator:
+                               LTX:dispenser.tex(100.35-100.43);
+                            }),
+                           <375>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(100.35-100.43);
+                           }),
+                          <376>Expr.Variable
+                          (<377>NameAppl
+                           (amount?,
+                            {},
+                            <378>
+                            Annotation {
+                              Locator zeta.session.Locator:
+                               LTX:dispenser.tex(100.44-100.52);
+                            }),
+                           <379>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(100.44-100.52);
+                           }),
+                          <380>
+                          Annotation {
+                            Locator zeta.session.Locator:
+                             LTX:dispenser.tex(100.35-100.52);
+                          }),
+                         <381>Expr.Binary
+                         (Apply,
+                          <382>Expr.Variable
+                          (<383>NameAppl
+                           (\mkrel,
+                            {},
+                            <384>
+                            Annotation {
+                              Locator zeta.session.Locator:
+                               LTX:dispenser.tex(101.28-101.33);
+                            }),
+                           <385>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(101.28-101.33);
+                           }),
+                          <386>Expr.Text
+                          ({<387>Expr.Decl.Inclusion
+                            (<388>Expr.Unary
+                             (Delta,
+                              <389>Expr.Variable
+                              (<390>NameAppl
+                               (State,
+                                {},
+                                <391>
+                                Annotation {
+                                  Locator zeta.session.Locator:
+                                   LTX:dispenser.tex(101.43-101.47);
+                                }),
+                               <392>
+                               Annotation {
+                                 Locator zeta.session.Locator:
+                                  LTX:dispenser.tex(101.43-101.47);
+                               }),
+                              <393>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(101.36-101.47);
+                              }),
+                             <394>
+                             Annotation {
+                               Locator zeta.session.Locator:
+                                LTX:dispenser.tex(101.36-101.47);
+                             })},
+                           {<395>Predicate.Schema
+                            (<396>Expr.Variable
+                             (<397>NameAppl
+                              (Draw,
+                               {},
+                               <398>
+                               Annotation {
+                                 Locator zeta.session.Locator:
+                                  LTX:dispenser.tex(101.51-101.54);
+                               }),
+                              <399>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(101.51-101.54);
+                              }),
+                             <400>
+                             Annotation {
+                               Locator zeta.session.Locator:
+                                LTX:dispenser.tex(101.51-101.54);
+                             })},
+                           <401>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(101.36-101.54);
+                           }),
+                          <402>
+                          Annotation {
+                            Locator zeta.session.Locator:
+                             LTX:dispenser.tex(101.28-101.54);
+                          })},
+                        <403>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:dispenser.tex(100.21-101.54);
+                        }),
+                       <404>
+                       Annotation {
+                         Locator zeta.session.Locator:
+                          LTX:dispenser.tex(100.21-101.54);
+                       }),
+                      <405>Expr.Binary
+                      (Apply,
+                       <406>Expr.Variable
+                       (<407>NameAppl
+                        (_\ucthen_,
+                         {},
+                         <408>
+                         Annotation {
+                           Locator zeta.session.Locator:
+                            LTX:dispenser.tex(102.21-105.40);
+                         }),
+                        <409>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:dispenser.tex(102.21-105.40);
+                        }),
+                       <410>Expr.Tuple
+                       ({<411>Expr.Binary
+                         (Apply,
+                          <412>Expr.Variable
+                          (<413>NameAppl
+                           (_\ucmk_,
+                            {},
+                            <414>
+                            Annotation {
+                              Locator zeta.session.Locator:
+                               LTX:dispenser.tex(102.21-102.45);
+                            }),
+                           <415>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(102.21-102.45);
+                           }),
+                          <416>Expr.Tuple
+                          ({<417>Expr.Variable
+                            (<418>NameAppl
+                             (dispenser,
+                              {},
+                              <419>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(102.21-102.29);
+                              }),
+                             <420>
+                             Annotation {
+                               Locator zeta.session.Locator:
+                                LTX:dispenser.tex(102.21-102.29);
+                             }),
+                            <421>Expr.Variable
+                            (<422>NameAppl
+                             (ejectCard,
+                              {},
+                              <423>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(102.37-102.45);
+                              }),
+                             <424>
+                             Annotation {
+                               Locator zeta.session.Locator:
+                                LTX:dispenser.tex(102.37-102.45);
+                             })},
+                           <425>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(102.21-102.45);
+                           }),
+                          <426>
+                          Annotation {
+                            Locator zeta.session.Locator:
+                             LTX:dispenser.tex(102.21-102.45);
+                          }),
+                         <427>Expr.Binary
+                         (Apply,
+                          <428>Expr.Variable
+                          (<429>NameAppl
+                           (_\ucthen_,
+                            {},
+                            <430>
+                            Annotation {
+                              Locator zeta.session.Locator:
+                               LTX:dispenser.tex(103.21-105.40);
+                            }),
+                           <431>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(103.21-105.40);
+                           }),
+                          <432>Expr.Tuple
+                          ({<433>Expr.Binary
+                            (Apply,
+                             <434>Expr.Variable
+                             (<435>NameAppl
+                              (_\ucmk_,
+                               {},
+                               <436>
+                               Annotation {
+                                 Locator zeta.session.Locator:
+                                  LTX:dispenser.tex(103.21-103.39);
+                               }),
+                              <437>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(103.21-103.39);
+                              }),
+                             <438>Expr.Tuple
+                             ({<439>Expr.Variable
+                               (<440>NameAppl
+                                (user,
+                                 {},
+                                 <441>
+                                 Annotation {
+                                   Locator zeta.session.Locator:
+                                    LTX:dispenser.tex(103.21-103.24);
+                                 }),
+                                <442>
+                                Annotation {
+                                  Locator zeta.session.Locator:
+                                   LTX:dispenser.tex(103.21-103.24);
+                                }),
+                               <443>Expr.Variable
+                               (<444>NameAppl
+                                (takeCard,
+                                 {},
+                                 <445>
+                                 Annotation {
+                                   Locator zeta.session.Locator:
+                                    LTX:dispenser.tex(103.32-103.39);
+                                 }),
+                                <446>
+                                Annotation {
+                                  Locator zeta.session.Locator:
+                                   LTX:dispenser.tex(103.32-103.39);
+                                })},
+                              <447>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(103.21-103.39);
+                              }),
+                             <448>
+                             Annotation {
+                               Locator zeta.session.Locator:
+                                LTX:dispenser.tex(103.21-103.39);
+                             }),
+                            <449>Expr.Binary
+                            (Apply,
+                             <450>Expr.Variable
+                             (<451>NameAppl
+                              (_\ucthen_,
+                               {},
+                               <452>
+                               Annotation {
+                                 Locator zeta.session.Locator:
+                                  LTX:dispenser.tex(104.21-105.40);
+                               }),
+                              <453>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(104.21-105.40);
+                              }),
+                             <454>Expr.Tuple
+                             ({<455>Expr.Binary
+                               (Apply,
+                                <456>Expr.Variable
+                                (<457>NameAppl
+                                 (_\ucmk_,
+                                  {},
+                                  <458>
+                                  Annotation {
+                                    Locator zeta.session.Locator:
+                                     LTX:dispenser.tex(104.21-104.55);
+                                  }),
+                                 <459>
+                                 Annotation {
+                                   Locator zeta.session.Locator:
+                                    LTX:dispenser.tex(104.21-104.55);
+                                 }),
+                                <460>Expr.Tuple
+                                ({<461>Expr.Variable
+                                  (<462>NameAppl
+                                   (dispenser,
+                                    {},
+                                    <463>
+                                    Annotation {
+                                      Locator zeta.session.Locator:
+                                       LTX:dispenser.tex(104.21-104.29);
+                                    }),
+                                   <464>
+                                   Annotation {
+                                     Locator zeta.session.Locator:
+                                      LTX:dispenser.tex(104.21-104.29);
+                                   }),
+                                  <465>Expr.Binary
+                                  (Apply,
+                                   <466>Expr.Variable
+                                   (<467>NameAppl
+                                    (ejectMoney,
+                                     {},
+                                     <468>
+                                     Annotation {
+                                       Locator zeta.session.Locator:
+                                        LTX:dispenser.tex(104.37-104.46);
+                                     }),
+                                    <469>
+                                    Annotation {
+                                      Locator zeta.session.Locator:
+                                       LTX:dispenser.tex(104.37-104.46);
+                                    }),
+                                   <470>Expr.Variable
+                                   (<471>NameAppl
+                                    (amount?,
+                                     {},
+                                     <472>
+                                     Annotation {
+                                       Locator zeta.session.Locator:
+                                        LTX:dispenser.tex(104.47-104.55);
+                                     }),
+                                    <473>
+                                    Annotation {
+                                      Locator zeta.session.Locator:
+                                       LTX:dispenser.tex(104.47-104.55);
+                                    }),
+                                   <474>
+                                   Annotation {
+                                     Locator zeta.session.Locator:
+                                      LTX:dispenser.tex(104.37-104.55);
+                                   })},
+                                 <475>
+                                 Annotation {
+                                   Locator zeta.session.Locator:
+                                    LTX:dispenser.tex(104.21-104.55);
+                                 }),
+                                <476>
+                                Annotation {
+                                  Locator zeta.session.Locator:
+                                   LTX:dispenser.tex(104.21-104.55);
+                                }),
+                               <477>Expr.Binary
+                               (Apply,
+                                <478>Expr.Variable
+                                (<479>NameAppl
+                                 (_\ucmk_,
+                                  {},
+                                  <480>
+                                  Annotation {
+                                    Locator zeta.session.Locator:
+                                     LTX:dispenser.tex(105.21-105.40);
+                                  }),
+                                 <481>
+                                 Annotation {
+                                   Locator zeta.session.Locator:
+                                    LTX:dispenser.tex(105.21-105.40);
+                                 }),
+                                <482>Expr.Tuple
+                                ({<483>Expr.Variable
+                                  (<484>NameAppl
+                                   (user,
+                                    {},
+                                    <485>
+                                    Annotation {
+                                      Locator zeta.session.Locator:
+                                       LTX:dispenser.tex(105.21-105.24);
+                                    }),
+                                   <486>
+                                   Annotation {
+                                     Locator zeta.session.Locator:
+                                      LTX:dispenser.tex(105.21-105.24);
+                                   }),
+                                  <487>Expr.Variable
+                                  (<488>NameAppl
+                                   (takeMoney,
+                                    {},
+                                    <489>
+                                    Annotation {
+                                      Locator zeta.session.Locator:
+                                       LTX:dispenser.tex(105.32-105.40);
+                                    }),
+                                   <490>
+                                   Annotation {
+                                     Locator zeta.session.Locator:
+                                      LTX:dispenser.tex(105.32-105.40);
+                                   })},
+                                 <491>
+                                 Annotation {
+                                   Locator zeta.session.Locator:
+                                    LTX:dispenser.tex(105.21-105.40);
+                                 }),
+                                <492>
+                                Annotation {
+                                  Locator zeta.session.Locator:
+                                   LTX:dispenser.tex(105.21-105.40);
+                                })},
+                              <493>
+                              Annotation {
+                                Locator zeta.session.Locator:
+                                 LTX:dispenser.tex(104.21-105.40);
+                              }),
+                             <494>
+                             Annotation {
+                               Locator zeta.session.Locator:
+                                LTX:dispenser.tex(104.21-105.40);
+                             })},
+                           <495>
+                           Annotation {
+                             Locator zeta.session.Locator:
+                              LTX:dispenser.tex(103.21-105.40);
+                           }),
+                          <496>
+                          Annotation {
+                            Locator zeta.session.Locator:
+                             LTX:dispenser.tex(103.21-105.40);
+                          })},
+                        <497>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:dispenser.tex(102.21-105.40);
+                        }),
+                       <498>
+                       Annotation {
+                         Locator zeta.session.Locator:
+                          LTX:dispenser.tex(102.21-105.40);
+                       })},
+                     <499>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(100.21-105.40);
+                     }),
+                    <500>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(100.21-105.40);
+                    }),
+                   <501>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(99.30-105.43);
+                   }),
+                  <502>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(99.21-105.43);
+                  })},
+                <503>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(98.21-105.43);
+                }),
+               <504>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(98.21-105.43);
+               })},
+             <505>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(97.21-105.43);
+             }),
+            <506>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(97.21-105.43);
+            })},
+          <507>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(96.16-105.43);
+          }),
+         <508>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(96.16-105.43);
+         })},
+       <509>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(96.3-105.43);
+       }),
+      <510>Expr.Variable
+      (<511>NameAppl
+       (_=_,
+        {},
+        <512>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(96.3-105.43);
+        }),
+       <513>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(96.3-105.43);
+       }),
+      <514>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(96.3-105.43);
+      }),
+     <515>Predicate.Test
+     (<516>Expr.Tuple
+      ({<517>Expr.Variable
+        (<518>NameAppl
+         (InvalidCard,
+          {},
+          <519>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(106.3-106.13);
+          }),
+         <520>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(106.3-106.13);
+         }),
+        <521>Expr.Binary
+        (Apply,
+         <522>Expr.Variable
+         (<523>NameAppl
+          (_\ucthen_,
+           {},
+           <524>
+           Annotation {
+             Locator zeta.session.Locator:
+              LTX:dispenser.tex(106.22-108.45);
+           }),
+          <525>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(106.22-108.45);
+          }),
+         <526>Expr.Tuple
+         ({<527>Expr.Binary
+           (Apply,
+            <528>Expr.Variable
+            (<529>NameAppl
+             (_\ucmk_,
+              {},
+              <530>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(106.22-106.39);
+              }),
+             <531>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(106.22-106.39);
+             }),
+            <532>Expr.Tuple
+            ({<533>Expr.Variable
+              (<534>NameAppl
+               (user,
+                {},
+                <535>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(106.22-106.25);
+                }),
+               <536>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(106.22-106.25);
+               }),
+              <537>Expr.Variable
+              (<538>NameAppl
+               (putCard,
+                {},
+                <539>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(106.33-106.39);
+                }),
+               <540>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(106.33-106.39);
+               })},
+             <541>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(106.22-106.39);
+             }),
+            <542>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(106.22-106.39);
+            }),
+           <543>Expr.Binary
+           (Apply,
+            <544>Expr.Variable
+            (<545>NameAppl
+             (_\ucthen_,
+              {},
+              <546>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(107.27-108.45);
+              }),
+             <547>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(107.27-108.45);
+             }),
+            <548>Expr.Tuple
+            ({<549>Expr.Binary
+              (Apply,
+               <550>Expr.Variable
+               (<551>NameAppl
+                (_\ucmk_,
+                 {},
+                 <552>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(107.27-107.51);
+                 }),
+                <553>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(107.27-107.51);
+                }),
+               <554>Expr.Tuple
+               ({<555>Expr.Variable
+                 (<556>NameAppl
+                  (dispenser,
+                   {},
+                   <557>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(107.27-107.35);
+                   }),
+                  <558>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(107.27-107.35);
+                  }),
+                 <559>Expr.Variable
+                 (<560>NameAppl
+                  (ejectCard,
+                   {},
+                   <561>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(107.43-107.51);
+                   }),
+                  <562>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(107.43-107.51);
+                  })},
+                <563>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(107.27-107.51);
+                }),
+               <564>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(107.27-107.51);
+               }),
+              <565>Expr.Binary
+              (Apply,
+               <566>Expr.Variable
+               (<567>NameAppl
+                (_\ucmk_,
+                 {},
+                 <568>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(108.27-108.45);
+                 }),
+                <569>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(108.27-108.45);
+                }),
+               <570>Expr.Tuple
+               ({<571>Expr.Variable
+                 (<572>NameAppl
+                  (user,
+                   {},
+                   <573>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(108.27-108.30);
+                   }),
+                  <574>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(108.27-108.30);
+                  }),
+                 <575>Expr.Variable
+                 (<576>NameAppl
+                  (takeCard,
+                   {},
+                   <577>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(108.38-108.45);
+                   }),
+                  <578>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(108.38-108.45);
+                  })},
+                <579>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(108.27-108.45);
+                }),
+               <580>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(108.27-108.45);
+               })},
+             <581>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(107.27-108.45);
+             }),
+            <582>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(107.27-108.45);
+            })},
+          <583>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(106.22-108.45);
+          }),
+         <584>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(106.22-108.45);
+         })},
+       <585>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(106.3-108.45);
+       }),
+      <586>Expr.Variable
+      (<587>NameAppl
+       (_=_,
+        {},
+        <588>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(106.3-108.45);
+        }),
+       <589>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(106.3-108.45);
+       }),
+      <590>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(106.3-108.45);
+      }),
+     <591>Predicate.Test
+     (<592>Expr.Tuple
+      ({<593>Expr.Variable
+        (<594>NameAppl
+         (NoReserves,
+          {},
+          <595>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(109.3-109.12);
+          }),
+         <596>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(109.3-109.12);
+         }),
+        <597>Expr.Binary
+        (Apply,
+         <598>Expr.Variable
+         (<599>NameAppl
+          (\ucselect,
+           {},
+           <600>
+           Annotation {
+             Locator zeta.session.Locator:
+              LTX:dispenser.tex(109.27-109.35);
+           }),
+          <601>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(109.27-109.35);
+          }),
+         <602>Expr.Quantor
+         (Set,
+          <603>Expr.Text
+          ({<604>Expr.Decl.Direct
+            ({<605>NameDecl
+              (amount?,
+               <606>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(109.38-109.44);
+               })},
+             <607>Expr.Variable
+             (<608>NameAppl
+              (\num,
+               {},
+               <609>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(109.47-109.50);
+               }),
+              <610>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(109.47-109.50);
+              }),
+             <611>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(109.38-109.50);
+             })},
+           {},
+           <612>
+           Annotation {
+             Locator zeta.session.Locator:
+              LTX:dispenser.tex(109.38-109.50);
+           }),
+          <613>Expr.Binary
+          (Apply,
+           <614>Expr.Variable
+           (<615>NameAppl
+            (_\ucthen_,
+             {},
+             <616>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(110.20-113.45);
+             }),
+            <617>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(110.20-113.45);
+            }),
+           <618>Expr.Tuple
+           ({<619>Expr.Binary
+             (Apply,
+              <620>Expr.Variable
+              (<621>NameAppl
+               (_\ucmkt_\uctrans_,
+                {},
+                <622>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(110.20-111.61);
+                }),
+               <623>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(110.20-111.61);
+               }),
+              <624>Expr.Tuple
+              ({<625>Expr.Variable
+                (<626>NameAppl
+                 (user,
+                  {},
+                  <627>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(110.20-110.23);
+                  }),
+                 <628>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(110.20-110.23);
+                 }),
+                <629>Expr.Binary
+                (Apply,
+                 <630>Expr.Variable
+                 (<631>NameAppl
+                  (putAmount,
+                   {},
+                   <632>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(110.34-110.42);
+                   }),
+                  <633>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(110.34-110.42);
+                  }),
+                 <634>Expr.Variable
+                 (<635>NameAppl
+                  (amount?,
+                   {},
+                   <636>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(110.43-110.51);
+                   }),
+                  <637>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(110.43-110.51);
+                  }),
+                 <638>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(110.34-110.51);
+                 }),
+                <639>Expr.Binary
+                (Apply,
+                 <640>Expr.Variable
+                 (<641>NameAppl
+                  (\mkrel,
+                   {},
+                   <642>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(111.31-111.36);
+                   }),
+                  <643>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(111.31-111.36);
+                  }),
+                 <644>Expr.Text
+                 ({<645>Expr.Decl.Inclusion
+                   (<646>Expr.Unary
+                    (Delta,
+                     <647>Expr.Variable
+                     (<648>NameAppl
+                      (State,
+                       {},
+                       <649>
+                       Annotation {
+                         Locator zeta.session.Locator:
+                          LTX:dispenser.tex(111.46-111.50);
+                       }),
+                      <650>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:dispenser.tex(111.46-111.50);
+                      }),
+                     <651>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(111.39-111.50);
+                     }),
+                    <652>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(111.39-111.50);
+                    })},
+                  {<653>Predicate.Schema
+                   (<654>Expr.Variable
+                    (<655>NameAppl
+                     (CantDraw,
+                      {},
+                      <656>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:dispenser.tex(111.54-111.61);
+                      }),
+                     <657>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(111.54-111.61);
+                     }),
+                    <658>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(111.54-111.61);
+                    })},
+                  <659>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(111.39-111.61);
+                  }),
+                 <660>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(111.31-111.61);
+                 })},
+               <661>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(110.20-111.61);
+               }),
+              <662>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(110.20-111.61);
+              }),
+             <663>Expr.Binary
+             (Apply,
+              <664>Expr.Variable
+              (<665>NameAppl
+               (_\ucthen_,
+                {},
+                <666>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(112.27-113.45);
+                }),
+               <667>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(112.27-113.45);
+               }),
+              <668>Expr.Tuple
+              ({<669>Expr.Binary
+                (Apply,
+                 <670>Expr.Variable
+                 (<671>NameAppl
+                  (_\ucmk_,
+                   {},
+                   <672>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(112.27-112.51);
+                   }),
+                  <673>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(112.27-112.51);
+                  }),
+                 <674>Expr.Tuple
+                 ({<675>Expr.Variable
+                   (<676>NameAppl
+                    (dispenser,
+                     {},
+                     <677>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(112.27-112.35);
+                     }),
+                    <678>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(112.27-112.35);
+                    }),
+                   <679>Expr.Variable
+                   (<680>NameAppl
+                    (ejectCard,
+                     {},
+                     <681>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(112.43-112.51);
+                     }),
+                    <682>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(112.43-112.51);
+                    })},
+                  <683>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(112.27-112.51);
+                  }),
+                 <684>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(112.27-112.51);
+                 }),
+                <685>Expr.Binary
+                (Apply,
+                 <686>Expr.Variable
+                 (<687>NameAppl
+                  (_\ucmk_,
+                   {},
+                   <688>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:dispenser.tex(113.27-113.45);
+                   }),
+                  <689>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(113.27-113.45);
+                  }),
+                 <690>Expr.Tuple
+                 ({<691>Expr.Variable
+                   (<692>NameAppl
+                    (user,
+                     {},
+                     <693>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(113.27-113.30);
+                     }),
+                    <694>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(113.27-113.30);
+                    }),
+                   <695>Expr.Variable
+                   (<696>NameAppl
+                    (takeCard,
+                     {},
+                     <697>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:dispenser.tex(113.38-113.45);
+                     }),
+                    <698>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:dispenser.tex(113.38-113.45);
+                    })},
+                  <699>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:dispenser.tex(113.27-113.45);
+                  }),
+                 <700>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(113.27-113.45);
+                 })},
+               <701>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(112.27-113.45);
+               }),
+              <702>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(112.27-113.45);
+              })},
+            <703>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(110.20-113.45);
+            }),
+           <704>
+           Annotation {
+             Locator zeta.session.Locator:
+              LTX:dispenser.tex(110.20-113.45);
+           }),
+          <705>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(109.36-113.47);
+          }),
+         <706>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(109.27-113.47);
+         })},
+       <707>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(109.3-113.47);
+       }),
+      <708>Expr.Variable
+      (<709>NameAppl
+       (_=_,
+        {},
+        <710>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(109.3-113.47);
+        }),
+       <711>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(109.3-113.47);
+       }),
+      <712>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(109.3-113.47);
+      }),
+     <713>Predicate.Test
+     (<714>Expr.Tuple
+      ({<715>Expr.Variable
+        (<716>NameAppl
+         (System,
+          {},
+          <717>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(114.3-114.8);
+          }),
+         <718>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(114.3-114.8);
+         }),
+        <719>Expr.Binary
+        (Apply,
+         <720>Expr.Variable
+         (<721>NameAppl
+          (\ucrepeat,
+           {},
+           <722>
+           Annotation {
+             Locator zeta.session.Locator:
+              LTX:dispenser.tex(114.15-114.23);
+           }),
+          <723>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(114.15-114.23);
+          }),
+         <724>Expr.Binary
+         (Apply,
+          <725>Expr.Variable
+          (<726>NameAppl
+           (_\ucexcept_,
+            {},
+            <727>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(114.25-115.55);
+            }),
+           <728>
+           Annotation {
+             Locator zeta.session.Locator:
+              LTX:dispenser.tex(114.25-115.55);
+           }),
+          <729>Expr.Tuple
+          ({<730>Expr.Binary
+            (Apply,
+             <731>Expr.Variable
+             (<732>NameAppl
+              (_\ucexcept_,
+               {},
+               <733>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(114.25-114.60);
+               }),
+              <734>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(114.25-114.60);
+              }),
+             <735>Expr.Tuple
+             ({<736>Expr.Variable
+               (<737>NameAppl
+                (Normal,
+                 {},
+                 <738>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(114.25-114.30);
+                 }),
+                <739>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(114.25-114.30);
+                }),
+               <740>Expr.Variable
+               (<741>NameAppl
+                (InvalidCard,
+                 {},
+                 <742>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(114.50-114.60);
+                 }),
+                <743>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(114.50-114.60);
+                })},
+              <744>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(114.25-114.60);
+              }),
+             <745>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(114.25-114.60);
+             }),
+            <746>Expr.Variable
+            (<747>NameAppl
+             (NoReserves,
+              {},
+              <748>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(115.46-115.55);
+              }),
+             <749>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(115.46-115.55);
+             })},
+           <750>
+           Annotation {
+             Locator zeta.session.Locator:
+              LTX:dispenser.tex(114.25-115.55);
+           }),
+          <751>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(114.25-115.55);
+          }),
+         <752>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(114.15-115.55);
+         })},
+       <753>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(114.3-115.55);
+       }),
+      <754>Expr.Variable
+      (<755>NameAppl
+       (_=_,
+        {},
+        <756>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(114.3-115.55);
+        }),
+       <757>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(114.3-115.55);
+       }),
+      <758>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(114.3-115.55);
+      })},
+    <759>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(91.1-117.11);
+    }),
+   <760>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(91.1-117.11);
+   }),
+  <761>Item.AxiomaticDef
+  ({},
+   <762>Expr.Text
+   ({<763>Expr.Decl.Eqn
+     (<764>NameDecl
+      (d_1,
+       <765>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(125.3-125.5);
+       }),
+      <766>Expr.Binary
+      (Apply,
+       <767>Expr.Variable
+       (<768>NameAppl
+        (\langle,,\rangle,
+         {},
+         <769>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(125.10-133.41);
+         }),
+        <770>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(125.10-133.41);
+        }),
+       <771>Expr.Display
+       ({<772>Expr.Tuple
+         ({<773>Expr.Number
+           ("1",
+            <774>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(126.13-126.36);
+            }),
+           <775>Expr.Binary
+           (Apply,
+            <776>Expr.Variable
+            (<777>NameAppl
+             (_\ucmki_,
+              {},
+              <778>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(126.13-126.36);
+              }),
+             <779>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(126.13-126.36);
+             }),
+            <780>Expr.Tuple
+            ({<781>Expr.Variable
+              (<782>NameAppl
+               (dispenser,
+                {},
+                <783>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(126.13-126.21);
+                }),
+               <784>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(126.13-126.21);
+               }),
+              <785>Expr.Variable
+              (<786>NameAppl
+               (askCard,
+                {},
+                <787>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(126.30-126.36);
+                }),
+               <788>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(126.30-126.36);
+               })},
+             <789>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(126.13-126.36);
+             }),
+            <790>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(126.13-126.36);
+            })},
+          <791>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(126.13-126.36);
+          }),
+         <792>Expr.Tuple
+         ({<793>Expr.Number
+           ("2",
+            <794>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(127.13-127.31);
+            }),
+           <795>Expr.Binary
+           (Apply,
+            <796>Expr.Variable
+            (<797>NameAppl
+             (_\ucmki_,
+              {},
+              <798>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(127.13-127.31);
+              }),
+             <799>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(127.13-127.31);
+             }),
+            <800>Expr.Tuple
+            ({<801>Expr.Variable
+              (<802>NameAppl
+               (user,
+                {},
+                <803>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(127.13-127.16);
+                }),
+               <804>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(127.13-127.16);
+               }),
+              <805>Expr.Variable
+              (<806>NameAppl
+               (putCard,
+                {},
+                <807>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(127.25-127.31);
+                }),
+               <808>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(127.25-127.31);
+               })},
+             <809>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(127.13-127.31);
+             }),
+            <810>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(127.13-127.31);
+            })},
+          <811>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(127.13-127.31);
+          }),
+         <812>Expr.Tuple
+         ({<813>Expr.Number
+           ("3",
+            <814>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(128.13-128.38);
+            }),
+           <815>Expr.Binary
+           (Apply,
+            <816>Expr.Variable
+            (<817>NameAppl
+             (_\ucmki_,
+              {},
+              <818>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(128.13-128.38);
+              }),
+             <819>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(128.13-128.38);
+             }),
+            <820>Expr.Tuple
+            ({<821>Expr.Variable
+              (<822>NameAppl
+               (dispenser,
+                {},
+                <823>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(128.13-128.21);
+                }),
+               <824>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(128.13-128.21);
+               }),
+              <825>Expr.Variable
+              (<826>NameAppl
+               (askAmount,
+                {},
+                <827>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(128.30-128.38);
+                }),
+               <828>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(128.30-128.38);
+               })},
+             <829>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(128.13-128.38);
+             }),
+            <830>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(128.13-128.38);
+            })},
+          <831>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(128.13-128.38);
+          }),
+         <832>Expr.Tuple
+         ({<833>Expr.Number
+           ("4",
+            <834>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(129.13-129.37);
+            }),
+           <835>Expr.Binary
+           (Apply,
+            <836>Expr.Variable
+            (<837>NameAppl
+             (_\ucmki_,
+              {},
+              <838>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(129.13-129.37);
+              }),
+             <839>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(129.13-129.37);
+             }),
+            <840>Expr.Tuple
+            ({<841>Expr.Variable
+              (<842>NameAppl
+               (user,
+                {},
+                <843>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(129.13-129.16);
+                }),
+               <844>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(129.13-129.16);
+               }),
+              <845>Expr.Binary
+              (Apply,
+               <846>Expr.Variable
+               (<847>NameAppl
+                (putAmount,
+                 {},
+                 <848>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(129.25-129.33);
+                 }),
+                <849>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(129.25-129.33);
+                }),
+               <850>Expr.Number
+               ("400",
+                <851>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(129.35-129.37);
+                }),
+               <852>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(129.25-129.37);
+               })},
+             <853>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(129.13-129.37);
+             }),
+            <854>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(129.13-129.37);
+            })},
+          <855>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(129.13-129.37);
+          }),
+         <856>Expr.Tuple
+         ({<857>Expr.Number
+           ("5",
+            <858>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(130.13-130.38);
+            }),
+           <859>Expr.Binary
+           (Apply,
+            <860>Expr.Variable
+            (<861>NameAppl
+             (_\ucmki_,
+              {},
+              <862>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(130.13-130.38);
+              }),
+             <863>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(130.13-130.38);
+             }),
+            <864>Expr.Tuple
+            ({<865>Expr.Variable
+              (<866>NameAppl
+               (dispenser,
+                {},
+                <867>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(130.13-130.21);
+                }),
+               <868>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(130.13-130.21);
+               }),
+              <869>Expr.Variable
+              (<870>NameAppl
+               (ejectCard,
+                {},
+                <871>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(130.30-130.38);
+                }),
+               <872>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(130.30-130.38);
+               })},
+             <873>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(130.13-130.38);
+             }),
+            <874>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(130.13-130.38);
+            })},
+          <875>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(130.13-130.38);
+          }),
+         <876>Expr.Tuple
+         ({<877>Expr.Number
+           ("6",
+            <878>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(131.13-131.32);
+            }),
+           <879>Expr.Binary
+           (Apply,
+            <880>Expr.Variable
+            (<881>NameAppl
+             (_\ucmki_,
+              {},
+              <882>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(131.13-131.32);
+              }),
+             <883>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(131.13-131.32);
+             }),
+            <884>Expr.Tuple
+            ({<885>Expr.Variable
+              (<886>NameAppl
+               (user,
+                {},
+                <887>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(131.13-131.16);
+                }),
+               <888>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(131.13-131.16);
+               }),
+              <889>Expr.Variable
+              (<890>NameAppl
+               (takeCard,
+                {},
+                <891>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(131.25-131.32);
+                }),
+               <892>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(131.25-131.32);
+               })},
+             <893>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(131.13-131.32);
+             }),
+            <894>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(131.13-131.32);
+            })},
+          <895>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(131.13-131.32);
+          }),
+         <896>Expr.Tuple
+         ({<897>Expr.Number
+           ("7",
+            <898>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(132.13-132.43);
+            }),
+           <899>Expr.Binary
+           (Apply,
+            <900>Expr.Variable
+            (<901>NameAppl
+             (_\ucmki_,
+              {},
+              <902>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(132.13-132.43);
+              }),
+             <903>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(132.13-132.43);
+             }),
+            <904>Expr.Tuple
+            ({<905>Expr.Variable
+              (<906>NameAppl
+               (dispenser,
+                {},
+                <907>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(132.13-132.21);
+                }),
+               <908>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(132.13-132.21);
+               }),
+              <909>Expr.Binary
+              (Apply,
+               <910>Expr.Variable
+               (<911>NameAppl
+                (ejectMoney,
+                 {},
+                 <912>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:dispenser.tex(132.30-132.39);
+                 }),
+                <913>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(132.30-132.39);
+                }),
+               <914>Expr.Number
+               ("400",
+                <915>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(132.41-132.43);
+                }),
+               <916>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(132.30-132.43);
+               })},
+             <917>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(132.13-132.43);
+             }),
+            <918>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(132.13-132.43);
+            })},
+          <919>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(132.13-132.43);
+          }),
+         <920>Expr.Tuple
+         ({<921>Expr.Number
+           ("8",
+            <922>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(133.13-133.33);
+            }),
+           <923>Expr.Binary
+           (Apply,
+            <924>Expr.Variable
+            (<925>NameAppl
+             (_\ucmki_,
+              {},
+              <926>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(133.13-133.33);
+              }),
+             <927>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(133.13-133.33);
+             }),
+            <928>Expr.Tuple
+            ({<929>Expr.Variable
+              (<930>NameAppl
+               (user,
+                {},
+                <931>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(133.13-133.16);
+                }),
+               <932>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(133.13-133.16);
+               }),
+              <933>Expr.Variable
+              (<934>NameAppl
+               (takeMoney,
+                {},
+                <935>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(133.25-133.33);
+                }),
+               <936>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(133.25-133.33);
+               })},
+             <937>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(133.13-133.33);
+             }),
+            <938>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(133.13-133.33);
+            })},
+          <939>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(133.13-133.33);
+          })},
+        <940>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(125.10-133.41);
+        }),
+       <941>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(125.10-133.41);
+       }),
+      <942>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(125.3-133.41);
+      })},
+    {},
+    <943>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(125.3-133.41);
+    }),
+   <944>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(125.3-133.41);
+   }),
+  <945>Item.AxiomaticDef
+  ({},
+   <946>Expr.Text
+   ({<947>Expr.Decl.Eqn
+     (<948>NameDecl
+      (d_2,
+       <949>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(134.3-134.5);
+       }),
+      <950>Expr.Binary
+      (Apply,
+       <951>Expr.Variable
+       (<952>NameAppl
+        (\langle,,\rangle,
+         {},
+         <953>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(134.10-138.41);
+         }),
+        <954>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(134.10-138.41);
+        }),
+       <955>Expr.Display
+       ({<956>Expr.Tuple
+         ({<957>Expr.Number
+           ("1",
+            <958>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(135.13-135.36);
+            }),
+           <959>Expr.Binary
+           (Apply,
+            <960>Expr.Variable
+            (<961>NameAppl
+             (_\ucmki_,
+              {},
+              <962>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(135.13-135.36);
+              }),
+             <963>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(135.13-135.36);
+             }),
+            <964>Expr.Tuple
+            ({<965>Expr.Variable
+              (<966>NameAppl
+               (dispenser,
+                {},
+                <967>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(135.13-135.21);
+                }),
+               <968>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(135.13-135.21);
+               }),
+              <969>Expr.Variable
+              (<970>NameAppl
+               (askCard,
+                {},
+                <971>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(135.30-135.36);
+                }),
+               <972>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(135.30-135.36);
+               })},
+             <973>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(135.13-135.36);
+             }),
+            <974>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(135.13-135.36);
+            })},
+          <975>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(135.13-135.36);
+          }),
+         <976>Expr.Tuple
+         ({<977>Expr.Number
+           ("2",
+            <978>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(136.13-136.31);
+            }),
+           <979>Expr.Binary
+           (Apply,
+            <980>Expr.Variable
+            (<981>NameAppl
+             (_\ucmki_,
+              {},
+              <982>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(136.13-136.31);
+              }),
+             <983>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(136.13-136.31);
+             }),
+            <984>Expr.Tuple
+            ({<985>Expr.Variable
+              (<986>NameAppl
+               (user,
+                {},
+                <987>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(136.13-136.16);
+                }),
+               <988>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(136.13-136.16);
+               }),
+              <989>Expr.Variable
+              (<990>NameAppl
+               (putCard,
+                {},
+                <991>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(136.25-136.31);
+                }),
+               <992>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(136.25-136.31);
+               })},
+             <993>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(136.13-136.31);
+             }),
+            <994>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(136.13-136.31);
+            })},
+          <995>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(136.13-136.31);
+          }),
+         <996>Expr.Tuple
+         ({<997>Expr.Number
+           ("3",
+            <998>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(137.13-137.38);
+            }),
+           <999>Expr.Binary
+           (Apply,
+            <1000>Expr.Variable
+            (<1001>NameAppl
+             (_\ucmki_,
+              {},
+              <1002>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(137.13-137.38);
+              }),
+             <1003>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(137.13-137.38);
+             }),
+            <1004>Expr.Tuple
+            ({<1005>Expr.Variable
+              (<1006>NameAppl
+               (dispenser,
+                {},
+                <1007>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(137.13-137.21);
+                }),
+               <1008>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(137.13-137.21);
+               }),
+              <1009>Expr.Variable
+              (<1010>NameAppl
+               (ejectCard,
+                {},
+                <1011>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(137.30-137.38);
+                }),
+               <1012>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(137.30-137.38);
+               })},
+             <1013>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(137.13-137.38);
+             }),
+            <1014>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(137.13-137.38);
+            })},
+          <1015>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(137.13-137.38);
+          }),
+         <1016>Expr.Tuple
+         ({<1017>Expr.Number
+           ("4",
+            <1018>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(138.13-138.32);
+            }),
+           <1019>Expr.Binary
+           (Apply,
+            <1020>Expr.Variable
+            (<1021>NameAppl
+             (_\ucmki_,
+              {},
+              <1022>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:dispenser.tex(138.13-138.32);
+              }),
+             <1023>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(138.13-138.32);
+             }),
+            <1024>Expr.Tuple
+            ({<1025>Expr.Variable
+              (<1026>NameAppl
+               (user,
+                {},
+                <1027>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(138.13-138.16);
+                }),
+               <1028>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(138.13-138.16);
+               }),
+              <1029>Expr.Variable
+              (<1030>NameAppl
+               (takeCard,
+                {},
+                <1031>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:dispenser.tex(138.25-138.32);
+                }),
+               <1032>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:dispenser.tex(138.25-138.32);
+               })},
+             <1033>
+             Annotation {
+               Locator zeta.session.Locator:
+                LTX:dispenser.tex(138.13-138.32);
+             }),
+            <1034>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:dispenser.tex(138.13-138.32);
+            })},
+          <1035>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(138.13-138.32);
+          })},
+        <1036>
+        Annotation {
+          Locator zeta.session.Locator: LTX:dispenser.tex(134.10-138.41);
+        }),
+       <1037>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(134.10-138.41);
+       }),
+      <1038>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(134.3-138.41);
+      })},
+    {},
+    <1039>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(134.3-138.41);
+    }),
+   <1040>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(134.3-138.41);
+   }),
+  <1041>Item.AxiomaticDef
+  ({},
+   <1042>Expr.Text
+   ({<1043>Expr.Decl.Eqn
+     (<1044>NameDecl
+      (\sigma_1,
+       <1045>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(139.3-139.10);
+       }),
+      <1046>Expr.Binding
+      ({<1047>Expr.Decl.Eqn
+        (<1048>NameDecl
+         (reserves,
+          <1049>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(139.22-139.29);
+          }),
+         <1050>Expr.Number
+         ("600",
+          <1051>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(139.32-139.34);
+          }),
+         <1052>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(139.22-139.34);
+         })},
+       <1053>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(139.15-139.41);
+       }),
+      <1054>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(139.3-139.41);
+      })},
+    {},
+    <1055>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(139.3-139.41);
+    }),
+   <1056>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(139.3-139.41);
+   }),
+  <1057>Item.AxiomaticDef
+  ({},
+   <1058>Expr.Text
+   ({<1059>Expr.Decl.Eqn
+     (<1060>NameDecl
+      (\sigma_2,
+       <1061>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(140.3-140.10);
+       }),
+      <1062>Expr.Binding
+      ({<1063>Expr.Decl.Eqn
+        (<1064>NameDecl
+         (reserves,
+          <1065>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(140.22-140.29);
+          }),
+         <1066>Expr.Number
+         ("800",
+          <1067>
+          Annotation {
+            Locator zeta.session.Locator: LTX:dispenser.tex(140.32-140.34);
+          }),
+         <1068>
+         Annotation {
+           Locator zeta.session.Locator: LTX:dispenser.tex(140.22-140.34);
+         })},
+       <1069>
+       Annotation {
+         Locator zeta.session.Locator: LTX:dispenser.tex(140.15-140.41);
+       }),
+      <1070>
+      Annotation {
+        Locator zeta.session.Locator: LTX:dispenser.tex(140.3-140.41);
+      })},
+    {},
+    <1071>
+    Annotation {
+      Locator zeta.session.Locator: LTX:dispenser.tex(140.3-140.41);
+    }),
+   <1072>
+   Annotation {
+     Locator zeta.session.Locator: LTX:dispenser.tex(140.3-140.41);
+   })},
+ <1073>
+ Annotation {
+   Locator zeta.session.Locator: LTX:dispenser.tex(33.3-33.36);
+ })

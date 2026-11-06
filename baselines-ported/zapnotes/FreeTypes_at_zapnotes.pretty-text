@@ -1,0 +1,5 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:FreeTypes#zapnotes}
+
+\begin{zed}
+  MySeq ::= nil | cons \ldata (1 \upto 3) \cross MySeq \rdata
+\end{zed}

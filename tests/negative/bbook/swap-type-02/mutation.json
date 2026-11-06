@@ -1,0 +1,10 @@
+{
+  "source": "bbook.tex",
+  "operator": "swap-type",
+  "detail": "schema/day : \\nat; -> DATE",
+  "units": [
+    "BBExec#bbook",
+    "BBSpec#bbook",
+    "BBTest#bbook"
+  ]
+}

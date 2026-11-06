@@ -1,0 +1,19 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load TincompleteActualization.tex
++ scanning TincompleteActualization.tex
+- load TincompleteActualization.tex
+>>> c -u TincompleteActualization#TincompleteActualization
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:TincompleteActualization#TincompleteActualization
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:TincompleteActualization#TincompleteActualization
+! ERROR[LTX:TincompleteActualization.tex(11.8-11.16)]:
+!   cannot determine actualization of `\emptyset'. inferred: \emptyset[<any>]
+= good bye.

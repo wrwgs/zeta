@@ -1,0 +1,10 @@
+{
+  "section": "Nat",
+  "unit": "Nat#zapnotes",
+  "kind": "pred",
+  "line": 256,
+  "query": "\\exists_1 ns == \\{x: N | x~less~three \\} @ ((ns \\cross ns) \\dres add) \\in pfun[N \\cross N,N]",
+  "yields": [
+    "*true*"
+  ]
+}

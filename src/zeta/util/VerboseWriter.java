@@ -1,0 +1,165 @@
+package zeta.util;
+
+/** 
+ * A class for managing verbosity prints. <p>
+ *
+ * Provides several methods for convenient printing of verbosity messages.
+ * By default, verbosity messages are send to standard out. It is
+ * possible to statically configure another output channel or a
+ * session to receive the verbosity messages. <p>
+ *
+ * Verbose printing itself is done on an instance of a VerboseWriter --
+ * when creating such an instance, it is decided on base of a parameter
+ * whether verbosity prints are actually done or not. <p>
+ *
+ * Typical usage is as follows:
+ *
+ * <pre>
+ * class MyClass {
+ *   static VerboseWriter verb = VerboseWriter.make(toolName, verboseCond);
+ *
+ *   .... {
+ *      verbose.send("reaching foo");
+ *      ...
+ *      verbose.send("reaching bar");
+ *      ...
+ *   }
+ * }
+ * </pre>
+ *
+ * @version $Id: VerboseWriter.pizza,v 1.1 1998/09/13 15:09:17 wg Exp $
+ *
+ * <h2>Port notes</h2>
+ *
+ * A straight translation, like {@link DebugWriter}, whose structure it duplicates almost
+ * line for line -- the two differ only in which messages they accept. Worth noting but not
+ * worth merging during a port: collapsing them onto one implementation would change two
+ * public APIs that the tools use independently.
+ *
+ * One Pizza artefact survives at the call sites below: `new DebugMessage(fmt)` does not
+ * compile, because `DebugMessage` is a `case` class and carries a static factory of the same
+ * name as the class, which hides the constructor from javac entirely ("cannot find symbol:
+ * constructor DebugMessage(Format)").  `DebugMessage.DebugMessage(fmt)` -- whose body is that
+ * very `new` -- is what Pizza-compiled callers use, and what is used here.  It disappears when
+ * `zeta.session` is ported and the factories go.
+ */
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+
+import zeta.format.Format;
+import zeta.session.DebugMessage;
+import zeta.session.Session;
+
+public abstract class VerboseWriter {
+
+  /**
+   * The PrintWriter for verbose messages.
+   */
+  private static PrintWriter writer =
+    new PrintWriter(new FileOutputStream(FileDescriptor.err), true);
+
+  /**
+   * A session to receive verbose messages.
+   */
+  private static Session session = null;
+
+
+  /**
+   * Set the given print-writer to be used for all verbose messages.
+   * An older print-writer or session is overwritten as a receiver.
+   */
+  public static void setReceiver(PrintWriter writer){
+    VerboseWriter.writer = writer; VerboseWriter.session = null;
+  }
+
+  /**
+   * Set the given session to be used for all verbose messages.
+   * An older print-writer or session system is overwritten as a receiver.
+   */
+  public static void setReceiver(Session session){
+    VerboseWriter.writer = null; VerboseWriter.session = session;
+  }
+
+  /**
+   * Return an instance of a verbose writer, using the given tool name in
+   * session messages. If the given boolean is true, then the returned
+   * verbose writer will issue its messages to the currently configured
+   * receiver.  Otherwise all output to the returned verbose writer will
+   * be ignored.  */
+  public static VerboseWriter make(Name name, boolean active){
+    if (active)
+      return new ActiveWriter(name);
+    else
+      return new DeactiveWriter();
+  }
+
+  /**
+   * Return an instance of a verbose writer, using the given tool name in
+   * session messages. If the given property string
+   * is defined in the system property set, then the returned verbose
+   * writer will issue its messages to the currently configured receiver.
+   * Otherwise all output to the returned verbose writer will be ignored.
+   */
+  public static VerboseWriter make(Name name, String property){
+    return make(name, System.getProperty(property) != null);
+  }
+
+  /**
+   * Send the given string to this verbose printer.
+   */
+  public abstract void send(String message);
+
+  /**
+   * Send the given format to this verbose printer.
+   */
+  public abstract void send(Format format);
+
+  /**
+   * Return true if this is an active verbose writer.
+   */
+  public abstract boolean isActive();
+
+
+  /**
+   * The class of active writers.
+   */
+  private static class ActiveWriter extends VerboseWriter {
+
+    private Name thisName;
+
+    private ActiveWriter(Name name){
+      thisName = name;
+    }
+    
+    public void send(String s){
+      if (session != null)
+	session.send(thisName, DebugMessage.DebugMessage(Format.literal(s)));
+      else
+	writer.println(s);
+    }
+
+    public void send(Format fmt){
+      if (session != null)
+	session.send(thisName, DebugMessage.DebugMessage(fmt));
+      else
+	writer.println(fmt);
+    }
+
+    public boolean isActive(){
+      return true;
+    }
+  }
+
+  /**
+   * The class of deactive writers.
+   */
+  private static class DeactiveWriter extends VerboseWriter {
+    public void send(String s){}
+    public void send(Format f){}
+    public boolean isActive(){ return false; }
+  }
+
+  
+}
+

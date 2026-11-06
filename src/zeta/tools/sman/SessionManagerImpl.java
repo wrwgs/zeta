@@ -1,0 +1,39 @@
+package zeta.tools.sman;
+
+/**
+ * A simple realization of a session manager.
+ *
+ * @version $Id: SessionManagerImpl.pizza,v 1.1.1.1 1998/09/01 10:51:06 wg Exp $
+ *
+ * <h2>Port notes</h2>
+ *
+ * A straight translation; no Pizza feature is used.  This class is loaded reflectively by
+ * {@link zeta.session.SessionManager#getManager} (see that class's port notes) -- so there is
+ * no {@code Class} constant pointing at it in any binary class, and {@code abi_gate.py} seeds
+ * it as an entry point explicitly (&#167;9.5).
+ */
+
+import java.io.File;
+
+import zeta.session.Failures;
+import zeta.session.Session;
+import zeta.session.SessionManager;
+
+public class SessionManagerImpl extends SessionManager {
+
+  /**
+   * The creation method of a session manager.
+   */
+  public Session createProject(String projectName) {
+    return SessionImpl.create(new File(projectName));
+  }
+
+  /**
+   * The open method of a session manager.
+   */
+  public Session openProject(String projectName)
+  throws Failures.NoSuchEntity {
+    return SessionImpl.open(new File(projectName));
+  }
+
+}

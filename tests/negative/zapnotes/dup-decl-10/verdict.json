@@ -1,0 +1,18 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "redeclaration"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:Specials#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(814.3-814.3)]:",
+    "illegal redeclaration of `x'.",
+    "previous declaration: LTX:zapnotes.tex(813.3-813.3)"
+  ]
+}

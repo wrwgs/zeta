@@ -1,0 +1,10 @@
+{
+  "section": "Genericity",
+  "unit": "Genericity#zapnotes",
+  "kind": "expr",
+  "line": 436,
+  "query": "id[\\{1,2\\}]",
+  "yields": [
+    "{(1,1),(2,2)}"
+  ]
+}

@@ -1,0 +1,25 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load TincompatActualization.tex
++ scanning TincompatActualization.tex
+- load TincompatActualization.tex
+>>> c -u TincompatActualization#TincompatActualization
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:TincompatActualization#TincompatActualization
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:TincompatActualization#TincompatActualization
+! ERROR[LTX:TincompatActualization.tex(16.12-16.23)]:
+!   invalid actualization of `g'.
+!     genericity   : 1 formal(s)
+!     actualization: 2 parameter(s)
+! ERROR[LTX:TincompatActualization.tex(16.9-16.23)]:
+!   type mismatch.
+!     demanded type : P \baseNum
+!     delivered type: \baseNum
+= good bye.

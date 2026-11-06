@@ -1,0 +1,21 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "incompatActualization",
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:Specials#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(875.27-875.27)]: undeclared `A'",
+    "ERROR[LTX:zapnotes.tex(875.21-875.28)]:",
+    "invalid actualization of `foldl'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)"
+  ]
+}

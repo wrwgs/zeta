@@ -1,0 +1,10 @@
+{
+  "source": "bbook.tex",
+  "operator": "drop-decl",
+  "detail": "schema/known removed",
+  "units": [
+    "BBExec#bbook",
+    "BBSpec#bbook",
+    "BBTest#bbook"
+  ]
+}

@@ -1,0 +1,109 @@
+UNIT LTX:UseCasesModel#ucases
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  Dialogue
+  Dialogue[]
+  Fragment
+  Fragment[]
+  Interaction
+  Interaction[]
+  Pattern
+  Pattern[]
+  \MEMOIZE
+  \Sigma
+  \alpha
+  \baseNum
+  \bigcup
+  \bigcup[]
+  \dom
+  \dom[]
+  \emptyset
+  \id_
+  \id_[]
+  \langle,,\rangle
+  \langle,,\rangle[]
+  \nat
+  \num
+  \pi
+  \ran
+  \seq_
+  \seq_[]
+  \ucrepeat
+  \ucrepeat[]
+  \ucselect
+  \ucselect[]
+  _-_
+  _=_
+  _=_[]
+  _\cat_
+  _\cat_[]
+  _\circ_
+  _\circ_[]
+  _\comp_
+  _\comp_[]
+  _\cup_
+  _\cup_[]
+  _\dres_
+  _\dres_[]
+  _\fun_
+  _\in_
+  _\in_[]
+  _\limg_\rimg
+  _\limg_\rimg[]
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\rel_[]
+  _\star
+  _\star[]
+  _\subseteq_
+  _\ucexcept_
+  _\ucexcept_[]
+  _\ucin_
+  _\ucin_[]
+  _\ucmk_
+  _\ucmk_[]
+  _\ucmki_
+  _\ucmki_[]
+  _\ucmkt_\uctrans_
+  _\ucmkt_\uctrans_[]
+  _\ucthen_
+  _\ucthen_[]
+  _\upto_
+  first
+  first[]
+  fold
+  fold[]
+  second
+  second[]
+LOCALS
+  %l
+  %l3
+PROPERTIES
+  LTX:ucspec.tex(12.1-14.12): Interaction = {((\alpha,\pi),Interaction) | LTX:ucspec.tex(12.1-14.12): Interaction = UNIV};
+  LTX:ucspec.tex(12.1-14.12): Interaction[] = UNIV;
+  LTX:ucspec.tex(16.27-16.54): %l = \seq_ Interaction[];
+  LTX:ucspec.tex(16.27-16.54): Dialogue[] = %l;
+  LTX:ucspec.tex(16.3-16.54): Dialogue = {((\alpha,\pi),Dialogue) | LTX:ucspec.tex(16.27-16.54): Dialogue = \seq_ (Interaction (\alpha,\pi))};
+  LTX:ucspec.tex(25.3-26.60): Pattern = {((\alpha,\pi,\Sigma),Pattern)\%l1,%l2 | LTX:ucspec.tex(26.11-26.33): %l1 = Interaction (\alpha,\pi); LTX:ucspec.tex(26.43-26.60): %l2 = _\rel_ (\Sigma,\Sigma); LTX:ucspec.tex(26.5-26.60): Pattern = \seq_ {(%c1,%c2) | LTX:ucspec.tex(26.11-26.33): %c1 : %l1; LTX:ucspec.tex(26.43-26.60): %c2 : %l2}};
+  LTX:ucspec.tex(26.5-26.60): %l3 = \seq_ {(%c1,%c2) | LTX:ucspec.tex(26.43-26.60): %c2 : _\rel_[]};
+  LTX:ucspec.tex(26.5-26.60): Pattern[] = %l3;
+  LTX:ucspec.tex(27.3-28.37): Fragment = {((\alpha,\pi,\Sigma),Fragment)\%l4 | LTX:ucspec.tex(28.12-28.37): %l4 = Pattern (\alpha,\pi,\Sigma); LTX:ucspec.tex(28.5-28.37): Fragment = {%s | LTX:ucspec.tex(28.5-28.37): %s <= %l4}};
+  LTX:ucspec.tex(28.5-28.37): Fragment[] = {%s | LTX:ucspec.tex(28.5-28.37): %s <= %l3};
+  LTX:ucspec.tex(43.1-47.11): _\ucmki_ = {((\alpha,\pi),_\ucmki_) | LTX:ucspec.tex(45.5-46.36): _\ucmki_ = {((actor,action),<action==action,actor==actor>) | }};
+  LTX:ucspec.tex(45.5-46.36): _\ucmki_[] = {((actor,action),<action==action,actor==actor>) | };
+  LTX:ucspec.tex(48.1-52.11): _\ucmkt_\uctrans_ = {((\alpha,\pi,\Sigma),_\ucmkt_\uctrans_) | LTX:ucspec.tex(50.5-51.50): _\ucmkt_\uctrans_ = {((actor,action,r),%r) | LTX:ucspec.tex(51.7-51.50): %r = {\langle,,\rangle[] {($NATIVEmakeNumber(1),(<action==action,actor==actor>,r) )}}}};
+  LTX:ucspec.tex(50.5-51.50): _\ucmkt_\uctrans_[] = {((actor,action,r),%r) | LTX:ucspec.tex(51.7-51.50): %r = {\langle,,\rangle[] {($NATIVEmakeNumber(1),(<action==action,actor==actor>,r))}}};
+  LTX:ucspec.tex(53.1-57.11): _\ucmk_ = {((\alpha,\pi,\Sigma),_\ucmk_) | LTX:ucspec.tex(55.5-56.48): _\ucmk_ = {((actor,action),%r) | LTX:ucspec.tex(56.10-56.48): %r = _\ucmkt_\uctrans_[] (actor,action,\id_ \Sigma)}};
+  LTX:ucspec.tex(55.5-56.48): _\ucmk_[] = {((actor,action),%r) | LTX:ucspec.tex(56.10-56.48): %r = _\ucmkt_\uctrans_[] (actor,action,\id_[])};
+  LTX:ucspec.tex(58.1-62.11): _\ucthen_ = {((\alpha,\pi,\Sigma),_\ucthen_) | LTX:ucspec.tex(60.5-61.36): _\ucthen_ = {((f,f'),%r) | LTX:ucspec.tex(61.7-61.36): %r = {%b\p,p' | LTX:ucspec.tex(61.25-61.33): %b = _\cat_[] (p,p')}}};
+  LTX:ucspec.tex(60.5-61.36): _\ucthen_[] = {((f,f'),%r) | LTX:ucspec.tex(61.7-61.36): %r = {%b\p,p' | LTX:ucspec.tex(61.25-61.33): %b = _\cat_[] (p,p')}};
+  LTX:ucspec.tex(63.1-67.11): \ucrepeat = {((\alpha,\pi,\Sigma),\ucrepeat) | LTX:ucspec.tex(64.15-66.35): \ucrepeat = {(f,%r) | LTX:ucspec.tex(65.5-66.35): %r = _\limg_\rimg[] (_\star[] {%b\p_1,p_2 | LTX:ucspec.tex(65.50-65.68): %b = (p_1,_\cat_[] (p_1,p_2))} ,{\langle,,\rangle[] EMPTY})}};
+  LTX:ucspec.tex(64.15-66.35): \ucrepeat[] = {(f,%r) | LTX:ucspec.tex(65.5-66.35): %r = _\limg_\rimg[] (_\star[] {%b\p_1,p_2 | LTX:ucspec.tex(65.50-65.68): %b = (p_1,_\cat_[] (p_1,p_2))} ,{\langle,,\rangle[] EMPTY})};
+  LTX:ucspec.tex(68.1-75.11): _\ucexcept_ = {((\alpha,\pi,\Sigma),_\ucexcept_) | LTX:ucspec.tex(70.5-74.45): _\ucexcept_ = {((f,f'),%r) | LTX:ucspec.tex(70.49-74.45): %r = f + {%b\i,p,p' | LTX:ucspec.tex(72.13-72.24): i : \dom[] p; LTX:ucspec.tex(73.13-73.35): first[] (p i) = first[] (p' $NATIVEmakeNumber(1)); LTX:ucspec.tex(74.15-74.43): %b = _\cat_[] (_\dres_[] (_\upto_ ($NATIVEmakeNumber(1),_-_ (i,$NATIVEmakeNumber(1))) ,p),p')}}};
+  LTX:ucspec.tex(70.5-74.45): _\ucexcept_[] = {((f,f'),%r) | LTX:ucspec.tex(70.49-74.45): %r = f + {%b\i,p,p' | LTX:ucspec.tex(72.13-72.24): i : \dom[] p; LTX:ucspec.tex(73.13-73.35): first[] (p i) = first[] (p' $NATIVEmakeNumber(1)); LTX:ucspec.tex(74.15-74.43): %b = _\cat_[] (_\dres_[] (_\upto_ ($NATIVEmakeNumber(1),_-_ (i,$NATIVEmakeNumber(1))),p) ,p')}};
+  LTX:ucspec.tex(77.1-80.11): \ucselect = {((\alpha,\pi,\Sigma),\ucselect) | LTX:ucspec.tex(79.5-79.63): \ucselect = {(fs,%r) | LTX:ucspec.tex(79.54-79.63): %r = \bigcup[] fs}};
+  LTX:ucspec.tex(79.5-79.63): \ucselect[] = {(fs,%r) | LTX:ucspec.tex(79.54-79.63): %r = \bigcup[] fs};
+  LTX:ucspec.tex(92.1-103.11): _\ucin_ = {((\alpha,\pi,\Sigma),_\ucin_) | LTX:ucspec.tex(96.3-102.40): UNIV <= {<\sigma==\sigma,d==d,f==f> | LTX:ucspec.tex(98.5-102.40): {#<>() | LTX:ucspec.tex(98.5-98.22): ((d,\sigma),f) : _\ucin_} = {#<>()\p | LTX:ucspec.tex(100.22-100.67): \sigma : \dom[] (fold[] _\comp_[] (_\circ_[] (second[],p))); LTX:ucspec.tex(102.24-102.40): _\circ_[] (first[],p) = d}}};
+  LTX:ucspec.tex(96.3-102.40): UNIV <= {<\sigma==\sigma,d==d,f==f> | LTX:ucspec.tex(98.5-102.40): {#<>() | LTX:ucspec.tex(98.5-98.22): ((d,\sigma),f) : _\ucin_[]} = {#<>()\p | LTX:ucspec.tex(100.22-100.67): \sigma : \dom[] (fold[] _\comp_[] (_\circ_[] (second[],p))); LTX:ucspec.tex(102.24-102.40): _\circ_[] (first[],p) = d}};

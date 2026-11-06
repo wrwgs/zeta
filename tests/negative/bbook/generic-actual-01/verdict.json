@@ -1,0 +1,23 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "incompatActualization"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBSpec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(66.3-66.13)]:",
+    "invalid actualization of `known'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)",
+    "ERROR[LTX:bbook.tex(66.3-66.13)]:",
+    "invalid actualization of `known'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)"
+  ]
+}

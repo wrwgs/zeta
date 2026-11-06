@@ -1,0 +1,24 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "typeIncompat",
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBExec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(165.3-165.5)]: undeclared `day'",
+    "ERROR[LTX:bbook.tex(275.31-275.70)]:",
+    "type mismatch.",
+    "demanded type : [month: \\baseNum; year: \\baseNum]",
+    "delivered type: [day: \\baseNum; month: \\baseNum; year: \\baseNum]",
+    "ERROR[LTX:bbook.tex(165.3-165.5)]: undeclared `day'",
+    "ERROR[LTX:bbook.tex(275.31-275.70)]:",
+    "type mismatch."
+  ]
+}

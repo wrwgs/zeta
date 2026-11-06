@@ -1,0 +1,15 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBTest#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(434.48-434.55)]: undeclared `ZZundecl'"
+  ]
+}

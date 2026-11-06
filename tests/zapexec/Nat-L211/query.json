@@ -1,0 +1,10 @@
+{
+  "section": "Nat",
+  "unit": "Nat#zapnotes",
+  "kind": "expr",
+  "line": 211,
+  "query": "\\LET ns == \\{x: N | x~less~three \\} @ image(add,ns \\cross ns)",
+  "yields": [
+    "{Z,S(Z),S(S(Z)),S(S(S(Z))),S(S(S(S(Z))))}"
+  ]
+}

@@ -1,0 +1,32 @@
+UNIT LTX:FreeTypes#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  MySeq
+  MySeq%giventypeinfo
+  MySeq%typegen
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _=_
+  _\fun_
+  _\in_
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  _\upto_
+  cons
+  nil
+LOCALS
+  \ran[]
+PROPERTIES
+  LTX:zapnotes.tex(360.13-360.15): nil = #nil();
+  LTX:zapnotes.tex(360.13-360.15);
+  LTX:zapnotes.tex(360.19-360.59): MySeq = {#nil()} + \ran[] cons;
+  LTX:zapnotes.tex(360.19-360.59): cons = /NATIVEmu {%m\%l | LTX:zapnotes.tex(360.19-360.59): %m = {((%a1,%a2),#cons(%a1,%a2)) | LTX:zapnotes.tex(360.31-360.39): %a1 : %l; LTX:zapnotes.tex(360.48-360.52): %a2 : MySeq}; LTX:zapnotes.tex(360.31-360.39): %l = _\upto_ ($NATIVEmakeNumber(1),$NATIVEmakeNumber(3))};
+  LTX:zapnotes.tex(360.3-360.59): MySeq%giventypeinfo = #GivenTypeInfo(nil|cons<(\baseNum,MySeq)>);

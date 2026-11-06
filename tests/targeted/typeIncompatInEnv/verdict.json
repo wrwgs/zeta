@@ -1,0 +1,12 @@
+{
+  "expect": "typeIncompatInEnv",
+  "kinds": [
+    "typeIncompatInEnv"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TtypeIncompatInEnv.tex(20.7-20.15)]:",
+    "type mismatch of `x' in environment.",
+    "this type       : \\baseNum",
+    "environment type: NAME"
+  ]
+}

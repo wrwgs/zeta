@@ -1,0 +1,23 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "typeIncompat"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBSpec#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(66.11-66.23)]:",
+    "type mismatch.",
+    "demanded type : DATE",
+    "delivered type: P NAME",
+    "ERROR[LTX:bbook.tex(109.16-109.20)]:",
+    "type mismatch.",
+    "demanded type : P NAME",
+    "delivered type: DATE"
+  ]
+}

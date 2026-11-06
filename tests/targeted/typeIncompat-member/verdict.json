@@ -1,0 +1,12 @@
+{
+  "expect": "typeIncompat",
+  "kinds": [
+    "typeIncompat"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TtypeIncompatmember.tex(13.9-13.9)]:",
+    "type mismatch.",
+    "demanded type : P \\baseNum",
+    "delivered type: \\baseNum"
+  ]
+}

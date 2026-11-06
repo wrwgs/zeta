@@ -1,0 +1,160 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:UseCases#ucases}
+
+%%macro \zblock 1 #1
+\zgeneric{90 (\cpower \_)}
+
+\begin{zed}
+  \cpower X == \assumed \power X
+\end{zed}
+
+\begin{schema}{Interaction [\alpha,\pi]}
+  actor: \alpha \\
+  action: \pi
+\end{schema}
+
+\begin{zed}
+  Dialogue == \assumed \seq Interaction [\alpha,\pi]
+\end{zed}
+
+\begin{zed}
+  Branch ::=
+    \uceod
+    | \ucbr \ldata \assumed
+                   Interaction [\alpha,\pi] \cross
+                   (\Sigma \rel \Sigma) \cross
+                   Fragment [\alpha,\pi,\Sigma] \rdata
+\end{zed}
+
+\begin{zed}
+  Fragment == \assumed \cpower Branch [\alpha,\pi,\Sigma]
+\end{zed}
+
+\zfunction{65 (\_ \ucmki \_)}
+\zfunction{60 (\_ \ucmk \_)}
+\zfunction{60 (\_ \ucmkt \_ \uctrans \_)}
+\zfunction{50 \rightassoc (\_ \ucthen \_)}
+\zfunction{40 \leftassoc (\_ \ucexcept \_)}
+
+\begin{zed}
+  \_ \ucmki \_ ==
+    \lambda actor: \alpha; action: \pi @ \theta Interaction [\alpha,\pi]
+\end{zed}
+
+\begin{zed}
+  \_ \ucmkt \_ \uctrans \_ ==
+    \lambda actor: \alpha; action: \pi; r: \Sigma \rel \Sigma @
+    \{\ucbr (actor \ucmki action,r,\{\uceod\})\}
+\end{zed}
+
+\begin{zed}
+  \_ \ucmk \_ ==
+    \lambda actor: \alpha; action: \pi @
+      actor \ucmkt action \uctrans \id \Sigma
+\end{zed}
+
+\begin{axdef}{[\alpha,\pi,\Sigma]}
+  \_ \ucthen \_:
+  Fragment [\alpha,\pi,\Sigma] \cross Fragment [\alpha,\pi,\Sigma] \fun
+  Fragment [\alpha,\pi,\Sigma]
+\where
+  (\_ \ucthen \_) =
+  \lambda f_1,f_2: Fragment [\alpha,\pi,\Sigma] @
+    \IF \uceod \in f_1 \THEN f_2 \ELSE \emptyset \cup
+    \{  i: Interaction [\alpha,\pi];
+        r: \Sigma \rel \Sigma;
+        f_1': Fragment [\alpha,\pi,\Sigma]
+        |
+          \ucbr (i,r,f_1') \in f_1 @ \ucbr (i,r,f_1' \ucthen f_2)\}
+\end{axdef}
+
+\begin{axdef}{[\alpha,\pi,\Sigma]}
+  \_ \ucexcept \_:
+  Fragment [\alpha,\pi,\Sigma] \cross Fragment [\alpha,\pi,\Sigma] \fun
+  Fragment [\alpha,\pi,\Sigma]
+\where
+  (\_ \ucexcept \_) =
+  \lambda f_1,f_2: Fragment [\alpha,\pi,\Sigma] @
+      \IF \uceod \in f_1 \THEN \{\uceod\} \ELSE \emptyset \cup
+      \{  i: Interaction [\alpha,\pi];
+          r_1,r_2: \Sigma \rel \Sigma;
+          f_1',f_2': Fragment [\alpha,\pi,\Sigma]
+          |
+            \ucbr (i,r_1,f_1') \in f_1 \\
+            \ucbr (i,r_2,f_2') \in f_2 @ \ucbr (i,r_2,f_2')\} \cup
+    \{  i: Interaction [\alpha,\pi];
+        r_1: \Sigma \rel \Sigma;
+        f_1': Fragment [\alpha,\pi,\Sigma]
+        |
+          \ucbr (i,r_1,f_1') \in f_1 @ \ucbr (i,r_1,f_1' \ucexcept f_2)\}
+\end{axdef}
+
+\begin{axdef}{[\alpha,\pi,\Sigma]}
+  \ucrepeat: Fragment [\alpha,\pi,\Sigma] \fun Fragment [\alpha,\pi,\Sigma]
+\where
+  \ucrepeat =
+  \lambda f: Fragment [\alpha,\pi,\Sigma] @
+    \mu
+      f': Fragment [\alpha,\pi,\Sigma]
+      |
+        f' =
+          \{\uceod\} \cup
+          \{  b: Branch [\alpha,\pi,\Sigma]
+              |
+                b \in (f \setminus \{\uceod\}) \ucthen f' @ b\} @ f'
+\end{axdef}
+
+\begin{zed}
+  \ucselect == \lambda fs: \power Fragment [\alpha,\pi,\Sigma] @ \bigcup fs
+\end{zed}
+
+\zrelation{(\_ \ucin \_)}
+
+\begin{axdef}{[\alpha,\pi,\Sigma]}
+  \_ \ucin \_:
+  \power
+  (Dialogue [\alpha,\pi] \cross \Sigma) \cross Fragment [\alpha,\pi,\Sigma]
+\where
+  ((\_ \ucin \_)) =
+    \{  \sigma: \Sigma; f: Fragment [\alpha,\pi,\Sigma] | \uceod \in f @
+        ((\langle \{\} \rangle,\sigma),f)\} \cup
+    \{  d: Dialogue [\alpha,\pi];
+        \sigma,\sigma': \Sigma;
+        f,f': Fragment [\alpha,\pi,\Sigma];
+        r: \Sigma \rel \Sigma
+        |
+          d \neq \langle \{\} \rangle \\
+          \ucbr (head d,r,f') \in f \\
+          (\sigma,\sigma') \in r \\
+          (tail d,\FORCE \sigma') \ucin f' @ ((d,\sigma),f)\}
+\end{axdef}
+
+\zfunction{45 (\_ \ucpar \_)}
+
+\begin{axdef}{[\alpha,\pi,\Sigma]}
+  \_ \ucpar \_:
+  Fragment [\alpha,\pi,\Sigma] \cross Fragment [\alpha,\pi,\Sigma] \fun
+  Fragment [\alpha,\pi,\Sigma]
+\where
+  (\_ \ucpar \_) =
+  \lambda f_1,f_2: Fragment [\alpha,\pi,\Sigma] @
+          \IF \uceod \in f_1 \THEN f_2
+          \ELSE \IF \uceod \in f_2 \THEN f_1 \ELSE \emptyset \cup
+        \{  i: Interaction [\alpha,\pi];
+            r_1,r_2: \Sigma \rel \Sigma;
+            f_1',f_2': Fragment [\alpha,\pi,\Sigma]
+            |
+              \ucbr (i,r_1,f_1') \in f_1 \\
+              \ucbr (i,r_2,f_2') \in f_2 @
+              \ucbr (i,r_1 \cap r_2,f_1' \ucpar f_2')\} \cup
+      \{  i: Interaction [\alpha,\pi];
+          r_1: \Sigma \rel \Sigma;
+          f_1': Fragment [\alpha,\pi,\Sigma]
+          |
+            \ucbr (i,r_1,f_1') \in f_1 @ \ucbr (i,r_1,f_1' \ucpar f_2)\}
+    \cup
+    \{  i: Interaction [\alpha,\pi];
+        r_2: \Sigma \rel \Sigma;
+        f_2': Fragment [\alpha,\pi,\Sigma]
+        |
+          \ucbr (i,r_2,f_2') \in f_2 @ \ucbr (i,r_2,f_1 \ucpar f_2')\}
+\end{axdef}

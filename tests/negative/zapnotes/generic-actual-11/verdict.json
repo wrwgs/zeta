@@ -1,0 +1,21 @@
+{
+  "verdict": "detected",
+  "kinds": [
+    "incompatActualization",
+    "undeclared"
+  ],
+  "subsystems": [
+    "checker",
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:Specials#zapnotes"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:zapnotes.tex(847.47-847.47)]: undeclared `A'",
+    "ERROR[LTX:zapnotes.tex(847.37-847.48)]:",
+    "invalid actualization of `setreduce'.",
+    "genericity   : none",
+    "actualization: 1 parameter(s)"
+  ]
+}

@@ -1,0 +1,69 @@
+UNIT LTX:BBExec#bbook
+PARENTS
+  LTX:BBSpec#bbook
+  LTX:Toolkit#Toolkit
+GLOBALS
+  AddBirthday
+  Barbara
+  BirthdayBook
+  DATE
+  DATE%giventypeinfo
+  DATE%typegen
+  Date
+  FindBirthday
+  InitBirthdayBook
+  InitBirthdayBook2
+  Martin
+  NAME
+  NAME%giventypeinfo
+  NAME%typegen
+  Remind
+  Remove
+  Werner
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _=_
+  _=_[]
+  _\fun_
+  _\geq_
+  _\in_
+  _\in_[]
+  _\leq_
+  _\mapsto_
+  _\mapsto_[]
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  _\upto_
+  add
+  date
+  find
+  remind
+  remove
+LOCALS
+  %l
+  \ran[]
+PROPERTIES
+  LTX:bbook.tex(157.12-157.17);
+  LTX:bbook.tex(157.21-157.27): Barbara = #Barbara();
+  LTX:bbook.tex(157.21-157.27);
+  LTX:bbook.tex(157.3-157.36): NAME%giventypeinfo = #GivenTypeInfo(Werner|Barbara|Martin);
+  LTX:bbook.tex(157.31-157.36): Martin = #Martin();
+  LTX:bbook.tex(157.31-157.36): NAME = {#Werner()} + {#Barbara()} + {#Martin()};
+  LTX:bbook.tex(158.12-158.34): DATE = \ran[] date;
+  LTX:bbook.tex(158.12-158.34): date = {(%a1,#date(%a1)) | LTX:bbook.tex(158.12-158.34): %a1 : Date};
+  LTX:bbook.tex(158.3-158.34): DATE%giventypeinfo = #GivenTypeInfo(date<[day:\baseNum;month:\baseNum;year:\baseNum]>);
+  LTX:bbook.tex(161.1-171.12): Date = {<day==day,month==month,year==year> | LTX:bbook.tex(166.3-166.20): day : _\upto_ ($NATIVEmakeNumber(1),$NATIVEmakeNumber(31)); LTX:bbook.tex(167.3-167.22): month : _\upto_ ($NATIVEmakeNumber(1),$NATIVEmakeNumber(12)); LTX:bbook.tex(168.3-168.32): {#<>() | LTX:bbook.tex(168.3-168.11): month = $NATIVEmakeNumber(2)} <= {#<>() | LTX:bbook.tex(168.22-168.32): (day,$NATIVEmakeNumber(29)) : _\leq_}; LTX:bbook.tex(169.3-169.47): {#<>() | LTX:bbook.tex(169.3-169.26): month : {$NATIVEmakeNumber(4)} + {$NATIVEmakeNumber(6)} + {$NATIVEmakeNumber(7)} + {$NATIVEmakeNumber(9)} + {$NATIVEmakeNumber(11)}} <= {#<>() | LTX:bbook.tex(169.37-169.47): (day,$NATIVEmakeNumber(30)) : _\leq_}; LTX:bbook.tex(170.3-170.13): (year,$NATIVEmakeNumber(0)) : _\geq_};
+  LTX:bbook.tex(219.4-219.74): add = {((name?,date?),%r) | LTX:bbook.tex(219.42-219.74): %r = {<birthday==birthday,birthday'==birthday',known==known ,known'==known'> | LTX:bbook.tex(219.42-219.60): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(219.42-219.60): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(219.64-219.74): <birthday==birthday,birthday'==birthday',date?==date? ,known==known,known'==known',name?==name?> : AddBirthday}};
+  LTX:bbook.tex(221.5-221.74): find = {(name?,%r) | LTX:bbook.tex(221.28-221.74): %r = {<birthday==birthday,birthday'==birthday',date!==date!,known==known ,known'==known'> | LTX:bbook.tex(221.28-221.46): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(221.28-221.46): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(221.63-221.74): <birthday==birthday,birthday'==birthday',date!==date! ,known==known,known'==known',name?==name?> : FindBirthday}};
+  LTX:bbook.tex(223.5-224.57): remind = {(today?,%r) | LTX:bbook.tex(224.8-224.57): %r = {<birthday==birthday,birthday'==birthday',cards!==cards! ,known==known,known'==known'> | LTX:bbook.tex(224.52-224.57): <birthday==birthday,birthday'==birthday',cards!==cards! ,known==known,known'==known',today?==today?> : Remind; LTX:bbook.tex(224.8-224.26): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(224.8-224.26): <birthday==birthday,known==known> : BirthdayBook}};
+  LTX:bbook.tex(226.5-226.55): remove = {(name?,%r) | LTX:bbook.tex(226.28-226.55): %r = {<birthday==birthday,birthday'==birthday',known==known ,known'==known'> | LTX:bbook.tex(226.28-226.46): <birthday==birthday',known==known'> : BirthdayBook; LTX:bbook.tex(226.28-226.46): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(226.50-226.55): <birthday==birthday,birthday'==birthday',known==known ,known'==known',name?==name?> : Remove}};
+  LTX:bbook.tex(273.8-276.72): %l = {<birthday==birthday,known==known> | LTX:bbook.tex(273.8-273.23): <birthday==birthday,known==known> : InitBirthdayBook} + {<birthday==birthday,known==known> | LTX:bbook.tex(274.10-274.21): <birthday==birthday,known==known> : BirthdayBook; LTX:bbook.tex(275.23-276.72): birthday = {(#Werner() ,date <day==$NATIVEmakeNumber(7),month==$NATIVEmakeNumber(5) ,year==$NATIVEmakeNumber(1929)>)}};
+  LTX:bbook.tex(273.8-276.72): InitBirthdayBook2 = %l;
+  LTX:bbook.tex(275.25-275.30): Werner = #Werner();

@@ -1,0 +1,139 @@
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Z Proposal</TITLE>
+<META NAME="description" CONTENT="Z Proposal">
+<META NAME="keywords" CONTENT="section-reordering">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="section-reordering.css">
+</HEAD>
+<BODY >
+
+<P>
+  <FONT SIZE="+1"><B><A NAME="tex2html1"
+ HREF="section-reordering.html">WG.48.1</A>: Independence of Textual Order of Sections</B></FONT> 
+<P>
+  <FONT SIZE="-1">Proposal for the Z Standard, 
+        by Wolfgang Grieskamp (<TT>wg@cs.tu-berlin.de</TT>), November 11, 1998, 
+        (v2)  , <A NAME="tex2html2"
+ HREF="section-reordering.ps.gz">postscript version</A>
+</FONT> 
+  
+<P>
+  
+<P>
+<BR>
+
+<P>
+
+<H5><A NAME="SECTION00000001000000000000">
+Note</A>
+</H5>
+This is a technical refinement of an earlier proposal by SHV.
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+What</A>
+</H2>
+
+<P>
+The order how sections appear in a Z specification document 
+is arbitrary. The parent-relation of sections must be acyclic.
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Why</A>
+</H2>
+
+<P>
+Shortly: the adequate way to structure a specification document with
+multiple sections is not always bottom-up. (As far as I know, the
+panel already agreed that section reordering is useful in general.)
+
+<P>
+
+<H2><A NAME="SECTION00003000000000000000">
+How</A>
+</H2>
+
+<P>
+
+<H5><A NAME="SECTION00003001000000000000">
+Conformance</A>
+</H5> Tools working in batch mode which don't implement
+this feature are considered still as conforming, since filters can be
+build which perform the section reordering for them.
+
+<P>
+
+<H5><A NAME="SECTION00003002000000000000">
+Updates to WD 1.5</A>
+</H5>
+
+<P>
+Type Inference Rules, Clause 13.2.1.1 (the according clause in
+  12, resp.): add a comment such as:
+  <BLOCKQUOTE>
+The order how sections appear in a Z specification document 
+    is arbitrary. The parent-relation of sections must be acyclic.
+  </BLOCKQUOTE>  Introduce reordering (and cycle check) as a condition to the rule.
+  This could be something along:
+  <BR>
+<IMG
+ WIDTH="394" HEIGHT="86" ALIGN="BOTTOM" BORDER="0"
+ SRC="section-reordering-img1.gif"
+ ALT="\begin{zed}\begin{array}{cc}
+\dfrac{
+\begin{array}{c}
+\{\} \vDash^s s_{\rho(1...
+... s_n
+} &
+\left( \rho : 1 \upto n \bij 1 \upto n \right)
+\end{array} \end{zed}">
+<BR>
+It's sufficient to just demand that the re-ordering <IMG
+ WIDTH="12" HEIGHT="27" ALIGN="MIDDLE" BORDER="0"
+ SRC="section-reordering-img2.gif"
+ ALT="$\rho$">
+is a bijection,
+   since:
+   <UL>
+<LI>any instance of <IMG
+ WIDTH="12" HEIGHT="27" ALIGN="MIDDLE" BORDER="0"
+ SRC="section-reordering-img2.gif"
+ ALT="$\rho$">
+which does not represent a proper bottom-up
+     order is rejected by rule 13.2.2.1, which would detect that a 
+     parent reference <I>i</I><SUB><I>k</I></SUB> is not in the environment build from
+     previous sections in the order
+<LI>if there are degrees of freedom how to reorder sections,
+     then because of independency of individual sections, so that
+     the chosen order doesn't matters
+   </UL>
+<P>
+
+<H5><A NAME="SECTION00003003000000000000">
+Implementation</A>
+</H5>
+
+<P>
+Tools can easily recognise the syntax of section paragraphs already at
+scanning time. So a three-phase architecture of parsing can be
+implemented: lexical analysis, section reordering (by topological
+sorting), and syntax analysis. 
+
+<P>
+<BR> <HR>
+<ADDRESS>
+<a href="mailto:wg@cs.tu-berlin.de">Wolfgang Grieskamp</a>
+</ADDRESS>
+</BODY>
+</HTML>

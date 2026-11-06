@@ -1,0 +1,10 @@
+{
+  "expect": "expectedSet",
+  "kinds": [
+    "expectedSet"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TexpectedSet.tex(14.3-14.3)]:",
+    "expected a powerset type. found type: \\baseNum"
+  ]
+}

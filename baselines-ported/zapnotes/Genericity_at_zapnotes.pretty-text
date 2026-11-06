@@ -1,0 +1,5 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:Genericity#zapnotes}
+
+\begin{zed}
+  id == \{x: X | x \in X @ (x,x)\}
+\end{zed}

@@ -1,0 +1,10 @@
+{
+  "section": "FreeTypes",
+  "unit": "FreeTypes#zapnotes",
+  "kind": "expr",
+  "line": 366,
+  "query": "MySeq",
+  "yields": [
+    "{nil,cons(1,nil),cons(1,cons(1,nil)),...}"
+  ]
+}

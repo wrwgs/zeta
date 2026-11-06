@@ -1,0 +1,93 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load zapnotes.tex
++ scanning zapnotes.tex
+- load zapnotes.tex
+>>> c -u DataInput#zapnotes
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:DataInput#zapnotes
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:DataInput#zapnotes
+- c -u DataInput#zapnotes
+>>> c -u FreeTypes#zapnotes
++ parsing section LTX:FreeTypes#zapnotes
++ type checking section LTX:FreeTypes#zapnotes
+- c -u FreeTypes#zapnotes
+>>> c -u FreeTypes2#zapnotes
++ parsing section LTX:FreeTypes2#zapnotes
++ type checking section LTX:FreeTypes2#zapnotes
+- c -u FreeTypes2#zapnotes
+>>> c -u Genericity#zapnotes
++ parsing section LTX:Genericity#zapnotes
++ type checking section LTX:Genericity#zapnotes
+- c -u Genericity#zapnotes
+>>> c -u Nat#zapnotes
++ parsing section LTX:Nat#zapnotes
++ type checking section LTX:Nat#zapnotes
+! ERROR[LTX:zapnotes.tex(72.3-72.5)]:
+!   illegal redeclaration of `add'.
+!     previous declaration: LTX:zapnotes.tex(71.3-71.5)
+>>> c -u Specials#zapnotes
++ parsing section LTX:Specials#zapnotes
++ type checking section LTX:Specials#zapnotes
+- c -u Specials#zapnotes
+>>> c -u Stepping#zapnotes
++ parsing section LTX:Stepping#zapnotes
++ type checking section LTX:Stepping#zapnotes
+- c -u Stepping#zapnotes
+>>> c -u facExec1#zapnotes
++ parsing section LTX:facExec1#zapnotes
++ type checking section LTX:facExec1#zapnotes
+- c -u facExec1#zapnotes
+>>> c -u facExec2#zapnotes
++ parsing section LTX:facExec2#zapnotes
++ type checking section LTX:facExec2#zapnotes
+- c -u facExec2#zapnotes
+>>> c -u facNonExec#zapnotes
++ parsing section LTX:facNonExec#zapnotes
++ type checking section LTX:facNonExec#zapnotes
+- c -u facNonExec#zapnotes
+>>> c -u queens#zapnotes
++ parsing section LTX:queens#zapnotes
++ type checking section LTX:queens#zapnotes
+- c -u queens#zapnotes
+>>> make -u DataInput#zapnotes pretty-text -d pt_DataInput_zapnotes.txt
++ formatting LTX:DataInput#zapnotes/pretty-text
+- make -u DataInput#zapnotes pretty-text -d pt_DataInput_zapnotes.txt
+>>> make -u FreeTypes#zapnotes pretty-text -d pt_FreeTypes_zapnotes.txt
++ formatting LTX:FreeTypes#zapnotes/pretty-text
+- make -u FreeTypes#zapnotes pretty-text -d pt_FreeTypes_zapnotes.txt
+>>> make -u FreeTypes2#zapnotes pretty-text -d pt_FreeTypes2_zapnotes.txt
++ formatting LTX:FreeTypes2#zapnotes/pretty-text
+- make -u FreeTypes2#zapnotes pretty-text -d pt_FreeTypes2_zapnotes.txt
+>>> make -u Genericity#zapnotes pretty-text -d pt_Genericity_zapnotes.txt
++ formatting LTX:Genericity#zapnotes/pretty-text
+- make -u Genericity#zapnotes pretty-text -d pt_Genericity_zapnotes.txt
+>>> make -u Nat#zapnotes pretty-text -d pt_Nat_zapnotes.txt
++ formatting LTX:Nat#zapnotes/pretty-text
+- make -u Nat#zapnotes pretty-text -d pt_Nat_zapnotes.txt
+>>> make -u Specials#zapnotes pretty-text -d pt_Specials_zapnotes.txt
++ formatting LTX:Specials#zapnotes/pretty-text
+- make -u Specials#zapnotes pretty-text -d pt_Specials_zapnotes.txt
+>>> make -u Stepping#zapnotes pretty-text -d pt_Stepping_zapnotes.txt
++ formatting LTX:Stepping#zapnotes/pretty-text
+- make -u Stepping#zapnotes pretty-text -d pt_Stepping_zapnotes.txt
+>>> make -u facExec1#zapnotes pretty-text -d pt_facExec1_zapnotes.txt
++ formatting LTX:facExec1#zapnotes/pretty-text
+- make -u facExec1#zapnotes pretty-text -d pt_facExec1_zapnotes.txt
+>>> make -u facExec2#zapnotes pretty-text -d pt_facExec2_zapnotes.txt
++ formatting LTX:facExec2#zapnotes/pretty-text
+- make -u facExec2#zapnotes pretty-text -d pt_facExec2_zapnotes.txt
+>>> make -u facNonExec#zapnotes pretty-text -d pt_facNonExec_zapnotes.txt
++ formatting LTX:facNonExec#zapnotes/pretty-text
+- make -u facNonExec#zapnotes pretty-text -d pt_facNonExec_zapnotes.txt
+>>> make -u queens#zapnotes pretty-text -d pt_queens_zapnotes.txt
++ formatting LTX:queens#zapnotes/pretty-text
+- make -u queens#zapnotes pretty-text -d pt_queens_zapnotes.txt
+= good bye.

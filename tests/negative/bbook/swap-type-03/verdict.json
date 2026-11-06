@@ -1,0 +1,18 @@
+{
+  "verdict": "detected",
+  "kinds": [],
+  "subsystems": [
+    "other"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBTest#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(428.10-429.69)]:",
+    "cannot reduce mixfix expression.",
+    "unreduced expression: _ \\seq _ <CROSS> \\seq _ \\fun <POWER> _",
+    "ERROR[LTX:bbook.tex(428.10-429.69)]:",
+    "cannot reduce mixfix expression.",
+    "unreduced expression: _ \\seq _ <CROSS> \\seq _ \\fun <POWER> _"
+  ]
+}

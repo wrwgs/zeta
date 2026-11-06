@@ -1,0 +1,24 @@
+# Third-party toolchains: large, and downloadable from their original sources.
+# See zesurrect-plan.md §0 for exact versions and provenance.
+# toolchain/ holds the two the live build needs (JDK 21, JavaCC); the historic JDK 8,
+# jdk6-rt and pizza-1.1.jar went into the recovered-material archive with recovered/.
+/toolchain/
+
+# A runnable copy of the distribution. Only the two files reconstructed here are
+# tracked (lib/zetarc, etc/defaults.props); the rest is a copy of the dist, and
+# defaults.props holds absolute paths for one machine.
+/run/zetabase/*
+!/run/zetabase/etc/
+/run/zetabase/etc/*
+!/run/zetabase/etc/defaults.props
+!/run/zetabase/lib/
+/run/zetabase/lib/*
+!/run/zetabase/lib/zetarc
+
+# Scratch and build output, all reproducible.
+/work/
+/classes/
+/zam/build/
+/zam/*.so
+__pycache__/
+*.pyc

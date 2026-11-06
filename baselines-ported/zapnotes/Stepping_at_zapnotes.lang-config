@@ -1,0 +1,10 @@
+LaTeX config.
+  leftOffside : <1>HashSet{}
+  rightOffside: <1>HashSet{}
+  inputs      : <1>HashSet{"\include","\input"}
+  markups     :
+    <1>HashMap
+    {"transition" => Transition,"axdef" => AxiomaticDef,
+     "andstate" => AndState,"zed" => Unboxed,"schema" => Schema,
+     "gendef" => AxiomaticDef,"reaction" => Reaction,"syntax" => Unboxed,
+     "xorstate" => XorState,"config" => Config}

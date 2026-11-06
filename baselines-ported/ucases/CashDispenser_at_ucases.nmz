@@ -1,0 +1,120 @@
+UNIT LTX:CashDispenser#ucases
+PARENTS
+  LTX:Toolkit#Toolkit
+  LTX:UseCases#ucases
+GLOBALS
+  ACTION
+  ACTION%giventypeinfo
+  ACTION%typegen
+  ACTOR
+  ACTOR%giventypeinfo
+  ACTOR%typegen
+  Branch
+  Branch[]
+  CantDraw
+  Draw
+  Fragment
+  Fragment[]
+  InvalidCard
+  NoReserves
+  Normal
+  State
+  System
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \langle,,\rangle
+  \langle,,\rangle[]
+  \mkrel
+  \nat
+  \num
+  \ran
+  \seq_
+  \sigma_1
+  \sigma_2
+  \ucrepeat
+  \ucrepeat[]
+  \ucselect
+  \ucselect[]
+  _-_
+  _<_
+  _=_
+  _=_[]
+  _\fun_
+  _\geq_
+  _\in_
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  _\ucexcept_
+  _\ucexcept_[]
+  _\ucmk_
+  _\ucmk_[]
+  _\ucmki_
+  _\ucmki_[]
+  _\ucmkt_\uctrans_
+  _\ucmkt_\uctrans_[]
+  _\ucthen_
+  _\ucthen_[]
+  askAmount
+  askCard
+  d_1
+  d_2
+  dispenser
+  ejectCard
+  ejectMoney
+  putAmount
+  putCard
+  takeCard
+  takeMoney
+  user
+LOCALS
+  %a1
+  %a2
+  %l
+  %l1
+  %l2
+  %l3
+  \ran[]
+PROPERTIES
+  LTX:dispenser.tex(106.22-108.45): InvalidCard = _\ucthen_[] (_\ucmk_[] (#user(),#putCard()) ,_\ucthen_[] (_\ucmk_[] (#dispenser(),#ejectCard()) ,_\ucmk_[] (#user(),#takeCard())));
+  LTX:dispenser.tex(109.27-113.47): NoReserves = \ucselect[] {%b\amount? | LTX:dispenser.tex(110.20-113.45): %b = _\ucthen_[] (_\ucmkt_\uctrans_[] (#user(),#putAmount(amount?) ,\mkrel {<reserves==reserves,reserves'==reserves'> | LTX:dispenser.tex(111.54-111.61): <amount?==amount?,reserves==reserves ,reserves'==reserves'> : CantDraw}) ,_\ucthen_[] (_\ucmk_[] (#dispenser(),#ejectCard()) ,_\ucmk_[] (#user(),#takeCard())))};
+  LTX:dispenser.tex(111.46-111.50): State = UNIV;
+  LTX:dispenser.tex(114.15-115.55): System = \ucrepeat[] (_\ucexcept_[] (_\ucexcept_[] (Normal,InvalidCard),NoReserves));
+  LTX:dispenser.tex(125.10-133.41): %l = \langle,,\rangle[] ({($NATIVEmakeNumber(1),_\ucmki_[] (#dispenser(),#askCard()))} + {($NATIVEmakeNumber(2),_\ucmki_[] (#user(),#putCard()))} + {($NATIVEmakeNumber(3),_\ucmki_[] (#dispenser(),#askAmount()))} + {($NATIVEmakeNumber(4),_\ucmki_[] (#user(),#putAmount(%a1)))} + {($NATIVEmakeNumber(5),_\ucmki_[] (#dispenser(),#ejectCard()))} + {($NATIVEmakeNumber(6),_\ucmki_[] (#user(),#takeCard()))} + {($NATIVEmakeNumber(7),_\ucmki_[] (#dispenser(),#ejectMoney(%a2)) )} + {($NATIVEmakeNumber(8),_\ucmki_[] (#user(),#takeMoney()))});
+  LTX:dispenser.tex(125.10-133.41): d_1 = %l;
+  LTX:dispenser.tex(128.30-128.38): askAmount = #askAmount();
+  LTX:dispenser.tex(129.35-129.37): %a1 = $NATIVEmakeNumber(400);
+  LTX:dispenser.tex(132.41-132.43): %a2 = $NATIVEmakeNumber(400);
+  LTX:dispenser.tex(133.25-133.33): takeMoney = #takeMoney();
+  LTX:dispenser.tex(134.10-138.41): %l1 = \langle,,\rangle[] ({($NATIVEmakeNumber(1),_\ucmki_[] (#dispenser(),#askCard()))} + {($NATIVEmakeNumber(2),_\ucmki_[] (#user(),#putCard()))} + {($NATIVEmakeNumber(3),_\ucmki_[] (#dispenser(),#ejectCard()))} + {($NATIVEmakeNumber(4),_\ucmki_[] (#user(),#takeCard()))});
+  LTX:dispenser.tex(134.10-138.41): d_2 = %l1;
+  LTX:dispenser.tex(135.30-135.36): askCard = #askCard();
+  LTX:dispenser.tex(136.25-136.31): putCard = #putCard();
+  LTX:dispenser.tex(137.13-137.21): dispenser = #dispenser();
+  LTX:dispenser.tex(137.30-137.38): ejectCard = #ejectCard();
+  LTX:dispenser.tex(138.13-138.16): user = #user();
+  LTX:dispenser.tex(138.25-138.32): takeCard = #takeCard();
+  LTX:dispenser.tex(139.15-139.41): %l2 = <reserves==$NATIVEmakeNumber(600)>;
+  LTX:dispenser.tex(139.15-139.41): \sigma_1 = %l2;
+  LTX:dispenser.tex(140.15-140.41): %l3 = <reserves==$NATIVEmakeNumber(800)>;
+  LTX:dispenser.tex(140.15-140.41): \sigma_2 = %l3;
+  LTX:dispenser.tex(36.13-36.16);
+  LTX:dispenser.tex(36.20-36.28): ACTOR = {#user()} + {#dispenser()};
+  LTX:dispenser.tex(36.3-36.28): ACTOR%giventypeinfo = #GivenTypeInfo(user|dispenser);
+  LTX:dispenser.tex(37.16-37.22);
+  LTX:dispenser.tex(37.26-37.32);
+  LTX:dispenser.tex(37.3-39.54): ACTION%giventypeinfo = #GivenTypeInfo (askCard|putCard|ejectCard|takeCard|askAmount|putAmount<\baseNum>|ejectMoney<\baseNum>|takeMoney);
+  LTX:dispenser.tex(37.36-37.44);
+  LTX:dispenser.tex(37.48-37.55);
+  LTX:dispenser.tex(38.14-38.22);
+  LTX:dispenser.tex(38.26-38.53): putAmount = {(%a3,#putAmount(%a3)) | };
+  LTX:dispenser.tex(38.26-38.53);
+  LTX:dispenser.tex(39.14-39.42): ejectMoney = {(%a3,#ejectMoney(%a3)) | };
+  LTX:dispenser.tex(39.14-39.42);
+  LTX:dispenser.tex(39.46-39.54): ACTION = {#askCard()} + {#putCard()} + {#ejectCard()} + {#takeCard()} + {#askAmount()} + \ran[] putAmount + \ran[] ejectMoney + {#takeMoney()};
+  LTX:dispenser.tex(61.1-65.12): CantDraw = {<amount?==amount?,reserves==reserves,reserves'==reserves> | LTX:dispenser.tex(64.3-64.20): (reserves,amount?) : _<_};
+  LTX:dispenser.tex(66.1-71.12): Draw = {<amount?==amount?,reserves==reserves,reserves'==reserves'> | LTX:dispenser.tex(69.3-69.23): (reserves,amount?) : _\geq_; LTX:dispenser.tex(70.15-70.32): reserves' = _-_ (reserves,amount?)};
+  LTX:dispenser.tex(73.14-74.64): \mkrel = {(Op,%r) | LTX:dispenser.tex(74.26-74.64): %r = {(<reserves==reserves>,<reserves==reserves'>) | LTX:dispenser.tex(74.28-74.29): <reserves==reserves,reserves'==reserves'> : Op}};
+  LTX:dispenser.tex(96.16-105.43): Normal = _\ucthen_[] (_\ucmk_[] (#dispenser(),#askCard()) ,_\ucthen_[] (_\ucmk_[] (#user(),#putCard()) ,_\ucthen_[] (_\ucmk_[] (#dispenser(),#askAmount()) ,\ucselect[] {%b\amount? | LTX:dispenser.tex(100.21-105.40): %b = _\ucthen_[] (_\ucmkt_\uctrans_[] (#user(),#putAmount(amount?) ,\mkrel {<reserves==reserves,reserves'==reserves'> | LTX:dispenser.tex(101.51-101.54): <amount?==amount?,reserves==reserves ,reserves'==reserves'> : Draw}) ,_\ucthen_[] (_\ucmk_[] (#dispenser(),#ejectCard()) ,_\ucthen_[] (_\ucmk_[] (#user(),#takeCard()) ,_\ucthen_[] (_\ucmk_[] (#dispenser(),#ejectMoney(amount?)) ,_\ucmk_[] (#user(),#takeMoney())))))})));

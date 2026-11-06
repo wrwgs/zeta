@@ -1,0 +1,17 @@
+{
+  "verdict": "detected",
+  "kinds": [],
+  "subsystems": [
+    "other",
+    "parser"
+  ],
+  "artifacts_changed": [
+    "pretty-text:BBTest#bbook"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:bbook.tex(429.7-429.7)]:",
+    "don't know how to parse on here. looking at : <COLON>",
+    "ERROR[LTX:bbook.tex(429.7-429.7)]:",
+    "don't know how to parse on here. looking at : <COLON>"
+  ]
+}

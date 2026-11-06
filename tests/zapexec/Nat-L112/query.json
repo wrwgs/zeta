@@ -1,0 +1,10 @@
+{
+  "section": "Nat",
+  "unit": "Nat#zapnotes",
+  "kind": "expr",
+  "line": 112,
+  "query": "add(three,three)",
+  "yields": [
+    "S(S(S(S(S(S(Z))))))"
+  ]
+}

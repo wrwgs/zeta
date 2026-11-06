@@ -1,0 +1,503 @@
+UNIT LTX:Toolkit#Toolkit
+PARENTS
+GLOBALS
+  -_
+  A
+  AUXasSeq
+  AUXasSeq[]
+  AUXreduce
+  AUXreduce[]
+  GIVENTYPEINFO
+  GIVENTYPEINFO%giventypeinfo
+  GIVENTYPEINFO%typegen
+  GIVENTYPEINFO[]
+  GivenTypeInfo
+  GivenTypeInfo[]
+  INTERNfoldl
+  INTERNfoldl[]
+  INTERNfoldr
+  INTERNfoldr[]
+  NATIVEasSeq
+  NATIVEbigcap
+  NATIVEcard
+  NATIVEcons
+  NATIVEcons[]
+  NATIVEdecode
+  NATIVEdeepForce
+  NATIVEdeepForce[]
+  NATIVEempty
+  NATIVEencode
+  NATIVEext
+  NATIVEextIsEmpty
+  NATIVEextIsEmpty[]
+  NATIVEextSplit
+  NATIVEextSplit[]
+  NATIVEforce
+  NATIVEforce[]
+  NATIVEfromDeno
+  NATIVEfromDeno[]
+  NATIVEfromFile
+  NATIVEfromFile[]
+  NATIVEgiventypeinfo
+  NATIVEhead
+  NATIVEhead[]
+  NATIVEhom
+  NATIVEhomT
+  NATIVEhomT%giventypeinfo
+  NATIVEhomT%typegen
+  NATIVEhom[]
+  NATIVEisNonEmptySeq
+  NATIVEisSeq
+  NATIVEisSeqRepr
+  NATIVEisSeqRepr[]
+  NATIVEmemoize
+  NATIVEmemoize[]
+  NATIVEnotempty
+  NATIVEnumAdd
+  NATIVEnumDiv
+  NATIVEnumLess
+  NATIVEnumLessEq
+  NATIVEnumMod
+  NATIVEnumMul
+  NATIVEnumSub
+  NATIVEpower
+  NATIVEseqCard
+  NATIVEseqCard[]
+  NATIVEsquash
+  NATIVEtail
+  NATIVEtail[]
+  NATIVEtrace
+  NATIVEtrace[]
+  NATIVEwaitfor
+  NATIVEwaitfor[]
+  TYPEINFO
+  TYPEINFO%giventypeinfo
+  TYPEINFO%typegen
+  TYPEINFO[]
+  TypeInfo
+  TypeInfo[]
+  X
+  Y
+  Z
+  \#
+  \#[]
+  \BEGINSEQ
+  \DEEPFORCE
+  \DEEPFORCE[]
+  \ENDSEQ
+  \EXT_
+  \EXT_[]
+  \FORCE
+  \FORCE[]
+  \MEMOIZE
+  \MEMOIZE[]
+  \PRINT
+  \PRINT[]
+  \TRACE
+  \TRACE[]
+  \abs
+  \assumed_
+  \assumed_[]
+  \baseNum
+  \baseNum%giventypeinfo
+  \baseNum%typegen
+  \bigcap
+  \bigcap[]
+  \bigcup
+  \bigcup[]
+  \dcat
+  \dcat[]
+  \ddec
+  \denc
+  \denotation
+  \denotation%giventypeinfo
+  \denotation%typegen
+  \disjoint_
+  \disjoint_[]
+  \dom
+  \dom[]
+  \efinset_
+  \efinset_[]
+  \emptyset
+  \emptyset[]
+  \finset_
+  \finset_[]
+  \giventypeinfo_
+  \giventypeinfo_[]
+  \id_
+  \id_[]
+  \iseq_
+  \iseq_[]
+  \langle,,\rangle
+  \langle,,\rangle[]
+  \nat
+  \nat_1
+  \num
+  \power_1_
+  \power_1_[]
+  \ran
+  \ran[]
+  \seq_
+  \seq_1_
+  \seq_1_[]
+  \seq_[]
+  \typeinfo_
+  \typeinfo_[]
+  \zbool
+  \zfalse
+  \ztrue
+  _*_
+  _+_
+  _-_
+  _<_
+  _=_
+  _=_[]
+  _>_
+  _\bij_
+  _\bij_[]
+  _\bsup_\esup
+  _\bsup_\esup[]
+  _\cap_
+  _\cap_[]
+  _\cat_
+  _\cat_[]
+  _\circ_
+  _\circ_[]
+  _\comp_
+  _\comp_[]
+  _\cup_
+  _\cup_[]
+  _\div_
+  _\dres_
+  _\dres_[]
+  _\extract_
+  _\extract_[]
+  _\ffun_
+  _\ffun_[]
+  _\filter_
+  _\filter_[]
+  _\finj_
+  _\finj_[]
+  _\fromdeno_
+  _\fromdeno_[]
+  _\fromfile_
+  _\fromfile_[]
+  _\fun_
+  _\fun_[]
+  _\geq_
+  _\in_
+  _\in_[]
+  _\inj_
+  _\inj_[]
+  _\inv
+  _\inv[]
+  _\leq_
+  _\limg_\rimg
+  _\limg_\rimg[]
+  _\mapsto_
+  _\mapsto_[]
+  _\mod_
+  _\ndres_
+  _\ndres_[]
+  _\neq_
+  _\neq_[]
+  _\notin_
+  _\notin_[]
+  _\nrres_
+  _\nrres_[]
+  _\oplus_
+  _\oplus_[]
+  _\partition_
+  _\partition_[]
+  _\pfun_
+  _\pfun_[]
+  _\pinj_
+  _\pinj_[]
+  _\plus
+  _\plus[]
+  _\prefix_
+  _\prefix_[]
+  _\psurj_
+  _\psurj_[]
+  _\rel_
+  _\rel_[]
+  _\rres_
+  _\rres_[]
+  _\setminus_
+  _\setminus_[]
+  _\star
+  _\star[]
+  _\subset_
+  _\subset_[]
+  _\subseteq_
+  _\subseteq_[]
+  _\suffix_
+  _\suffix_[]
+  _\surj_
+  _\surj_[]
+  _\upto_
+  _\whenbound_
+  _\whenbound_[]
+  _\zscons_
+  _\zscons_[]
+  first
+  first[]
+  fold
+  fold[]
+  foldl
+  foldl[]
+  foldr
+  foldr[]
+  front
+  front[]
+  head
+  head[]
+  iter
+  iter[]
+  last
+  last[]
+  max
+  min
+  rev
+  rev[]
+  second
+  second[]
+  setreduce
+  setreduce[]
+  squash
+  squash[]
+  succ
+  tail
+  tail[]
+LOCALS
+  %gen
+  %l
+  %l1
+  %l2
+  %l3
+  %l4
+  %l5
+PROPERTIES
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(100.1-102.11): NATIVEwaitfor = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1000.22-1000.81) : _\fromfile_[] = {((i,f),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1000.63-1000.81) : %r = $NATIVEfromFile(i,f)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1003.1-1005.11) : _\fromdeno_ = {(A,_\fromdeno_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1004.22-1004.81) : _\fromdeno_ = {((i,f),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1004.63-1004.81) : %r = $NATIVEfromDeno(i,f)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1004.22-1004.81) : _\fromdeno_[] = {((i,f),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1004.63-1004.81) : %r = $NATIVEfromDeno(i,f)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(106.1-108.11): \DEEPFORCE = {(X,\DEEPFORCE) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(107.17-107.58) : \DEEPFORCE = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(107.41-107.58) : %r = $NATIVEdeepForce(x)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(107.17-107.58) : \DEEPFORCE[] = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(107.41-107.58) : %r = $NATIVEdeepForce(x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(110.1-112.11): \FORCE = {(X,\FORCE) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(111.13-111.50) : \FORCE = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(111.37-111.50) : %r = $NATIVEforce(x)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(111.13-111.50) : \FORCE[] = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(111.37-111.50) : %r = $NATIVEforce(x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(116.1-118.11): _\whenbound_ = {((X,Y),_\whenbound_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(117.23-117.79) : _\whenbound_ = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(117.62-117.79) : %r = $NATIVEwaitfor(x,y)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(117.23-117.79) : _\whenbound_[] = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(117.62-117.79) : %r = $NATIVEwaitfor(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(128.1-130.11): NATIVEmemoize = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(132.1-134.11): \MEMOIZE = {(X,\MEMOIZE) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(133.15-133.65) : \MEMOIZE = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(133.46-133.65) : %r = $NATIVEmemoize($NATIVEmakeNumber(16),x)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(133.15-133.65) : \MEMOIZE[] = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(133.46-133.65) : %r = $NATIVEmemoize($NATIVEmakeNumber(16),x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(152.1-154.11): NATIVEhom = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(168.1-172.11): _=_ = {(X,_=_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(171.3-171.37) : _=_ : {{(x1,x1) | }}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(171.3-171.37): _=_[] : {{(x1,x1) | }};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(174.1-176.11): _\neq_ = {(X,_\neq_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(175.17-175.48) : _\neq_ = {(x1,x2) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(175.36-175.46) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(175.42-175.46) : x1 = x2}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(175.17-175.48) : _\neq_[] = {(x1,x2) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(175.36-175.46) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(175.42-175.46) : x1 = x2}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(187.13-187.20) : \zbool = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(191.14-191.26) : \zfalse = EMPTY;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(192.13-192.28) : %l = {#<>()};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(204.1-206.11): first = {((X,Y),first) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(205.13-205.50) : first = {((x,y),x) | }};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(205.13-205.50) : first[] = {((x,y),x) | };
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(207.1-209.11): second = {((X,Y),second) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(208.14-208.50) : second = {((x,y),y) | }};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(208.14-208.50) : second[] = {((x,y),y) | };
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(210.1-212.11): _\mapsto_ = {((X,Y),_\mapsto_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(211.21-211.63) : _\mapsto_ = {((x,y),(x,y)) | }};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(211.21-211.63) : _\mapsto_[] = {((x,y),(x,y)) | };
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(233.1-235.11): \EXT_ = {(X,\EXT_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(234.14-234.68) : \EXT_ = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(234.35-234.68) : %r = /NATIVEext S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(234.14-234.68) : \EXT_[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(234.35-234.68) : %r = /NATIVEext S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(237.1-241.11): \power_1_ = {(X,\power_1_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(239.6-240.59) : \power_1_ = {S | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(240.11-240.57) : /NATIVEnotempty S = %l}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(239.6-240.59): \power_1_[] = {S | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(240.11-240.57) : /NATIVEnotempty S = %l};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(243.1-245.11): \finset_ = {(X,\finset_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(244.17-244.24) : \finset_ = {%s | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(244.17-244.24) : %s <= X}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(244.17-244.24) : \finset_[] = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(247.1-250.11): \efinset_ = {(X,\efinset_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(248.18-249.54) : \efinset_ = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(249.10-249.54) : %r = /NATIVEpower S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(248.18-249.54) : \efinset_[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(249.10-249.54) : %r = /NATIVEpower S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(255.1-257.11): \emptyset = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(266.1-270.11): _\in_ = {(X,_\in_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(269.17-269.65) : _\in_ = {(x,S) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(269.57-269.63) : x : S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(269.17-269.65) : _\in_[] = {(x,S) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(269.57-269.63) : x : S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(271.1-273.11): _\notin_ = {(X,_\notin_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(272.20-272.73) : _\notin_ = {(x,S) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(272.59-272.71) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(272.65-272.71) : x : S}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(272.20-272.73) : _\notin_[] = {(x,S) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(272.59-272.71) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(272.65-272.71) : x : S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(274.1-278.11): _\subseteq_ = {(X,_\subseteq_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(277.24-277.65) : _\subseteq_ = {(S,T) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(277.51-277.63) : S <= T}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(277.24-277.65) : _\subseteq_[] = {(S,T) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(277.51-277.63) : S <= T};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(279.1-282.11): _\subset_ = {(X,_\subset_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(280.21-281.76) : _\subset_ = {(S,T)\x~1 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(280.48-280.60) : S <= T; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(281.51-281.57) : x~1 : T; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(281.61-281.73) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(281.67-281.73) : x~1 : S}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(280.21-281.76) : _\subset_[] = {(S,T)\x~1 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(280.48-280.60) : S <= T; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(281.51-281.57) : x~1 : T; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(281.61-281.73) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(281.67-281.73) : x~1 : S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(290.1-294.11): _\cup_ = {(X,_\cup_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(293.21-293.65) : _\cup_ = {((S1,S2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(293.56-293.65) : %r = S1 + S2}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(293.21-293.65) : _\cup_[] = {((S1,S2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(293.56-293.65) : %r = S1 + S2};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(295.1-299.11): _\cap_ = {(X,_\cap_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(298.21-298.65) : _\cap_ = {((S1,S2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(298.56-298.65) : %r = S1 * S2}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(298.21-298.65) : _\cap_[] = {((S1,S2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(298.56-298.65) : %r = S1 * S2};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(300.1-303.11): _\setminus_ = {(X,_\setminus_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(301.25-302.67) : _\setminus_ = {((S1,S2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(302.28-302.67) : %r = S1 * {x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(302.52-302.65) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(302.58-302.65) : x : S2}}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(301.25-302.67) : _\setminus_[] = {((S1,S2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(302.28-302.67) : %r = S1 * {x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(302.52-302.65) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(302.58-302.65) : x : S2}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(304.1-307.11): \bigcup = {(X,\bigcup) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(305.15-306.76) : \bigcup = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(306.16-306.76) : %r = {x\s | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(306.55-306.61) : s : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(306.64-306.70) : x : s}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(305.15-306.76) : \bigcup[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(306.16-306.76) : %r = {x\s | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(306.55-306.61) : s : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(306.64-306.70) : x : s}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(308.1-311.11): \bigcap = {(X,\bigcap) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(309.15-310.68) : \bigcap = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(310.24-310.68) : %r = /NATIVEbigcap S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(309.15-310.68) : \bigcap[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(310.24-310.68) : %r = /NATIVEbigcap S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(315.1-319.11): setreduce = {((X,Y),setreduce) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(316.16-318.64) : setreduce = {((f,y,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(318.15-318.64) : %r = AUXreduce[] (f,y,/NATIVEext S)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(316.16-318.64) : setreduce[] = {((f,y,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(318.15-318.64) : %r = AUXreduce[] (f,y,/NATIVEext S)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(328.1-330.11): NATIVEextIsEmpty = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(332.1-334.11): NATIVEextSplit = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(336.1-346.11): AUXreduce = {((X,Y),AUXreduce) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(340.15-345.37) : AUXreduce = {((f,y,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(342.6-345.37) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(342.10-342.31) : $NATIVEextIsEmpty(S)} THEN y ELSE /NATIVEmu {%b\S',x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(344.42-344.67) : (x,S') = $NATIVEextSplit(S); LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(345.14-345.37) : %b = AUXreduce (f,f (x,y),S')}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(340.15-345.37) : AUXreduce[] = {((f,y,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(342.6-345.37) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(342.10-342.31) : $NATIVEextIsEmpty(S)} THEN y ELSE /NATIVEmu {%b\S',x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(344.42-344.67) : (x,S') = $NATIVEextSplit(S); LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(345.14-345.37) : %b = AUXreduce[] (f,f (x,y),S')}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(356.1-359.11): \dom = {((X,Y),\dom) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(357.12-358.63) : \dom = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(358.16-358.63) : %r = {x\y | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(358.47-358.57) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(357.12-358.63) : \dom[] = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(358.16-358.63) : %r = {x\y | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(358.47-358.57) : (x,y) : R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(361.1-364.11): \ran = {((X,Y),\ran) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(362.12-363.63) : \ran = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(363.16-363.63) : %r = {y\x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(363.47-363.57) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(362.12-363.63) : \ran[] = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(363.16-363.63) : %r = {y\x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(363.47-363.57) : (x,y) : R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(370.1-373.11): _\inv = {((X,Y),_\inv) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(371.15-372.68) : _\inv = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(372.16-372.68) : %r = {(y,x) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(372.47-372.57) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(371.15-372.68) : _\inv[] = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(372.16-372.68) : %r = {(y,x) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(372.47-372.57) : (x,y) : R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(379.1-384.11): _\limg_\rimg = {((X,Y),_\limg_\rimg) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(381.7-383.66) : _\limg_\rimg = {((R,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(382.9-383.66) : %r = {y\x~1 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(383.40-383.46) : x~1 : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(383.54-383.64) : (x~1,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(381.7-383.66): _\limg_\rimg[] = {((R,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(382.9-383.66) : %r = {y\x~1 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(383.40-383.46) : x~1 : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(383.54-383.64) : (x~1,y) : R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(391.1-393.11): \id_ = {(X,\id_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(392.14-392.48) : \id_ = {(x,x) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(392.32-392.38) : x : X}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(392.14-392.48) : \id_[] = {(x,x) | };
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(402.1-407.11): _\comp_ = {((X,Y,Z),_\comp_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(404.6-406.48) : _\comp_ = {((R1,R2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(405.8-406.48) : %r = {(x,z)\y | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(406.13-406.24) : (x,y) : R1; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(406.27-406.38) : (y,z) : R2}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(404.6-406.48): _\comp_[] = {((R1,R2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(405.8-406.48) : %r = {(x,z)\y | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(406.13-406.24) : (x,y) : R1; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(406.27-406.38) : (y,z) : R2}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(409.1-413.11): _\circ_ = {((X,Y,Z),_\circ_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(411.6-412.18) : _\circ_ = {((R1,R2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(412.8-412.18) : %r = _\comp_[] (R2,R1)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(411.6-412.18): _\circ_[] = {((R1,R2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(412.8-412.18) : %r = _\comp_[] (R2,R1)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(417.1-424.11): iter = {(X,iter) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(420.10-423.41) : iter = {(n,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(420.37-420.46) : n : \nat; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(421.12-423.41) : %r = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(422.16-423.41) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(422.20-422.24) : n = $NATIVEmakeNumber(0)} THEN \id_ (\dom[] R + \ran[] R) ELSE _\comp_[] (R,iter (_-_ (n,$NATIVEmakeNumber(1))) R)}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(420.10-423.41) : iter[] = {(n,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(420.37-420.46) : n : \nat; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(421.12-423.41) : %r = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(422.16-423.41) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(422.20-422.24) : n = $NATIVEmakeNumber(0)} THEN \id_ (\dom[] R + \ran[] R) ELSE _\comp_[] (R,iter[] (_-_ (n,$NATIVEmakeNumber(1))) R)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(428.1-431.11): _\bsup_\esup = {(X,_\bsup_\esup) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(429.24-430.16) : _\bsup_\esup = {((R,n),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(430.9-430.16) : %r = iter[] n R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(429.24-430.16) : _\bsup_\esup[] = {((R,n),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(430.9-430.16) : %r = iter[] n R};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(437.1-444.11): _\plus = {(X,_\plus) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(440.15-443.65) : _\plus = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(441.6-443.65) : %r = R + {(x,z)\y~1 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(443.29-443.39) : (x,y~1) : R; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(443.47-443.62) : (y~1,z) : _\plus R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(440.15-443.65) : _\plus[] = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(441.6-443.65) : %r = R + {(x,z)\y~1 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(443.29-443.39) : (x,y~1) : R; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(443.47-443.62) : (y~1,z) : _\plus[] R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(450.1-453.11): _\star = {(X,_\star) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(452.4-452.70) : _\star = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(452.35-452.70) : %r = \id_ (\dom[] R + \ran[] R) + _\plus[] R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(452.4-452.70): _\star[] = {(R,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(452.35-452.70) : %r = \id_ (\dom[] R + \ran[] R) + _\plus[] R};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(462.1-464.11): _\rel_ = {((X,Y),_\rel_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(463.17-463.37) : _\rel_ = UNIV};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(463.17-463.37) : _\rel_[] = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(466.1-470.11): _\pfun_ = {((X,Y),_\pfun_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(468.5-469.67) : _\pfun_ = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.10-469.65) : {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.24-469.35) : x : \dom[] R} <= {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.39-469.65) : ? /NATIVEexists1 {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.55-469.65) : (x,y) : R}}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(468.5-469.67): _\pfun_[] = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.10-469.65) : {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.24-469.35) : x : \dom[] R} <= {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.39-469.65) : ? /NATIVEexists1 {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(469.55-469.65) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(472.1-477.11): _\fun_ = {((X,Y),_\fun_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(474.5-476.25) : _\fun_ = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(475.10-476.23) : {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(475.34-475.40) : x : X} <= {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(475.44-476.23) : ? /NATIVEexists1 {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(475.70-475.76) : y : Y; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(476.13-476.23) : (x,y) : R}}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(474.5-476.25): _\fun_[] = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(475.10-476.23) : UNIV <= {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(475.44-476.23) : ? /NATIVEexists1 {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(476.13-476.23) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(479.1-484.11): _\pinj_ = {((X,Y),_\pinj_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(481.5-483.65) : _\pinj_ = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(482.10-483.63) : {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(482.34-482.45) : y : \ran[] R} <= {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(483.17-483.63) : ? /NATIVEexists1 {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(483.43-483.49) : x : X; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(483.53-483.63) : (x,y) : R}}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(481.5-483.65): _\pinj_[] = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(482.10-483.63) : {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(482.34-482.45) : y : \ran[] R} <= {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(483.17-483.63) : ? /NATIVEexists1 {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(483.53-483.63) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(486.1-491.11): _\psurj_ = {((X,Y),_\psurj_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(488.5-490.65) : _\psurj_ = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(489.10-490.63) : {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(489.34-489.40) : y : Y} <= {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(490.17-490.63) : ? /NATIVEexists1 {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(490.43-490.49) : x : X; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(490.53-490.63) : (x,y) : R}}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(488.5-490.65): _\psurj_[] = {R | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(489.10-490.63) : UNIV <= {<y==y> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(490.17-490.63) : ? /NATIVEexists1 {<x==x> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(490.53-490.63) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(494.17-494.42) : %l1 = _\psurj_[] * _\fun_[];
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(494.17-494.42) : _\surj_[] = %l1;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(494.3-494.42): _\surj_ = {((X,Y),_\surj_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(494.17-494.42) : _\surj_ = _\psurj_ (X,Y) * _\fun_ (X,Y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(495.17-495.41) : %l2 = _\pinj_[] * _\fun_[];
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(495.17-495.41) : _\inj_[] = %l2;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(495.3-495.41): _\inj_ = {((X,Y),_\inj_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(495.17-495.41) : _\inj_ = _\pinj_ (X,Y) * _\fun_ (X,Y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(496.17-496.41) : %l3 = %l2 * %l1;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(496.17-496.41) : _\bij_[] = %l3;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(496.3-496.41): _\bij_ = {((X,Y),_\bij_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(496.17-496.41) : _\bij_ = _\inj_ (X,Y) * _\surj_ (X,Y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(497.17-497.50) : %l4 = _\pfun_[] * \finset_[];
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(497.17-497.50) : _\ffun_[] = %l4;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(497.3-497.50): _\ffun_ = {((X,Y),_\ffun_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(497.17-497.50) : _\ffun_ = _\pfun_ (X,Y) * \finset_ {(%c1,%c2) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(497.41-497.41) : %c1 : X; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(497.50-497.50) : %c2 : Y}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(498.17-498.42) : %l5 = _\pinj_[] * %l4;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(498.17-498.42) : _\finj_[] = %l5;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(498.3-498.42): _\finj_ = {((X,Y),_\finj_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(498.17-498.42) : _\finj_ = _\pinj_ (X,Y) * _\ffun_ (X,Y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(511.1-515.11): _\dres_ = {((X,Y),_\dres_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(513.7-514.67) : _\dres_ = {((S,R),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(514.9-514.67) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(514.41-514.47) : x : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(514.55-514.65) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(513.7-514.67): _\dres_[] = {((S,R),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(514.9-514.67) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(514.41-514.47) : x : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(514.55-514.65) : (x,y) : R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(517.1-521.11): _\ndres_ = {((X,Y),_\ndres_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(519.7-520.68) : _\ndres_ = {((S,R),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.9-520.68) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.41-520.53) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.47-520.53) : x : S}; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.56-520.66) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(519.7-520.68): _\ndres_[] = {((S,R),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.9-520.68) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.41-520.53) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.47-520.53) : x : S}; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(520.56-520.66) : (x,y) : R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(523.1-527.11): _\rres_ = {((X,Y),_\rres_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(525.7-526.68) : _\rres_ = {((R,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(526.9-526.68) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(526.42-526.48) : y : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(526.56-526.66) : (x,y) : R}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(525.7-526.68): _\rres_[] = {((R,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(526.9-526.68) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(526.42-526.48) : y : S; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(526.56-526.66) : (x,y) : R}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(529.1-533.11): _\nrres_ = {((X,Y),_\nrres_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(531.7-532.69) : _\nrres_ = {((R,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.9-532.69) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.42-532.52) : (x,y) : R; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.55-532.67) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.61-532.67) : y : S}}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(531.7-532.69): _\nrres_[] = {((R,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.9-532.69) : %r = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.42-532.52) : (x,y) : R; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.55-532.67) : ? /NATIVEempty {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(532.61-532.67) : y : S}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(535.1-539.11): _\oplus_ = {((X,Y),_\oplus_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(537.7-538.35) : _\oplus_ = {((R1,R2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(538.10-538.35) : %r = _\ndres_[] (\dom[] R2,R1) + R2}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(537.7-538.35): _\oplus_[] = {((R1,R2),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(538.10-538.35) : %r = _\ndres_[] (\dom[] R2,R1) + R2};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(541.1-548.11): \disjoint_ = {((X,Y),\disjoint_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(545.6-547.39) : \disjoint_ = {F | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.9-547.37) : {<x1==x1,x2==x2> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.28-546.40) : x1 : \dom[] F; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.43-546.55) : x2 : \dom[] F; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.58-546.67) : (x1,x2) : _\neq_[]} <= {<x1==x1,x2==x2> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(547.12-547.37) : F x1 * F x2 = EMPTY}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(545.6-547.39): \disjoint_[] = {F | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.9-547.37) : {<x1==x1,x2==x2> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.28-546.40) : x1 : \dom[] F; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.43-546.55) : x2 : \dom[] F; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(546.58-546.67) : (x1,x2) : _\neq_[]} <= {<x1==x1,x2==x2> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(547.12-547.37) : F x1 * F x2 = EMPTY}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(550.1-556.11): _\partition_ = {((X,Y),_\partition_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(554.6-555.43) : _\partition_ = {(F,S) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(555.22-555.36) : S = \bigcup[] (\ran[] F); LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(555.9-555.19) : F : \disjoint_[]}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(554.6-555.43): _\partition_[] = {(F,S) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(555.22-555.36) : S = \bigcup[] (\ran[] F); LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(555.9-555.19) : F : \disjoint_[]};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(58.1-60.11): \assumed_ = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(588.3-588.12): \baseNum = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(588.3-588.12): \baseNum%giventypeinfo = #GivenTypeInfo(1);
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(589.11-589.18) : \num = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(601.12-601.50) : \nat = {x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(601.24-601.48) : $NATIVEnumLessEq($NATIVEmakeNumber(0),x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(605.14-605.50) : \nat_1 = {x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(605.26-605.48) : $NATIVEnumLess($NATIVEmakeNumber(0),x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(609.11-609.44) : -_ = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(609.28-609.44) : %r = $NATIVEnumSub($NATIVEmakeNumber(0),x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(613.14-613.50) : _+_ = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(613.34-613.50) : %r = $NATIVEnumAdd(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(617.14-617.50) : _-_ = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(617.34-617.50) : %r = $NATIVEnumSub(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(621.14-621.50) : _*_ = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(621.34-621.50) : %r = $NATIVEnumMul(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(625.17-625.53) : _\div_ = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(625.37-625.53) : %r = $NATIVEnumDiv(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(629.17-629.53) : _\mod_ = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(629.37-629.53) : %r = $NATIVEnumMod(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(633.14-633.53) : _<_ = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(633.28-633.50) : $NATIVEnumLess(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(637.17-637.58) : _\leq_ = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(637.31-637.55) : $NATIVEnumLessEq(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(641.14-641.53) : _>_ = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(641.28-641.50) : $NATIVEnumLess(y,x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(645.17-645.58) : _\geq_ = {(x,y) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(645.31-645.55) : $NATIVEnumLessEq(y,x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(649.11-649.30) : succ = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(649.28-649.30) : %r = _+_ (x,$NATIVEmakeNumber(1))};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(655.19-657.33) : _\upto_ = {((l,u),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(656.6-657.33) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(656.10-656.17) : (l,u) : _\leq_} THEN {l} + _\upto_ (_+_ (l,$NATIVEmakeNumber(1)),u) ELSE EMPTY};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(661.10-664.67) : min = {(S,%r)\%l6 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(662.14-664.67) : %r = /NATIVEmu {%b\S' | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(662.25-662.30) : S' = %l6; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(663.15-664.67) : %b = /NATIVEmu {x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(663.28-663.35) : x : S'; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(664.29-664.67) : {<x'==x'> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(664.47-664.55) : x' : S'} <= {<x'==x'> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(664.59-664.67) : (x,x') : _\leq_}}}; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(662.25-662.30) : %l6 = \EXT_[] S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(668.10-671.68) : max = {(S,%r)\%l6 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(669.14-671.68) : %r = /NATIVEmu {%b\S' | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(669.25-669.30) : S' = %l6; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(670.16-671.68) : %b = /NATIVEmu {x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(670.29-670.36) : x : S'; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(671.30-671.68) : {<x'==x'> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(671.48-671.56) : x' : S'} <= {<x'==x'> | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(671.60-671.68) : (x,x') : _\geq_}}}; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(669.25-669.30) : %l6 = \EXT_[] S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(675.11-675.53) : \abs = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(675.28-675.53) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(675.32-675.36) : (x,$NATIVEmakeNumber(0)) : _<_} THEN -_ x ELSE x};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(70.1-72.11): NATIVEtrace = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(710.1-716.11): %gen = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(710.1-716.11): NATIVEcons = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(710.1-716.11): NATIVEhead = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(710.1-716.11): NATIVEisSeqRepr = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(710.1-716.11): NATIVEseqCard = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(710.1-716.11): NATIVEtail = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(721.1-726.11): AUXasSeq = {(X,AUXasSeq) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(723.5-725.74) : AUXasSeq = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(724.7-725.74) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(724.11-724.31) : $NATIVEisSeqRepr(S)} THEN S ELSE /NATIVEasSeq S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(723.5-725.74): AUXasSeq[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(724.7-725.74) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(724.11-724.31) : $NATIVEisSeqRepr(S)} THEN S ELSE /NATIVEasSeq S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(730.1-737.11): \seq_ = {(X,\seq_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(734.5-736.75) : \seq_ = {S | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(735.8-736.72) : ? /NATIVEnotempty ({#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(735.8-735.28) : $NATIVEisSeqRepr(S)} + {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(736.17-736.72) : /NATIVEisSeq S = %l})}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(734.5-736.75): \seq_[] = {S | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(735.8-736.72) : ? /NATIVEnotempty ({#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(735.8-735.28) : $NATIVEisSeqRepr(S)} + {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(736.17-736.72) : /NATIVEisSeq S = %l})};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(74.1-76.11): \TRACE = {(X,\TRACE) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(75.13-75.52) : \TRACE = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(75.37-75.52) : %r = $NATIVEtrace(x,x)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(740.3-742.75): \seq_1_ = {(X,\seq_1_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(741.5-742.75) : \seq_1_ = {S | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(742.9-742.72) : /NATIVEisNonEmptySeq S = %l}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(741.5-742.75): \seq_1_[] = {S | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(742.9-742.72) : /NATIVEisNonEmptySeq S = %l};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(742.67-742.72) : \ztrue = %l;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.14-746.61) : \iseq_[] = {s | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.27-746.38) : s : \seq_[]; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.41-746.58) : \#[] (\ran[] s) = \#[] s};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.3-746.61): \iseq_ = {(X,\iseq_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.14-746.61) : \iseq_ = {s | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.27-746.38) : s : \seq_ X; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(746.41-746.58) : \#[] (\ran[] s) = \#[] s}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(75.13-75.52): \TRACE[] = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(75.37-75.52) : %r = $NATIVEtrace(x,x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(752.1-754.11): \langle,,\rangle = {(X,\langle,,\rangle) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(753.25-753.35) : \langle,,\rangle = AUXasSeq X};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(753.25-753.35) : \langle,,\rangle[] = AUXasSeq[];
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(759.1-762.11): _\zscons_ = {(X,_\zscons_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(761.5-761.65) : _\zscons_ = {((x,xs),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(761.50-761.65) : %r = $NATIVEcons(x,xs)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(761.5-761.65): _\zscons_[] = {((x,xs),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(761.50-761.65) : %r = $NATIVEcons(x,xs)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(765.1-777.11): _\cat_ = {(X,_\cat_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(769.6-776.7) : _\cat_ = {%b\ys,ys' | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(769.41-769.52) : ys' = AUXasSeq[] ys; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(770.35-770.56) : %b = ((EMPTY,ys'),ys')} + {((xs,ys),zs')\x,xs',zs | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(773.14-773.30) : xs = $NATIVEcons(x,xs'); LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(773.33-773.60) : ((xs',ys),zs) : _\cat_; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(774.15-774.30) : zs' = $NATIVEcons(x,zs)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(769.6-776.7): _\cat_[] = {%b\ys,ys' | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(769.41-769.52) : ys' = AUXasSeq[] ys; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(770.35-770.56) : %b = ((EMPTY,ys'),ys')} + {((xs,ys),zs')\x,xs',zs | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(773.14-773.30) : xs = $NATIVEcons(x,xs'); LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(773.33-773.60) : ((xs',ys),zs) : _\cat_[]; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(774.15-774.30) : zs' = $NATIVEcons(x,zs)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(78.1-80.11): \PRINT = {((X,Y),\PRINT) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(79.13-79.67) : \PRINT = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(79.52-79.67) : %r = $NATIVEtrace(x,y)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(782.1-787.11): squash = {(X,squash) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(784.5-786.75) : squash = {(F,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(785.7-786.75) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(785.11-785.31) : $NATIVEisSeqRepr(F)} THEN F ELSE /NATIVEsquash F}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(784.5-786.75): squash[] = {(F,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(785.7-786.75) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(785.11-785.31) : $NATIVEisSeqRepr(F)} THEN F ELSE /NATIVEsquash F};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(79.13-79.67): \PRINT[] = {((x,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(79.52-79.67) : %r = $NATIVEtrace(x,y)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(791.1-794.11): head = {(X,head) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(792.11-793.45) : head = {(S,x)\S' | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(793.19-793.35) : S = $NATIVEcons(x,S')}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(792.11-793.45) : head[] = {(S,x)\S' | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(793.19-793.35) : S = $NATIVEcons(x,S')};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(796.1-799.11): tail = {(X,tail) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(797.11-798.46) : tail = {(S,S')\x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(798.19-798.35) : S = $NATIVEcons(x,S')}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(797.11-798.46) : tail[] = {(S,S')\x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(798.19-798.35) : S = $NATIVEcons(x,S')};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(801.1-807.11): rev = {(X,rev) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(804.9-806.59) : rev = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(805.14-806.59) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(805.18-805.30) : S = EMPTY} THEN EMPTY ELSE _\cat_[] (rev (tail[] S) ,AUXasSeq[] {($NATIVEmakeNumber(1),head[] S)})}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(804.9-806.59): rev[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(805.14-806.59) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(805.18-805.30) : S = EMPTY} THEN EMPTY ELSE _\cat_[] (rev[] (tail[] S) ,AUXasSeq[] {($NATIVEmakeNumber(1),head[] S)})};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(810.1-812.11): last = {(X,last) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(811.11-811.49) : last = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(811.40-811.49) : %r = head[] (rev[] S)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(811.11-811.49) : last[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(811.40-811.49) : %r = head[] (rev[] S)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(815.1-817.11): front = {(X,front) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(816.12-816.54) : front = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(816.41-816.54) : %r = rev[] (tail[] (rev[] S))}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(816.12-816.54) : front[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(816.41-816.54) : %r = rev[] (tail[] (rev[] S))};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(821.1-826.11): foldr = {((X,Y),foldr) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(824.11-825.75) : foldr = {((F,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(825.12-825.75) : %r = {(xs,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(825.33-825.75) : %r = INTERNfoldr[] (F,y,AUXasSeq[] (\DEEPFORCE[] xs))}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(824.11-825.75) : foldr[] = {((F,y),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(825.12-825.75) : %r = {(xs,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(825.33-825.75) : %r = INTERNfoldr[] (F,y,AUXasSeq[] (\DEEPFORCE[] xs))}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(828.1-833.11): foldl = {((X,Y),foldl) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(831.11-832.74) : foldl = {((y,F),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(832.12-832.74) : %r = {(xs,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(832.33-832.74) : %r = INTERNfoldl[] (y,F,AUXasSeq[] (\DEEPFORCE[] xs))}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(831.11-832.74) : foldl[] = {((y,F),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(832.12-832.74) : %r = {(xs,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(832.33-832.74) : %r = INTERNfoldl[] (y,F,AUXasSeq[] (\DEEPFORCE[] xs))}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(835.1-842.11): INTERNfoldr = {((X,Y),INTERNfoldr) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(839.5-841.66) : INTERNfoldr = {((F,y,xs),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(840.7-841.66) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(840.11-840.24) : xs = EMPTY} THEN y ELSE F (head[] xs,INTERNfoldr (F,y,tail[] xs))}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(839.5-841.66): INTERNfoldr[] = {((F,y,xs),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(840.7-841.66) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(840.11-840.24) : xs = EMPTY} THEN y ELSE F (head[] xs,INTERNfoldr[] (F,y,tail[] xs))};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(844.1-851.11): INTERNfoldl = {((X,Y),INTERNfoldl) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(848.5-850.66) : INTERNfoldl = {((y,F,xs),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(849.7-850.66) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(849.11-849.24) : xs = EMPTY} THEN y ELSE INTERNfoldl (F (y,head[] xs),F,tail[] xs)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(848.5-850.66): INTERNfoldl[] = {((y,F,xs),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(849.7-850.66) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(849.11-849.24) : xs = EMPTY} THEN y ELSE INTERNfoldl[] (F (y,head[] xs),F,tail[] xs)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(853.1-860.11): fold = {(X,fold) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(857.5-859.36) : fold = {(F,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(858.5-859.36) : %r = {(xs,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(859.7-859.36) : %r = INTERNfoldl[] (head[] xs,F,tail[] xs)}}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(857.5-859.36): fold[] = {(F,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(858.5-859.36) : %r = {(xs,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(859.7-859.36) : %r = INTERNfoldl[] (head[] xs,F,tail[] xs)}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(865.1-870.11): _\filter_ = {(X,_\filter_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(868.22-869.22) : _\filter_ = {((S,R),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(869.6-869.22) : %r = squash[] (_\rres_[] (S,R))}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(868.22-869.22) : _\filter_[] = {((S,R),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(869.6-869.22) : %r = squash[] (_\rres_[] (S,R))};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(872.1-876.11): _\extract_ = {(X,_\extract_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(874.7-875.25) : _\extract_ = {((D,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(875.9-875.25) : %r = squash[] (_\dres_[] (D,S))}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(874.7-875.25): _\extract_[] = {((D,S),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(875.9-875.25) : %r = squash[] (_\dres_[] (D,S))};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(878.1-885.11): _\prefix_ = {(X,_\prefix_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(882.6-884.64) : _\prefix_ = {%b\S2 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(882.31-882.45) : %b = (EMPTY,S2)} + {%b\S1,S2,x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(884.10-884.22) : (S1,S2) : _\prefix_; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(884.26-884.61) : %b = ($NATIVEcons(x,S1),$NATIVEcons(x,S2))}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(882.6-884.64): _\prefix_[] = {%b\S2 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(882.31-882.45) : %b = (EMPTY,S2)} + {%b\S1,S2,x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(884.10-884.22) : (S1,S2) : _\prefix_[]; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(884.26-884.61) : %b = ($NATIVEcons(x,S1),$NATIVEcons(x,S2))};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(887.1-897.11): _\suffix_ = {(X,_\suffix_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(891.6-896.19) : _\suffix_ = {%b\S2 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(891.31-891.45) : %b = (EMPTY,S2)} + {(S1,S2)\S1',S2',x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(893.10-893.54) : ((S1',AUXasSeq[] {($NATIVEmakeNumber(1),x)}),S1) : _\cat_[]; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(894.10-894.54) : ((S2',AUXasSeq[] {($NATIVEmakeNumber(1),x)}),S2) : _\cat_[]; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(895.10-895.24) : (S1',S2') : _\suffix_}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(891.6-896.19): _\suffix_[] = {%b\S2 | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(891.31-891.45) : %b = (EMPTY,S2)} + {(S1,S2)\S1',S2',x | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(893.10-893.54) : ((S1',AUXasSeq[] {($NATIVEmakeNumber(1),x)}),S1) : _\cat_[]; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(894.10-894.54) : ((S2',AUXasSeq[] {($NATIVEmakeNumber(1),x)}),S2) : _\cat_[]; LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(895.10-895.24) : (S1',S2') : _\suffix_[]};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(899.1-904.11): \dcat = {(X,\dcat) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(902.12-903.43) : \dcat = {(SS,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(903.13-903.43) : %r = foldr[] (_\cat_[],EMPTY) SS}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(902.12-903.43) : \dcat[] = {(SS,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(903.13-903.43) : %r = foldr[] (_\cat_[],EMPTY) SS};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(910.1-914.11): \# = {(X,\#) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(911.10-913.55) : \# = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(912.14-913.55) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(912.18-912.38) : $NATIVEisSeqRepr(S)} THEN $NATIVEseqCard(S) ELSE /NATIVEcard S}};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(911.10-913.55) : \#[] = {(S,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(912.14-913.55) : %r = IF {#<>() | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(912.18-912.38) : $NATIVEisSeqRepr(S)} THEN $NATIVEseqCard(S) ELSE /NATIVEcard S};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(92.1-94.11): NATIVEdeepForce = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(929.3-929.15): \denotation = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(929.3-929.15): \denotation%giventypeinfo = #GivenTypeInfo(1);
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(942.12-942.60) : \ddec = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(942.46-942.60) : %r = $NATIVEdecode(x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(947.5-947.59): \denc = {(x,%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(947.37-947.59) : %r = $NATIVEencode(AUXasSeq[] x)};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.19-955.52) : TYPEINFO[] = \ran[] TypeInfo;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.19-955.52) : TypeInfo = {(A,TypeInfo) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.19-955.52) : TypeInfo = {(%a1,#TypeInfo(%a1)) | }};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.19-955.52) : TypeInfo[] = {(%a1,#TypeInfo(%a1)) | };
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.3-955.52): TYPEINFO = {(A,TYPEINFO) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.19-955.52) : TYPEINFO = \ran[] TypeInfo};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(955.3-955.52): TYPEINFO%giventypeinfo = #GivenTypeInfo(TypeInfo<\denotation>);
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.24-956.62) : GIVENTYPEINFO[] = \ran[] GivenTypeInfo;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.24-956.62) : GivenTypeInfo = {(A,GivenTypeInfo) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.24-956.62) : GivenTypeInfo = {(%a1,#GivenTypeInfo(%a1)) | }};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.24-956.62) : GivenTypeInfo[] = {(%a1,#GivenTypeInfo(%a1)) | };
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.3-956.62): GIVENTYPEINFO = {(A,GIVENTYPEINFO) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.24-956.62) : GIVENTYPEINFO = \ran[] GivenTypeInfo};
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(956.3-956.62): GIVENTYPEINFO%giventypeinfo = #GivenTypeInfo(GivenTypeInfo<\denotation>);
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(96.1-98.11): NATIVEforce = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(962.1-964.11): \typeinfo_ = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(966.1-968.11): \giventypeinfo_ = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(988.1-990.11): NATIVEfromFile = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(992.1-994.11): NATIVEfromDeno = UNIV;
+  LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(999.1-1001.11) : _\fromfile_ = {(A,_\fromfile_) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1000.22-1000.81) : _\fromfile_ = {((i,f),%r) | LTX:$ZETABASE/lib/ztoolkits/Toolkit.tex(1000.63-1000.81) : %r = $NATIVEfromFile(i,f)}};

@@ -1,0 +1,100 @@
+<1>UnitAbsy.Section
+(LTX:FreeTypes#zapnotes,
+ {LTX:Toolkit#Toolkit},
+ {<2>Item.AxiomaticDef
+  ({},
+   <3>Expr.FreeType
+   (<4>NameDecl
+    (MySeq,
+     <5>
+     Annotation {
+       Locator zeta.session.Locator: LTX:zapnotes.tex(360.3-360.7);
+     }),
+    {<6>Expr.Branch.Constant
+     (<7>NameDecl
+      (nil,
+       <8>
+       Annotation {
+         Locator zeta.session.Locator: LTX:zapnotes.tex(360.13-360.15);
+       }),
+      <9>
+      Annotation {
+        Locator zeta.session.Locator: LTX:zapnotes.tex(360.13-360.15);
+      }),
+     <10>Expr.Branch.Function
+     (<11>NameDecl
+      (cons,
+       <12>
+       Annotation {
+         Locator zeta.session.Locator: LTX:zapnotes.tex(360.19-360.22);
+       }),
+      <13>Expr.Product
+      ({<14>Expr.Binary
+        (Apply,
+         <15>Expr.Variable
+         (<16>NameAppl
+          (_\upto_,
+           {},
+           <17>
+           Annotation {
+             Locator zeta.session.Locator: LTX:zapnotes.tex(360.31-360.39);
+           }),
+          <18>
+          Annotation {
+            Locator zeta.session.Locator: LTX:zapnotes.tex(360.31-360.39);
+          }),
+         <19>Expr.Tuple
+         ({<20>Expr.Number
+           ("1",
+            <21>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:zapnotes.tex(360.31-360.31);
+            }),
+           <22>Expr.Number
+           ("3",
+            <23>
+            Annotation {
+              Locator zeta.session.Locator:
+               LTX:zapnotes.tex(360.39-360.39);
+            })},
+          <24>
+          Annotation {
+            Locator zeta.session.Locator: LTX:zapnotes.tex(360.31-360.39);
+          }),
+         <25>
+         Annotation {
+           Locator zeta.session.Locator: LTX:zapnotes.tex(360.31-360.39);
+         }),
+        <26>Expr.Variable
+        (<27>NameAppl
+         (MySeq,
+          {},
+          <28>
+          Annotation {
+            Locator zeta.session.Locator: LTX:zapnotes.tex(360.48-360.52);
+          }),
+         <29>
+         Annotation {
+           Locator zeta.session.Locator: LTX:zapnotes.tex(360.48-360.52);
+         })},
+       <30>
+       Annotation {
+         Locator zeta.session.Locator: LTX:zapnotes.tex(360.31-360.52);
+       }),
+      <31>
+      Annotation {
+        Locator zeta.session.Locator: LTX:zapnotes.tex(360.19-360.59);
+      })},
+    <32>
+    Annotation {
+      Locator zeta.session.Locator: LTX:zapnotes.tex(360.3-360.59);
+    }),
+   <33>
+   Annotation {
+     Locator zeta.session.Locator: LTX:zapnotes.tex(360.3-360.59);
+   })},
+ <34>
+ Annotation {
+   Locator zeta.session.Locator: LTX:zapnotes.tex(357.3-357.22);
+ })

@@ -1,0 +1,7 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:facExec2#zapnotes}
+
+\begin{axdef}
+  fac: \nat \fun \nat
+\where
+  fac = \lambda x: \nat @ \IF x = 0 \THEN 1 \ELSE x * fac (x - 1)
+\end{axdef}

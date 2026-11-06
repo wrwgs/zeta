@@ -1,0 +1,7 @@
+\zsection[LTX:Toolkit#Toolkit]{LTX:Stepping#zapnotes}
+
+\begin{axdef}
+  S: \power \num
+\where
+  S \in \{\{1,2\},\{3,4\}\}
+\end{axdef}

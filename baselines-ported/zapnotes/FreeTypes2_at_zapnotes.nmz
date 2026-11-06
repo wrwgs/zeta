@@ -1,0 +1,32 @@
+UNIT LTX:FreeTypes2#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  MySeq
+  MySeq%giventypeinfo
+  MySeq%typegen
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _=_
+  _\fun_
+  _\in_
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  _\upto_
+  cons
+  nil
+LOCALS
+  \ran[]
+PROPERTIES
+  LTX:zapnotes.tex(402.13-402.15): nil = #nil();
+  LTX:zapnotes.tex(402.13-402.15);
+  LTX:zapnotes.tex(402.19-402.66): MySeq = {#nil()} + \ran[] cons;
+  LTX:zapnotes.tex(402.19-402.66): cons = {((%a1,%a2),#cons(%a1,%a2)) | };
+  LTX:zapnotes.tex(402.3-402.66): MySeq%giventypeinfo = #GivenTypeInfo(nil|cons<(\baseNum,MySeq)>);

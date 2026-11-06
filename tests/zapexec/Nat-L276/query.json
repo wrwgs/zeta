@@ -1,0 +1,10 @@
+{
+  "section": "Nat",
+  "unit": "Nat#zapnotes",
+  "kind": "expr",
+  "line": 276,
+  "query": "[x,y: \\num | y \\in 1 \\upto 2] \\land [y,z:\\num | y = z]",
+  "yields": [
+    "{<x==x,y==1,z==1>,<x==x,y==2,z==2>}"
+  ]
+}

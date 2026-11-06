@@ -1,0 +1,63 @@
+ZETA -- a framework for the Z specification notation
+Copyright 1997-2026 Wolfgang Grieskamp and ZETA contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+ZETA was developed at the Technische Universitaet Berlin between 1997 and
+2002. The source carries its original @author attributions; the principal
+authors are Wolfgang Grieskamp, Jacob Wieland and Robert Buessow. The 2026
+recovery and the port from Pizza to Java 21 are recorded in README.md and
+zesurrect-plan.md.
+
+
+Third-party code in src/
+------------------------
+
+An auxiliary hashtable derived from the 1994 JDK carries an embedded Sun
+Microsystems notice permitting use for NON-COMMERCIAL purposes only. The
+derived code is one package-private class in each of two files:
+
+    src/zeta/agl/HashMap.java   final class HashMapTab
+    src/zeta/agl/HashSet.java   final class HashSetTab
+
+That notice is narrower than the Apache License and is not superseded by it,
+so commercial redistribution of ZETA requires replacing those two classes.
+Neither is public and nothing outside its own file names it -- but the
+replacement is not a drop-in: these classes decide hash-bucket iteration
+order, which is observable in ZETA's output, so a replacement that does not
+reproduce the same order changes rendered text and every affected regression
+baseline has to be re-recorded deliberately.
+
+src/zeta/agl/Option.java is attributed to Martin Odersky and derives from the
+Pizza 1.0 standard library (1996).
+
+
+doc/
+----
+
+doc/ is recovered material and the Apache License does not apply uniformly to
+it:
+
+  doc/papers, doc/thesis, doc/zeta/*.pdf, doc/zeta/*.ps.gz, doc/zeta/html,
+  doc/other/esz, doc/other/wg-homepage
+      publications, manuals and archived web pages. Copyright rests with
+      their authors and publishers; several papers are under publishers'
+      agreements (Springer, IEEE).
+
+  doc/zeta/src, doc/other/latex-styles, doc/other/pizza-agl/pizza-mode-addon.el
+      ZETA's own sources -- the esz and zeta LaTeX packages and their noweb
+      original, Toolkit.tex, the example specifications, and an Emacs
+      pizza-mode add-on. Part of ZETA, under the Apache License.
+
+  doc/other/sheffield-z2sal/zed.sty
+      Copyright (c) J.M. Spivey 1988, 1990, 1994. Free to copy, distribute
+      and use "for any purpose except direct commercial gain", as a whole and
+      without modification.
+
+  doc/other/sheffield-z2sal/oz.sty
+      Copyright (C) 1993 Sebastian Rahtz. Local customization permitted; a
+      modified version may not be distributed under the original name.
+
+  doc/other/sheffield-z2sal/ZofZeTa.pdf
+      a third party's 2007 PostScript-to-PDF conversion of doc/zeta/Z.ps.gz.
+      See doc/other/sheffield-z2sal/PROVENANCE.md.

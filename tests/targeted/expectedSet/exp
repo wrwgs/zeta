@@ -1,0 +1,19 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load TexpectedSet.tex
++ scanning TexpectedSet.tex
+- load TexpectedSet.tex
+>>> c -u TexpectedSet#TexpectedSet
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:TexpectedSet#TexpectedSet
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:TexpectedSet#TexpectedSet
+! ERROR[LTX:TexpectedSet.tex(14.3-14.3)]:
+!   expected a powerset type. found type: \baseNum
+= good bye.

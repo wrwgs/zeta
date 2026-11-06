@@ -1,0 +1,28 @@
+{
+  "section": "Nat",
+  "unit": "Nat#zapnotes",
+  "kind": "expr",
+  "line": 161,
+  "query": "\\{x:N | x ~ less_1 ~ three\\}",
+  "yields": [
+    "unresolvable constraints in toplevel goal {",
+    "resolving LTX:zapnotes.tex(136.21-136.64)",
+    "with variables:",
+    "x = _x",
+    "y = S(S(...))",
+    "t~1 unbound",
+    "unresolved constraints:",
+    "LTX:zapnotes.tex(136.52-136.61) waiting for subgoal {",
+    "resolving '{_y|(_x,_y) IN _S}'",
+    "with parameters:",
+    "_S = LTX:zapnotes.tex(70.6-70.33)+LTX:zapnotes.tex(71.6-71.67)",
+    "_x = (_x,S(...))",
+    "with variables:",
+    "_y unbound",
+    "unresolved constraints:",
+    "'(_x,_y) IN _S' waiting for variable _x",
+    "}",
+    "}",
+    "{*unknown*}"
+  ]
+}

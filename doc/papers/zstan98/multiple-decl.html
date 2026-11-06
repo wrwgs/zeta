@@ -1,0 +1,369 @@
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Z Proposal</TITLE>
+<META NAME="description" CONTENT="Z Proposal">
+<META NAME="keywords" CONTENT="multiple-decl">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="multiple-decl.css">
+</HEAD>
+<BODY >
+<FONT SIZE="+1"><B><A NAME="tex2html1"
+ HREF="multiple-decl.html">WG.48.5</A>: Multiple Declarations</B></FONT> 
+<P>
+  <FONT SIZE="-1">Proposal for the Z Standard, 
+        by Wolfgang Grieskamp (<TT>wg@cs.tu-berlin.de</TT>), November 11, 1998, 
+        (v2)  , <A NAME="tex2html2"
+ HREF="multiple-decl.ps.gz">postscript version</A>
+</FONT> 
+  
+<P>
+  
+<P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+What</A>
+</H2>
+
+<P>
+Global constants can be declared multiple times in the environment
+of a section. All declarations must be type-compatible.
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Why</A>
+</H2>
+
+<P>
+
+<H5><A NAME="SECTION00002001000000000000">
+Methodological Reasons</A>
+</H5>
+
+<P>
+Z specifications are often <EM>literate</EM> and do not only present the
+pure formalisation but also documentation. For the purpose
+of documentation, an approved technique is step-wise refinement:
+
+<P>
+<BLOCKQUOTE>
+<BR>
+<IMG
+ WIDTH="656" HEIGHT="241" ALIGN="BOTTOM" BORDER="0"
+ SRC="multiple-decl-img1.gif"
+ ALT="\begin{boxedminipage}{\linewidth}
+\medskip
+\par\textbf{The System}
+We distingu...
+...rdata
+\end{zed}\par\textbf{The Outputs}
+\ldots
+\medskip
+\end{boxedminipage}">
+<BR></BLOCKQUOTE>
+<P>
+The same technique is desirable to be supported in a refinement process
+over sections boundaries:
+
+<P>
+<BLOCKQUOTE>
+<BR>
+<IMG
+ WIDTH="656" HEIGHT="244" ALIGN="BOTTOM" BORDER="0"
+ SRC="multiple-decl-img2.gif"
+ ALT="\begin{boxedminipage}{\linewidth}
+\medskip
+\textbf{The Abstract System}
+\begi...
+...data \\
+OUTPUT ::= \ldots \\
+\ldots
+\end{zed} \medskip
+\end{boxedminipage}">
+<BR></BLOCKQUOTE>
+<P>
+One important counter-argument against multiple declarations is that
+from the point of view of human understanding and of formal proof of
+specifications it is is desirable to have a unique point of the
+``defining property'' of a Z name.  The main argument against: this is
+only true for <EM>one particular method</EM> how to use Z There are
+other possible usages of Z:
+
+<P>
+<UL>
+<LI>It has been suggested that Z may become a formalism for ISO
+  standards . There are many examples (at least before WD
+  1.5) where properties of single entities are spreaded over various
+  places in the Z standard document itself.
+<LI>As reported by Andreas Fett from Daimler-Benz, whose group uses Z
+  mainly for documentation but not for formal proof, they prefer a
+  specification style where they formulate several ``views'' on the
+  specified system, depending on roles and knowledge-background of
+  readers of the specification, and of the systems components (such as
+  interfaces, functionality, safety-requirements, etc). The views
+  should type-check as individual documents, as well as if they are
+  included in an overall document.
+<LI>In ESPRESS, we have combined Z with other formalisms such as
+  statecharts. The combination is founded (and tool-technically
+  supported) by mapping the model provided by Statemate statecharts,
+  inclusive of Statemates data declarations, to Z, and combining this
+  with a Z specification. It is inherent that this can result in
+  multiple declarations, since the user can specify identical entities
+  in the Statemate model and the Z specification.
+</UL>
+<P>
+Since it is hard to predict all the possible usages of Z, the Standard
+should not restrict the notation because of methodological
+considerations. Methods, perhaps with accompanying tool-support, which
+put conditions on the usage of Z going further then the Standard, can
+be build on top of it.
+
+<P>
+
+<H5><A NAME="SECTION00002002000000000000">
+Technical Reasons</A>
+</H5>
+
+<P>
+Multiple declarations improve orthogonality of Standard Z:
+
+<P>
+<UL>
+<LI>Multiple declarations are already present on the level of the
+  schema calculus where declarations of the same name are matched
+  under the condition of type-compatibility. Though there is a
+  difference because of the presence of generics on the top-level not
+  available in schemata, the principle concept of multiple
+  declarations is already present in the language.
+<LI>It is possible to write e.g.
+  <BR>
+<IMG
+ WIDTH="433" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="multiple-decl-img4.gif"
+ ALT="\begin{zedgroup}\begin{axdef}
+x: \num
+\end{axdef} \begin{axdef}
+\where
+x \in \nat
+\end{axdef} \end{zedgroup}">
+<BR>
+But it is not possible to write the equivalent:
+  <BR>
+<IMG
+ WIDTH="357" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="multiple-decl-img5.gif"
+ ALT="\begin{zedgroup}\begin{axdef}
+x: \num
+\end{axdef} \begin{axdef}
+x : \nat
+\end{axdef} \end{zedgroup}">
+<BR>
+<LI>Whereas for constants arbitrary constraints can be added by
+  axioms (though not by declarations), adding to given types the axiom
+  that they are  freely generated is not possible at all (see also proposal
+  <A NAME="tex2html3"
+ HREF="freetype-recursion.html">WG.48.4</A>).
+</UL> 
+
+<P>
+
+<H2><A NAME="SECTION00003000000000000000">
+How</A>
+</H2>
+
+<P>
+
+<H5><A NAME="SECTION00003001000000000000">
+Dependencies</A>
+</H5>
+
+<P>
+This proposal depends on <A NAME="tex2html4"
+ HREF="freetype-recursion.html">WG.48.4</A>.
+
+<P>
+
+<H5><A NAME="SECTION00003002000000000000">
+Conformance</A>
+</H5>
+
+<P>
+Tools working in batch mode which don't implement this feature may be
+still regarded as conforming, since syntactic transformations can
+build which eliminate multiple declarations (see the <I>ANF</I> below).
+
+<P>
+
+<H5><A NAME="SECTION00003003000000000000">
+Semantics</A>
+</H5>
+
+<P>
+From any section, one can syntactically build what I would call the
+<EM>algebraic normal form</EM>, 
+<!-- MATH: $ANF_S = (G_S,C_S,P_S)$ -->
+<I>ANF</I><SUB><I>S</I></SUB> = (<I>G</I><SUB><I>S</I></SUB>,<I>C</I><SUB><I>S</I></SUB>,<I>P</I><SUB><I>S</I></SUB>) (see proposal
+<A NAME="tex2html5"
+ HREF="paragraph-reordering.html">WG.48.3</A> for details).  From <I>ANF</I><SUB><I>S</I></SUB> one can re-construct
+a Z section 
+<!-- MATH: $S' = \mathsf{section}~i~\mathsf{parents}~i_1, \ldots,
+i_n~\mathsf{END}~G_S~C_S~P_S~\mathsf{END}$ -->
+<IMG
+ WIDTH="324" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="multiple-decl-img6.gif"
+ ALT="$S' = \mathsf{section}~i~\mathsf{parents}~i_1, \ldots,
+i_n~\mathsf{END}~G_S~C_S~P_S~\mathsf{END}$">.
+<EM>Assuming that the
+
+semantics equations ensure</EM> that (for each arbitrary arrangement of
+<I>S</I>') it holds: 
+<!-- MATH: $\lbag S \rbag^{\mathcal{S}} = \lbag S'
+\rbag^{\mathcal{S}}$ -->
+<IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="multiple-decl-img7.gif"
+ ALT="$\lbag S \rbag^{\mathcal{S}} = \lbag S'
+\rbag^{\mathcal{S}}$">,
+then multiple declarations cause no semantic
+problems. In particular, it doesn't makes a difference whether a
+constraint on a variable is put in its declaration or in a property,
+and whether the declaration precedes a property or not.
+
+<P>
+Multiple declarations introduce similar problems for the generation of
+free type axioms as described and solved in <A NAME="tex2html6"
+ HREF="freetype-recursion.html">WG.48.4</A>,
+``Semantic Transformations''. The reason for this is that one
+can make a declaration of a given type, then define some other
+sets in dependency of the given type, and later on add a free-type
+axiom.
+
+<P>
+
+<P><P>
+<BR>
+<EM>Multiple declarations across section boundaries</EM>: Names
+which are inherited from parents and are redeclared cause no special
+semantic problems (the <I>ANF</I> form can be extended to hierarchies, to
+explain the semantics).  Yet, it is not possible to define mutual
+recursive free types over section boundaries.
+
+<P>
+<BR>
+<IMG
+ WIDTH="460" HEIGHT="32" ALIGN="BOTTOM" BORDER="0"
+ SRC="multiple-decl-img8.gif"
+ ALT="\begin{zedgroup}\begin{zed}
+\zsection{S} \\
+[A]; B ::= \ldots A \ldots
+\end{zed}\begin{zed}
+\zsection[S]{T} \\
+A ::= \ldots B \ldots
+\end{zed}\end{zedgroup}">
+<BR>
+<P>
+This in general does not result in the meaning one might expect, since
+the fixing of type <I>B</I> is performed locally in section <I>S</I> for
+arbitrary <I>A</I>.
+
+<P>
+
+<H5><A NAME="SECTION00003004000000000000">
+Generics</A>
+</H5>
+
+<P>
+Multiple declaration of generic names are allowed provided
+that the types are equal modulo alpha-conversion.
+
+<P>
+
+<H5><A NAME="SECTION00003005000000000000">
+Operator Templates</A>
+</H5>
+
+<P>
+Multiple declaration of operator templates are allowed provided that
+they do not change an existing token assignment.
+
+<P>
+
+<H5><A NAME="SECTION00003006000000000000">
+Updates to WD 1.5</A>
+</H5>
+
+<P>
+<UL>
+<LI>Clause 7.4.4, Lexis: 
+  <BLOCKQUOTE>
+[...] If a WORD already has an assignment in the mapping, an
+    operator template can induce the same assignment, but cannot change
+    it [...] [Similarly for parents]
+  </BLOCKQUOTE>
+<P>
+<LI>Clause 13.2.2.1 (the according clause in 12, resp.): add a comment such
+    as:
+
+<P>
+<BLOCKQUOTE>
+Global constants can be declared multiple times in the environment
+      of a section (this environment is build from the parent sections
+      and the paragraphs in the section). All declarations must be
+      type-compatible.
+    </BLOCKQUOTE>  
+    Change the rule as follows:
+    <UL>
+<LI>remove condition 
+<!-- MATH: $\dom \sigma_1 \cap \ldots \cap \dom \sigma_n = \{\}$ -->
+<IMG
+ WIDTH="177" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="multiple-decl-img9.gif"
+ ALT="$\dom \sigma_1 \cap \ldots \cap \dom \sigma_n = \{\}$">
+<LI>add condition 
+<!-- MATH: $\bigwedge k,j: 1 \ldots n @ \dom \sigma_k \dres
+\sigma_j \sim_{\alpha} \dom \sigma_i \dres \sigma_k$ -->
+<IMG
+ WIDTH="289" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="multiple-decl-img10.gif"
+ ALT="$\bigwedge k,j: 1 \ldots n @ \dom \sigma_k \dres
+\sigma_j \sim_{\alpha} \dom \sigma_i \dres \sigma_k$">,
+where
+      
+<!-- MATH: $\sim_{\alpha}$ -->
+<IMG
+ WIDTH="24" HEIGHT="27" ALIGN="MIDDLE" BORDER="0"
+ SRC="multiple-decl-img11.gif"
+ ALT="$\sim_{\alpha}$">
+denotes type equality modulo alpha-conversion of
+      generics for type assignments.
+    </UL>
+<P>
+<LI>Clause 15.2.3.1, Semantic Transformation Rules: use
+    the variant for induction described in <A NAME="tex2html7"
+ HREF="freetype-recursion.html">WG.48.4</A>.
+<LI>Clause 16, Semantic Equations: either rewrite this to
+
+allow multiple declarations, or introduce the ANF as a semantic
+    transformation to 15.  In the second case, multiple declarations
+    across section boundaries need to be still handled, which
+    suggests to use the first version.
+
+<P>
+</UL>
+<P>
+<BR> <HR>
+<ADDRESS>
+<a href="mailto:wg@cs.tu-berlin.de">Wolfgang Grieskamp</a>
+</ADDRESS>
+</BODY>
+</HTML>

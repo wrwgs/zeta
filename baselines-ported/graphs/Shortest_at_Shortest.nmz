@@ -1,0 +1,64 @@
+UNIT LTX:Shortest#Shortest
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  G
+  Graph
+  Node
+  X
+  \MEMOIZE
+  \baseNum
+  \denotation
+  \dom
+  \dom[]
+  \emptyset
+  \emptyset[]
+  \nat
+  \num
+  \ran
+  \ran[]
+  \seq_
+  _=_
+  _=_[]
+  _\circ_
+  _\circ_[]
+  _\cup_
+  _\cup_[]
+  _\ffun_
+  _\ffun_[]
+  _\fun_
+  _\fun_[]
+  _\in_
+  _\in_[]
+  _\inv
+  _\inv[]
+  _\limg_\rimg
+  _\limg_\rimg[]
+  _\mapsto_
+  _\mapsto_[]
+  _\neq_
+  _\neq_[]
+  _\pfun_
+  _\pfun_[]
+  _\rel_
+  _\rel_[]
+  _\setminus_
+  _\setminus_[]
+  _\subseteq_
+  fix
+  fix[]
+  min
+  nodes
+  shortest
+  succ
+LOCALS
+  %l
+PROPERTIES
+  LTX:Shortest.tex(21.22-21.25): Node = UNIV;
+  LTX:Shortest.tex(21.3-21.25): _\rel_[] = Graph;
+  LTX:Shortest.tex(28.12-28.48): nodes = {(G,%r) | LTX:Shortest.tex(28.31-28.48): %r = \dom[] G + \ran[] G};
+  LTX:Shortest.tex(36.14-43.31): shortest = {((G,node),%r) | LTX:Shortest.tex(37.4-43.31): %r = /NATIVEmu {%b\Step | LTX:Shortest.tex(37.23-40.54): Step = {(W,%r) | LTX:Shortest.tex(37.58-40.54): %r = W + {%b\n,prev | LTX:Shortest.tex(38.40-38.69): n : _\setminus_[] (nodes G,\dom[] W); LTX:Shortest.tex(39.21-39.52): prev = _\limg_\rimg[] (_\circ_[] (W,_\inv[] G),{n}); LTX:Shortest.tex(39.21-39.67): (_\limg_\rimg[] (_\circ_[] (W,_\inv[] G),{n}) ,EMPTY) : _\neq_[]; LTX:Shortest.tex(40.15-40.50): %b = (n,min (_\limg_\rimg[] (succ,prev)))}}; LTX:Shortest.tex(43.5-43.31): %b = fix[] Step {(node,$NATIVEmakeNumber(0))}}};
+  LTX:Shortest.tex(48.1-55.11): fix = {(X,fix) | LTX:Shortest.tex(51.9-54.47): fix = {(f,%r) | LTX:Shortest.tex(52.12-54.47): %r = {(x,%r)\%l | LTX:Shortest.tex(53.15-54.47): %r = /NATIVEmu {%b\x' | LTX:Shortest.tex(53.26-53.28): x' = %l; LTX:Shortest.tex(54.15-54.47): %b = IF {#<>() | LTX:Shortest.tex(54.19-54.24): x = x'} THEN x ELSE fix f x'}; LTX:Shortest.tex(53.26-53.28): %l = f x}}};
+  LTX:Shortest.tex(51.9-54.47): fix[] = {(f,%r) | LTX:Shortest.tex(52.12-54.47): %r = {(x,%r)\%R1 | LTX:Shortest.tex(53.15-54.47): %r = /NATIVEmu {%b\x' | LTX:Shortest.tex(53.26-53.28): x' = %R1; LTX:Shortest.tex(54.15-54.47): %b = IF {#<>() | LTX:Shortest.tex(54.19-54.24): x = x'} THEN x ELSE fix[] f x'}; LTX:Shortest.tex(53.26-53.28): %R1 = f x}};
+  LTX:Shortest.tex(61.8-63.57): %l = {(A,B)} + {(A,C)} + {(C,D)} + {(D,E)} + {(B,E)} + {(B,A)};
+  LTX:Shortest.tex(61.8-63.57): G = %l;

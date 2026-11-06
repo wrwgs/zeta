@@ -1,0 +1,7 @@
+<1>
+LaTeXFragment {
+ String
+  header:
+  ;
+ String content: "\includeDocument{zapnotes.tex}";
+}

@@ -1,0 +1,120 @@
+UNIT LTX:UseCases#ucases
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  Branch
+  Branch%giventypeinfo
+  Branch%typegen
+  Branch[]
+  Dialogue
+  Dialogue[]
+  Fragment
+  Fragment[]
+  Interaction
+  Interaction[]
+  X
+  \FORCE
+  \FORCE[]
+  \MEMOIZE
+  \Sigma
+  \alpha
+  \assumed_
+  \assumed_[]
+  \baseNum
+  \bigcup
+  \bigcup[]
+  \cpower_
+  \cpower_[]
+  \emptyset
+  \emptyset[]
+  \id_
+  \id_[]
+  \langle,,\rangle
+  \langle,,\rangle[]
+  \nat
+  \num
+  \pi
+  \ran
+  \seq_
+  \seq_[]
+  \ucbr
+  \ucbr[]
+  \uceod
+  \uceod[]
+  \ucrepeat
+  \ucrepeat[]
+  \ucselect
+  \ucselect[]
+  _=_
+  _=_[]
+  _\cap_
+  _\cap_[]
+  _\cup_
+  _\cup_[]
+  _\fun_
+  _\fun_[]
+  _\in_
+  _\in_[]
+  _\neq_
+  _\neq_[]
+  _\pfun_
+  _\rel_
+  _\rel_[]
+  _\setminus_
+  _\setminus_[]
+  _\subseteq_
+  _\ucexcept_
+  _\ucexcept_[]
+  _\ucin_
+  _\ucin_[]
+  _\ucmk_
+  _\ucmk_[]
+  _\ucmki_
+  _\ucmki_[]
+  _\ucmkt_\uctrans_
+  _\ucmkt_\uctrans_[]
+  _\ucpar_
+  _\ucpar_[]
+  _\ucthen_
+  _\ucthen_[]
+  head
+  head[]
+  tail
+  tail[]
+LOCALS
+  \ran[]
+PROPERTIES
+  LTX:ucdef.tex(119.1-139.11): _\ucexcept_ = {((\alpha,\pi,\Sigma),_\ucexcept_) | LTX:ucdef.tex(124.22-138.7): _\ucexcept_ = {((f_1,f_2),%r) | LTX:ucdef.tex(126.7-138.7): %r = (IF {#<>() | LTX:ucdef.tex(126.11-126.24): #\uceod() : f_1} THEN {#\uceod()} ELSE EMPTY) + {#\ucbr(i,r_2,f_2')\f_1',r_1 | LTX:ucdef.tex(130.10-130.34): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(130.37-130.61): #\ucbr(i,r_2,f_2') : f_2} + {#\ucbr(i,r_1,%a1)\f_1' | LTX:ucdef.tex(136.10-136.34): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(137.22-137.39): %a1 = _\ucexcept_ (f_1',f_2)}}};
+  LTX:ucdef.tex(124.22-138.7): _\ucexcept_[] = {((f_1,f_2),%r) | LTX:ucdef.tex(126.7-138.7): %r = (IF {#<>() | LTX:ucdef.tex(126.11-126.24): #\uceod() : f_1} THEN {#\uceod()} ELSE EMPTY) + {#\ucbr(i,r_2,f_2')\f_1',r_1 | LTX:ucdef.tex(130.10-130.34): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(130.37-130.61): #\ucbr(i,r_2,f_2') : f_2} + {#\ucbr(i,r_1,%a1)\f_1' | LTX:ucdef.tex(136.10-136.34): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(137.22-137.39): %a1 = _\ucexcept_[] (f_1',f_2)}};
+  LTX:ucdef.tex(151.1-164.11): \ucrepeat = {((\alpha,\pi,\Sigma),\ucrepeat) | LTX:ucdef.tex(156.14-162.51): \ucrepeat = {(f,%r) | LTX:ucdef.tex(158.6-162.51): %r = /NATIVEmu {f' | LTX:ucdef.tex(160.6-162.51): f' = {#\uceod()} + {b | LTX:ucdef.tex(162.9-162.49): b : _\ucthen_[] (_\setminus_[] (f,{#\uceod()}),f')}}}};
+  LTX:ucdef.tex(156.14-162.51): \ucrepeat[] = {(f,%r) | LTX:ucdef.tex(158.6-162.51): %r = /NATIVEmu {f' | LTX:ucdef.tex(160.6-162.51): f' = {#\uceod()} + {b | LTX:ucdef.tex(162.9-162.49): b : _\ucthen_[] (_\setminus_[] (f,{#\uceod()}),f')}}};
+  LTX:ucdef.tex(171.1-174.11): \ucselect = {((\alpha,\pi,\Sigma),\ucselect) | LTX:ucdef.tex(173.5-173.63): \ucselect = {(fs,%r) | LTX:ucdef.tex(173.54-173.63): %r = \bigcup[] fs}};
+  LTX:ucdef.tex(173.5-173.63): \ucselect[] = {(fs,%r) | LTX:ucdef.tex(173.54-173.63): %r = \bigcup[] fs};
+  LTX:ucdef.tex(189.1-207.11): _\ucin_ = {((\alpha,\pi,\Sigma),_\ucin_) | LTX:ucdef.tex(195.3-206.5): _\ucin_ = {%b\\sigma,f | LTX:ucdef.tex(196.55-196.66): #\uceod() : f; LTX:ucdef.tex(197.8-197.36): %b = ((\langle,,\rangle[] EMPTY,\sigma),f)} + {((d,\sigma),f)\%a2,\sigma',f',r | LTX:ucdef.tex(202.10-202.30): (d,\langle,,\rangle[] EMPTY) : _\neq_[]; LTX:ucdef.tex(202.33-202.56): #\ucbr(%a2,r,f') : f; LTX:ucdef.tex(202.39-202.44): %a2 = head[] d; LTX:ucdef.tex(203.8-203.29): (\sigma,\sigma') : r; LTX:ucdef.tex(204.8-204.40): ((tail[] d,\FORCE[] \sigma'),f') : _\ucin_}};
+  LTX:ucdef.tex(195.3-206.5): _\ucin_[] = {%b\\sigma,f | LTX:ucdef.tex(196.55-196.66): #\uceod() : f; LTX:ucdef.tex(197.8-197.36): %b = ((\langle,,\rangle[] EMPTY,\sigma),f)} + {((d,\sigma),f)\%a2,\sigma',f',r | LTX:ucdef.tex(202.10-202.30): (d,\langle,,\rangle[] EMPTY) : _\neq_[]; LTX:ucdef.tex(202.33-202.56): #\ucbr(%a2,r,f') : f; LTX:ucdef.tex(202.39-202.44): %a2 = head[] d; LTX:ucdef.tex(203.8-203.29): (\sigma,\sigma') : r; LTX:ucdef.tex(204.8-204.40): ((tail[] d,\FORCE[] \sigma'),f') : _\ucin_[]};
+  LTX:ucdef.tex(220.1-250.11): _\ucpar_ = {((\alpha,\pi,\Sigma),_\ucpar_) | LTX:ucdef.tex(226.19-249.38): _\ucpar_ = {((f_1,f_2),%r) | LTX:ucdef.tex(230.5-249.38): %r = (IF {#<>() | LTX:ucdef.tex(230.9-230.22): #\uceod() : f_1} THEN f_2 ELSE IF {#<>() | LTX:ucdef.tex(230.46-230.59): #\uceod() : f_2} THEN f_1 ELSE EMPTY) + {#\ucbr(i,%a3,%a1)\f_1',f_2',r_1,r_2 | LTX:ucdef.tex(236.35-236.59): #\ucbr(i,r_2,f_2') : f_2; LTX:ucdef.tex(236.8-236.32): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(237.17-237.28): %a3 = r_1 * r_2; LTX:ucdef.tex(237.31-237.46): %a1 = _\ucpar_ (f_1',f_2')} + {#\ucbr(i,r_1,%a1)\f_1' | LTX:ucdef.tex(242.8-242.32): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(243.21-243.35): %a1 = _\ucpar_ (f_1',f_2)} + {#\ucbr(i,r_2,%a1)\f_2' | LTX:ucdef.tex(248.8-248.32): #\ucbr(i,r_2,f_2') : f_2; LTX:ucdef.tex(249.21-249.35): %a1 = _\ucpar_ (f_1,f_2')}}};
+  LTX:ucdef.tex(226.19-249.38): _\ucpar_[] = {((f_1,f_2),%r) | LTX:ucdef.tex(230.5-249.38): %r = (IF {#<>() | LTX:ucdef.tex(230.9-230.22): #\uceod() : f_1} THEN f_2 ELSE IF {#<>() | LTX:ucdef.tex(230.46-230.59): #\uceod() : f_2} THEN f_1 ELSE EMPTY) + {#\ucbr(i,%a3,%a1)\f_1',f_2',r_1,r_2 | LTX:ucdef.tex(236.35-236.59): #\ucbr(i,r_2,f_2') : f_2; LTX:ucdef.tex(236.8-236.32): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(237.17-237.28): %a3 = r_1 * r_2; LTX:ucdef.tex(237.31-237.46): %a1 = _\ucpar_[] (f_1',f_2')} + {#\ucbr(i,r_1,%a1)\f_1' | LTX:ucdef.tex(242.8-242.32): #\ucbr(i,r_1,f_1') : f_1; LTX:ucdef.tex(243.21-243.35): %a1 = _\ucpar_[] (f_1',f_2)} + {#\ucbr(i,r_2,%a1)\f_2' | LTX:ucdef.tex(248.8-248.32): #\ucbr(i,r_2,f_2') : f_2; LTX:ucdef.tex(249.21-249.35): %a1 = _\ucpar_[] (f_1,f_2')}};
+  LTX:ucdef.tex(33.16-33.45): \cpower_ = {(X,\cpower_) | LTX:ucdef.tex(33.29-33.45): \cpower_ = UNIV};
+  LTX:ucdef.tex(33.29-33.45): \cpower_[] = UNIV;
+  LTX:ucdef.tex(35.1-37.12): Interaction = {((\alpha,\pi),Interaction) | LTX:ucdef.tex(35.1-37.12): Interaction = UNIV};
+  LTX:ucdef.tex(35.1-37.12): Interaction[] = UNIV;
+  LTX:ucdef.tex(39.27-39.63): Dialogue[] = UNIV;
+  LTX:ucdef.tex(39.3-39.63): Dialogue = {((\alpha,\pi),Dialogue) | LTX:ucdef.tex(39.27-39.63): Dialogue = UNIV};
+  LTX:ucdef.tex(42.3-46.54): Branch = {((\alpha,\pi,\Sigma),Branch) | LTX:ucdef.tex(43.5-43.10); LTX:ucdef.tex(44.5-46.54): Branch = {#\uceod()} + \ran[] \ucbr};
+  LTX:ucdef.tex(42.3-46.54): Branch%giventypeinfo = #GivenTypeInfo (\uceod|\ucbr<([action:%%2;actor:%%1],!(%%3,%%3),!Branch[%%1,%%2,%%3])>);
+  LTX:ucdef.tex(43.5-43.10): \uceod = {((\alpha,\pi,\Sigma),#\uceod()) | };
+  LTX:ucdef.tex(43.5-43.10): \uceod[] = #\uceod();
+  LTX:ucdef.tex(43.5-43.10);
+  LTX:ucdef.tex(44.5-46.54): Branch[] = {#\uceod()} + \ran[] \ucbr;
+  LTX:ucdef.tex(44.5-46.54): \ucbr = {((\alpha,\pi,\Sigma),\ucbr) | LTX:ucdef.tex(44.5-46.54): \ucbr = {((%a4,%a5,%a6),#\ucbr(%a4,%a5,%a6)) | }};
+  LTX:ucdef.tex(44.5-46.54): \ucbr[] = {((%a4,%a5,%a6),#\ucbr(%a4,%a5,%a6)) | };
+  LTX:ucdef.tex(47.3-48.46): Fragment = {((\alpha,\pi,\Sigma),Fragment) | LTX:ucdef.tex(48.5-48.46): Fragment = UNIV};
+  LTX:ucdef.tex(48.5-48.46): Fragment[] = UNIV;
+  LTX:ucdef.tex(69.1-73.11): _\ucmki_ = {((\alpha,\pi),_\ucmki_) | LTX:ucdef.tex(71.5-72.36): _\ucmki_ = {((actor,action),<action==action,actor==actor>) | }};
+  LTX:ucdef.tex(71.5-72.36): _\ucmki_[] = {((actor,action),<action==action,actor==actor>) | };
+  LTX:ucdef.tex(74.1-78.11): _\ucmkt_\uctrans_ = {((\alpha,\pi,\Sigma),_\ucmkt_\uctrans_) | LTX:ucdef.tex(76.5-77.52): _\ucmkt_\uctrans_ = {((actor,action,r),%r)\%a1 | LTX:ucdef.tex(77.40-77.49): %a1 = {#\uceod()}; LTX:ucdef.tex(77.7-77.52): %r = {#\ucbr(<action==action,actor==actor>,r,%a1)}}};
+  LTX:ucdef.tex(76.5-77.52): _\ucmkt_\uctrans_[] = {((actor,action,r),%r)\%a1 | LTX:ucdef.tex(77.40-77.49): %a1 = {#\uceod()}; LTX:ucdef.tex(77.7-77.52): %r = {#\ucbr(<action==action,actor==actor>,r,%a1)}};
+  LTX:ucdef.tex(79.1-83.11): _\ucmk_ = {((\alpha,\pi,\Sigma),_\ucmk_) | LTX:ucdef.tex(81.5-82.48): _\ucmk_ = {((actor,action),%r) | LTX:ucdef.tex(82.10-82.48): %r = _\ucmkt_\uctrans_[] (actor,action,\id_ \Sigma)}};
+  LTX:ucdef.tex(81.5-82.48): _\ucmk_[] = {((actor,action),%r) | LTX:ucdef.tex(82.10-82.48): %r = _\ucmkt_\uctrans_[] (actor,action,\id_[])};
+  LTX:ucdef.tex(92.1-107.11): _\ucthen_ = {((\alpha,\pi,\Sigma),_\ucthen_) | LTX:ucdef.tex(97.20-106.9): _\ucthen_ = {((f_1,f_2),%r) | LTX:ucdef.tex(100.7-106.9): %r = (IF {#<>() | LTX:ucdef.tex(100.11-100.24): #\uceod() : f_1} THEN f_2 ELSE EMPTY) + {#\ucbr(i,r,%a1)\f_1' | LTX:ucdef.tex(104.10-104.32): #\ucbr(i,r,f_1') : f_1; LTX:ucdef.tex(105.20-105.35): %a1 = _\ucthen_ (f_1',f_2)}}};
+  LTX:ucdef.tex(97.20-106.9): _\ucthen_[] = {((f_1,f_2),%r) | LTX:ucdef.tex(100.7-106.9): %r = (IF {#<>() | LTX:ucdef.tex(100.11-100.24): #\uceod() : f_1} THEN f_2 ELSE EMPTY) + {#\ucbr(i,r,%a1)\f_1' | LTX:ucdef.tex(104.10-104.32): #\ucbr(i,r,f_1') : f_1; LTX:ucdef.tex(105.20-105.35): %a1 = _\ucthen_[] (f_1',f_2)}};

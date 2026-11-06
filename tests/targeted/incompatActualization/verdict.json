@@ -1,0 +1,15 @@
+{
+  "expect": "incompatActualization",
+  "kinds": [
+    "incompatActualization",
+    "typeIncompat"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TincompatActualization.tex(16.12-16.23)]:",
+    "invalid actualization of `g'.",
+    "genericity   : 1 formal(s)",
+    "actualization: 2 parameter(s)",
+    "ERROR[LTX:TincompatActualization.tex(16.9-16.23)]:",
+    "type mismatch."
+  ]
+}

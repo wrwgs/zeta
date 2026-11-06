@@ -1,0 +1,10 @@
+{
+  "expect": "expectedSchema",
+  "kinds": [
+    "expectedSchema"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TexpectedSchema.tex(17.13-17.13)]:",
+    "expected a schema type. found type: \\baseNum"
+  ]
+}

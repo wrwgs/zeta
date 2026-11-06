@@ -1,0 +1,57 @@
+UNIT LTX:queens#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  N
+  Pos
+  \BEGINSEQ
+  \ENDSEQ
+  \EXT_
+  \EXT_[]
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \emptyset[]
+  \nat
+  \num
+  \ran
+  \seq_
+  _+_
+  _-_
+  _=_
+  _=_[]
+  _>_
+  _\cup_
+  _\cup_[]
+  _\fun_
+  _\in_
+  _\in_[]
+  _\neq_
+  _\neq_[]
+  _\pfun_
+  _\rel_
+  _\rel_[]
+  _\subseteq_
+  _\upto_
+  col
+  down
+  feasible
+  queens
+  queens_1
+  queens_2
+  row
+  up
+LOCALS
+  %l
+PROPERTIES
+  LTX:zapnotes.tex(607.8-607.8): %l = $NATIVEmakeNumber(8);
+  LTX:zapnotes.tex(610.10-610.25): Pos = UNIV;
+  LTX:zapnotes.tex(613.10-613.29): col = {((#0,#1),#0) | };
+  LTX:zapnotes.tex(614.10-614.29): row = {((#0,#1),#1) | };
+  LTX:zapnotes.tex(617.9-617.40): up = {((%y,#1~1),%r) | LTX:zapnotes.tex(617.26-617.40): %r = _-_ (%y,#1~1)};
+  LTX:zapnotes.tex(618.11-618.42): down = {((%y,#1~1),%r) | LTX:zapnotes.tex(618.28-618.42): %r = _+_ (%y,#1~1)};
+  LTX:zapnotes.tex(621.15-626.41): feasible = {(ps,p) | LTX:zapnotes.tex(622.17-626.38): {<p'==p'> | LTX:zapnotes.tex(622.35-622.43): p' : ps} <= {<p'==(#0~1,#1~1)>\%y,%y1 | LTX:zapnotes.tex(623.18-623.23): (p,%y) : col; LTX:zapnotes.tex(623.18-623.36): (%y,#0~1) : _\neq_[]; LTX:zapnotes.tex(624.18-624.23): (p,%y1) : row; LTX:zapnotes.tex(624.18-624.36): (%y1,#1~1) : _\neq_[]; LTX:zapnotes.tex(625.18-625.34): (up p,up (#0~1,#1~1)) : _\neq_[]; LTX:zapnotes.tex(626.18-626.38): (down p,down (#0~1,#1~1)) : _\neq_[]}};
+  LTX:zapnotes.tex(632.5-641.17): queens = {($NATIVEmakeNumber(0),EMPTY)} + {(n,qs')\c,qs | LTX:zapnotes.tex(635.7-635.11): (n,$NATIVEmakeNumber(0)) : _>_; LTX:zapnotes.tex(636.7-636.25): (_-_ (n,$NATIVEmakeNumber(1)),qs) : queens; LTX:zapnotes.tex(637.7-637.21): c : _\upto_ ($NATIVEmakeNumber(1),%l); LTX:zapnotes.tex(638.7-638.30): (qs,(c,n)) : feasible; LTX:zapnotes.tex(639.13-639.29): qs' = qs + {(c,n)}};
+  LTX:zapnotes.tex(678.5-689.17): queens_1 = {($NATIVEmakeNumber(0),EMPTY)} + {(n,qs')\c,qs | LTX:zapnotes.tex(681.7-681.11): (n,$NATIVEmakeNumber(0)) : _>_; LTX:zapnotes.tex(682.7-682.15): #<>() : \BEGINSEQ; LTX:zapnotes.tex(683.7-683.27): (_-_ (n,$NATIVEmakeNumber(1)),qs) : queens_1; LTX:zapnotes.tex(684.7-684.21): c : _\upto_ ($NATIVEmakeNumber(1),%l); LTX:zapnotes.tex(685.7-685.13): #<>() : \ENDSEQ; LTX:zapnotes.tex(686.7-686.30): (qs,(c,n)) : feasible; LTX:zapnotes.tex(687.13-687.29): qs' = qs + {(c,n)}};
+  LTX:zapnotes.tex(710.5-719.17): queens_2 = {($NATIVEmakeNumber(0),EMPTY)} + {(n,qs')\c,qs | LTX:zapnotes.tex(713.7-713.11): (n,$NATIVEmakeNumber(0)) : _>_; LTX:zapnotes.tex(714.7-714.61): qs : \EXT_[] {%R1 | LTX:zapnotes.tex(714.38-714.58): (_-_ (n,$NATIVEmakeNumber(1)),%R1) : queens_2}; LTX:zapnotes.tex(715.7-715.21): c : _\upto_ ($NATIVEmakeNumber(1),%l); LTX:zapnotes.tex(716.7-716.30): (qs,(c,n)) : feasible; LTX:zapnotes.tex(717.13-717.29): qs' = qs + {(c,n)}};
+  LTX:zapnotes.tex(715.21-715.21): N = %l;

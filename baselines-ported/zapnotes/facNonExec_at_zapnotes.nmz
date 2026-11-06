@@ -1,0 +1,28 @@
+UNIT LTX:facNonExec#zapnotes
+PARENTS
+  LTX:Toolkit#Toolkit
+GLOBALS
+  \MEMOIZE
+  \baseNum
+  \emptyset
+  \nat
+  \num
+  \ran
+  \seq_
+  _*_
+  _-_
+  _=_
+  _=_[]
+  _>_
+  _\fun_
+  _\fun_[]
+  _\in_
+  _\neq_
+  _\pfun_
+  _\rel_
+  _\subseteq_
+  fac
+LOCALS
+PROPERTIES
+  LTX:zapnotes.tex(318.14-318.56): {<x==x> | LTX:zapnotes.tex(318.31-318.35): (x,$NATIVEmakeNumber(0)) : _>_} <= {<x==x> | LTX:zapnotes.tex(318.39-318.56): fac x = _*_ (x,fac (_-_ (x,$NATIVEmakeNumber(1))))};
+  LTX:zapnotes.tex(318.3-318.11): fac $NATIVEmakeNumber(0) = $NATIVEmakeNumber(1);

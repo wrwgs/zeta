@@ -1,0 +1,477 @@
+<1>UnitAbsy.Section
+(LTX:facExec1#zapnotes,
+ {LTX:Toolkit#Toolkit},
+ {<2>Item.AxiomaticDef
+  ({},
+   <3>Expr.Text
+   ({<4>Expr.Decl.Direct
+     ({<5>NameDecl
+       (fac,
+        <6>
+        Annotation {
+          Locator zeta.session.Locator: LTX:zapnotes.tex(327.3-327.5);
+        })},
+      <7>Expr.Variable
+      (<8>NameAppl
+       (_\fun_,
+        {<9>Expr.Variable
+         (<10>NameAppl
+          (\nat,
+           {},
+           <11>
+           Annotation {
+             Expr[] zeta.content.zirp.Act: <12> Expr[] {};
+             Locator zeta.session.Locator: LTX:zapnotes.tex(327.9-327.12);
+           }),
+          <13>
+          Annotation {
+            Expr zeta.content.zirp.Type:
+             <14>Expr.Unary
+             (Power,
+              <15>Expr.Variable
+              (<16>NameAppl(\baseNum,{},<17> Annotation { }),
+               <18> Annotation { }),
+              <19> Annotation { });
+            Locator zeta.session.Locator: LTX:zapnotes.tex(327.9-327.12);
+          }),
+         <20>Expr.Variable
+         (<21>NameAppl
+          (\nat,
+           {},
+           <22>
+           Annotation {
+             Expr[] zeta.content.zirp.Act: <23> Expr[] {};
+             Locator zeta.session.Locator: LTX:zapnotes.tex(327.19-327.22);
+           }),
+          <24>
+          Annotation {
+            Expr zeta.content.zirp.Type: <14>;
+            Locator zeta.session.Locator: LTX:zapnotes.tex(327.19-327.22);
+          })},
+        <25>
+        Annotation {
+          Expr[] zeta.content.zirp.Act: <26> Expr[] { <15>, <15> };
+          Locator zeta.session.Locator: LTX:zapnotes.tex(327.9-327.22);
+        }),
+       <27>
+       Annotation {
+         Expr zeta.content.zirp.Type:
+          <28>Expr.Unary
+          (Power,
+           <29>Expr.Unary
+           (Power,
+            <30>Expr.Product({<15>,<15>},<31> Annotation { }),
+            <32> Annotation { }),
+           <33> Annotation { });
+         Locator zeta.session.Locator: LTX:zapnotes.tex(327.9-327.22);
+       }),
+      <34>
+      Annotation {
+        Locator zeta.session.Locator: LTX:zapnotes.tex(327.3-327.22);
+      })},
+    {<35>Predicate.Test
+     (<36>Expr.Tuple
+      ({<37>Expr.Variable
+        (<38>NameAppl
+         (fac,
+          {},
+          <39>
+          Annotation {
+            Expr[] zeta.content.zirp.Act: <40> Expr[] {};
+            Locator zeta.session.Locator: LTX:zapnotes.tex(329.3-329.5);
+          }),
+         <41>
+         Annotation {
+           Expr zeta.content.zirp.Type: <29>;
+           Locator zeta.session.Locator: LTX:zapnotes.tex(329.3-329.5);
+         }),
+        <42>Expr.Binary
+        (Apply,
+         <43>Expr.Variable
+         (<44>NameAppl
+          (_\cup_,
+           {},
+           <45>
+           Annotation {
+             Expr[] zeta.content.zirp.Act:
+              <46>
+              Expr[] {
+               <47>Expr.Product
+               ({<48>Expr.Variable
+                 (<49>NameAppl(\baseNum,{},<50> Annotation { }),
+                  <51> Annotation { }),
+                 <52>Expr.Variable
+                 (<53>NameAppl(\baseNum,{},<54> Annotation { }),
+                  <55> Annotation { })},
+                <56> Annotation { })
+              };
+             Locator zeta.session.Locator: LTX:zapnotes.tex(329.9-329.58);
+           }),
+          <57>
+          Annotation {
+            Expr zeta.content.zirp.Type:
+             <58>Expr.Unary
+             (Power,
+              <59>Expr.Product
+              ({<60>Expr.Product
+                ({<61>Expr.Unary(Power,<47>,<62> Annotation { }),
+                  <63>Expr.Unary(Power,<47>,<64> Annotation { })},
+                 <65> Annotation { }),
+                <66>Expr.Unary(Power,<47>,<67> Annotation { })},
+               <68> Annotation { }),
+              <69> Annotation { });
+            Locator zeta.session.Locator: LTX:zapnotes.tex(329.9-329.58);
+          }),
+         <70>Expr.Tuple
+         ({<71>Expr.Display
+           ({<72>Expr.Tuple
+             ({<73>Expr.Number
+               ("0",
+                <74>
+                Annotation {
+                  Expr zeta.content.zirp.Type: <48>;
+                  Locator zeta.session.Locator:
+                   LTX:zapnotes.tex(329.12-329.12);
+                }),
+               <75>Expr.Number
+               ("1",
+                <76>
+                Annotation {
+                  Expr zeta.content.zirp.Type: <52>;
+                  Locator zeta.session.Locator:
+                   LTX:zapnotes.tex(329.14-329.14);
+                })},
+              <77>
+              Annotation {
+                Expr zeta.content.zirp.Type: <47>;
+                Locator zeta.session.Locator:
+                 LTX:zapnotes.tex(329.11-329.15);
+              })},
+            <78>
+            Annotation {
+              Expr zeta.content.zirp.Type:
+               <79>Expr.Unary(Power,<47>,<80> Annotation { });
+              Locator zeta.session.Locator: LTX:zapnotes.tex(329.9-329.17);
+            }),
+           <81>Expr.Quantor
+           (Lambda,
+            <82>Expr.Text
+            ({<83>Expr.Decl.Direct
+              ({<84>NameDecl
+                (x,
+                 <85>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:zapnotes.tex(329.33-329.33);
+                 })},
+               <86>Expr.Variable
+               (<87>NameAppl
+                (\nat,
+                 {},
+                 <88>
+                 Annotation {
+                   Expr[] zeta.content.zirp.Act: <89> Expr[] {};
+                   Locator zeta.session.Locator:
+                    LTX:zapnotes.tex(329.35-329.38);
+                 }),
+                <90>
+                Annotation {
+                  Expr zeta.content.zirp.Type: <14>;
+                  Locator zeta.session.Locator:
+                   LTX:zapnotes.tex(329.35-329.38);
+                }),
+               <91>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:zapnotes.tex(329.33-329.38);
+               })},
+             {<92>Predicate.Test
+              (<93>Expr.Tuple
+               ({<94>Expr.Variable
+                 (<95>NameAppl
+                  (x,
+                   {},
+                   <96>
+                   Annotation {
+                     Expr[] zeta.content.zirp.Act: <97> Expr[] {};
+                     Locator zeta.session.Locator:
+                      LTX:zapnotes.tex(329.42-329.42);
+                   }),
+                  <98>
+                  Annotation {
+                    Expr zeta.content.zirp.Type: <15>;
+                    Locator zeta.session.Locator:
+                     LTX:zapnotes.tex(329.42-329.42);
+                  }),
+                 <99>Expr.Number
+                 ("0",
+                  <100>
+                  Annotation {
+                    Expr zeta.content.zirp.Type:
+                     <101>Expr.Variable
+                     (<102>NameAppl(\baseNum,{},<103> Annotation { }),
+                      <104> Annotation { });
+                    Locator zeta.session.Locator:
+                     LTX:zapnotes.tex(329.46-329.46);
+                  })},
+                <105>
+                Annotation {
+                  Expr zeta.content.zirp.Type:
+                   <106>Expr.Product({<15>,<101>},<107> Annotation { });
+                  Locator zeta.session.Locator:
+                   LTX:zapnotes.tex(329.42-329.46);
+                }),
+               <108>Expr.Variable
+               (<109>NameAppl
+                (_>_,
+                 {},
+                 <110>
+                 Annotation {
+                   Expr[] zeta.content.zirp.Act: <111> Expr[] {};
+                   Locator zeta.session.Locator:
+                    LTX:zapnotes.tex(329.42-329.46);
+                 }),
+                <112>
+                Annotation {
+                  Expr zeta.content.zirp.Type:
+                   <113>Expr.Unary
+                   (Power,
+                    <114>Expr.Product({<15>,<15>},<115> Annotation { }),
+                    <116> Annotation { });
+                  Locator zeta.session.Locator:
+                   LTX:zapnotes.tex(329.42-329.46);
+                }),
+               <117>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:zapnotes.tex(329.42-329.46);
+               })},
+             <118>
+             Annotation {
+               Expr zeta.content.zirp.Type:
+                <119>Expr.Unary
+                (Power,
+                 <120>Expr.Signature({x},{<15>},<121> Annotation { }),
+                 <122> Annotation { });
+               Locator zeta.session.Locator:
+                LTX:zapnotes.tex(329.33-329.46);
+             }),
+            <123>Expr.Binary
+            (Apply,
+             <124>Expr.Variable
+             (<125>NameAppl
+              (_*_,
+               {},
+               <126>
+               Annotation {
+                 Expr[] zeta.content.zirp.Act: <127> Expr[] {};
+                 Locator zeta.session.Locator:
+                  LTX:zapnotes.tex(329.50-329.58);
+               }),
+              <128>
+              Annotation {
+                Expr zeta.content.zirp.Type:
+                 <129>Expr.Unary
+                 (Power,
+                  <130>Expr.Product
+                  ({<131>Expr.Product({<15>,<15>},<132> Annotation { }),
+                    <15>},
+                   <133> Annotation { }),
+                  <134> Annotation { });
+                Locator zeta.session.Locator:
+                 LTX:zapnotes.tex(329.50-329.58);
+              }),
+             <135>Expr.Tuple
+             ({<136>Expr.Variable
+               (<137>NameAppl
+                (x,
+                 {},
+                 <138>
+                 Annotation {
+                   Expr[] zeta.content.zirp.Act: <139> Expr[] {};
+                   Locator zeta.session.Locator:
+                    LTX:zapnotes.tex(329.50-329.50);
+                 }),
+                <140>
+                Annotation {
+                  Expr zeta.content.zirp.Type: <15>;
+                  Locator zeta.session.Locator:
+                   LTX:zapnotes.tex(329.50-329.50);
+                }),
+               <141>Expr.Binary
+               (Apply,
+                <142>Expr.Variable
+                (<143>NameAppl
+                 (fac,
+                  {},
+                  <144>
+                  Annotation {
+                    Expr[] zeta.content.zirp.Act: <145> Expr[] {};
+                    Locator zeta.session.Locator:
+                     LTX:zapnotes.tex(329.52-329.54);
+                  }),
+                 <146>
+                 Annotation {
+                   Expr zeta.content.zirp.Type: <29>;
+                   Locator zeta.session.Locator:
+                    LTX:zapnotes.tex(329.52-329.54);
+                 }),
+                <147>Expr.Binary
+                (Apply,
+                 <148>Expr.Variable
+                 (<149>NameAppl
+                  (_-_,
+                   {},
+                   <150>
+                   Annotation {
+                     Expr[] zeta.content.zirp.Act: <151> Expr[] {};
+                     Locator zeta.session.Locator:
+                      LTX:zapnotes.tex(329.56-329.58);
+                   }),
+                  <152>
+                  Annotation {
+                    Expr zeta.content.zirp.Type:
+                     <153>Expr.Unary
+                     (Power,
+                      <154>Expr.Product
+                      ({<155>Expr.Product
+                        ({<15>,<15>},<156> Annotation { }),
+                        <15>},
+                       <157> Annotation { }),
+                      <158> Annotation { });
+                    Locator zeta.session.Locator:
+                     LTX:zapnotes.tex(329.56-329.58);
+                  }),
+                 <159>Expr.Tuple
+                 ({<160>Expr.Variable
+                   (<161>NameAppl
+                    (x,
+                     {},
+                     <162>
+                     Annotation {
+                       Expr[] zeta.content.zirp.Act: <163> Expr[] {};
+                       Locator zeta.session.Locator:
+                        LTX:zapnotes.tex(329.56-329.56);
+                     }),
+                    <164>
+                    Annotation {
+                      Expr zeta.content.zirp.Type: <15>;
+                      Locator zeta.session.Locator:
+                       LTX:zapnotes.tex(329.56-329.56);
+                    }),
+                   <165>Expr.Number
+                   ("1",
+                    <166>
+                    Annotation {
+                      Expr zeta.content.zirp.Type:
+                       <167>Expr.Variable
+                       (<168>NameAppl(\baseNum,{},<169> Annotation { }),
+                        <170> Annotation { });
+                      Locator zeta.session.Locator:
+                       LTX:zapnotes.tex(329.58-329.58);
+                    })},
+                  <171>
+                  Annotation {
+                    Expr zeta.content.zirp.Type:
+                     <172>Expr.Product({<15>,<167>},<173> Annotation { });
+                    Locator zeta.session.Locator:
+                     LTX:zapnotes.tex(329.56-329.58);
+                  }),
+                 <174>
+                 Annotation {
+                   Expr zeta.content.zirp.Type: <15>;
+                   Locator zeta.session.Locator:
+                    LTX:zapnotes.tex(329.56-329.58);
+                 }),
+                <175>
+                Annotation {
+                  Expr zeta.content.zirp.Type: <15>;
+                  Locator zeta.session.Locator:
+                   LTX:zapnotes.tex(329.52-329.58);
+                })},
+              <176>
+              Annotation {
+                Expr zeta.content.zirp.Type:
+                 <177>Expr.Product({<15>,<15>},<178> Annotation { });
+                Locator zeta.session.Locator:
+                 LTX:zapnotes.tex(329.50-329.58);
+              }),
+             <179>
+             Annotation {
+               Expr zeta.content.zirp.Type: <15>;
+               Locator zeta.session.Locator:
+                LTX:zapnotes.tex(329.50-329.58);
+             }),
+            <180>
+            Annotation {
+              Expr zeta.content.zirp.Type:
+               <181>Expr.Unary
+               (Power,
+                <182>Expr.Product({<15>,<15>},<183> Annotation { }),
+                <184> Annotation { });
+              Locator zeta.session.Locator:
+               LTX:zapnotes.tex(329.25-329.58);
+            })},
+          <185>
+          Annotation {
+            Expr zeta.content.zirp.Type:
+             <186>Expr.Product
+             ({<187>Expr.Unary(Power,<47>,<188> Annotation { }),<181>},
+              <189> Annotation { });
+            Locator zeta.session.Locator: LTX:zapnotes.tex(329.9-329.58);
+          }),
+         <190>
+         Annotation {
+           Expr zeta.content.zirp.Type:
+            <191>Expr.Unary(Power,<47>,<192> Annotation { });
+           Locator zeta.session.Locator: LTX:zapnotes.tex(329.9-329.58);
+         })},
+       <193>
+       Annotation {
+         Expr zeta.content.zirp.Type:
+          <194>Expr.Product
+          ({<29>,<195>Expr.Unary(Power,<47>,<196> Annotation { })},
+           <197> Annotation { });
+         Locator zeta.session.Locator: LTX:zapnotes.tex(329.3-329.58);
+       }),
+      <198>Expr.Variable
+      (<199>NameAppl
+       (_=_,
+        {},
+        <200>
+        Annotation {
+          Expr[] zeta.content.zirp.Act: <201> Expr[] { <29> };
+          Locator zeta.session.Locator: LTX:zapnotes.tex(329.3-329.58);
+        }),
+       <202>
+       Annotation {
+         Expr zeta.content.zirp.Type:
+          <203>Expr.Unary
+          (Power,
+           <204>Expr.Product({<29>,<29>},<205> Annotation { }),
+           <206> Annotation { });
+         Locator zeta.session.Locator: LTX:zapnotes.tex(329.3-329.58);
+       }),
+      <207>
+      Annotation {
+        Locator zeta.session.Locator: LTX:zapnotes.tex(329.3-329.58);
+      })},
+    <208>
+    Annotation {
+      Expr zeta.content.zirp.Type:
+       <209>Expr.Unary
+       (Power,
+        <210>Expr.Signature({fac},{<29>},<211> Annotation { }),
+        <212> Annotation { });
+      Locator zeta.session.Locator: LTX:zapnotes.tex(326.1-330.11);
+    }),
+   <213>
+   Annotation {
+     Locator zeta.session.Locator: LTX:zapnotes.tex(326.1-330.11);
+     Name[] zeta.content.zirp.Used:
+      <214> Name[] { _=_, _*_, \baseNum, _\cup_, _\fun_, \nat, _>_, _-_ };
+   })},
+ <215>
+ Annotation {
+   Locator zeta.session.Locator: LTX:zapnotes.tex(324.1-324.19);
+ })

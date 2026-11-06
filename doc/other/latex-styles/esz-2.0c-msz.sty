@@ -1,0 +1,1933 @@
+%% 
+%% This is file `esz.sty',
+%% generated with the docstrip utility.
+%% 
+%% The original source files were:
+%% 
+%% esz.dtx  (with options: `msz')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% You are *not* allowed to modify this file.
+%% 
+%% You are *not* allowed to distribute this file.
+%% For distribution of the original source see
+%% the terms for copying and modification in the file  esz.dtx.
+%% 
+\def\eszversion{v2.0c}
+\def\eszdate{1997/01/02}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{esz}[\eszdate\space\eszversion]
+\typeout{Package `esz' version \eszversion\space<\eszdate>}
+\newif\ifesz@dqactive
+\ifcat \noexpand"*
+    \esz@dqactivefalse
+\else
+    \esz@dqactivetrue
+    \catcode`\"=12
+\fi
+\def\esz@setcatcodes{%
+    \catcode`\"=12%
+}
+\newif\ifesz@oxsz   \DeclareOption{oxsz}{\esz@oxsztrue}
+\newif\ifesz@vref   \DeclareOption{varioref}{\esz@vreftrue}
+\newif\ifesz@german \DeclareOption{german}{\esz@germantrue}
+\newif\ifesz@msz    \DeclareOption{msz}{\esz@msztrue}
+\newif\ifesz@mszdraw    \DeclareOption{mszdraw}{\esz@msztrue}
+\newif\ifesz@compile \DeclareOption{compile}{\esz@compiletrue}
+\newif\ifesz@cmtip  \DeclareOption{cmtip}{\esz@cmtiptrue}
+\newif\ifesz@ps
+\newif\ifesz@dvips  \DeclareOption{dvips}{\esz@dvipstrue\esz@pstrue}
+\newif\ifesz@xdvi   \DeclareOption{xdvi}{\esz@xdvitrue\esz@pstrue}
+\newif\ifesz@draft  \DeclareOption{draft}{\esz@drafttrue}
+\newif\ifesz@units  \DeclareOption{units}{\esz@unitstrue}
+\newif\ifesz@outerbox\esz@outerboxtrue
+                     \DeclareOption{nobigbox}{\esz@outerboxfalse}
+\ProcessOptions
+\def\esz@psnondraft#1{\ifesz@ps\ifesz@draft\else#1\fi\fi}
+\def\esz@nondraft#1{\ifesz@draft\else#1\fi}
+\RequirePackage{amssymb}
+\RequirePackage{latexsym}
+\ifesz@mszdraw
+    \input xy
+    \xyrequire{frame}
+    \xyrequire{curve}
+    \ifesz@cmtip
+        \xyrequire{cmtip}\UseComputerModernTips
+    \fi
+    \ifesz@xdvi
+        \xyrequire{ps}
+        \xyrequire{xdvi}
+        \xyrequire{line}
+        \xyrequire{color}
+    \else
+    \ifesz@dvips
+        \xyrequire{ps}
+        \xyrequire{dvips}
+        \xyrequire{line}
+        \xyrequire{color}
+    \fi\fi
+    \ifesz@draft
+    \fi
+\fi
+\ifesz@msz
+\ifesz@vref
+    \RequirePackage{varioref}
+\fi
+\fi
+\ifesz@msz
+\ifesz@german
+   \def\esz@setrefs{
+        \def\reftextfareaway##1{siehe Seite~\pageref{##1}}%
+        \def\reftextfacebefore{siehe vorherige Seite}%
+        \def\reftextbefore{siehe vorherige Seite}%
+        \def\reftextfaceafter{siehe n\"achste Seite}%
+        \def\reftextafter{siehe n\"achste Seite}%
+        \def\reftextcurrent{}
+    }
+    \def\esz@firsttext{begin}
+    \def\esz@lasttext{end}
+\else
+    \def\esz@setrefs{
+        \def\reftextfareaway##1{see page~\pageref{##1}}%
+        \def\reftextfacebefore{see previous page}%
+        \def\reftextbefore{see previous page}%
+        \def\reftextfaceafter{see next page}%
+        \def\reftextafter{see next page}%
+        \def\reftextcurrent{}
+    }
+    \def\esz@firsttext{begin}
+    \def\esz@lasttext{end}
+\fi
+\ifesz@vref
+    \def\esz@backref#1{%
+        {\esz@setrefs\ldots\vpageref{#1}}%
+    }
+    \def\esz@forwref#1{%
+        {\esz@setrefs\ldots\vpageref{#1}}%
+    }
+\else
+    \def\esz@backref#1{%
+        {\esz@setrefs\ldots\reftextfareaway{#1}}%
+    }
+    \def\esz@forwref#1{%
+        {\esz@setrefs\ldots\reftextfareaway{#1}}%
+    }
+\fi
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newdimen\zedindent \zedindent=\leftmargini
+\newdimen\zedleftsep    \zedleftsep=1em
+\newdimen\zedtab    \zedtab=2em
+\newdimen\zedbar    \zedbar=8em
+\newdimen\zedlinethickness  \zedlinethickness=0.4pt
+\newdimen\zedcornerheight   \zedcornerheight=0pt
+\newif\ifleftnames  \leftnamesfalse
+\def\leftschemas{\leftnamestrue}
+\newskip\zedbaselineskip    \zedbaselineskip\baselineskip
+\newbox\zstrutbox   \setbox\zstrutbox=\copy\strutbox
+\def\zstrut{\relax\ifmmode\copy\zstrutbox\else\unhcopy\zstrutbox\fi}
+\def\zedbaselinestretch{1}
+\newcount\interzedlinepenalty   \interzedlinepenalty=10000  %never break
+\newcount\preboxpenalty \preboxpenalty=0    %break easily
+\newcount\forcepagepenalty  \forcepagepenalty=-10000    %always break
+\interdisplaylinepenalty=100    %break sometimes
+\ifesz@mszdraw
+\def\eszstretch{1.0}
+\newdimen\eszgridwd \eszgridwd=3.5cm
+\newdimen\eszgridht \eszgridht=1.8cm
+\newdimen\eszstatewd \eszstatewd=2.0cm
+\newdimen\eszstateht \eszstateht=0.5cm
+\def\eszstatebgcl{white}
+\def\eszstatefgcl{black}
+\def\eszstatebdwd{1.5}
+\newdimen\eszlabeldist \eszlabeldist=\jot
+\def\eszedgewd{1.2}
+\newdimen\eszrefpdist \eszrefpdist=0.4\eszgridht
+\def\eszstatehop{[d]}
+\def\eszdefaulthop{[r(0.5)d(0.2)]}
+\def\eszcompoundhop{[d(0.5)]}
+\def\eszparallelhop{[d(0.5)]}
+\def\eszcomphop{[r]}
+\def\eszbushop{[Ld]}
+\def\eszshowrefp{\def\esz@crvmod{pc}}
+\def\eszdontshowrefp{\def\esz@crvmod{}}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\esz@error#1{\PackageError{esz}{#1}{}}
+\ifx \undefined\esz@dodebug
+  \def\esz@debug#1{}
+\else
+  \def\esz@debug#1{#1}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newdimen\esz@da
+\newdimen\esz@db
+\newdimen\esz@dx
+\newtoks\esz@ta
+\newtoks\esz@tb
+\def\esz@ma{}
+\def\esz@mb{}
+\def\esz@mc{}
+\def\esz@md{}
+\def\esz@me{}
+\newbox\esz@ba
+\newbox\esz@bb
+\newbox\esz@bc
+\newcount\esz@ca
+\def\esz@split#1\esz@to#2#3{%
+    \esz@dosplit#1\esz@endsplit{#2}{#3}%
+}
+\def\esz@dosplit#1#2\esz@endsplit#3#4{%
+    \def#3{#1}\def#4{#2}%
+}
+\long\def\esz@lapp#1\esz@to#2{%
+    \esz@ta={\esz@LM{#1}} \esz@tb=\expandafter{#2}%
+    \edef#2{\the\esz@ta\the\esz@tb}%
+}
+\long\def\esz@rapp#1\esz@to#2{%
+    \esz@ta={\esz@LM{#1}} \esz@tb=\expandafter{#2}%
+    \edef#2{\the\esz@tb\the\esz@ta}%
+}
+\def\esz@conc#1#2\esz@to#3{%
+    \esz@ta=\expandafter{#1} \esz@tb=\expandafter{#2}%
+    \edef#3{\the\esz@ta\the\esz@tb}
+}
+\def\esz@lop#1\esz@to#2{%
+    \expandafter\esz@lopoff#1\lopoff#1#2
+}
+\long\def\esz@lopoff\esz@LM#1#2\lopoff#3#4{%
+    \def#4{#1}\def#3{#2}%
+}
+\def\esz@exec#1\over#2{%
+     \long\def\esz@LM##1{#1{##1}} #2%
+}
+\newif\ifesz@test
+\def\esz@testfirst#1#2{
+    \esz@dotestfirst{#1}#2\esz@endtestfirst%
+}
+\def\esz@dotestfirst#1#2#3\esz@endtestfirst{%
+    \ifx #1#2 \esz@testtrue \else \esz@testfalse \fi%
+}
+\def\esz@testsimple#1{%
+    \esz@dotestsimple#1\esz@endtestsimple%
+}
+\def\esz@dotestsimple#1#2\esz@endtestsimple{%
+    \def\esz@testmacro{#2}%
+    \ifx \empty\esz@testmacro \esz@testtrue \else \esz@testfalse \fi%
+}
+\def\esz@extend#1#2{%
+    #2=\expandafter{\the#2#1}%
+}
+\def\esz@extbraced#1#2{%
+    #2=\expandafter{\the#2{#1}}%
+}
+\def\esz@extsave#1#2{%
+    \esz@testsimple{#1}%
+    \ifesz@test\esz@extend{#1}{#2}\else\esz@extbraced{#1}{#2}\fi%
+}
+\def\esz@xextend#1#2{%
+    \expandafter\esz@extend\expandafter{#1}{#2}%
+}
+\def\esz@testtoks#1#2{%
+    \def\esz@testa{#1}\edef\esz@testb{\the#2}%
+    \ifx \esz@testa\esz@testb \esz@testtrue \else \esz@testfalse \fi%
+}
+\def\esz@xadd#1#2{%
+    \edef\esz@eadd@{#1}\global\esz@xextend{\esz@eadd@}{#2}%
+}
+\ifesz@msz
+\def\esz@litdimen#1\esz@to#2{%
+    \esz@ca=#1 \edef#2{\the\esz@ca sp}%
+}
+\def\esz@litdimenplus#1#2\esz@to#3{%
+    \esz@dx=#1 \advance\esz@dx by #2 \esz@litdimen\esz@dx\esz@to#3%
+}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\ESZ{\mbox{$E\!{\cal S\!Z}$}}
+\def\MSZ{\mbox{$\mu\!{\cal S\!Z}$}}
+\DeclareSymbolFont{italics}{\encodingdefault}{\familydefault}{m}{it}%
+\SetSymbolFont{italics}{bold}{\encodingdefault}{\familydefault}{bx}{it}%
+\DeclareSymbolFontAlphabet{\eszit}{italics}
+\ifesz@oxsz
+    \DeclareFontFamily{U}{oxsz}{}
+    \DeclareFontShape{U}{oxsz}{m}{n}{%
+    %   <5> oxsz5
+    %   <6> oxsz6
+    %   <7> oxsz7
+    %   <8> oxsz8
+        <5> <6> <7> <8> <9> oxsz9
+        <10> <10.95> <12> <14.4> <17.28> <20.74> <24.88> oxsz10
+        }{}
+    \DeclareSymbolFont{OXSZ}{U}{oxsz}{m}{n}
+\fi
+\def\esz@big#1{\mbox{\large$#1$\nulldelimiterspace\z@\m@th}}
+\def\esz@Big#1{\mbox{\Large$#1$\nulldelimiterspace\z@\m@th}}
+\def\esz@small#1{\mbox{\small$#1$\nulldelimiterspace\z@\m@th}}
+\def\esz@Small#1{\mbox{\footnotesize$#1$\nulldelimiterspace\z@\m@th}}
+\def\esz@op#1{\mathop{\mathstrut{#1}}\nolimits}
+\def\esz@bin#1{\mathbin{\mathstrut{#1}}}
+\def\esz@rel#1{\mathrel{\mathstrut{#1}}}
+\def\esz@bigop#1{\esz@op{\esz@big{#1}}}
+\def\esz@bigbin#1{\esz@bin{\esz@big{#1}}}
+\def\esz@bigrel#1{\esz@rel{\esz@big{#1}}}
+\def\Zkeyword#1{\esz@op{\mathbf{#1}}}
+\def\Zpreop#1{\esz@op{\mathsf{#1}}}
+\def\Zinop#1{\esz@bin{\mathsf{#1}}}
+\def\Zpregen#1{\esz@op{\mathrm{#1}}}
+\def\Zingen#1{\esz@rel{\mathrm{#1}}}
+\def\Zprerel#1{\mathopen{}\esz@rel{\mathsf{#1}}}
+\def\Zinrel#1{\esz@rel{\mathsf{#1}}}
+\def\esz@partial#1{\mathbin{\ooalign{\hfil%
+    $\mapstochar\mkern 5mu$\hfil\cr$#1$}}}
+\def\esz@finite#1{\mathbin{\ooalign{\hfil%
+    $\mapstochar\mkern 3mu\mapstochar\mkern 5mu$\hfil\cr$#1$}}}
+\def\esz@minus#1{\rlap{$\kern0.04em\mathord-$}\lower0.37ex\hbox{$#1$}}
+\def\@setmcodes#1#2#3{{\count0=#1 \count1=#3
+    \loop \global\mathcode\count0=\count1 \ifnum \count0<#2
+    \advance\count0 by1 \advance\count1 by1 \repeat}}
+\@setmcodes{`A}{`Z}{"7\hexnumber@\symitalics41}
+\@setmcodes{`a}{`z}{"7\hexnumber@\symitalics61}
+\mathchardef\eszsemicolon="603B
+\mathcode`\;="8000 {\catcode`\;=\active \gdef;{\eszsemicolon\;}}
+\edef\esz@origtilde{~}
+\def\esztildespace#1{%
+   \def~{\ifmmode#1\else\esz@origtilde\fi}%
+}
+\esztildespace{\,}
+\mathchardef\eszat="6040
+\mathcode`\@="8000 {\catcode`\@=\active \gdef@{\spot}}
+\def\spot{\bullet}
+{\catcode`\@=\active
+ \gdef\eszrestoreat{\gdef@{\eszat}}
+}
+\mathcode`\|="8000 {\catcode`\|=\active \gdef|{\mid}}
+\def\bsup#1\esup{^{#1}}
+\def\inrel#1{\mathrel{\underline{#1}}}
+\ifesz@oxsz
+  \DeclareMathSymbol{\lblot}{\mathopen}{OXSZ}{"09}
+  \DeclareMathSymbol{\rblot}{\mathclose}{OXSZ}{"0A}
+  \DeclareMathSymbol{\bind}{\mathbin}{OXSZ}{"01}
+  \DeclareMathSymbol{\@power}{\mathord}{OXSZ}{"0B}
+  \def\power{\esz@op{\@power}}
+  \DeclareMathSymbol{\lbag}{\mathopen}{OXSZ}{"0E}
+  \DeclareMathSymbol{\rbag}{\mathclose}{OXSZ}{"0F}
+  \DeclareMathSymbol{\project}{\mathrel}{OXSZ}{"02}
+  \DeclareMathSymbol{\semi}{\mathrel}{OXSZ}{"1C}
+  \DeclareMathSymbol{\ldata}{\mathopen}{OXSZ}{"12}
+  \DeclareMathSymbol{\rdata}{\mathclose}{OXSZ}{"13}
+  \DeclareMathSymbol{\emptyset}{\mathord}{OXSZ}{"1E}
+  \DeclareMathSymbol{\rel}{\mathbin}{OXSZ}{"23}
+  \DeclareMathSymbol{\comp}{\mathbin}{OXSZ}{"1C}
+  \DeclareMathSymbol{\dres}{\mathbin}{OXSZ}{"03}
+  \DeclareMathSymbol{\rres}{\mathbin}{OXSZ}{"04}
+  \DeclareMathSymbol{\ndres}{\mathbin}{OXSZ}{"05}
+  \DeclareMathSymbol{\nrres}{\mathbin}{OXSZ}{"06}
+  \DeclareMathSymbol{\limg}{\mathopen}{OXSZ}{"10}
+  \DeclareMathSymbol{\rimg}{\mathclose}{OXSZ}{"11}
+  \DeclareMathSymbol{\pfun}{\mathbin}{OXSZ}{"14}
+  \DeclareMathSymbol{\fun}{\mathbin}{OXSZ}{"22}
+  \DeclareMathSymbol{\pinj}{\mathbin}{OXSZ}{"19}
+  \DeclareMathSymbol{\inj}{\mathbin}{OXSZ}{"18}
+  \DeclareMathSymbol{\psurj}{\mathbin}{OXSZ}{"17}
+  \DeclareMathSymbol{\surj}{\mathbin}{OXSZ}{"16}
+  \DeclareMathSymbol{\bij}{\mathbin}{OXSZ}{"1B}
+  \DeclareMathSymbol{\nat}{\mathord}{OXSZ}{"0D}
+  \DeclareMathSymbol{\num}{\mathord}{OXSZ}{"1D}
+  \DeclareMathSymbol{\@finset}{\mathord}{OXSZ}{"0C}
+  \def\finset{\esz@op{\@finset}}
+  \DeclareMathSymbol{\ffun}{\mathbin}{OXSZ}{"15}
+  \DeclareMathSymbol{\finj}{\mathbin}{OXSZ}{"1A}
+  \DeclareMathSymbol{\cat}{\mathbin}{OXSZ}{"1F}
+  \DeclareMathSymbol{\filter}{\mathbin}{OXSZ}{"02}
+  \DeclareMathSymbol{\inbag}{\mathrel}{OXSZ}{"08}
+  \DeclareMathSymbol{\extract}{\mathbin}{OXSZ}{"20}
+  \DeclareMathSymbol{\uminus}{\mathbin}{OXSZ}{"21}
+\else
+  \def\lblot{\langle\!|}
+  \def\rblot{|\!\rangle}
+  \def\bind{\mathbin{\Rrightarrow}}
+  \def\power{\esz@op{\mathbb P}}
+  \def\lbag{[\![}
+  \def\rbag{]\!]}
+  \def\project{\esz@bigbin{\upharpoonright}}
+  \def\semi{\esz@bigbin\comp}
+  \def\ldata{\langle\!\langle}
+  \def\rdata{\rangle\!\rangle}
+  \def\emptyset{\varnothing}
+  \def\rel{\mathbin{\leftrightarrow}}
+  \def\comp{\mathbin{\raise 0.6ex\hbox{\oalign{\hfil$\scriptscriptstyle
+     \mathrm{o}$\hfil\cr\hfil$\scriptscriptstyle\mathrm{9}$\hfil}}}}
+  \def\dres{\mathbin{\vartriangleleft}}
+  \def\rres{\mathbin{\vartriangleright}}
+  \def\ndres{\mathbin{\rlap{\raise.05ex\hbox{$-$}}{\dres}}}
+  \def\nrres{\mathbin{\rlap{\raise.05ex\hbox{$-$}}{\rres}}}
+  \def\limg{\mathopen{(\!|}}
+  \def\rimg{\mathclose{|\!)}}
+  \def\pfun{\esz@partial\fun}
+  \def\fun{\mathbin{\rightarrow}}
+  \def\pinj{\esz@partial\inj}
+  \def\inj{\mathbin{\rightarrowtail}}
+  \def\psurj{\esz@partial\surj}
+  \def\surj{\mathbin{\ooalign{$\fun$\hfil\cr$\mkern4mu\fun$}}}
+  \def\bij{\mathbin{\ooalign{$\inj$\hfil\cr$\mkern5mu\fun$}}}
+  \def\nat{{\mathbb N}}
+  \def\num{{\mathbb Z}}
+  \def\finset{\esz@op{{\mathbb F}}}
+  \def\ffun{\esz@finite\fun}
+  \def\finj{\esz@finite\inj}
+  \def\cat{\mathbin{\raise 0.8ex\hbox{$\smallfrown$}}}
+  \def\filter{\mathbin{\upharpoonright}}
+  \def\inbag{\mathrel{\esz@minus{\sqsubset}}}
+  \def\extract{\mathbin{\upharpoonleft}}
+  \def\uminus{\mathbin{\esz@minus{\cup}}}
+\fi
+\def\:{\!:\!\!}
+\def\defs{\mathrel{\widehat=}}
+\def\cross{\times}
+\def\lambda{\esz@op{\mathchar"115}}
+\def\mu{\esz@op{\mathchar"116}}
+\def\lnot{\neg\;}
+\def\land{\esz@rel{\wedge}}
+\def\lor{\esz@rel{\vee}}
+\let\implies\Rightarrow
+\let\iff\Leftrightarrow
+\def\forall{\esz@op{\mathchar"238}}
+\def\exists{\esz@op{\mathchar"239}}
+\def\hide{\esz@bigbin{\backslash}}
+\let\shows\vdash
+\def\pipe{\esz@bigbin{>\!\!>}}
+\def\LET{\Zkeyword{let}}
+\def\IF{\Zkeyword{if}}
+\def\THEN{\Zkeyword{then}}
+\def\ELSE{\Zkeyword{else}}
+\def\dom{\Zpreop{dom}}
+\def\ran{\Zpreop{ran}}
+\def\id{\Zpreop{id}}
+\def\inv{^\sim}
+\def\div{\Zinop{div}}
+\def\mod{\Zinop{mod}}
+\def\upto{\esz@bin{\ldotp\ldotp}}
+\def\plus{^+}
+\def\star{^*}
+\def\seq{\Zpregen{seq}}
+\def\iseq{\Zpregen{iseq}}
+\def\dcat{\esz@op{\cat/}}
+\def\bag{\Zpregen{bag}}
+\def\bcount{\esz@bin{\sharp}}
+\let\subbageq\sqsubseteq
+\def\disjoint{\Zprerel{disjoint}}
+\def\partition{\Zinrel{partition}}
+\def\prefix{\Zinrel{prefix}}
+\def\suffix{\Zinrel{suffix}}
+\def\inseq{\Zinrel{in}}
+\def\pre{\Zpreop{pre}}
+\def\flat{\Zpreop{\downarrow}}
+\def\steps{\Zpreop{steps}}
+\def\baseNum{BASENUM}
+\def\typeName#1#2{#1 \subset_{type} #2}
+\def\typeNameDef#1{(#1)_{type}}
+\def\typeRule#1#2{#1 \subseteq_{type} \bigcup #2}
+
+\ifesz@units
+\newcommand{\xunit}{U}
+\newcommand{\real}{\mathcal{R}}
+\newcommand{\wreal}{\real_{\xunit}}
+\newcommand{\rat}{\mathcal{Q}}
+\newcommand{\wrat}{\rat_{\xunit}}
+\newcommand{\wnum}{\num_{\xunit}}
+\newcommand{\wnat}{\nat_{\xunit}}
+\newcommand{\weighting}{weighting}
+\newcommand{\unitExpon}{UE}
+\newcommand{\quo}{\mathop{/}}
+\newcommand{\abs}{\mathrm{abs}}
+\newcommand{\val}{\mathrm{val}}
+\newcommand{\nom}{\mathrm{nom}}
+\newcommand{\dnom}{\mathrm{dnom}}
+\newcommand{\weight}{\mathrm{weight}}
+\newcommand{\wplus}{\mathop{\$}}
+\newcommand{\recipro}{{\frac{1}{\mathrm{x}}}}
+\newcommand{\floor}{\mathrm{floor}}
+\newcommand{\ceil}{\mathrm{ceil}}
+\newcommand{\interv}{\nearrow}
+\newcommand{\m}{\mathsf{m}}
+\newcommand{\kg}{\mathsf{kg}}
+\newcommand{\s}{\mathsf{s}}
+\newcommand{\amp}{\mathsf{amp}}
+\newcommand{\kel}{\mathsf{kel}}
+\newcommand{\can}{\mathsf{can}}
+\newcommand{\mol}{\mathsf{mol}}
+\newcommand{\unitNum}{UNUM}
+\newcommand{\unitAdd}{\boxplus}
+\newcommand{\unitNegate}{\boxminus}
+\fi
+\ifesz@msz
+\def\action{\leadsto}
+\def\Inv{\blacksquare}
+\def\atnext%
+ {\rlap{$\esz@Small\bigcirc$}\kern0.01em\rlap{$\esz@Small\bigcirc$}%
+  \kern0.01em\esz@Small\bigcirc}
+\def\atlast%
+ {\rlap{$\esz@Small\bigcirc$}\kern0.01em\rlap{$\esz@Small\bigcirc$}
+  \kern0.01em\rlap{$\kern0.01em\mathord-$}\esz@Small\bigcirc}
+\def\always{\lower0.37ex\hbox{$\esz@big\Box$}}
+\def\uptilnow{\rlap{$\kern0.02em\mathord-$}\lower0.37ex\hbox{$\esz@big\Box$}}
+\def\eventually{\lower0.37ex\hbox{$\esz@big\Diamond$}}
+\newcommand{\everywhere}{\always}
+\newcommand{\somewhere}{\eventually}
+\def\previously%
+ {\rlap{$\kern0.04em\mathord-$}\lower0.37ex\hbox{$\esz@big\Diamond$}}
+\def\until{\esz@rel{\cal U}}
+\def\since{\esz@rel{\cal S}}
+\def\instate{\Zprerel{in}}
+\def\chop{\cat}
+\def\tr{/}
+\def\lstate{\lceil}
+\def\rstate{\rceil}
+\def\lop{\lceil}
+\def\rop{\rceil_{\Delta}}
+\def\lleng{\lceil}
+\def\rleng{\rceil_{\ell}}
+\def\ldyn{\Dynamic [}
+\def\rdyn{]}
+\def\tiff{\iff\!\!_t}
+\def\timplies{\implies\!\!_t}
+\def\tand{\land\!\!_t}
+\def\tor{\lor\!\!_t}
+\def\tnot{\lnot\!\!_t}
+\def\STATE{STATE}
+\def\CONTROL{CONTROL}
+\def\DATA{DATA}
+\def\event{\Zpregen{\mathbb{E}}}
+\def\signal{\mathbb{S}}
+\def\df{\Zprerel{def}}
+\def\vl{\Zpreop{val}}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcount\z@cols
+\newif\ifz@firstline    \z@firstlinefalse
+\newif\ifz@incomponent  \z@incomponentfalse
+\newif\ifz@innestedcomponent  \z@innestedcomponentfalse
+\newif\ifz@inenv    \z@inenvfalse
+\newif\ifz@leftmargin   \z@leftmargintrue
+\newif\ifz@incols   \z@incolsfalse
+\newif\ifz@inbox    \z@inboxfalse
+\newcount\z@stackmin
+\newcount\z@stackmax
+\newcount\z@stacktop
+\newdimen\@gtempa \z@stackmin=\allocationnumber
+\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa
+\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa
+\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa
+\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa
+\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa
+\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa\newdimen\@gtempa
+\z@stackmax=\allocationnumber
+\dimen\z@stackmin=0pt
+\newbox\z@curline
+\newdimen\z@curindent
+\dimen\z@curindent=0pt
+\def\z@space{{}\;{}}
+\newbox\z@curfield
+\def\z@startline{\setbox\z@curline\hbox{}%
+     \global\z@curindent\dimen\z@stacktop
+     \z@startfield\ignorespaces}
+\def\z@stopline{\z@stopfield
+    \z@addfield
+    \hbox{\hskip\z@curindent \box\z@curline}}
+\def\z@startfield{\global\setbox\z@curfield\hbox\bgroup}
+\def\z@stopfield{\egroup}
+\def\z@addfield{\global\setbox\z@curline\hbox{\unhbox
+     \z@curline\unhbox\z@curfield}}
+\def\z@pushmargin{\hbox{\kern0pt}$%
+  \z@stopfield
+  \z@addfield
+  \ifnum \z@stacktop < \z@stackmax
+    \global\advance\z@stacktop \@ne
+  \else
+    \@latexerr{Z margin stack overflow (too many \string\<'s)}
+    \@ehd
+  \fi
+  \global\dimen\z@stacktop\z@curindent
+  \global\advance\dimen\z@stacktop \wd\z@curline
+  \z@startfield\ignorespaces
+  $\relax}
+\def\z@popmargin{\ifnum \z@stacktop > \z@stackmin
+    \global\advance\z@stacktop \m@ne \ignorespaces
+  \else
+    \@latexerr{Z Margin stack underflow (too many \string\>'s)}
+    \@ehd
+  \fi}
+\def\M{\z@pushmargin} \def\O{\z@popmargin} \def\S{\z@space}
+\let\<\M
+\let\>\O
+\z@stacktop\z@stackmin
+\def\z@narrow{\advance\linewidth by -\zedindent}
+\def\z@wide{\advance\linewidth by \zedindent}
+\def\zedsize#1{\def\z@size{#1}}
+\def\z@size{}
+\newskip\z@adskip\newskip\z@bdskip\newskip\z@adsskip\newskip\z@bdsskip
+\def\z@changesize{%
+\z@adskip\abovedisplayskip\z@bdskip\belowdisplayskip% save skips
+\z@adsskip\abovedisplayshortskip\z@bdsskip\belowdisplayshortskip
+\z@size % change size
+\abovedisplayskip\z@adskip\belowdisplayskip\z@bdskip% restore skips
+\abovedisplayshortskip\z@adsskip\belowdisplayshortskip\z@bdsskip}
+\def\z@zeroskips{\abovedisplayskip\z@\belowdisplayskip\z@
+    \abovedisplayshortskip\z@\belowdisplayshortskip\z@}
+\def\z@hrulefill{\leaders\hrule height\zedlinethickness\hfill}
+\def\z@topline#1{\omit\@ifnextchar[{\z@@topline{#1}}{\z@@topline{#1}[]}}
+\def\z@@topline#1[#2]{\hbox to\linewidth{\zstrut\ifleftnames\else
+    \vrule height\zedlinethickness width\zedlinethickness
+    \hbox to\zedleftsep{\z@hrulefill}\fi#1\z@hrulefill
+    \smash{\vrule height\zedlinethickness width\zedlinethickness
+    depth\zedcornerheight}\hbox{\sf #2}}\cr}
+\def\z@dbltopline#1{%
+  \omit\@ifnextchar[{\z@@dbltopline{#1}}{\z@@dbltopline{#1}[]}%
+}
+\def\z@@dbltopline#1[#2]{\z@@topline{#1}[#2]%
+  \noalign{\kern-\baselineskip
+    \kern-\zedlinethickness
+    \kern-\doublerulesep \nobreak}%
+  \omit\z@@topline{\hphantom{#1}}[\hphantom{#2}]%
+  \noalign{\kern\doublerulesep
+    \kern\zedlinethickness \nobreak}}
+\def\z@botline{\also\omit\hbox to\linewidth{\z@hrulefill
+  \smash{\vrule height\zedcornerheight width\zedlinethickness
+    depth 0pt}}\cr}
+\def\z@@botline[#1]{\hbox to\linewidth %
+  {\vrule\z@hrulefill\hbox{\sf\smash{#1}}}\also}
+\def\zedline{\also\omit\@ifnextchar[{\z@@botline}{\z@@botline[]}}
+\def\z@midline#1{\hbox to\linewidth{\zstrut% doesnt work as desired
+    \setbox\esz@ba=\hbox{$\relax#1$}%
+    \esz@da=0.5\linewidth \advance \esz@da by 0.5\wd\esz@ba%
+    \hbox to \esz@da{\hskip\zedleftsep\z@hrulefill}%
+    \box\esz@ba%
+    \z@hrulefill\hskip\zedleftsep}%
+    \cr%
+}
+\def\where{\also \omit \hbox to\zedbar{\z@hrulefill}\cr\also}
+\def\z@left{\ifz@inbox\vrule width\zedlinethickness\hskip\zedleftsep\fi}
+\def\z@env{\global\z@firstlinetrue\z@changesize
+   \tracingcommands=1\tracingmacros=1
+    $$
+    \z@inenvtrue
+    \baselineskip\zedbaselineskip
+    \parskip=0pt\lineskip=0pt\z@narrow
+    \advance\displayindent by \zedindent
+    \def\\{\crcr}% Must have \def and not \let for nested alignments.
+    \def\par{\relax}
+    \everycr={\noalign{\ifz@firstline \global\z@firstlinefalse%
+    \else \penalty\interzedlinepenalty \fi}}
+    \tabskip=0pt}
+\def\endz@env{$$
+ \global\@ignoretrue
+}
+\def\z@format{\halign to\linewidth\bgroup%\global\everypar{}%
+    \zstrut\z@left\z@startline\ignorespaces$\@lign##$\z@stopline\hfil%
+    \tabskip=0pt plus1fil%
+    &\hbox to 0pt{\hss\@lign##}\tabskip=0pt\cr}
+\def\z@boxenv{\z@narrow\let\also=\als@ \let\Also=\Als@ \let\ALSO=\ALS@
+    \z@inboxtrue \predisplaypenalty=\preboxpenalty \z@env\z@format}
+\def\z@outnonbox{\z@leavevmode\z@env}
+\def\z@inoutbox{\z@leavevmode\z@makeouter\z@incomponentfalse\z@boxenv}
+\def\oz@parbox{\@ifnextchar [{\oz@iparbox}{\oz@iparbox[c]}}
+\long\def\oz@iparbox[#1]#2#3{\leavevmode \@pboxswfalse
+   \if #1b\vbox
+   \else \if #1t\vtop \else \vbox \fi
+   \fi
+   {\hsize #2\@parboxrestore #3}
+}
+\def\@but{\noalign{\nointerlineskip}}
+\def\z@nopar{\ifz@incomponent\else\vskip-\parskip\fi}
+\def\z@leavevmode{\ifvmode\if@inlabel\indent\else\if@noskipsec\indent\else
+    \if@nobreak\global\@nobreakfalse\everypar={}\fi
+    {\parskip=0pt\noindent}\fi\fi\fi}
+\def\also{\crcr\noalign{\vskip\jot}}
+\def\Also{\crcr\noalign{\vskip2\jot}}
+\def\ALSO{\Also\Also}
+\def\als@{\crcr\@but\omit\vrule height\jot width\zedlinethickness \cr \@but}
+\def\Als@{\crcr\@but\omit\vrule height2\jot width\zedlinethickness \cr \@but}
+\def\ALS@{\crcr\@but\omit\vrule height4\jot width\zedlinethickness \cr \@but}
+\def\znewpage{\also\noalign{\penalty\forcepagepenalty}\also}
+\def\zbreak{\also\noalign{\penalty\interdisplaylinepenalty\vskip-\jot}\also}
+\def\Zbreak{\also\noalign{\penalty\interdisplaylinepenalty}\also}
+\def\ZBREAK{\Also\noalign{\penalty\interdisplaylinepenalty}\Also}
+\def\t#1{\hskip #1\zedtab}
+\def\flushr#1{\crcr&#1\quad\cr}
+\def\z@incomponentcheck{
+    \ifz@incomponent\else
+        \esz@error{This Z environment is only allowed within a component}
+    \fi
+}
+\def\z@outcomponentcheck{
+    \ifz@incomponent
+        \esz@error{This Z environment is not allowed inside a component}
+    \fi
+}
+\def\z@makeouter{%
+ \ifz@inenv
+     \ifz@incomponent\z@inenvfalse
+         \hskip-\zedleftsep \advance\linewidth by -\zedlinethickness
+         \zedindent=\zedleftsep \zedleftsep=0.8\zedleftsep
+         \zedbar=0.8\zedbar \zedtab=0.8\zedtab
+         \oz@parbox{\linewidth}\bgroup
+         \z@zeroskips
+     \else
+         \esz@error{Incorrect place for Z environment; nesting is
+                    allowed only inside components}
+     \fi
+ \else
+   \bgroup
+ \fi
+}
+\def \z@makeinner{\egroup
+   \global\z@curindent\z@
+}
+\def \componentbreak{\also\egroup$$\vskip -\ht\zstrutbox
+    \vskip -\abovedisplayskip\vskip -\belowdisplayskip\z@wide\z@boxenv\also}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\zed{\z@outnonbox\z@inboxfalse\z@format}
+\def\endzed{\crcr\egroup\endz@env}
+\let\[=\zed
+\def\]{\crcr\egroup$$\ignorespaces}
+\def\syntax{\z@outnonbox\halign\bgroup
+    \zstrut$\@lign##$\hfil &\hfil$\@lign{}##{}$\hfil
+    &$\@lign##$\hfil &\qquad\@lign-- ##\hfil\cr}
+\let\endsyntax=\endzed
+\def\schema#1{%
+    \@ifnextchar[{\esz@genschema{#1}}{\esz@schema{#1}}
+}
+\def\esz@schema#1{%
+    \z@inoutbox\z@topline{$\,#1\,$}
+}
+\def\esz@genschema#1[#2]{%
+    \z@inoutbox\z@topline{$\,#1\:[#2]\,$}
+}
+\def\endschema{%
+    \z@botline \endzed \z@makeinner \z@nopar
+}
+\@namedef{schema*}{%
+    \@ifnextchar[{\esz@genschemaNN}{\esz@schemaNN}
+}
+\def\esz@schemaNN{%
+    \leftnamesfalse\z@inoutbox\z@topline{}
+}
+\def\esz@genschemaNN[#1]{%
+    \leftnamesfalse\z@inoutbox\z@topline{$\,[#1]\,$}
+}
+\expandafter\let\csname endschema*\endcsname=\endschema
+\def\axdef{\z@inoutbox}
+\def\endaxdef{\endzed\z@makeinner}
+\def\gendef{\@ifnextchar[{\esz@gendef}{\esz@nogendef}}
+\def\esz@gendef[#1]{%
+    \leftnamesfalse\z@inoutbox\z@dbltopline{$\,[#1]\,$}
+}
+\def\esz@nogendef{%
+    \leftnamesfalse\z@inoutbox\z@dbltopline{}
+}
+\let\endgendef=\endschema
+\def\argue{\z@outnonbox\interzedlinepenalty=\interdisplaylinepenalty
+    \openup 1\jot \z@format
+    \noalign{\vskip-\jot}}% equal vspace above and below argue display
+\let\endargue=\endzed
+\def\infrule{\z@outnonbox\halign\bgroup
+    \zstrut\quad$\@lign##$\quad\hfil&\quad\@lign##\hfil\cr}
+\let\endinfrule=\endzed
+\def\derive{\crcr\also\@but\omit\z@hrulefill%
+    \@ifnextchar[{\z@sidecondition}{\cr\also\@but}}
+\def\Derive{\crcr\also\@but\omit\z@hrulefill\cr\@but
+    \noalign{\kern-\dp\zstrutbox
+    \kern\doublerulesep \nobreak}%
+\omit\derive}
+\def\z@sidecondition[#1]{&$\smash{\lower 0.2ex\hbox{$[\;#1\;]$}}$\cr\also\@but}
+\def\sidebyside{\@ifnextchar[{\z@columns}{\z@columns[2]}}
+\def\z@columns[#1]{\z@leavevmode\z@cols#1 \z@makeouter\z@narrow%
+    $$\lineskip=0pt\z@incolstrue
+    \predisplaysize\maxdimen
+    \ifz@leftmargin\hskip-\zedindent\z@leftmarginfalse\fi
+    \setbox0=\hbox to \linewidth\bgroup\z@zeroskips%
+    \divide\zedbar by \z@cols \divide\zedleftsep by \z@cols
+    \divide\zedtab by \z@cols \divide\linewidth by \z@cols
+   \oz@parbox[t]{\linewidth}\bgroup\z@wide}
+\def\nextside{\egroup\hss\oz@parbox[t]{\linewidth}\bgroup\z@wide}
+\newdimen\z@temp
+\def\endsidebyside{\egroup\egroup
+    \z@temp\ht0 \advance\z@temp by \dp0\advance\z@temp by-\dp\zstrutbox
+    \hbox{\raise\z@temp\box0}\endz@env\z@makeinner\z@nopar}
+\def\zpar{\z@leavevmode
+    \ifz@inenv\z@incomponenttrue\fi% fudge to let zpar in all boxes
+    \z@makeouter\z@changesize
+    \advance\linewidth by -\z@curindent
+    \advance\linewidth by -\wd\z@curline
+    \hskip-\wd\z@curline\advance\linewidth by -\zedindent$$
+    \ifz@leftmargin\hskip-\zedindent\fi% adjustment for first column
+    \advance\displayindent by \zedindent
+    \advance\displaywidth by -\zedindent
+    \advance\displayindent by \z@curindent
+    \advance\displayindent by \wd\z@curline
+    \advance\displaywidth by -\z@curindent
+    \advance\displaywidth by -\wd\z@curline
+    \global\setbox\z@curline\hbox{}
+    \z@narrow\oz@parbox[b]{\linewidth}\bgroup\hfil\break}
+\def\endzpar{\egroup$$\z@makeinner\z@nopar}
+\def \zcom{\zpar\sf}
+\let \endzcom=\endzpar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtoks\esz@source      % The name of the current source state
+\newtoks\esz@instance    % Instantiation of a sub-chart
+\newtoks\esz@exitpoint   % The name of an exit point
+\newtoks\esz@trans       % The tokens of the current transition
+\newcount\esz@transcount % Transition counter for current source
+\newtoks\esz@destin      % The name of the current destination state
+\newtoks\esz@outrefp     % The current outgoing reference point
+\newtoks\esz@inrefp      % The current ingoing reference point
+\newtoks\esz@tplace      % Place of the transition label
+\newtoks\esz@talias      % Alias for the transition label
+\newtoks\esz@talign      % Alignment of transition label
+\newtoks\esz@hopfactor   % Factor to use for state hops
+\newtoks\esz@prevsource  % The name of the previous source state
+\newtoks\esz@compound    % The name of a compound
+\newtoks\esz@parorient   % The orientation of a parallel composition
+\newtoks\esz@parfactor   % The distance factor of a parallel composition
+\newtoks\esz@userlayout  % Layout given by the user
+
+\def\esz@defaulthop{}    % default hop to take after ;
+\def\esz@crvmod{}        % modifiers to apply to \crv
+\newdimen\esz@X          % current X coordinate of state turtle
+\newdimen\esz@Y          % current Y coordinate of state turtle
+\newdimen\esz@W          % current width of state
+\newdimen\esz@H          % current height of state
+\newtoks\esz@posdrawing    % drawing of state positions
+\newtoks\esz@statedrawing  % drawing of state boxes
+\newtoks\esz@transdrawing  % drawing of transition edges
+\newtoks\esz@labeldrawing  % drawing of transition labels
+\newtoks\esz@labeldef      % array of transition label definitions
+\newif\ifesz@userlayout  % If user has given layout
+\newif\ifesz@labeldef
+\ifesz@msz
+\def\cont@#1{\def\cont@@{#1}}
+\long\def\esz@p@end#1{#1}
+\long\def\esz@p@token#1#2#3{%
+    \ifx #1#3%
+        \cont@{#2}%
+    \else%
+        \cont@{\esz@error{expected `\noexpand#1', found `\noexpand#3'}
+               \esz@p@skip{#1\end\layout\where\endcompound}{#2}}
+    \fi%
+    \cont@@%
+}
+\long\def\esz@p@skip#1#2#3{%
+    \esz@p@ifset{#1}{\esz@error{skipped until `\noexpand#3'}#2}%
+                    {\esz@p@eat{\esz@p@skip{#1}{#2}}}%
+                    {#3}%
+}
+\long\def\esz@p@eat#1#2{#1}
+\long\def\esz@p@if#1#2#3#4{%
+    \def\esz@iftest{#1}\def\esz@ifarg{#4}%
+    \ifx \esz@iftest\esz@ifarg%
+        \cont@{#2}%
+    \else%
+        \cont@{#3{#4}}
+    \fi%
+    \cont@@%
+}
+\long\def\esz@p@ifset#1#2#3#4{%
+    \def\esz@ifset{#1}% store token set
+    \esz@p@ifsetX{#2}{#3}{#4}%
+}
+\long\def\esz@p@ifsetX#1#2#3{
+    \ifx \empty\esz@ifset% take failure continuation
+         \cont@{#2{#3}}%
+    \else%
+         \expandafter\esz@split\esz@ifset\esz@to\esz@ifsetnext\esz@ifset%
+         \def\esz@ifsettest{#3}%
+         \ifx\esz@ifsetnext\esz@ifsettest% take success continuation
+             \cont@{#1{#3}}%
+         \else% try next token
+             \cont@{\esz@p@ifsetX{#1}{#2}{#3}}%
+         \fi%
+    \fi%
+    \cont@@%
+}
+\long\def\esz@p@ifsetm#1#2#3#4{%
+    \expandafter\esz@p@ifset\expandafter{#1}{#2}{#3}{#4}%
+}
+\long\def\esz@p@store#1#2#3{%
+    #1={}\esz@extsave{#3}{#1}#2%
+}
+\long\def\esz@p@storenb#1#2#3{%
+    #1={}\esz@extend{#3}{#1}#2%
+}
+\long\def\esz@p@extend#1#2#3{%
+    \esz@extsave{#3}{#1}#2%
+}
+\def\esz@reserved{\via\when\goto\exit\with%
+                  \default\end\layout\where\compound\endcompound\space}
+\def\esz@endtoks{\end\where\layout}
+\long\def\esz@p@ident#1#2#3{%
+    \ifcat A\noexpand#3% alphanumerical ident
+        \cont@{\esz@extend{#3}{#1}\esz@p@alphanum{#1}{\esz@p@decor{#1}{#2}}}
+    \else%if not reserved, take a single token
+        \cont@{\esz@p@ifsetm{\esz@reserved}%
+                        {\esz@error{expected <ident>, found `\noexpand#3'}#2}%
+                        {\esz@p@extend{#1}{\esz@p@decor{#1}{#2}}}%
+                        {#3}}%
+    \fi%
+    \cont@@%
+}
+\long\def\esz@p@alphanum#1#2#3{%
+    \ifcat A\noexpand#3%
+        \cont@{\esz@extend{#3}{#1}\esz@p@alphanum{#1}{#2}}%
+    \else%
+        \cont@{\esz@p@ifset{0123456789\_}%
+                           {\esz@p@extend{#1}{\esz@p@alphanum{#1}{#2}}}%
+                           {#2}%
+                           {#3}%
+        }%
+    \fi%
+    \cont@@%
+}
+\long\def\esz@p@decor#1#2#3{%
+    \ifx _#3% _{...} decor; the p@extend will eat whatever follows _
+         \cont@{\esz@extend{#3}{#1}\esz@p@extend{#1}{\esz@p@decor{#1}{#2}}}
+    \else%
+         \cont@{\esz@p@ifset{'!?}%
+                            {\esz@p@extend{#1}{\esz@p@decor{#1}{#2}}}%
+                            {#2}%
+                            {#3}}%
+    \fi%
+    \cont@@
+}
+\long\def\esz@p@expr#1#2#3{%
+    \esz@p@ifsetm{\esz@reserved}%
+                 {#2}%
+                 {\esz@p@extend{#1}{\esz@p@expr{#1}{#2}}}%
+                 {#3}%
+}
+\long\def\esz@p@vec#1#2#3{%
+    \esz@p@dir{#1}{\esz@p@factor{#1}{#2}}{#3}%
+}
+\long\def\esz@p@dir#1#2#3{%
+    \esz@p@ifset{lrudc}
+                 {\esz@p@extend{#1}{\esz@p@dir{#1}{#2}}}%
+                 {#2}%
+                 {#3}%
+}
+\long\def\esz@p@factor#1#2#3{%
+    \esz@p@if{(}%
+             {\esz@p@factorcont{#1}{\esz@p@token{)}{#2}}}%
+             {#2}%
+             {#3}%
+}
+\long\def\esz@p@factorcont#1#2#3{%
+    \esz@p@ifset{0123456789.}%
+                 {\esz@p@extend{#1}{\esz@p@factorcont{#1}{#2}}}%
+                 {#2}%
+                 {#3}%
+}
+\long\def\esz@p@stm#1{%
+    \esz@p@if{\layout}%
+        {\global\esz@userlayouttrue\esz@p@userlayout}
+        {\esz@p@ifsetm{\esz@endtoks}%
+                 {\esz@p@end}% thats it
+                 {\esz@p@ifset{;}%
+                              {\esz@p@nextstm}%
+                              {\esz@p@source}}}%
+        {#1}%
+}
+\long\def\esz@p@userlayout#1{%
+    \esz@p@ifsetm{\esz@endtoks}%
+        {\esz@p@end}
+        {\esz@p@extend{\esz@userlayout}{\esz@p@userlayout}}
+        {#1}
+}
+\long\def\esz@p@source#1{%
+    \esz@source={}\esz@instance={}\esz@transcount=1%
+    \esz@p@if{\default}%
+        {\esz@p@default}%
+        {\esz@p@if{\compound}%
+             {\esz@p@compound}%
+             {\esz@p@if{\space}%
+                  {\esz@p@space}
+                  {\esz@p@ident{\esz@source}%
+                       {\esz@p@instance}}}}%
+        {#1}%
+}
+\long\def\esz@p@space#1{%
+    \esz@drawspace\esz@p@nextstm{#1}%
+}
+\long\def\esz@p@default#1{%
+    \esz@drawdefault\esz@p@transopt{#1}%
+}
+\long\def\esz@p@compound#1{%
+    \esz@p@ident{\esz@source}%
+        {\esz@drawbegincompound\bgroup\esz@p@transopt}{#1}%
+}
+\long\def\esz@p@instance#1{%
+    \esz@p@if{:}%
+             {\esz@p@expr{\esz@instance}{\esz@p@endsource}}%
+             {\esz@p@endsource}%
+             {#1}%
+}
+\long\def\esz@p@endsource#1{%
+    \esz@p@if{\exit}{\esz@drawstate{X}\esz@p@nextstm}%
+                    {\esz@drawstate{N}\esz@p@transopt}%
+                    {#1}%
+}
+\long\def\esz@p@transopt#1{%
+    \esz@p@ifset{\when\via\goto\action}%
+                {\esz@p@trans}%
+                {\esz@p@nextstm}%
+                {#1}%
+}
+\long\def\esz@p@trans#1{%
+    \esz@exitpoint={}%
+    \esz@inrefp={}\esz@outrefp={}%
+    \esz@tplace={}\esz@talign={}\esz@talias={}%
+    \esz@trans={}\esz@destin={}%
+    \esz@p@if{\via}%
+             {\esz@p@ident{\esz@exitpoint}{\esz@p@transcont}}%
+             {\esz@p@transcont}%
+             {#1}%
+}
+\long\def\esz@p@transcont#1{%
+    \esz@p@if{\when}%
+             {\esz@p@expr{\esz@trans}{\esz@p@destin}}%
+             {\esz@p@transcontcont}
+             {#1}%
+}
+\long\def\esz@p@transcontcont#1{%
+    \esz@p@ifset{\action}%
+             {\esz@p@expr{\esz@trans}{\esz@p@destin}}%
+             {\esz@p@destin}
+             {#1}%
+}
+\long\def\esz@p@destin#1{%
+    \esz@p@token{\goto}%
+        {\esz@p@ident{\esz@destin}%
+             {\esz@p@if{[}%
+                  {\esz@p@tlayout{\esz@p@token{]}%
+                                 {\esz@drawtrans%
+                                  \esz@p@nexttrans}}}%
+                  {\esz@drawtrans \esz@p@nexttrans}}}%
+        {#1}%
+}
+\long\def\esz@p@tlayout#1#2{%
+    \esz@p@if{=}{\esz@p@storenb{\esz@talias}{\esz@p@tlayout{#1}}}%
+   {\esz@p@if{>}{\esz@outrefp={}\esz@p@vec{\esz@outrefp}%
+                           {\esz@extend{\eszrefpdist}{\esz@outrefp}%
+                            \esz@p@tlayout{#1}}}%
+   {\esz@p@if{<}{\esz@inrefp={}\esz@p@vec{\esz@inrefp}%
+                           {\esz@extend{\eszrefpdist}{\esz@inrefp}%
+                            \esz@p@tlayout{#1}}}%
+   {\esz@p@if{!}{\esz@talign={}\esz@p@dir{\esz@talign}%
+                           {\esz@p@factor{\esz@tplace}{\esz@p@tlayout{#1}}}}%
+   {#1}}}}{#2}%
+}
+\long\def\esz@p@nexttrans#1{%
+    \esz@p@if{,}{\advance\esz@transcount by 1\esz@p@trans}{\esz@p@nextstm}{#1}%
+}
+\long\def\esz@p@nextstm#1{%
+    \esz@p@if{\endcompound}
+        {\esz@p@endcompound}
+        {\esz@p@if{\parallel}%
+             {\esz@p@parallel}%
+             {\esz@p@if{;}%
+                 {\esz@p@if{[}%
+                      {\esz@p@hops{\esz@p@token{]}\esz@p@stm}}%
+                      {\edef\esz@ma{\noexpand\esz@p@nextstm;\esz@defaulthop}%
+                       \esz@ma}}
+                 {\esz@p@ifset{\end\layout\where}%
+                      {\esz@p@stm}%
+                      {\esz@p@token{;}\esz@p@stm}}}}%
+        {#1}%
+}
+\long\def\esz@p@endcompound#1{%
+    \egroup\esz@drawendcompound\esz@p@stm{#1}%
+}
+\long\def\esz@p@parallel#1{%
+    \egroup\esz@p@parallellayout{#1}%
+}
+\long\def\esz@p@parallellayout#1{%
+    \esz@parorient={}\esz@parfactor={}%
+    \esz@p@if{[}%
+        {\esz@p@dir{\esz@parorient}
+             {\esz@p@factor{\esz@parfactor}
+                  {\esz@p@token{]}\esz@p@parcont}}}%
+        {\edef\esz@ma{\noexpand\esz@p@parallellayout\eszparallelhop}%
+         \esz@ma}
+        {#1}%
+}
+\long\def\esz@p@parcont#1{
+    \esz@prevsource=\expandafter{\the\esz@source}\esz@source={}%
+    \esz@p@ident{\esz@source}%
+        {\esz@drawnextcompound\bgroup\esz@p@transopt}
+        {#1}%
+}
+\long\def\esz@p@hops#1#2{%
+    \esz@p@ifset{lrduLU}%
+                {\esz@p@hop{#1}}%
+                {#1}%
+                {#2}%
+}
+\long\def\esz@p@hop#1#2#3{
+    \esz@hopfactor={}%
+    \esz@p@factor{\esz@hopfactor}%
+                 {\esz@hop{#2}{\esz@hopfactor}\esz@p@hops{#1}}%
+                 {#3}%
+}
+\def\esz@drawfilled#1#2#3{%
+    \hbox{%
+        \esz@da=#2%
+        \setbox\esz@bc=\hbox{%
+               \vrule width 0pt height 0.75\esz@da depth 0.35\esz@da%
+               \hbox{%
+                  $\arraycolsep=0pt\def\arraystretch{1.0}%
+                  \begin{array}{lllllllll}#3\end{array}$%
+               }%
+        }%
+        \ifdim\wd\esz@bc<#1%
+            \setbox\esz@bc=\hbox to #1 {\hss\unhbox\esz@bc\hss}%
+        \fi
+        \ifesz@ps%
+           \ifesz@draft%
+               \box\esz@bc%
+           \else%
+                \xybox{*[F*:white]{\box\esz@bc}}%
+           \fi%
+        \else%
+           \box\esz@bc%
+        \fi%
+    }%
+}
+\def\esz@drawdefault{%
+    \esz@source={\default}%
+    \esz@litdimenplus{\esz@X}{.5\eszgridwd}\esz@to\esz@Xm%
+    \esz@litdimenplus{\esz@Y}{-.5\eszgridht}\esz@to\esz@Ym%
+    \esz@xadd{%
+         , <\esz@Xm,\esz@Ym>%
+           *\esz@nondraft{i}{\noexpand\esz@bigbullet}%
+           ="\the\esz@source"%
+         , @+c%
+    }{\esz@posdrawing}%
+    \ifesz@draft\else%
+        \esz@xadd{%
+         , "\the\esz@source"%
+           *\esz@psnondraft{[\eszstatefgcl]}{\noexpand\esz@bigbullet}%
+        }{\esz@statedrawing}%
+    \fi%
+    \global\edef\esz@defaulthop{\eszdefaulthop}%
+}
+\def\esz@bigbullet{%
+    \hbox{\LARGE$\bullet$}%
+}
+\def\esz@drawspace{%
+    \esz@litdimenplus{\esz@X}{.5\eszgridwd}\esz@to\esz@Xm%
+    \esz@litdimenplus{\esz@Y}{-.5\eszgridht}\esz@to\esz@Ym%
+    \esz@xadd{%
+         , <\esz@Xm,\esz@Ym>%
+           *i=<\eszstatewd,\eszstateht>{}%
+         , @+c%
+    }{\esz@posdrawing}%
+    \global\edef\esz@defaulthop{\eszstatehop}%
+}
+\def\esz@drawstate#1{%
+    \esz@litdimenplus{\esz@X}{.5\eszgridwd}\esz@to\esz@Xm%
+    \esz@litdimenplus{\esz@Y}{-.5\eszgridht}\esz@to\esz@Ym%
+    \ifx #1X%exit mode; use a double outline
+        \def\esz@mc{<4pt>{=}}%
+    \else%
+        \def\esz@mc{<4pt>{-}}%
+    \fi%
+    \esz@ta=\expandafter{\the\esz@source}%
+    \esz@testtoks{}{\esz@instance}
+    \ifesz@test\else%instance of a subchart
+        \esz@extend{:}{\esz@ta}%
+        \esz@xextend{\the\esz@instance}{\esz@ta}%
+    \fi%
+    \esz@xadd{%
+         , <\esz@Xm,\esz@Ym>%
+           *\esz@nondraft{i}\esz@psnondraft{[\eszstatefgcl]}%
+            \noexpand\esz@drawstatename{\the\esz@ta}%
+           *\esz@nondraft{i}%
+               \esz@psnondraft{[|(\eszstatebdwd)]}\noexpand\frm\esz@mc%
+                      ="\the\esz@source"%
+         , @+c%
+    }{\esz@posdrawing}%
+    \ifesz@draft\else%
+        \esz@xadd{%
+         , "\the\esz@source"%
+           *\esz@psnondraft{[\eszstatefgcl]}%
+            \noexpand\esz@drawstatename{\the\esz@ta}%
+           *\esz@psnondraft{[|(\eszstatebdwd)]}\noexpand\frm\esz@mc%
+        }{\esz@statedrawing}%
+    \fi
+    \global\edef\esz@defaulthop{\eszstatehop}%
+}
+\def\esz@drawstatename#1{%
+    \esz@drawfilled{\eszstatewd}{\eszstateht}{\;#1\;\,}%
+}
+\def\esz@drawbegincompound{%
+    \esz@xadd{%
+        , @(% open stack of all members of compound
+    }{\esz@posdrawing}%
+    \esz@compound=\expandafter{\the\esz@source.compound}%
+    \esz@drawopencompound{\esz@source}%
+}
+\def\esz@drawnextcompound{%
+    \esz@drawclosecompound{\esz@prevsource}%
+    % hop the amount specified by @parorient and @parfactor
+    \expandafter\esz@hop\expandafter{\the\esz@parorient}{\esz@parfactor}%
+    % draw the dotted border of a parallel composition
+    \esz@testtoks{l}{\esz@parorient}%
+    \ifesz@test%
+        \esz@xadd{%
+            , "\the\esz@prevsource"+UL;"\the\esz@prevsource"+DL%
+            **\noexpand\dir{.}%
+        }{\esz@transdrawing}%
+    \else%
+    \esz@testtoks{r}{\esz@parorient}%
+    \ifesz@test%
+        \esz@xadd{%
+            , "\the\esz@prevsource"+UR;"\the\esz@prevsource"+DR%
+            **\noexpand\dir{.}%
+        }{\esz@transdrawing}%
+    \else%
+    \esz@testtoks{u}{\esz@parorient}%
+    \ifesz@test%
+        \esz@xadd{%
+            , "\the\esz@prevsource"+UL;"\the\esz@prevsource"+UR%
+            **\noexpand\dir{.}%
+        }{\esz@transdrawing}%
+    \else%
+        \esz@xadd{%
+            , "\the\esz@prevsource"+DL;"\the\esz@prevsource"+DR%
+            **\noexpand\dir{.}%
+        }{\esz@transdrawing}%
+    \fi\fi\fi%
+    \esz@drawopencompound{\esz@source}%
+}
+\def\esz@drawendcompound{%
+    \esz@drawclosecompound{\esz@source}%
+    \esz@xadd{%
+        % compose position "\the\esz@compound" of all stacked member
+        % positions
+        , @-, c="\the\esz@compound"%
+        , @@{c."\the\esz@compound"!C="\the\esz@compound"}%
+        % draw a reference frame around the the composed position
+        , "\the\esz@compound"*i\esz@psnondraft{[|(\eszstatebdwd)]}%
+           \noexpand\frm<4pt>{-}="\the\esz@compound"%
+        % close compound stack and push composed position
+        , @i, @), "\the\esz@compound", @+c%
+    }{\esz@posdrawing}%
+    \esz@xadd{%
+        , "\the\esz@compound"%
+          *\esz@psnondraft{[|(\eszstatebdwd)]}%
+           \noexpand\frm<4pt>{-}%
+    }{\esz@statedrawing}%
+}
+\def\esz@drawopencompound#1{%
+    \esz@litdimenplus{\esz@X}{.3\eszgridwd}\esz@to\esz@Xm%
+    \esz@litdimenplus{\esz@Y}{-.5\eszgridht}\esz@to\esz@Ym%
+    \esz@xadd{%
+        , @(% open stack of elements of next member of compound
+        , <\esz@Xm,\esz@Ym>%
+          *i!L\noexpand\esz@drawlabel{\the#1}="\the#1.label"%
+        , @+c%
+    }{\esz@posdrawing}%
+    \esz@xadd{%
+        , "\the#1.label"%
+          *!L\noexpand\esz@drawlabel{\the#1}%
+    }{\esz@statedrawing}%
+    \global\edef\esz@defaulthop{\eszcompoundhop}%
+}
+\def\esz@drawclosecompound#1{%
+    \esz@xadd{%
+        % compose position "\the#1" of all stacked element positions
+        , @-, c="\the#1", @@{c."\the#1"!C="\the#1"}%
+        % let the composed position grow
+        , "\the#1"*i++\noexpand\frm<4pt>{-}="\the#1"%
+        % close element stack and push composed position
+        , @i, @), "\the#1", @+c%
+    }{\esz@posdrawing}%
+}
+\def\esz@hop#1#2{%
+    \esz@testtoks{}{#2}
+    \ifesz@test #2={1.0} \fi%
+    \ifx l#1%
+        \esz@da=\the#2\esz@W%
+        \global\advance\esz@X by -\esz@da%
+    \else%
+    \ifx r#1%
+        \esz@da=\the#2\esz@W%
+        \global\advance\esz@X by \esz@da%
+    \else%
+    \ifx u#1%
+        \esz@da=\the#2\esz@H%
+        \global\advance\esz@Y by \esz@da%
+    \else%
+    \ifx d#1%
+        \esz@da=\the#2\esz@H%
+        \global\advance\esz@Y by -\esz@da%
+    \else%
+    \ifx L#1%
+        \global\esz@X=0pt%
+    \else%
+    \ifx U#1%
+        \global\esz@Y=\eszgridht%
+    \fi\fi\fi\fi\fi\fi%
+}
+\def\esz@drawtrans{%
+    \esz@testtoks{}{\esz@destin}%
+    \ifesz@test%
+         % do nothing
+    \else
+        % setup connection and reference points
+        \esz@testtoks{}{\esz@outrefp}
+        \ifesz@test% implicite outgoing direction
+             % setup outgoing edge and reference point
+             \edef\esz@ma{"\the\esz@source"}%
+             \edef\esz@mb{,"\the\esz@source";"\the\esz@destin"%
+                           **{}?<>(0.5)+/^4ex/="_1"}%
+        \else%
+             \expandafter\esz@tocorner\the\esz@outrefp\esz@to\esz@mc%
+             \edef\esz@ma{"\the\esz@source"+\esz@mc}%
+             \edef\esz@mb{,"\the\esz@source"+\esz@mc+/\the\esz@outrefp/="_1"}%
+        \fi%
+        \esz@testtoks{}{\esz@inrefp}
+        \ifesz@test% implicite ingoing direction
+             % setup ingoing edge and reference point
+             \edef\esz@mc{"\the\esz@destin"}%
+             \edef\esz@md{,"\the\esz@destin";"\the\esz@source"%
+                           **{}?<>(0.5)+/_4ex/="_2"}%
+        \else%
+             \expandafter\esz@tocorner\the\esz@inrefp\esz@to\esz@me%
+             \edef\esz@mc{"\the\esz@destin"+\esz@me}%
+             \edef\esz@md{,"\the\esz@destin"+\esz@me+/\the\esz@inrefp/="_2"}%
+        \fi%
+        % setup transition drawing
+        \global\esz@xextend{\esz@mb}{\esz@transdrawing}% the reference points
+        \global\esz@xextend{\esz@md}{\esz@transdrawing}%
+        \global\esz@extend{,}{\esz@transdrawing}% the connection
+        \global\esz@xextend{\esz@ma}{\esz@transdrawing}%
+        \global\esz@extend{;}{\esz@transdrawing}%
+        \global\esz@xextend{\esz@mc}{\esz@transdrawing}%
+        \edef\esz@ma{**\esz@psnondraft{[|(\eszedgewd)][roundcap]}}%
+        \global\esz@xextend{\esz@ma}{\esz@transdrawing}%
+        \ifx \empty\esz@crvmod%
+            \global\esz@extend{\crv}{\esz@transdrawing}%
+        \else%
+            \edef\esz@ma{\noexpand\crv\noexpand~\esz@crvmod}%
+            \global\esz@xextend{\esz@ma}{\esz@transdrawing}%
+        \fi%
+        \global\esz@extend{{"_1"&"_2"}?>*\dir{>}}{\esz@transdrawing}%
+        \esz@testtoks{}{\esz@tplace}
+        \ifesz@test\esz@tplace={.5}\fi%
+        \edef\esz@ma{?<>(\the\esz@tplace)%
+                     *{}="\the\esz@source-\the\esz@transcount"}%
+        \global\esz@xextend{\esz@ma}{\esz@transdrawing}%
+        \esz@testtoks{}{\esz@exitpoint}
+        \ifesz@test\else%
+            \edef\esz@ma{?<<<<*{}=%
+                    "\the\esz@source-\the\esz@transcount:\the\esz@exitpoint"}%
+            \global\esz@xextend{\esz@ma}{\esz@transdrawing}%
+        \fi%
+        % setup label drawing
+        \esz@testtoks{}{\esz@talign}
+        \ifesz@test\esz@talign={l}\fi%
+        \expandafter\esz@tolabeldist\the\esz@talign\esz@to\esz@mc%
+        \expandafter\esz@tocorner\the\esz@talign\esz@to\esz@md%
+        \edef\esz@ma{, "\the\esz@source-\the\esz@transcount" \esz@mc%
+                       *!\esz@md}%
+        \global\esz@xextend{\esz@ma}{\esz@labeldrawing}%
+        \global\esz@extend{\esz@drawlabel}{\esz@labeldrawing}%
+        \esz@testtoks{}{\esz@talias}
+        \ifesz@test%
+            \global\expandafter\esz@extbraced\expandafter{\the\esz@trans}%
+                                                  {\esz@labeldrawing}%
+        \else%
+            \global\expandafter\esz@extbraced\expandafter{\the\esz@talias}%
+                                                  {\esz@labeldrawing}%
+            \ifesz@labeldef%
+                 \global\esz@extend{\\}{\esz@labeldef}%
+            \fi
+            \global\esz@labeldeftrue%
+            \global\esz@xextend{\the\esz@talias}{\esz@labeldef}%
+            \global\esz@extend{:\begin{array}[t]{llllllll}}{\esz@labeldef}%
+            \global\esz@xextend{\the\esz@trans}{\esz@labeldef}%
+            \global\esz@extend{\end{array}}{\esz@labeldef}%
+        \fi%
+        \esz@testtoks{}{\esz@exitpoint}
+        \ifesz@test\else%
+      \edef\esz@ma{, "\the\esz@source-\the\esz@transcount:\the\esz@exitpoint"%
+           *\noexpand\esz@drawlabel{\noexpand\scriptstyle\the\esz@exitpoint}}%
+            \global\esz@xextend{\esz@ma}{\esz@labeldrawing}%
+        \fi%
+    \fi%
+}
+\def\esz@drawlabel#1{%
+    \esz@drawfilled{0pt}{0pt}{#1}%
+}
+\def\esz@tocorner#1\esz@to#2{
+    \def#2{}\esz@tocornerX{#2}#1*
+}
+\def\esz@tocornerX#1#2{
+    \ifx *#2 \cont@{}                                \else%
+    \ifx u#2 \cont@{\edef#1{#1U}\esz@tocornerX{#1}}  \else%
+    \ifx d#2 \cont@{\edef#1{#1D}\esz@tocornerX{#1}}  \else%
+    \ifx l#2 \cont@{\edef#1{#1L}\esz@tocornerX{#1}}  \else%
+    \ifx r#2 \cont@{\edef#1{#1R}\esz@tocornerX{#1}}  \else%
+    \ifx c#2 \cont@{\edef#1{#1C}\esz@tocornerX{#1}}  \else%
+             \cont@{\esz@tocornerX{#1}}              \fi\fi\fi\fi\fi\fi%
+    \cont@@
+}
+\def\esz@tolabeldist#1\esz@to#2{
+    \def#2{}\esz@tolabeldistX{#2}#1*
+}
+\def\esz@tolabeldistX#1#2{
+    \ifx *#2 \cont@{}                                                \else%
+    \ifx u#2 \cont@{\def#1{+ /d \eszlabeldist/}\esz@tolabeldistX{#1}}\else%
+    \ifx d#2 \cont@{\def#1{+ /u \eszlabeldist/}\esz@tolabeldistX{#1}}\else%
+    \ifx l#2 \cont@{\def#1{+ /r \eszlabeldist/}\esz@tolabeldistX{#1}}\else%
+    \ifx r#2 \cont@{\def#1{+ /l \eszlabeldist/}\esz@tolabeldistX{#1}}\else%
+    \ifx c#2 \cont@{\def#1{}\esz@tolabeldistX{#1}}                   \else%
+             \cont@{\esz@tolabeldistX{#1}}              \fi\fi\fi\fi\fi\fi%
+    \cont@@
+}
+\def\esz@initchart{%
+    \global\esz@X=0pt \global\esz@Y=\eszstretch\eszgridht%
+    \global\esz@W=\eszstretch\eszgridwd \global\esz@H=\eszstretch\eszgridht%
+    \global\esz@posdrawing={} \global\esz@statedrawing={}%
+    \global\esz@transdrawing={} \global\esz@labeldrawing={}%
+    \global\esz@labeldef={} \global\esz@labeldeffalse%
+    \global\def\esz@defaulthop{d}%
+    \global\esz@userlayoutfalse \global\esz@userlayout={}%
+}
+\def\esz@parsechart{%
+    \esz@p@stm%
+}
+\def\esz@calcchart{%
+    \esz@debug{\message{Position Drawing.} \showthe\esz@posdrawing}%
+    \esz@debug{\message{Transition Drawing.} \showthe\esz@transdrawing}%
+    \esz@debug{\message{State Drawing.} \showthe\esz@statedrawing}%
+    \esz@debug{\message{Label Drawing.} \showthe\esz@labeldrawing}%
+    \esz@debug{\message{Label Definitions.} \showthe\esz@labeldef}%
+    \esz@debug{\message{User Layout.} \showthe\esz@userlayout}%
+    \ifesz@userlayout
+        \global\setbox\esz@ba=\hbox{\the\esz@userlayout}
+        \global\setbox\esz@bb=\hbox{}%
+    \else
+        \esz@xextend{\the\esz@transdrawing}{\esz@posdrawing}
+        \esz@xextend{\the\esz@statedrawing}{\esz@posdrawing}
+        \esz@xextend{\the\esz@labeldrawing}{\esz@posdrawing}
+        {%\tracingcommands=0\tracingmacros=0
+        \ifesz@compile%
+            \esz@ta={\xycompile}%
+            \esz@xadd{{\the\esz@posdrawing}}{\esz@ta}%
+            \global\setbox\esz@ba=%
+                   \hbox{\expandafter\xy\the\esz@ta\endxy}%
+        \else%
+            \global\setbox\esz@ba=%
+                   \hbox{\expandafter\xy\the\esz@posdrawing\endxy}%
+        \fi%
+        \global\setbox\esz@bb=\hbox{}%
+        }%
+    \fi
+}
+\let\esz@cname=\esz@source
+\let\esz@cinst=\esz@instance
+\let\esz@bus=\esz@destin
+\let\esz@bussize=\esz@inrefp
+\let\esz@busorient=\esz@outrefp
+\let\esz@conn=\esz@trans
+\let\esz@conncount=\esz@transcount
+\let\esz@calias=\esz@talias
+\let\esz@calign=\esz@talign
+\let\esz@cplace=\esz@tplace
+\let\esz@cdir=\esz@exitpoint
+\let\esz@compdrawing=\esz@statedrawing
+\let\esz@conndrawing=\esz@transdrawing
+\long\def\esz@p@cstm#1{%
+    \esz@p@if{\layout}
+        {\esz@userlayouttrue\esz@p@userlayout}
+        {\esz@p@ifsetm{\esz@endtoks}%
+                 {\esz@p@end}% thats it
+                 {\esz@p@if{\bus}{\esz@p@bus}{\esz@p@comp}}}%
+        {#1}%
+}
+\long\def\esz@p@bus#1{%
+    \esz@bus={}\esz@bussize={}\esz@busorient={}%
+    \esz@p@ident{\esz@bus}%
+                {\esz@p@if{[}%
+                    {\esz@p@blayout%
+                       {\esz@p@token{]}%
+                           {\esz@drawbus\esz@p@nextcstm}}}
+                    {\esz@drawbus\esz@p@nextcstm}}%
+                {#1}%
+}
+\long\def\esz@p@blayout#1#2{%
+    \esz@p@if{h}%
+        {\esz@busorient={h}\esz@p@blayout{#1}}%
+        {\esz@p@if{v}%
+            {\esz@busorient={v}\esz@p@blayout{#1}}%
+            {\esz@p@ifset{(}%
+                 {\esz@bussize={}%
+                  \esz@p@factor{\esz@bussize}{\esz@p@blayout{#1}}}%
+                 {#1}}}%
+        {#2}%
+}
+\long\def\esz@p@comp#1{%
+    \esz@cname={}\esz@cinst={}\esz@conncount=1%
+    \esz@p@if{\self}%
+        {\esz@cname={\self}\esz@drawopenend\esz@p@conn}%
+        {\esz@p@ident{\esz@cname}%
+             {\esz@p@if{:}%
+                  {\esz@p@expr{\esz@cinst}%
+                       {\esz@drawcomp\esz@p@conn}}%
+                  {\esz@drawcomp\esz@p@conn}}}%
+        {#1}%
+}
+\long\def\esz@p@conn#1{%
+    \esz@p@if{\via}
+        {\esz@conn={}\esz@calign={}\esz@calias={}\esz@cplace={}\esz@bus={}%
+         \esz@cdir={}%
+         \esz@p@expr{\esz@conn}%
+             {\esz@p@token{\with}%
+                  {\esz@p@ident{\esz@bus}%
+                       {\esz@p@if{[}%
+                            {\esz@p@clayout%
+                                 {\esz@p@token{]}{\esz@p@nextconn}}}%
+                            {\esz@p@nextconn}}}}}%
+        {\esz@p@nextcstm}%
+        {#1}%
+}
+\long\def\esz@p@nextconn#1{%
+    \esz@drawconn%
+    \esz@p@if{,}{\advance\esz@conncount by 1\esz@p@conn}{\esz@p@nextcstm}{#1}%
+}
+\long\def\esz@p@clayout#1#2{%
+    \esz@p@if{=}%
+        {\esz@p@storenb{\esz@calias}{\esz@p@clayout{#1}}}%
+        {\esz@p@if{!}%
+             {\esz@calign={}\esz@cplace={}%
+              \esz@p@dir{\esz@calign}%
+                  {\esz@p@factor{\esz@cplace}{\esz@p@clayout{#1}}}}%
+             {\esz@p@if{^}%
+                  {\esz@cdir={}%
+                   \esz@p@dir{\esz@cdir}{\esz@p@clayout{#1}}}%
+                  {#1}}}%
+        {#2}%
+}
+\long\def\esz@p@nextcstm#1{%
+    \esz@p@if{;}%
+             {\esz@p@if{[}%
+                       {\esz@p@hops{\esz@p@token{]}\esz@p@cstm}}%
+                       {\edef\esz@ma{\noexpand\esz@p@nextcstm%
+                                     ;\esz@defaulthop}%
+                       \esz@ma}}%
+             {\esz@p@ifset{\end\layout\where}%
+                          {\esz@p@cstm}%
+                          {\esz@p@token{;}{\esz@p@cstm}}}%
+             {#1}%
+}
+\def\esz@drawbus{%
+    \esz@testtoks{}{\esz@busorient}%
+    \ifesz@test \esz@busorient={h} \fi%
+    \esz@testtoks{}{\esz@bussize}%
+    \ifesz@test \esz@bussize={3.0} \fi%
+    \esz@testtoks{h}{\esz@busorient}%
+    \ifesz@test%
+        \esz@da=\the\esz@bussize\eszgridwd% width of bus
+        \esz@W=.5\esz@da%                   the center of the drawing
+        \advance\esz@da by -0.4\eszgridwd%   let space for real width
+        \esz@db=\eszstateht%
+        \esz@H=-.5\eszgridht%
+    \else
+        \esz@db=\the\esz@bussize\eszgridht% height of bus
+        \esz@H=-.5\esz@db%                  the center of the drawing
+        \advance\esz@db by -0.4\eszgridht%   let space for real height
+        \esz@da=\eszstateht%               take the state height as width
+        \esz@W=.5\eszgridwd%
+    \fi
+    \esz@litdimenplus{\esz@X}{\esz@W}\esz@to\esz@Xm%
+    \esz@litdimenplus{\esz@Y}{\esz@H}\esz@to\esz@Ym%
+    \esz@litdimen{\esz@da}\esz@to\esz@Wm%
+    \esz@litdimen{\esz@db}\esz@to\esz@Hm%
+    \esz@xadd{%
+            , <\esz@Xm,\esz@Ym>%
+              *\esz@nondraft{i}%
+                     {\noexpand\esz@drawfilled{\esz@Wm}{\esz@Hm}%
+                                         {\the\esz@bus}}%
+              *\esz@nondraft{i}\noexpand\frm{-}%
+               ="\noexpand\bus\the\esz@bus"%
+    }{\esz@posdrawing}%
+    \ifesz@draft\else%
+        \esz@xadd{%
+        , "\noexpand\bus\the\esz@bus"%
+              *{\noexpand\esz@drawfilled{\esz@Wm}{\esz@Hm}%
+                                         {\the\esz@bus}}%
+              *\esz@psnondraft{[|(\eszstatebdwd)]}\noexpand\frm{-}%
+        }{\esz@compdrawing}%
+    \fi%
+    \esz@W=\eszstretch\eszgridwd \esz@H=\eszstretch\eszgridht%
+    \global\edef\esz@defaulthop{\eszbushop}%
+}
+\def\esz@drawopenend{
+    \esz@litdimenplus{\esz@X}{.5\eszgridwd}\esz@to\esz@Xm%
+    \esz@litdimenplus{\esz@Y}{-.5\eszgridht}\esz@to\esz@Ym%
+    \esz@ta=\expandafter{\esz@compname}%
+    \esz@xadd{%
+         , <\esz@Xm,\esz@Ym>%
+           *\esz@nondraft{i}\noexpand\esz@drawstatename{\the\esz@ta}%
+           *\esz@nondraft{i}\noexpand\frm<4pt>{.}%
+           ="\noexpand\self"%
+    }{\esz@posdrawing}%
+    \ifesz@draft\else%
+        \esz@xadd{%
+         , "\noexpand\self"%
+           *\noexpand\esz@drawstatename{\the\esz@ta}%
+           *\esz@psnondraft{[|(\eszstatebdwd)]}\noexpand\frm<4pt>{.}%
+        }{\esz@compdrawing}%
+    \fi%
+    \global\edef\esz@defaulthop{\eszcomphop}%
+}
+\def\esz@drawcomp{
+    \esz@litdimenplus{\esz@X}{.5\eszgridwd}\esz@to\esz@Xm%
+    \esz@litdimenplus{\esz@Y}{-.5\eszgridht}\esz@to\esz@Ym%
+    \esz@ta=\expandafter{\the\esz@cname}%
+    \esz@testtoks{}{\esz@cinst}%
+    \ifesz@test
+        \def\esz@ma{<4pt>}
+    \else
+        \esz@xadd{:\the\esz@cinst}{\esz@ta}
+        \def\esz@ma{<4pt>}
+    \fi
+    \esz@xadd{%
+         , <\esz@Xm,\esz@Ym>%
+           *\esz@nondraft{i}\noexpand\esz@drawstatename{\the\esz@ta}%
+           *\esz@nondraft{i}\noexpand\frm\esz@ma{-}%
+           ="\the\esz@cname"%
+    }{\esz@posdrawing}%
+    \ifesz@draft\else%
+        \esz@xadd{%
+         , "\the\esz@cname"%
+           *\noexpand\esz@drawstatename{\the\esz@ta}%
+           *\esz@psnondraft{[|(\eszstatebdwd)]}\noexpand\frm\esz@ma{-}%
+        }{\esz@compdrawing}%
+    \fi%
+    \global\edef\esz@defaulthop{\eszcomphop}%
+}
+\def\esz@drawconn{%
+    % setup connection drawing
+    \esz@testtoks{}{\esz@cplace}
+    \ifesz@test\esz@cplace={.5}\fi%
+    \esz@ta={\bus}
+    \esz@xextend{\the\esz@bus}{\esz@ta}
+    \esz@testtoks{u}{\esz@cdir}%
+    \ifesz@test%
+        \edef\esz@ma{%
+          , "\the\esz@cname"+UC="_1"%
+         , "_1";"_1"+/u 300pt/**hi{}?!{"\the\esz@ta"+DL;"\the\esz@ta"+DR}="_2"%
+        }
+    \else\esz@testtoks{d}{\esz@cdir}%
+    \ifesz@test%
+        \edef\esz@ma{%
+          , "\the\esz@cname"+DC="_1"%
+         , "_1";"_1"+/d 300pt/**hi{}?!{"\the\esz@ta"+UL;"\the\esz@ta"+UR}="_2"%
+        }
+    \else\esz@testtoks{l}{\esz@cdir}%
+    \ifesz@test%
+        \edef\esz@ma{%
+          , "\the\esz@cname"+LC="_1"%
+         , "_1";"_1"+/l 300pt/**hi{}?!{"\the\esz@ta"+RU;"\the\esz@ta"+RD}="_2"%
+        }
+    \else\esz@testtoks{r}{\esz@cdir}%
+    \ifesz@test%
+        \edef\esz@ma{%
+          , "\the\esz@cname"+RC="_1"%
+         , "_1";"_1"+/r 300pt/**hi{}?!{"\the\esz@ta"+LU;"\the\esz@ta"+LD}="_2"%
+        }
+    \else%no direction
+        \edef\esz@ma{%
+          , "\the\esz@cname"="_1", "\the\esz@ta"="_2"%
+        }
+    \fi\fi\fi\fi%
+    \edef\esz@mb{%
+        , "_1";"_2"**\esz@psnondraft{[|(\eszedgewd)]}%
+           \noexpand\dir{-}?<*{\bullet}?>*{\bullet}%
+            ?<>(\the\esz@cplace)*{}="\the\esz@cname-\the\esz@conncount"%
+    }
+    \global\esz@xextend{\esz@ma}{\esz@conndrawing}%
+    \global\esz@xextend{\esz@mb}{\esz@conndrawing}%
+    % setup label drawing
+    \esz@testtoks{}{\esz@calign}
+    \ifesz@test\esz@calign={c}\fi%
+    \expandafter\esz@tolabeldist\the\esz@calign\esz@to\esz@mc%
+    \expandafter\esz@tocorner\the\esz@calign\esz@to\esz@md%
+    \edef\esz@ma{, "\the\esz@cname-\the\esz@conncount" \esz@mc *!\esz@md}%
+    \global\esz@xextend{\esz@ma}{\esz@labeldrawing}%
+    \global\esz@extend{\esz@drawlabel}{\esz@labeldrawing}%
+    \esz@testtoks{}{\esz@calias}
+    \ifesz@test%
+        \global\expandafter\esz@extbraced\expandafter{\the\esz@conn}%
+                                              {\esz@labeldrawing}%
+    \else%
+        \global\expandafter\esz@extbraced\expandafter{\the\esz@calias}%
+                                              {\esz@labeldrawing}%
+        \ifesz@labeldef%
+             \global\esz@extend{\\}{\esz@labeldef}%
+        \fi
+        \global\esz@labeldeftrue%
+        \global\esz@xextend{\the\esz@calias}{\esz@labeldef}%
+        \global\esz@extend{& == &\begin{array}{llllllll}}{\esz@labeldef}%
+        \global\esz@xextend{\the\esz@conn}{\esz@labeldef}%
+        \global\esz@extend{\end{array}}{\esz@labeldef}%
+    \fi%
+}
+\def\esz@initconfig{%
+    \global\esz@X=0pt \global\esz@Y=\eszstretch\eszgridht%
+    \global\esz@W=\eszstretch\eszgridwd \global\esz@H=\eszstretch\eszgridht%
+    \global\esz@posdrawing={} \global\esz@compdrawing={}%
+    \global\esz@conndrawing={} \global\esz@labeldrawing={}%
+    \global\esz@labeldef={} \global\esz@labeldeffalse%
+    \global\esz@userlayoutfalse \global\esz@userlayout={}%
+}
+\def\esz@parseconfig{%
+    \esz@p@cstm%
+}
+\def\esz@calcconfig{%
+    \esz@debug{\message{Position Drawing.} \showthe\esz@posdrawing}%
+    \esz@debug{\message{Connection Drawing.} \showthe\esz@conndrawing}%
+    \esz@debug{\message{Component Drawing.} \showthe\esz@compdrawing}%
+    \esz@debug{\message{Label Drawing.} \showthe\esz@labeldrawing}%
+    \esz@debug{\message{Label Definitions.} \showthe\esz@labeldef}%
+    \esz@debug{\message{User Layout.} \showthe\esz@userlayout}%
+    \ifesz@userlayout%
+        \global\setbox\esz@ba=\hbox{\the\esz@userlayout}%
+        \global\setbox\esz@bb=\hbox{}%
+    \else
+        \esz@xextend{\the\esz@conndrawing}{\esz@posdrawing}
+        \esz@xextend{\the\esz@compdrawing}{\esz@posdrawing}
+        \esz@xextend{\the\esz@labeldrawing}{\esz@posdrawing}
+        \ifesz@compile%
+            \esz@ta={\xy\xycompile}%
+            \esz@xadd{{\the\esz@posdrawing}\noexpand\endxy\noexpand}{\esz@ta}%
+            \global\setbox\esz@ba=\hbox{\the\esz@ta}%
+        \else%
+            \global\setbox\esz@ba=%
+                   \hbox{\expandafter\xy\the\esz@posdrawing\endxy}%
+        \fi%
+        \global\setbox\esz@bb=\hbox{}%
+    \fi
+}
+\def\Data{D\!\mbox{\footnotesize\emph{ATA}}}
+\def\Init{I\!\mbox{\footnotesize\emph{NIT}}}
+\def\Port{P\!\mbox{\footnotesize\emph{ORT}}}
+\def\Behaviour{B\!\mbox{\footnotesize\emph{EHAVIOUR}}}
+\def\Op{O\!\mbox{\footnotesize\emph{P}}}
+\def\Trans{T\!\mbox{\footnotesize\emph{RANS}}}
+\def\Guard{G\!\mbox{\footnotesize\emph{UARD}}}
+\def\Temporal{T\!\mbox{\footnotesize\emph{EMPORAL}}}
+\def\Dynamic{D\!\mbox{\footnotesize\emph{YNAMIC}}}
+\def\Subchart{S\!\mbox{\footnotesize\emph{UBCHART}}}
+\def\Chart{C\!\mbox{\footnotesize\emph{HART}}}
+\def\Config{C\!\mbox{\footnotesize\emph{ONFIG}}}
+\def\Xor{X\!\mbox{\footnotesize\emph{OR}}}
+\def\Xand{X\!\mbox{\footnotesize\emph{AND}}}
+
+\def\Enrich{E\!\mbox{\footnotesize\emph{NRICH}}}
+\def\State{S\!\mbox{\footnotesize\emph{TATE}}}
+\def\Connector{C\!\mbox{\footnotesize\emph{ONNECTOR}}}
+\def\When{W\!\mbox{\footnotesize\emph{HEN}}}
+\def\Goto{G\!\mbox{\footnotesize\emph{OTO}}}
+\def\Aggreg{A\!\mbox{\footnotesize\emph{GGREG}}}
+\def\Assoc{A\!\mbox{\footnotesize\emph{SSOC}}}
+\def\To{T\!\mbox{\footnotesize\emph{O}}}
+\def\Flow{F\!\mbox{\footnotesize\emph{LOW}}}
+
+\def\component{%
+    \@ifnextchar[{\esz@component}{\esz@component[s]}%
+}
+\def\esz@component[#1]#2{%
+    \ifz@incomponent%
+       \if s#1\else%
+           \esz@error{No continuation references in nested components}%
+       \fi%
+       \z@innestedcomponenttrue%
+    \else%
+      \gdef\esz@compmode{#1}%
+      \gdef\esz@compname{#2}%
+    \fi
+    \ifesz@outerbox%
+        \z@leavevmode\z@makeouter\z@incomponenttrue%
+        \z@boxenv\z@topline{$\,#2\,$}%
+    \else%
+        \z@outnonbox\z@inboxfalse\z@incomponenttrue%
+        \z@format%
+    \fi%
+    \if s\esz@compmode\else%
+        \if f\esz@compmode% initialize label macro
+            \expandafter\xdef\csname esz@l@\esz@compname\endcsname%
+                      {component:\esz@compname}%
+        \fi%
+        \expandafter\ifx\csname esz@l@\esz@compname\endcsname\relax%
+            \esz@error{no previous fragment of `\esz@compname' to refer to}%
+            \expandafter\xdef\csname esz@l@\esz@compname\endcsname%
+                      {component:\esz@compname}%
+        \fi%
+        \expandafter\xdef\expandafter\esz@complabelval\expandafter%
+                 {\csname esz@l@\esz@compname\endcsname}%
+        \expandafter\xdef\csname esz@l@\esz@compname\endcsname%
+                      {\esz@complabelval+}%
+        \expandafter\label\expandafter{\esz@complabelval+}%
+    \fi%
+    \if l\esz@compmode%
+        \ifesz@outerbox\mbox\bgroup\footnotesize%
+                       \else#2\quad\mbox\bgroup\footnotesize\fi%
+        \expandafter\esz@backref\expandafter{\esz@complabelval}
+        \ifesz@outerbox\else\fi\egroup
+        \\
+    \else%
+    \if c\esz@compmode%
+        \ifesz@outerbox\mbox\bgroup\footnotesize
+                       \else#2\quad\mbox\bgroup\footnotesize\fi
+        \expandafter\esz@backref\expandafter{\esz@complabelval}
+        \ifesz@outerbox\else\fi\egroup
+        \\
+    \else%
+    \ifesz@outerbox\else
+         #2\quad\mbox{\footnotesize\esz@firsttext} \\
+    \fi\fi\fi%
+}
+\def\endcomponent{%
+    \ifz@innestedcomponent\else%
+    \if f\esz@compmode%
+        \\
+        \ifesz@outerbox\mbox\bgroup\footnotesize
+                       \else\esz@compname\quad\mbox\bgroup\footnotesize\fi
+        \expandafter\esz@forwref\expandafter{\esz@complabelval++}
+        \ifesz@outerbox\else\fi\egroup
+    \else%
+    \if c\esz@compmode%
+        \\
+        \ifesz@outerbox\mbox\bgroup\footnotesize
+                       \else\esz@compname\quad\mbox\bgroup\footnotesize\fi
+        \expandafter\esz@forwref\expandafter{\esz@complabelval++}
+        \ifesz@outerbox\else\fi\egroup
+    \else%
+    \ifesz@outerbox\else%
+         \\ \esz@compname\quad\mbox{\footnotesize \esz@lasttext}%
+    \fi\fi\fi\fi%
+    \ifesz@outerbox%
+        \z@botline\endzed\z@makeinner\z@nopar%
+    \else%
+        \endzed\z@nopar%
+    \fi%
+}
+\let\class\component
+\let\endclass\endcomponent
+\let\process\component
+\let\endprocess\endcomponent
+\def\op#1{\z@incomponentcheck\schema{\Op\;#1}}
+\let\endop\endschema
+\def\data#1{\z@incomponentcheck\schema{\Data\;#1}}
+\let\enddata\endschema
+\def\init#1{\z@incomponentcheck\schema{\Init\;#1}}
+\let\endinit\endschema
+\def\temporal#1{\schema{\Temporal\;#1}}
+\let\endtemporal\endschema
+\def\dynamic#1{\schema{\Dynamic\;#1}}
+\let\enddynamic\endschema
+\def\port#1{\z@incomponentcheck\schema{\Port\;#1}}
+\let\endport\endschema
+\@namedef{port*}{\z@incomponentcheck\schema{\Port}}
+\expandafter\let\csname endport*\endcsname=\endschema
+
+\def\behaviour#1{\z@incomponentcheck\schema{\Behaviour\;#1}}
+\let\endbehaviour\endschema
+\def\guard#1{\z@incomponentcheck\schema{\Guard\;#1}}
+\let\endguard\endschema
+\def\trans#1{%
+    \z@incomponenttrue%
+    \schema{\Trans\;#1}%
+}
+\let\endtrans\endschema
+\def\xor#1{\z@incomponentcheck\schema{\Xor\;#1}}
+\let\endxor\endschema
+\def\xand#1{\z@incomponentcheck\schema{\Xand\;#1}}
+\let\endxand\endschema
+\def\config#1{\z@incomponentcheck\schema{\Config\;#1}}
+\let\endconfig\endschema
+\def\subchart#1{
+    \z@leavevmode\z@makeouter\z@incomponenttrue%
+    \z@boxenv\z@topline{$\,\Subchart\;#1\,$}%
+    \esz@initchart%
+    \let\chart\esz@parsechart%
+    \let\endsubchart\esz@finalendsubchart%
+    \let\esz@ozwhere\where%
+    \let\where\esz@innerendsubchart%
+}
+\def\esz@innerendsubchart{%
+    \esz@calcchart%
+    \let\where\esz@ozwhere%
+    \where% closes a group!
+    \hbox{\box\esz@ba}%
+    \als@%
+    \let\endsubchart\esz@endsubchart
+}
+\def\esz@finalendsubchart{%
+    \esz@calcchart%
+    \let\where\esz@ozwhere%
+    \where% closes a group!
+    \hbox{\box\esz@ba}%
+    \als@%
+    \esz@endsubchart%
+}
+\def\esz@endsubchart{%
+    \z@botline\endzed\z@makeinner\z@nopar%
+}
+\def\chart{%
+    \esz@setcatcodes%
+    \begin{schema}{\Chart}%
+    \esz@initchart%
+    \esz@parsechart%
+}
+\def\endchart{%
+    \esz@calcchart%
+    \hbox{\box\esz@ba}%
+    \also%
+    \ifesz@labeldef%
+        \where%
+        \box\esz@bb
+    \fi%
+    \end{schema}
+}
+\def\oldconfig{%
+    \esz@setcatcodes%
+    \begin{schema*}%
+    \esz@initconfig%
+    \esz@parseconfig%
+}
+\def\endoldconfig{%
+    \esz@calcconfig%
+    \hbox{\box\esz@ba}%
+    \also%
+    \ifesz@labeldef%
+        \where%
+        \box\esz@bb
+    \fi%
+    \end{schema*}
+}
+\fi % \ifesz@msz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifesz@dqactive
+    \catcode`\"=13
+\fi
+\endinput
+%% 
+%% End of file `esz.sty'.

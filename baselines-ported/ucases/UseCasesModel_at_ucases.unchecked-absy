@@ -1,0 +1,2954 @@
+<1>UnitAbsy.Section
+(LTX:UseCasesModel#ucases,
+ {LTX:Toolkit#Toolkit},
+ {<2>Item.AxiomaticDef
+  ({<3>NameDecl
+    (\alpha,
+     <4>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(12.28-12.33);
+     }),
+    <5>NameDecl
+    (\pi,
+     <6>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(12.35-12.37);
+     })},
+   <7>Expr.Text
+   ({<8>Expr.Decl.Eqn
+     (<9>NameDecl
+      (Interaction,
+       <10>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(12.16-12.26);
+       }),
+      <11>Expr.Text
+      ({<12>Expr.Decl.Direct
+        ({<13>NameDecl
+          (actor,
+           <14>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(13.3-13.7);
+           })},
+         <15>Expr.Variable
+         (<16>NameAppl
+          (\alpha,
+           {},
+           <17>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(13.10-13.15);
+           }),
+          <18>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(13.10-13.15);
+          }),
+         <19>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(13.3-13.15);
+         }),
+        <20>Expr.Decl.Direct
+        ({<21>NameDecl
+          (action,
+           <22>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(13.18-13.23);
+           })},
+         <23>Expr.Variable
+         (<24>NameAppl
+          (\pi,
+           {},
+           <25>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(13.26-13.28);
+           }),
+          <26>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(13.26-13.28);
+          }),
+         <27>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(13.18-13.28);
+         })},
+       {},
+       <28>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(12.1-14.12);
+       }),
+      <29>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(12.1-14.12);
+      })},
+    {},
+    <30>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(12.1-14.12);
+    }),
+   <31>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(12.1-14.12);
+   }),
+  <32>Item.AxiomaticDef
+  ({<33>NameDecl
+    (\alpha,
+     <34>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(16.12-16.17);
+     }),
+    <35>NameDecl
+    (\pi,
+     <36>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(16.19-16.21);
+     })},
+   <37>Expr.Text
+   ({<38>Expr.Decl.Eqn
+     (<39>NameDecl
+      (Dialogue,
+       <40>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(16.3-16.22);
+       }),
+      <41>Expr.Variable
+      (<42>NameAppl
+       (\seq_,
+        {<43>Expr.Variable
+         (<44>NameAppl
+          (Interaction,
+           {<45>Expr.Variable
+            (<46>NameAppl
+             (\alpha,
+              {},
+              <47>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(16.44-16.49);
+              }),
+             <48>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(16.44-16.49);
+             }),
+            <49>Expr.Variable
+            (<50>NameAppl
+             (\pi,
+              {},
+              <51>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(16.51-16.53);
+              }),
+             <52>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(16.51-16.53);
+             })},
+           <53>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(16.32-16.54);
+           }),
+          <54>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(16.32-16.54);
+          })},
+        <55>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(16.27-16.54);
+        }),
+       <56>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(16.27-16.54);
+       }),
+      <57>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(16.3-16.54);
+      })},
+    {},
+    <58>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(16.3-16.54);
+    }),
+   <59>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(16.3-16.54);
+   }),
+  <60>Item.AxiomaticDef
+  ({<61>NameDecl
+    (\alpha,
+     <62>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(25.11-25.16);
+     }),
+    <63>NameDecl
+    (\pi,
+     <64>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(25.18-25.20);
+     }),
+    <65>NameDecl
+    (\Sigma,
+     <66>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(25.22-25.27);
+     })},
+   <67>Expr.Text
+   ({<68>Expr.Decl.Eqn
+     (<69>NameDecl
+      (Pattern,
+       <70>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(25.3-25.28);
+       }),
+      <71>Expr.Variable
+      (<72>NameAppl
+       (\seq_,
+        {<73>Expr.Product
+         ({<74>Expr.Variable
+           (<75>NameAppl
+            (Interaction,
+             {<76>Expr.Variable
+              (<77>NameAppl
+               (\alpha,
+                {},
+                <78>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(26.23-26.28);
+                }),
+               <79>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(26.23-26.28);
+               }),
+              <80>Expr.Variable
+              (<81>NameAppl
+               (\pi,
+                {},
+                <82>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(26.30-26.32);
+                }),
+               <83>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(26.30-26.32);
+               })},
+             <84>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(26.11-26.33);
+             }),
+            <85>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(26.11-26.33);
+            }),
+           <86>Expr.Variable
+           (<87>NameAppl
+            (_\rel_,
+             {<88>Expr.Variable
+              (<89>NameAppl
+               (\Sigma,
+                {},
+                <90>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(26.43-26.48);
+                }),
+               <91>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(26.43-26.48);
+               }),
+              <92>Expr.Variable
+              (<93>NameAppl
+               (\Sigma,
+                {},
+                <94>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(26.55-26.60);
+                }),
+               <95>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(26.55-26.60);
+               })},
+             <96>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(26.43-26.60);
+             }),
+            <97>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(26.43-26.60);
+            })},
+          <98>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(26.11-26.60);
+          })},
+        <99>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(26.5-26.60);
+        }),
+       <100>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(26.5-26.60);
+       }),
+      <101>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(25.3-26.60);
+      })},
+    {},
+    <102>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(25.3-26.60);
+    }),
+   <103>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(25.3-26.60);
+   }),
+  <104>Item.AxiomaticDef
+  ({<105>NameDecl
+    (\alpha,
+     <106>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(27.12-27.17);
+     }),
+    <107>NameDecl
+    (\pi,
+     <108>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(27.19-27.21);
+     }),
+    <109>NameDecl
+    (\Sigma,
+     <110>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(27.23-27.28);
+     })},
+   <111>Expr.Text
+   ({<112>Expr.Decl.Eqn
+     (<113>NameDecl
+      (Fragment,
+       <114>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(27.3-27.29);
+       }),
+      <115>Expr.Unary
+      (Power,
+       <116>Expr.Variable
+       (<117>NameAppl
+        (Pattern,
+         {<118>Expr.Variable
+          (<119>NameAppl
+           (\alpha,
+            {},
+            <120>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(28.20-28.25);
+            }),
+           <121>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(28.20-28.25);
+           }),
+          <122>Expr.Variable
+          (<123>NameAppl
+           (\pi,
+            {},
+            <124>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(28.27-28.29);
+            }),
+           <125>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(28.27-28.29);
+           }),
+          <126>Expr.Variable
+          (<127>NameAppl
+           (\Sigma,
+            {},
+            <128>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(28.31-28.36);
+            }),
+           <129>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(28.31-28.36);
+           })},
+         <130>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(28.12-28.37);
+         }),
+        <131>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(28.12-28.37);
+        }),
+       <132>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(28.5-28.37);
+       }),
+      <133>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(27.3-28.37);
+      })},
+    {},
+    <134>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(27.3-28.37);
+    }),
+   <135>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(27.3-28.37);
+   }),
+  <136>Item.EmbeddedText
+  (<137>Text.ZedFixity((65): (66) \ucmki (66),LTX:ucspec.tex(36.3-36.31),,
+   <138>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(36.3-36.31);
+   }),
+  <139>Item.EmbeddedText
+  (<140>Text.ZedFixity((60): (61) \ucmk (61),LTX:ucspec.tex(37.3-37.30),,
+   <141>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(37.3-37.30);
+   }),
+  <142>Item.EmbeddedText
+  (<143>Text.ZedFixity
+   ((60): (61) \ucmkt (0) \uctrans (61),LTX:ucspec.tex(38.3-38.43),,
+   <144>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(38.3-38.43);
+   }),
+  <145>Item.EmbeddedText
+  (<146>Text.ZedFixity((50): (51) \ucthen (50),LTX:ucspec.tex(40.3-40.44),,
+   <147>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(40.3-40.44);
+   }),
+  <148>Item.EmbeddedText
+  (<149>Text.ZedFixity
+   ((40): (40) \ucexcept (41),LTX:ucspec.tex(41.3-41.45),,
+   <150>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(41.3-41.45);
+   }),
+  <151>Item.AxiomaticDef
+  ({<152>NameDecl
+    (\alpha,
+     <153>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(43.15-43.20);
+     }),
+    <154>NameDecl
+    (\pi,
+     <155>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(43.22-43.24);
+     })},
+   <156>Expr.Text
+   ({<157>Expr.Decl.Eqn
+     (<158>NameDecl
+      (_\ucmki_,
+       <159>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(44.3-44.14);
+       }),
+      <160>Expr.Quantor
+      (Lambda,
+       <161>Expr.Text
+       ({<162>Expr.Decl.Direct
+         ({<163>NameDecl
+           (actor,
+            <164>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(45.13-45.17);
+            })},
+          <165>Expr.Variable
+          (<166>NameAppl
+           (\alpha,
+            {},
+            <167>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(45.20-45.25);
+            }),
+           <168>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(45.20-45.25);
+           }),
+          <169>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(45.13-45.25);
+          }),
+         <170>Expr.Decl.Direct
+         ({<171>NameDecl
+           (action,
+            <172>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(45.28-45.33);
+            })},
+          <173>Expr.Variable
+          (<174>NameAppl
+           (\pi,
+            {},
+            <175>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(45.36-45.38);
+            }),
+           <176>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(45.36-45.38);
+           }),
+          <177>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(45.28-45.38);
+          })},
+        {},
+        <178>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(45.13-45.38);
+        }),
+       <179>Expr.Unary
+       (Theta,
+        <180>Expr.Variable
+        (<181>NameAppl
+         (Interaction,
+          {<182>Expr.Variable
+           (<183>NameAppl
+            (\alpha,
+             {},
+             <184>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(46.26-46.31);
+             }),
+            <185>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(46.26-46.31);
+            }),
+           <186>Expr.Variable
+           (<187>NameAppl
+            (\pi,
+             {},
+             <188>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(46.33-46.35);
+             }),
+            <189>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(46.33-46.35);
+            })},
+          <190>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(46.14-46.36);
+          }),
+         <191>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(46.14-46.36);
+         }),
+        <192>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(46.7-46.36);
+        }),
+       <193>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(45.5-46.36);
+       }),
+      <194>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(44.3-46.36);
+      })},
+    {},
+    <195>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(43.1-47.11);
+    }),
+   <196>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(43.1-47.11);
+   }),
+  <197>Item.AxiomaticDef
+  ({<198>NameDecl
+    (\alpha,
+     <199>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(48.15-48.20);
+     }),
+    <200>NameDecl
+    (\pi,
+     <201>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(48.22-48.24);
+     }),
+    <202>NameDecl
+    (\Sigma,
+     <203>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(48.26-48.31);
+     })},
+   <204>Expr.Text
+   ({<205>Expr.Decl.Eqn
+     (<206>NameDecl
+      (_\ucmkt_\uctrans_,
+       <207>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(49.3-49.26);
+       }),
+      <208>Expr.Quantor
+      (Lambda,
+       <209>Expr.Text
+       ({<210>Expr.Decl.Direct
+         ({<211>NameDecl
+           (actor,
+            <212>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(50.13-50.17);
+            })},
+          <213>Expr.Variable
+          (<214>NameAppl
+           (\alpha,
+            {},
+            <215>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(50.20-50.25);
+            }),
+           <216>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(50.20-50.25);
+           }),
+          <217>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(50.13-50.25);
+          }),
+         <218>Expr.Decl.Direct
+         ({<219>NameDecl
+           (action,
+            <220>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(50.28-50.33);
+            })},
+          <221>Expr.Variable
+          (<222>NameAppl
+           (\pi,
+            {},
+            <223>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(50.36-50.38);
+            }),
+           <224>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(50.36-50.38);
+           }),
+          <225>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(50.28-50.38);
+          }),
+         <226>Expr.Decl.Direct
+         ({<227>NameDecl
+           (r,
+            <228>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(50.41-50.41);
+            })},
+          <229>Expr.Variable
+          (<230>NameAppl
+           (_\rel_,
+            {<231>Expr.Variable
+             (<232>NameAppl
+              (\Sigma,
+               {},
+               <233>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(50.44-50.49);
+               }),
+              <234>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(50.44-50.49);
+              }),
+             <235>Expr.Variable
+             (<236>NameAppl
+              (\Sigma,
+               {},
+               <237>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(50.56-50.61);
+               }),
+              <238>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(50.56-50.61);
+              })},
+            <239>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(50.44-50.61);
+            }),
+           <240>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(50.44-50.61);
+           }),
+          <241>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(50.41-50.61);
+          })},
+        {},
+        <242>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(50.13-50.61);
+        }),
+       <243>Expr.Display
+       ({<244>Expr.Binary
+         (Apply,
+          <245>Expr.Variable
+          (<246>NameAppl
+           (\langle,,\rangle,
+            {},
+            <247>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(51.9-51.48);
+            }),
+           <248>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(51.9-51.48);
+           }),
+          <249>Expr.Display
+          ({<250>Expr.Tuple
+            ({<251>Expr.Number
+              ("1",
+               <252>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(51.17-51.40);
+               }),
+              <253>Expr.Tuple
+              ({<254>Expr.Binary
+                (Apply,
+                 <255>Expr.Variable
+                 (<256>NameAppl
+                  (_\ucmki_,
+                   {},
+                   <257>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(51.18-51.36);
+                   }),
+                  <258>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(51.18-51.36);
+                  }),
+                 <259>Expr.Tuple
+                 ({<260>Expr.Variable
+                   (<261>NameAppl
+                    (actor,
+                     {},
+                     <262>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:ucspec.tex(51.18-51.22);
+                     }),
+                    <263>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(51.18-51.22);
+                    }),
+                   <264>Expr.Variable
+                   (<265>NameAppl
+                    (action,
+                     {},
+                     <266>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:ucspec.tex(51.31-51.36);
+                     }),
+                    <267>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(51.31-51.36);
+                    })},
+                  <268>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(51.18-51.36);
+                  }),
+                 <269>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(51.18-51.36);
+                 }),
+                <270>Expr.Variable
+                (<271>NameAppl
+                 (r,
+                  {},
+                  <272>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(51.39-51.39);
+                  }),
+                 <273>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(51.39-51.39);
+                 })},
+               <274>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(51.17-51.40);
+               })},
+             <275>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(51.17-51.40);
+             })},
+           <276>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(51.9-51.48);
+           }),
+          <277>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(51.9-51.48);
+          })},
+        <278>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(51.7-51.50);
+        }),
+       <279>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(50.5-51.50);
+       }),
+      <280>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(49.3-51.50);
+      })},
+    {},
+    <281>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(48.1-52.11);
+    }),
+   <282>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(48.1-52.11);
+   }),
+  <283>Item.AxiomaticDef
+  ({<284>NameDecl
+    (\alpha,
+     <285>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(53.15-53.20);
+     }),
+    <286>NameDecl
+    (\pi,
+     <287>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(53.22-53.24);
+     }),
+    <288>NameDecl
+    (\Sigma,
+     <289>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(53.26-53.31);
+     })},
+   <290>Expr.Text
+   ({<291>Expr.Decl.Eqn
+     (<292>NameDecl
+      (_\ucmk_,
+       <293>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(54.3-54.13);
+       }),
+      <294>Expr.Quantor
+      (Lambda,
+       <295>Expr.Text
+       ({<296>Expr.Decl.Direct
+         ({<297>NameDecl
+           (actor,
+            <298>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(55.13-55.17);
+            })},
+          <299>Expr.Variable
+          (<300>NameAppl
+           (\alpha,
+            {},
+            <301>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(55.20-55.25);
+            }),
+           <302>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(55.20-55.25);
+           }),
+          <303>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(55.13-55.25);
+          }),
+         <304>Expr.Decl.Direct
+         ({<305>NameDecl
+           (action,
+            <306>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(55.28-55.33);
+            })},
+          <307>Expr.Variable
+          (<308>NameAppl
+           (\pi,
+            {},
+            <309>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(55.36-55.38);
+            }),
+           <310>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(55.36-55.38);
+           }),
+          <311>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(55.28-55.38);
+          })},
+        {},
+        <312>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(55.13-55.38);
+        }),
+       <313>Expr.Binary
+       (Apply,
+        <314>Expr.Variable
+        (<315>NameAppl
+         (_\ucmkt_\uctrans_,
+          {},
+          <316>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(56.10-56.48);
+          }),
+         <317>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(56.10-56.48);
+         }),
+        <318>Expr.Tuple
+        ({<319>Expr.Variable
+          (<320>NameAppl
+           (actor,
+            {},
+            <321>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(56.10-56.14);
+            }),
+           <322>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(56.10-56.14);
+           }),
+          <323>Expr.Variable
+          (<324>NameAppl
+           (action,
+            {},
+            <325>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(56.23-56.28);
+            }),
+           <326>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(56.23-56.28);
+           }),
+          <327>Expr.Variable
+          (<328>NameAppl
+           (\id_,
+            {<329>Expr.Variable
+             (<330>NameAppl
+              (\Sigma,
+               {},
+               <331>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(56.43-56.48);
+               }),
+              <332>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(56.43-56.48);
+              })},
+            <333>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(56.39-56.48);
+            }),
+           <334>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(56.39-56.48);
+           })},
+         <335>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(56.10-56.48);
+         }),
+        <336>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(56.10-56.48);
+        }),
+       <337>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(55.5-56.48);
+       }),
+      <338>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(54.3-56.48);
+      })},
+    {},
+    <339>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(53.1-57.11);
+    }),
+   <340>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(53.1-57.11);
+   }),
+  <341>Item.AxiomaticDef
+  ({<342>NameDecl
+    (\alpha,
+     <343>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(58.15-58.20);
+     }),
+    <344>NameDecl
+    (\pi,
+     <345>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(58.22-58.24);
+     }),
+    <346>NameDecl
+    (\Sigma,
+     <347>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(58.26-58.31);
+     })},
+   <348>Expr.Text
+   ({<349>Expr.Decl.Eqn
+     (<350>NameDecl
+      (_\ucthen_,
+       <351>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(59.3-59.15);
+       }),
+      <352>Expr.Quantor
+      (Lambda,
+       <353>Expr.Text
+       ({<354>Expr.Decl.Direct
+         ({<355>NameDecl
+           (f,
+            <356>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(60.13-60.13);
+            }),
+           <357>NameDecl
+           (f',
+            <358>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(60.15-60.16);
+            })},
+          <359>Expr.Variable
+          (<360>NameAppl
+           (Fragment,
+            {<361>Expr.Variable
+             (<362>NameAppl
+              (\alpha,
+               {},
+               <363>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(60.28-60.33);
+               }),
+              <364>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(60.28-60.33);
+              }),
+             <365>Expr.Variable
+             (<366>NameAppl
+              (\pi,
+               {},
+               <367>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(60.35-60.37);
+               }),
+              <368>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(60.35-60.37);
+              }),
+             <369>Expr.Variable
+             (<370>NameAppl
+              (\Sigma,
+               {},
+               <371>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(60.39-60.44);
+               }),
+              <372>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(60.39-60.44);
+              })},
+            <373>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(60.19-60.45);
+            }),
+           <374>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(60.19-60.45);
+           }),
+          <375>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(60.13-60.45);
+          })},
+        {},
+        <376>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(60.13-60.45);
+        }),
+       <377>Expr.Quantor
+       (Set,
+        <378>Expr.Text
+        ({<379>Expr.Decl.Direct
+          ({<380>NameDecl
+            (p,
+             <381>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(61.10-61.10);
+             })},
+           <382>Expr.Variable
+           (<383>NameAppl
+            (f,
+             {},
+             <384>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(61.13-61.13);
+             }),
+            <385>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(61.13-61.13);
+            }),
+           <386>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(61.10-61.13);
+           }),
+          <387>Expr.Decl.Direct
+          ({<388>NameDecl
+            (p',
+             <389>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(61.16-61.17);
+             })},
+           <390>Expr.Variable
+           (<391>NameAppl
+            (f',
+             {},
+             <392>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(61.20-61.21);
+             }),
+            <393>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(61.20-61.21);
+            }),
+           <394>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(61.16-61.21);
+           })},
+         {},
+         <395>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(61.10-61.21);
+         }),
+        <396>Expr.Binary
+        (Apply,
+         <397>Expr.Variable
+         (<398>NameAppl
+          (_\cat_,
+           {},
+           <399>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(61.25-61.33);
+           }),
+          <400>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(61.25-61.33);
+          }),
+         <401>Expr.Tuple
+         ({<402>Expr.Variable
+           (<403>NameAppl
+            (p,
+             {},
+             <404>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(61.25-61.25);
+             }),
+            <405>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(61.25-61.25);
+            }),
+           <406>Expr.Variable
+           (<407>NameAppl
+            (p',
+             {},
+             <408>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(61.32-61.33);
+             }),
+            <409>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(61.32-61.33);
+            })},
+          <410>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(61.25-61.33);
+          }),
+         <411>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(61.25-61.33);
+         }),
+        <412>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(61.7-61.36);
+        }),
+       <413>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(60.5-61.36);
+       }),
+      <414>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(59.3-61.36);
+      })},
+    {},
+    <415>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(58.1-62.11);
+    }),
+   <416>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(58.1-62.11);
+   }),
+  <417>Item.AxiomaticDef
+  ({<418>NameDecl
+    (\alpha,
+     <419>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(63.15-63.20);
+     }),
+    <420>NameDecl
+    (\pi,
+     <421>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(63.22-63.24);
+     }),
+    <422>NameDecl
+    (\Sigma,
+     <423>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(63.26-63.31);
+     })},
+   <424>Expr.Text
+   ({<425>Expr.Decl.Eqn
+     (<426>NameDecl
+      (\ucrepeat,
+       <427>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(64.2-64.10);
+       }),
+      <428>Expr.Quantor
+      (Lambda,
+       <429>Expr.Text
+       ({<430>Expr.Decl.Direct
+         ({<431>NameDecl
+           (f,
+            <432>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(64.23-64.23);
+            })},
+          <433>Expr.Variable
+          (<434>NameAppl
+           (Fragment,
+            {<435>Expr.Variable
+             (<436>NameAppl
+              (\alpha,
+               {},
+               <437>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(64.35-64.40);
+               }),
+              <438>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(64.35-64.40);
+              }),
+             <439>Expr.Variable
+             (<440>NameAppl
+              (\pi,
+               {},
+               <441>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(64.42-64.44);
+               }),
+              <442>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(64.42-64.44);
+              }),
+             <443>Expr.Variable
+             (<444>NameAppl
+              (\Sigma,
+               {},
+               <445>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(64.46-64.51);
+               }),
+              <446>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(64.46-64.51);
+              })},
+            <447>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(64.26-64.52);
+            }),
+           <448>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(64.26-64.52);
+           }),
+          <449>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(64.23-64.52);
+          })},
+        {},
+        <450>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(64.23-64.52);
+        }),
+       <451>Expr.Binary
+       (Apply,
+        <452>Expr.Variable
+        (<453>NameAppl
+         (_\limg_\rimg,
+          {},
+          <454>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(65.5-66.35);
+          }),
+         <455>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(65.5-66.35);
+         }),
+        <456>Expr.Tuple
+        ({<457>Expr.Binary
+          (Apply,
+           <458>Expr.Variable
+           (<459>NameAppl
+            (_\star,
+             {},
+             <460>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(65.5-65.75);
+             }),
+            <461>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(65.5-65.75);
+            }),
+           <462>Expr.Quantor
+           (Set,
+            <463>Expr.Text
+            ({<464>Expr.Decl.Direct
+              ({<465>NameDecl
+                (p_1,
+                 <466>
+                 Annotation {
+                   Locator zeta.session.Locator: LTX:ucspec.tex(65.7-65.9);
+                 })},
+               <467>Expr.Variable
+               (<468>NameAppl
+                (Pattern,
+                 {<469>Expr.Variable
+                  (<470>NameAppl
+                   (\alpha,
+                    {},
+                    <471>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(65.20-65.25);
+                    }),
+                   <472>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(65.20-65.25);
+                   }),
+                  <473>Expr.Variable
+                  (<474>NameAppl
+                   (\pi,
+                    {},
+                    <475>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(65.27-65.29);
+                    }),
+                   <476>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(65.27-65.29);
+                   }),
+                  <477>Expr.Variable
+                  (<478>NameAppl
+                   (\Sigma,
+                    {},
+                    <479>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(65.31-65.36);
+                    }),
+                   <480>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(65.31-65.36);
+                   })},
+                 <481>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(65.12-65.37);
+                 }),
+                <482>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(65.12-65.37);
+                }),
+               <483>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(65.7-65.37);
+               }),
+              <484>Expr.Decl.Direct
+              ({<485>NameDecl
+                (p_2,
+                 <486>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(65.40-65.42);
+                 })},
+               <487>Expr.Variable
+               (<488>NameAppl
+                (f,
+                 {},
+                 <489>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(65.46-65.46);
+                 }),
+                <490>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(65.46-65.46);
+                }),
+               <491>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(65.40-65.46);
+               })},
+             {},
+             <492>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(65.7-65.46);
+             }),
+            <493>Expr.Tuple
+            ({<494>Expr.Variable
+              (<495>NameAppl
+               (p_1,
+                {},
+                <496>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(65.51-65.53);
+                }),
+               <497>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(65.51-65.53);
+               }),
+              <498>Expr.Binary
+              (Apply,
+               <499>Expr.Variable
+               (<500>NameAppl
+                (_\cat_,
+                 {},
+                 <501>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(65.56-65.67);
+                 }),
+                <502>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(65.56-65.67);
+                }),
+               <503>Expr.Tuple
+               ({<504>Expr.Variable
+                 (<505>NameAppl
+                  (p_1,
+                   {},
+                   <506>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(65.56-65.58);
+                   }),
+                  <507>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(65.56-65.58);
+                  }),
+                 <508>Expr.Variable
+                 (<509>NameAppl
+                  (p_2,
+                   {},
+                   <510>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(65.65-65.67);
+                   }),
+                  <511>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(65.65-65.67);
+                  })},
+                <512>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(65.56-65.67);
+                }),
+               <513>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(65.56-65.67);
+               })},
+             <514>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(65.50-65.68);
+             }),
+            <515>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(65.5-65.70);
+            }),
+           <516>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(65.5-65.75);
+           }),
+          <517>Expr.Display
+          ({<518>Expr.Binary
+            (Apply,
+             <519>Expr.Variable
+             (<520>NameAppl
+              (\langle,,\rangle,
+               {},
+               <521>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(66.14-66.27);
+               }),
+              <522>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(66.14-66.27);
+              }),
+             <523>Expr.Display
+             ({},
+              <524>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(66.14-66.27);
+              }),
+             <525>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(66.14-66.27);
+             })},
+           <526>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(66.12-66.29);
+           })},
+         <527>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(65.5-66.35);
+         }),
+        <528>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(65.5-66.35);
+        }),
+       <529>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(64.15-66.35);
+       }),
+      <530>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(64.2-66.35);
+      })},
+    {},
+    <531>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(63.1-67.11);
+    }),
+   <532>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(63.1-67.11);
+   }),
+  <533>Item.AxiomaticDef
+  ({<534>NameDecl
+    (\alpha,
+     <535>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(68.15-68.20);
+     }),
+    <536>NameDecl
+    (\pi,
+     <537>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(68.22-68.24);
+     }),
+    <538>NameDecl
+    (\Sigma,
+     <539>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(68.26-68.31);
+     })},
+   <540>Expr.Text
+   ({<541>Expr.Decl.Eqn
+     (<542>NameDecl
+      (_\ucexcept_,
+       <543>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(69.3-69.17);
+       }),
+      <544>Expr.Quantor
+      (Lambda,
+       <545>Expr.Text
+       ({<546>Expr.Decl.Direct
+         ({<547>NameDecl
+           (f,
+            <548>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(70.13-70.13);
+            }),
+           <549>NameDecl
+           (f',
+            <550>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(70.15-70.16);
+            })},
+          <551>Expr.Variable
+          (<552>NameAppl
+           (Fragment,
+            {<553>Expr.Variable
+             (<554>NameAppl
+              (\alpha,
+               {},
+               <555>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(70.28-70.33);
+               }),
+              <556>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(70.28-70.33);
+              }),
+             <557>Expr.Variable
+             (<558>NameAppl
+              (\pi,
+               {},
+               <559>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(70.35-70.37);
+               }),
+              <560>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(70.35-70.37);
+              }),
+             <561>Expr.Variable
+             (<562>NameAppl
+              (\Sigma,
+               {},
+               <563>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(70.39-70.44);
+               }),
+              <564>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(70.39-70.44);
+              })},
+            <565>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(70.19-70.45);
+            }),
+           <566>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(70.19-70.45);
+           }),
+          <567>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(70.13-70.45);
+          })},
+        {},
+        <568>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(70.13-70.45);
+        }),
+       <569>Expr.Binary
+       (Apply,
+        <570>Expr.Variable
+        (<571>NameAppl
+         (_\cup_,
+          {},
+          <572>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(70.49-74.45);
+          }),
+         <573>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(70.49-74.45);
+         }),
+        <574>Expr.Tuple
+        ({<575>Expr.Variable
+          (<576>NameAppl
+           (f,
+            {},
+            <577>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(70.49-70.49);
+            }),
+           <578>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(70.49-70.49);
+           }),
+          <579>Expr.Quantor
+          (Set,
+           <580>Expr.Text
+           ({<581>Expr.Decl.Direct
+             ({<582>NameDecl
+               (p,
+                <583>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(71.14-71.14);
+                })},
+              <584>Expr.Variable
+              (<585>NameAppl
+               (f,
+                {},
+                <586>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(71.17-71.17);
+                }),
+               <587>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(71.17-71.17);
+               }),
+              <588>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(71.14-71.17);
+              }),
+             <589>Expr.Decl.Direct
+             ({<590>NameDecl
+               (p',
+                <591>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(71.20-71.21);
+                })},
+              <592>Expr.Variable
+              (<593>NameAppl
+               (f',
+                {},
+                <594>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(71.24-71.25);
+                }),
+               <595>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(71.24-71.25);
+               }),
+              <596>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(71.20-71.25);
+              }),
+             <597>Expr.Decl.Direct
+             ({<598>NameDecl
+               (i,
+                <599>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(71.28-71.28);
+                })},
+              <600>Expr.Variable
+              (<601>NameAppl
+               (\nat,
+                {},
+                <602>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(71.31-71.34);
+                }),
+               <603>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(71.31-71.34);
+               }),
+              <604>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(71.28-71.34);
+              })},
+            {<605>Predicate.Test
+             (<606>Expr.Tuple
+              ({<607>Expr.Variable
+                (<608>NameAppl
+                 (i,
+                  {},
+                  <609>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(72.13-72.13);
+                  }),
+                 <610>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(72.13-72.13);
+                 }),
+                <611>Expr.Binary
+                (Apply,
+                 <612>Expr.Variable
+                 (<613>NameAppl
+                  (\dom,
+                   {},
+                   <614>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(72.19-72.22);
+                   }),
+                  <615>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(72.19-72.22);
+                  }),
+                 <616>Expr.Variable
+                 (<617>NameAppl
+                  (p,
+                   {},
+                   <618>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(72.24-72.24);
+                   }),
+                  <619>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(72.24-72.24);
+                  }),
+                 <620>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(72.19-72.24);
+                 })},
+               <621>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(72.13-72.24);
+               }),
+              <622>Expr.Variable
+              (<623>NameAppl
+               (_\in_,
+                {},
+                <624>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(72.13-72.24);
+                }),
+               <625>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(72.13-72.24);
+               }),
+              <626>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(72.13-72.24);
+              }),
+             <627>Predicate.Test
+             (<628>Expr.Tuple
+              ({<629>Expr.Binary
+                (Apply,
+                 <630>Expr.Variable
+                 (<631>NameAppl
+                  (first,
+                   {},
+                   <632>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(73.13-73.17);
+                   }),
+                  <633>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(73.13-73.17);
+                  }),
+                 <634>Expr.Binary
+                 (Apply,
+                  <635>Expr.Variable
+                  (<636>NameAppl
+                   (p,
+                    {},
+                    <637>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(73.19-73.19);
+                    }),
+                   <638>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(73.19-73.19);
+                   }),
+                  <639>Expr.Variable
+                  (<640>NameAppl
+                   (i,
+                    {},
+                    <641>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(73.21-73.21);
+                    }),
+                   <642>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(73.21-73.21);
+                   }),
+                  <643>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(73.19-73.21);
+                  }),
+                 <644>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(73.13-73.21);
+                 }),
+                <645>Expr.Binary
+                (Apply,
+                 <646>Expr.Variable
+                 (<647>NameAppl
+                  (first,
+                   {},
+                   <648>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(73.26-73.30);
+                   }),
+                  <649>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(73.26-73.30);
+                  }),
+                 <650>Expr.Binary
+                 (Apply,
+                  <651>Expr.Variable
+                  (<652>NameAppl
+                   (p',
+                    {},
+                    <653>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(73.32-73.33);
+                    }),
+                   <654>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(73.32-73.33);
+                   }),
+                  <655>Expr.Number
+                  ("1",
+                   <656>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(73.35-73.35);
+                   }),
+                  <657>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(73.32-73.35);
+                  }),
+                 <658>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(73.26-73.35);
+                 })},
+               <659>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(73.13-73.35);
+               }),
+              <660>Expr.Variable
+              (<661>NameAppl
+               (_=_,
+                {},
+                <662>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(73.13-73.35);
+                }),
+               <663>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(73.13-73.35);
+               }),
+              <664>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(73.13-73.35);
+              })},
+            <665>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(71.14-73.35);
+            }),
+           <666>Expr.Binary
+           (Apply,
+            <667>Expr.Variable
+            (<668>NameAppl
+             (_\cat_,
+              {},
+              <669>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(74.15-74.43);
+              }),
+             <670>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(74.15-74.43);
+             }),
+            <671>Expr.Tuple
+            ({<672>Expr.Binary
+              (Apply,
+               <673>Expr.Variable
+               (<674>NameAppl
+                (_\dres_,
+                 {},
+                 <675>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(74.15-74.34);
+                 }),
+                <676>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(74.15-74.34);
+                }),
+               <677>Expr.Tuple
+               ({<678>Expr.Binary
+                 (Apply,
+                  <679>Expr.Variable
+                  (<680>NameAppl
+                   (_\upto_,
+                    {},
+                    <681>
+                    Annotation {
+                      Locator zeta.session.Locator:
+                       LTX:ucspec.tex(74.15-74.25);
+                    }),
+                   <682>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(74.15-74.25);
+                   }),
+                  <683>Expr.Tuple
+                  ({<684>Expr.Number
+                    ("1",
+                     <685>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:ucspec.tex(74.15-74.15);
+                     }),
+                    <686>Expr.Binary
+                    (Apply,
+                     <687>Expr.Variable
+                     (<688>NameAppl
+                      (_-_,
+                       {},
+                       <689>
+                       Annotation {
+                         Locator zeta.session.Locator:
+                          LTX:ucspec.tex(74.23-74.25);
+                       }),
+                      <690>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:ucspec.tex(74.23-74.25);
+                      }),
+                     <691>Expr.Tuple
+                     ({<692>Expr.Variable
+                       (<693>NameAppl
+                        (i,
+                         {},
+                         <694>
+                         Annotation {
+                           Locator zeta.session.Locator:
+                            LTX:ucspec.tex(74.23-74.23);
+                         }),
+                        <695>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:ucspec.tex(74.23-74.23);
+                        }),
+                       <696>Expr.Number
+                       ("1",
+                        <697>
+                        Annotation {
+                          Locator zeta.session.Locator:
+                           LTX:ucspec.tex(74.25-74.25);
+                        })},
+                      <698>
+                      Annotation {
+                        Locator zeta.session.Locator:
+                         LTX:ucspec.tex(74.23-74.25);
+                      }),
+                     <699>
+                     Annotation {
+                       Locator zeta.session.Locator:
+                        LTX:ucspec.tex(74.23-74.25);
+                     })},
+                   <700>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(74.15-74.25);
+                   }),
+                  <701>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(74.15-74.25);
+                  }),
+                 <702>Expr.Variable
+                 (<703>NameAppl
+                  (p,
+                   {},
+                   <704>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(74.34-74.34);
+                   }),
+                  <705>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(74.34-74.34);
+                  })},
+                <706>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(74.15-74.34);
+                }),
+               <707>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(74.15-74.34);
+               }),
+              <708>Expr.Variable
+              (<709>NameAppl
+               (p',
+                {},
+                <710>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(74.42-74.43);
+                }),
+               <711>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(74.42-74.43);
+               })},
+             <712>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(74.15-74.43);
+             }),
+            <713>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(74.15-74.43);
+            }),
+           <714>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(71.8-74.45);
+           })},
+         <715>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(70.49-74.45);
+         }),
+        <716>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(70.49-74.45);
+        }),
+       <717>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(70.5-74.45);
+       }),
+      <718>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(69.3-74.45);
+      })},
+    {},
+    <719>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(68.1-75.11);
+    }),
+   <720>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(68.1-75.11);
+   }),
+  <721>Item.AxiomaticDef
+  ({<722>NameDecl
+    (\alpha,
+     <723>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(77.15-77.20);
+     }),
+    <724>NameDecl
+    (\pi,
+     <725>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(77.22-77.24);
+     }),
+    <726>NameDecl
+    (\Sigma,
+     <727>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(77.26-77.31);
+     })},
+   <728>Expr.Text
+   ({<729>Expr.Decl.Eqn
+     (<730>NameDecl
+      (\ucselect,
+       <731>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(78.3-78.11);
+       }),
+      <732>Expr.Quantor
+      (Lambda,
+       <733>Expr.Text
+       ({<734>Expr.Decl.Direct
+         ({<735>NameDecl
+           (fs,
+            <736>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(79.13-79.14);
+            })},
+          <737>Expr.Unary
+          (Power,
+           <738>Expr.Variable
+           (<739>NameAppl
+            (Fragment,
+             {<740>Expr.Variable
+              (<741>NameAppl
+               (\alpha,
+                {},
+                <742>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(79.33-79.38);
+                }),
+               <743>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(79.33-79.38);
+               }),
+              <744>Expr.Variable
+              (<745>NameAppl
+               (\pi,
+                {},
+                <746>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(79.40-79.42);
+                }),
+               <747>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(79.40-79.42);
+               }),
+              <748>Expr.Variable
+              (<749>NameAppl
+               (\Sigma,
+                {},
+                <750>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(79.44-79.49);
+                }),
+               <751>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(79.44-79.49);
+               })},
+             <752>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(79.24-79.50);
+             }),
+            <753>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(79.24-79.50);
+            }),
+           <754>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(79.17-79.50);
+           }),
+          <755>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(79.13-79.50);
+          })},
+        {},
+        <756>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(79.13-79.50);
+        }),
+       <757>Expr.Binary
+       (Apply,
+        <758>Expr.Variable
+        (<759>NameAppl
+         (\bigcup,
+          {},
+          <760>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(79.54-79.60);
+          }),
+         <761>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(79.54-79.60);
+         }),
+        <762>Expr.Variable
+        (<763>NameAppl
+         (fs,
+          {},
+          <764>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(79.62-79.63);
+          }),
+         <765>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(79.62-79.63);
+         }),
+        <766>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(79.54-79.63);
+        }),
+       <767>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(79.5-79.63);
+       }),
+      <768>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(78.3-79.63);
+      })},
+    {},
+    <769>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(77.1-80.11);
+    }),
+   <770>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(77.1-80.11);
+   }),
+  <771>Item.EmbeddedText
+  (<772>Text.ZedFixity((-1): (0) \ucin (-1),LTX:ucspec.tex(90.3-90.27),,
+   <773>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(90.3-90.27);
+   }),
+  <774>Item.AxiomaticDef
+  ({<775>NameDecl
+    (\alpha,
+     <776>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(92.15-92.20);
+     }),
+    <777>NameDecl
+    (\pi,
+     <778>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(92.22-92.24);
+     }),
+    <779>NameDecl
+    (\Sigma,
+     <780>
+     Annotation {
+       Locator zeta.session.Locator: LTX:ucspec.tex(92.26-92.31);
+     })},
+   <781>Expr.Text
+   ({<782>Expr.Decl.Direct
+     ({<783>NameDecl
+       (_\ucin_,
+        <784>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(93.3-93.13);
+        })},
+      <785>Expr.Variable
+      (<786>NameAppl
+       (_\rel_,
+        {<787>Expr.Product
+         ({<788>Expr.Variable
+           (<789>NameAppl
+            (Dialogue,
+             {<790>Expr.Variable
+              (<791>NameAppl
+               (\alpha,
+                {},
+                <792>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(93.26-93.31);
+                }),
+               <793>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(93.26-93.31);
+               }),
+              <794>Expr.Variable
+              (<795>NameAppl
+               (\pi,
+                {},
+                <796>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(93.33-93.35);
+                }),
+               <797>
+               Annotation {
+                 Locator zeta.session.Locator: LTX:ucspec.tex(93.33-93.35);
+               })},
+             <798>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(93.17-93.36);
+             }),
+            <799>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(93.17-93.36);
+            }),
+           <800>Expr.Variable
+           (<801>NameAppl
+            (\Sigma,
+             {},
+             <802>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(93.45-93.50);
+             }),
+            <803>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(93.45-93.50);
+            })},
+          <804>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(93.17-93.50);
+          }),
+         <805>Expr.Variable
+         (<806>NameAppl
+          (Fragment,
+           {<807>Expr.Variable
+            (<808>NameAppl
+             (\alpha,
+              {},
+              <809>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(94.28-94.33);
+              }),
+             <810>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(94.28-94.33);
+             }),
+            <811>Expr.Variable
+            (<812>NameAppl
+             (\pi,
+              {},
+              <813>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(94.35-94.37);
+              }),
+             <814>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(94.35-94.37);
+             }),
+            <815>Expr.Variable
+            (<816>NameAppl
+             (\Sigma,
+              {},
+              <817>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(94.39-94.44);
+              }),
+             <818>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(94.39-94.44);
+             })},
+           <819>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(94.19-94.45);
+           }),
+          <820>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(94.19-94.45);
+          })},
+        <821>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(93.17-94.45);
+        }),
+       <822>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(93.17-94.45);
+       }),
+      <823>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(93.3-94.45);
+      })},
+    {<824>Predicate.Quantor
+     (Forall,
+      <825>Expr.Text
+      ({<826>Expr.Decl.Direct
+        ({<827>NameDecl
+          (d,
+           <828>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(96.13-96.13);
+           })},
+         <829>Expr.Variable
+         (<830>NameAppl
+          (Dialogue,
+           {<831>Expr.Variable
+            (<832>NameAppl
+             (\alpha,
+              {},
+              <833>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(96.25-96.30);
+              }),
+             <834>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(96.25-96.30);
+             }),
+            <835>Expr.Variable
+            (<836>NameAppl
+             (\pi,
+              {},
+              <837>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(96.32-96.34);
+              }),
+             <838>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(96.32-96.34);
+             })},
+           <839>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(96.16-96.35);
+           }),
+          <840>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(96.16-96.35);
+          }),
+         <841>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(96.13-96.35);
+         }),
+        <842>Expr.Decl.Direct
+        ({<843>NameDecl
+          (\sigma,
+           <844>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(96.38-96.43);
+           })},
+         <845>Expr.Variable
+         (<846>NameAppl
+          (\Sigma,
+           {},
+           <847>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(96.46-96.51);
+           }),
+          <848>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(96.46-96.51);
+          }),
+         <849>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(96.38-96.51);
+         }),
+        <850>Expr.Decl.Direct
+        ({<851>NameDecl
+          (f,
+           <852>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(97.11-97.11);
+           })},
+         <853>Expr.Variable
+         (<854>NameAppl
+          (Fragment,
+           {<855>Expr.Variable
+            (<856>NameAppl
+             (\alpha,
+              {},
+              <857>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(97.23-97.28);
+              }),
+             <858>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(97.23-97.28);
+             }),
+            <859>Expr.Variable
+            (<860>NameAppl
+             (\pi,
+              {},
+              <861>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(97.30-97.32);
+              }),
+             <862>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(97.30-97.32);
+             }),
+            <863>Expr.Variable
+            (<864>NameAppl
+             (\Sigma,
+              {},
+              <865>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(97.34-97.39);
+              }),
+             <866>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(97.34-97.39);
+             })},
+           <867>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(97.14-97.40);
+           }),
+          <868>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(97.14-97.40);
+          }),
+         <869>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(97.11-97.40);
+         })},
+       {},
+       <870>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(96.13-97.40);
+       }),
+      <871>Predicate.Binary
+      (Iff,
+       <872>Predicate.Test
+       (<873>Expr.Tuple
+        ({<874>Expr.Tuple
+          ({<875>Expr.Variable
+            (<876>NameAppl
+             (d,
+              {},
+              <877>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(98.6-98.6);
+              }),
+             <878>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(98.6-98.6);
+             }),
+            <879>Expr.Variable
+            (<880>NameAppl
+             (\sigma,
+              {},
+              <881>
+              Annotation {
+                Locator zeta.session.Locator: LTX:ucspec.tex(98.8-98.13);
+              }),
+             <882>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(98.8-98.13);
+             })},
+           <883>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(98.5-98.14);
+           }),
+          <884>Expr.Variable
+          (<885>NameAppl
+           (f,
+            {},
+            <886>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(98.22-98.22);
+            }),
+           <887>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(98.22-98.22);
+           })},
+         <888>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(98.5-98.22);
+         }),
+        <889>Expr.Variable
+        (<890>NameAppl
+         (_\ucin_,
+          {},
+          <891>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(98.5-98.22);
+          }),
+         <892>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(98.5-98.22);
+         }),
+        <893>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(98.5-98.22);
+        }),
+       <894>Predicate.Quantor
+       (Exists,
+        <895>Expr.Text
+        ({<896>Expr.Decl.Direct
+          ({<897>NameDecl
+            (p,
+             <898>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(99.16-99.16);
+             })},
+           <899>Expr.Variable
+           (<900>NameAppl
+            (f,
+             {},
+             <901>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(99.19-99.19);
+             }),
+            <902>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(99.19-99.19);
+            }),
+           <903>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(99.16-99.19);
+           })},
+         {},
+         <904>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(99.16-99.19);
+         }),
+        <905>Predicate.Binary
+        (And,
+         <906>Predicate.Test
+         (<907>Expr.Tuple
+          ({<908>Expr.Variable
+            (<909>NameAppl
+             (\sigma,
+              {},
+              <910>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:ucspec.tex(100.22-100.27);
+              }),
+             <911>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(100.22-100.27);
+             }),
+            <912>Expr.Binary
+            (Apply,
+             <913>Expr.Variable
+             (<914>NameAppl
+              (\dom,
+               {},
+               <915>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:ucspec.tex(100.33-100.36);
+               }),
+              <916>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:ucspec.tex(100.33-100.36);
+              }),
+             <917>Expr.Binary
+             (Apply,
+              <918>Expr.Binary
+              (Apply,
+               <919>Expr.Variable
+               (<920>NameAppl
+                (fold,
+                 {},
+                 <921>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(100.38-100.41);
+                 }),
+                <922>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(100.38-100.41);
+                }),
+               <923>Expr.Variable
+               (<924>NameAppl
+                (_\comp_,
+                 {},
+                 <925>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(100.42-100.52);
+                 }),
+                <926>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(100.42-100.52);
+                }),
+               <927>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:ucspec.tex(100.38-100.52);
+               }),
+              <928>Expr.Binary
+              (Apply,
+               <929>Expr.Variable
+               (<930>NameAppl
+                (_\circ_,
+                 {},
+                 <931>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(100.54-100.67);
+                 }),
+                <932>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(100.54-100.67);
+                }),
+               <933>Expr.Tuple
+               ({<934>Expr.Variable
+                 (<935>NameAppl
+                  (second,
+                   {},
+                   <936>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(100.54-100.59);
+                   }),
+                  <937>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(100.54-100.59);
+                  }),
+                 <938>Expr.Variable
+                 (<939>NameAppl
+                  (p,
+                   {},
+                   <940>
+                   Annotation {
+                     Locator zeta.session.Locator:
+                      LTX:ucspec.tex(100.67-100.67);
+                   }),
+                  <941>
+                  Annotation {
+                    Locator zeta.session.Locator:
+                     LTX:ucspec.tex(100.67-100.67);
+                  })},
+                <942>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(100.54-100.67);
+                }),
+               <943>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:ucspec.tex(100.54-100.67);
+               }),
+              <944>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:ucspec.tex(100.38-100.67);
+              }),
+             <945>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(100.33-100.67);
+             })},
+           <946>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(100.22-100.67);
+           }),
+          <947>Expr.Variable
+          (<948>NameAppl
+           (_\in_,
+            {},
+            <949>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(100.22-100.67);
+            }),
+           <950>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(100.22-100.67);
+           }),
+          <951>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(100.22-100.67);
+          }),
+         <952>Predicate.Test
+         (<953>Expr.Tuple
+          ({<954>Expr.Binary
+            (Apply,
+             <955>Expr.Variable
+             (<956>NameAppl
+              (_\circ_,
+               {},
+               <957>
+               Annotation {
+                 Locator zeta.session.Locator:
+                  LTX:ucspec.tex(102.24-102.36);
+               }),
+              <958>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:ucspec.tex(102.24-102.36);
+              }),
+             <959>Expr.Tuple
+             ({<960>Expr.Variable
+               (<961>NameAppl
+                (first,
+                 {},
+                 <962>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(102.24-102.28);
+                 }),
+                <963>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(102.24-102.28);
+                }),
+               <964>Expr.Variable
+               (<965>NameAppl
+                (p,
+                 {},
+                 <966>
+                 Annotation {
+                   Locator zeta.session.Locator:
+                    LTX:ucspec.tex(102.36-102.36);
+                 }),
+                <967>
+                Annotation {
+                  Locator zeta.session.Locator:
+                   LTX:ucspec.tex(102.36-102.36);
+                })},
+              <968>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:ucspec.tex(102.24-102.36);
+              }),
+             <969>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(102.24-102.36);
+             }),
+            <970>Expr.Variable
+            (<971>NameAppl
+             (d,
+              {},
+              <972>
+              Annotation {
+                Locator zeta.session.Locator:
+                 LTX:ucspec.tex(102.40-102.40);
+              }),
+             <973>
+             Annotation {
+               Locator zeta.session.Locator: LTX:ucspec.tex(102.40-102.40);
+             })},
+           <974>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(102.24-102.40);
+           }),
+          <975>Expr.Variable
+          (<976>NameAppl
+           (_=_,
+            {},
+            <977>
+            Annotation {
+              Locator zeta.session.Locator: LTX:ucspec.tex(102.24-102.40);
+            }),
+           <978>
+           Annotation {
+             Locator zeta.session.Locator: LTX:ucspec.tex(102.24-102.40);
+           }),
+          <979>
+          Annotation {
+            Locator zeta.session.Locator: LTX:ucspec.tex(102.24-102.40);
+          }),
+         <980>
+         Annotation {
+           Locator zeta.session.Locator: LTX:ucspec.tex(100.22-102.40);
+         }),
+        <981>
+        Annotation {
+          Locator zeta.session.Locator: LTX:ucspec.tex(99.6-102.40);
+        }),
+       <982>
+       Annotation {
+         Locator zeta.session.Locator: LTX:ucspec.tex(98.5-102.40);
+       }),
+      <983>
+      Annotation {
+        Locator zeta.session.Locator: LTX:ucspec.tex(96.3-102.40);
+      })},
+    <984>
+    Annotation {
+      Locator zeta.session.Locator: LTX:ucspec.tex(92.1-103.11);
+    }),
+   <985>
+   Annotation {
+     Locator zeta.session.Locator: LTX:ucspec.tex(92.1-103.11);
+   })},
+ <986>
+ Annotation {
+   Locator zeta.session.Locator: LTX:ucspec.tex(10.3-10.26);
+ })

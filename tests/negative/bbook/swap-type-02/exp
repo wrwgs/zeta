@@ -1,0 +1,37 @@
+ZETA 1.5, (c) 1997-2000 Wolfgang Grieskamp, Robert Buessow (restored for Java 21, 2026)
++ installed Z LaTeX adaptor v1.4
++ installed Z parser v1.5
++ installed Z type checker v1.5
++ installed Z-to-MicroZ reducer v2.0
++ installed ZAP/ZAM v2.1
++ installed pretty printer v1.0
+>>> load bbook.tex
++ scanning bbook.tex
+- load bbook.tex
+>>> c -u BBExec#bbook
++ scanning $ZETABASE/lib/ztoolkits/Toolkit.tex
++ parsing section LTX:Toolkit#Toolkit
++ parsing section LTX:BBSpec#bbook
++ parsing section LTX:BBExec#bbook
+! ERROR[LTX:bbook.tex(163.9-163.9)]:
+!   don't know how to parse on here. looking at : <COLON>
+>>> c -u BBSpec#bbook
++ type checking section LTX:Toolkit#Toolkit
++ type checking section LTX:BBSpec#bbook
+- c -u BBSpec#bbook
+>>> c -u BBTest#bbook
++ parsing section LTX:BBExec#bbook
+! ERROR[LTX:bbook.tex(163.9-163.9)]:
+!   don't know how to parse on here. looking at : <COLON>
+>>> make -u BBExec#bbook pretty-text -d pt_BBExec_bbook.txt
++ parsing section LTX:BBExec#bbook
+! ERROR[LTX:bbook.tex(163.9-163.9)]:
+!   don't know how to parse on here. looking at : <COLON>
+>>> make -u BBSpec#bbook pretty-text -d pt_BBSpec_bbook.txt
++ formatting LTX:BBSpec#bbook/pretty-text
+- make -u BBSpec#bbook pretty-text -d pt_BBSpec_bbook.txt
+>>> make -u BBTest#bbook pretty-text -d pt_BBTest_bbook.txt
++ parsing section LTX:BBExec#bbook
+! ERROR[LTX:bbook.tex(163.9-163.9)]:
+!   don't know how to parse on here. looking at : <COLON>
+= good bye.

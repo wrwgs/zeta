@@ -1,0 +1,11 @@
+{
+  "expect": "undeclaredPos",
+  "kinds": [
+    "undeclaredPos"
+  ],
+  "diagnostics": [
+    "ERROR[LTX:TundeclaredPos.tex(13.3-13.5)]:",
+    "expected a product type with at least 2components.",
+    "found type: \\baseNum ** \\baseNum"
+  ]
+}
